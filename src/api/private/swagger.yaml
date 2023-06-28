@@ -1,0 +1,2265 @@
+openapi: 3.0.1
+info:
+  title: Liftshare Private API
+  version: 1.0.0
+servers:
+  - url: https://interface.liftshare.com
+    description: Production
+  - url: http://localhost
+    description: Current server
+  - url: https://interface-dev.liftshare.com
+    description: Development
+  - url: https://liftshare-api-core-staging.azurewebsites.net
+    description: Staging
+paths:
+  /parking/assets:
+    get:
+      tags:
+        - AppyParking
+      summary: List of appy parking assets assigned to user
+      responses:
+        '200':
+          description: CommunityParkingAssetsForUserResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CommunityParkingAssetsForUserResponseDto_unhunja'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommunityParkingAssetsForUserResponseDto_unhunja'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CommunityParkingAssetsForUserResponseDto_unhunja'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /parking/has-numberplate:
+    get:
+      tags:
+        - AppyParking
+      summary: Determine if user as added there numberplate as an answer to an optional question with category = numberplate
+      responses:
+        '200':
+          description: HasNumberplateResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/HasNumberplateResponseDto_mlta'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HasNumberplateResponseDto_mlta'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/HasNumberplateResponseDto_mlta'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /parking/numberplate:
+    post:
+      tags:
+        - AppyParking
+      summary: Insert or update a users numberplate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestBaseDto_eebfuhy'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestBaseDto_eebfuhy'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestBaseDto_eebfuhy'
+      responses:
+        '200':
+          description: InsertOrUpdateNumberplateRequestDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestDto_zpnhi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestDto_zpnhi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/InsertOrUpdateNumberplateRequestDto_zpnhi'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /parking/begin-session:
+    post:
+      tags:
+        - AppyParking
+      summary: Starts a parking session with appy parking for the current user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookParkingAssetRequestBaseDto_wqijsui'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/BookParkingAssetRequestBaseDto_wqijsui'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/BookParkingAssetRequestBaseDto_wqijsui'
+      responses:
+        '200':
+          description: BookParkingAssetResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/BookParkingAssetResponseDto_yvsa'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookParkingAssetResponseDto_yvsa'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/BookParkingAssetResponseDto_yvsa'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /authenticate-trip/driver:
+    post:
+      tags:
+        - AuthenticateTrip
+      summary: Returns new qr code for driver to display to passenger
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripDriverRequestBaseDto_eluguhi'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripDriverRequestBaseDto_eluguhi'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripDriverRequestBaseDto_eluguhi'
+      responses:
+        '200':
+          description: AuthenticateTripDriverResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripDriverResponseDto_wmhqyy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripDriverResponseDto_wmhqyy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripDriverResponseDto_wmhqyy'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /authenticate-trip/passenger:
+    post:
+      tags:
+        - AuthenticateTrip
+      summary: Validates passenger and authenticates trip
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripPassengerRequestBaseDto_poxnzaq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripPassengerRequestBaseDto_poxnzaq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AuthenticateTripPassengerRequestBaseDto_poxnzaq'
+      responses:
+        '200':
+          description: AuthenticateTripPassengerBaseResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/authenticate-trip/status/{token}':
+    get:
+      tags:
+        - AuthenticateTrip
+      summary: Gets the status and details of an authenticated trip
+      parameters:
+        - name: token
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: AuthenticateTripPassengerBaseResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticateTripPassengerBaseResponseDto_ucnkima'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /authenticate-trip/trips:
+    get:
+      tags:
+        - AuthenticateTrip
+      summary: Get list of authenticated trips. Note name may be null if member has been deleted
+      responses:
+        '200':
+          description: AuthenticatedTripsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedTripsResponseDto_yptpiy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedTripsResponseDto_yptpiy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/AuthenticatedTripsResponseDto_yptpiy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /booking/pending:
+    get:
+      tags:
+        - Booking
+      summary: Get a list of any pending share requests for current user
+      responses:
+        '200':
+          description: PendingBookingsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PendingBookingsResponseDto_nqieea'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PendingBookingsResponseDto_nqieea'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PendingBookingsResponseDto_nqieea'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/booking/confirm/{publicBookingId}':
+    post:
+      tags:
+        - Booking
+      summary: Accepts the request to share. Sends email to passenger and driver.
+      parameters:
+        - name: publicBookingId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: ConfirmBookingResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ConfirmBookingResponseDto_cxydui'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfirmBookingResponseDto_cxydui'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ConfirmBookingResponseDto_cxydui'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/booking/cancel/{publicBookingId}':
+    delete:
+      tags:
+        - Booking
+      summary: Cancels or declines the request to share. Sends email to passenger and driver.
+      parameters:
+        - name: publicBookingId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingRequestBaseDto_tdrudvy'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingRequestBaseDto_tdrudvy'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingRequestBaseDto_tdrudvy'
+      responses:
+        '200':
+          description: CancelBookingResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CancelBookingResponseDto_edcwa'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CancelBookingResponseDto_edcwa'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CancelBookingResponseDto_edcwa'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /booking/book:
+    post:
+      tags:
+        - Booking
+      summary: Creat a booking request / request to share journey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookJourneyRequestBaseDto_yjbarzq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/BookJourneyRequestBaseDto_yjbarzq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/BookJourneyRequestBaseDto_yjbarzq'
+      responses:
+        '200':
+          description: BookJourneyResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/BookJourneyResponseDto_eqvlq'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookJourneyResponseDto_eqvlq'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/BookJourneyResponseDto_eqvlq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /client/token/get-client-token:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Generate authentication token to login of behalf of client
+      description: "Used to generate an admin JWT allowing liftshare admins to login on behalf of a client. \nToken is valid for 30 min. \nToken can be refreshed using the refresh token up to 90 days after issue."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetTokenForClientAccountHandler-Request_tthtui'
+      responses:
+        '200':
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTokenCreate-Response_nnmuhq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /community/options:
+    get:
+      tags:
+        - Community
+      summary: Get a key value list of all community options for current user
+      responses:
+        '200':
+          description: CommunityOptionsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CommunityOptionsHandler-CommunityOptionsResponseDto_tbbwxi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommunityOptionsHandler-CommunityOptionsResponseDto_tbbwxi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CommunityOptionsHandler-CommunityOptionsResponseDto_tbbwxi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /community/find/by-name:
+    post:
+      tags:
+        - Community
+      summary: Find community by name or part of
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommunityFindByName-BaseRequest_qbmaui'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CommunityFindByName-BaseRequest_qbmaui'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CommunityFindByName-BaseRequest_qbmaui'
+      responses:
+        '200':
+          description: Response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+  /community/details:
+    post:
+      tags:
+        - Community
+      summary: Find community by public id and get public information and options
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommunityDetailsRequestDto_tgugsq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CommunityDetailsRequestDto_tgugsq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CommunityDetailsRequestDto_tgugsq'
+      responses:
+        '200':
+          description: CommunityDetailsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CommunityFindByName-Response_gsuvy'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+  /conversation:
+    get:
+      tags:
+        - Conversation
+      summary: Get a list of all current conversations
+      responses:
+        '200':
+          description: ConversationsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ConversationsResponseDto_yzawzqi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationsResponseDto_yzawzqi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ConversationsResponseDto_yzawzqi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/conversation/{conversationId}':
+    get:
+      tags:
+        - Conversation
+      summary: Get a list of all messages for a given conversation
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ConversationResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ConversationResponseDto_iyccxkq'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationResponseDto_iyccxkq'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ConversationResponseDto_iyccxkq'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+    post:
+      tags:
+        - Conversation
+      summary: Post reply to conversation
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateReplyRequestBaseDto_uyptry'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CreateReplyRequestBaseDto_uyptry'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CreateReplyRequestBaseDto_uyptry'
+      responses:
+        '200':
+          description: CreateReplyResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CreateReplyResponseDto_qsizqa'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateReplyResponseDto_qsizqa'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CreateReplyResponseDto_qsizqa'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard:
+    get:
+      tags:
+        - Dashboard
+      summary: Get information about current user and savings
+      responses:
+        '200':
+          description: Response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/MobileAppDashboard-Response_jshi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MobileAppDashboard-Response_jshi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/MobileAppDashboard-Response_jshi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/admin/user:
+    post:
+      tags:
+        - DashboardUsers
+      summary: Create a new dashboard user with roles
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateDashboardUser-Request_evlhlxy'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CreateDashboardUser-Request_evlhlxy'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CreateDashboardUser-Request_evlhlxy'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/dashboard/admin/user/{userId}':
+    get:
+      tags:
+        - DashboardUsers
+      summary: Full details about a dashboard user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/dashboard/admin/user/{userId}/send-welcome-email':
+    post:
+      tags:
+        - DashboardUsers
+      summary: Send a welcome email to the dashboard user
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/admin/user/search:
+    post:
+      tags:
+        - DashboardUsers
+      summary: 'Find dashboard users by name, surname, email, id, encrypted id, or hashed id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FindDashboardUsers-Request_yenidi'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/FindDashboardUsers-Request_yenidi'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/FindDashboardUsers-Request_yenidi'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/dashboard/admin/community/{communityId}/users':
+    get:
+      tags:
+        - DashboardUsers
+      summary: Summary of users and their roles with access to the community
+      parameters:
+        - name: communityId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/dashboard/admin/community/{communityId}/users/roles':
+    post:
+      tags:
+        - DashboardUsers
+      summary: 'Updates all roles for this dashboard user for this community. Adds missing roles, deletes roles not posted.'
+      parameters:
+        - name: communityId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateDashboardUserRoles-RequestBase_ufqlua'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/UpdateDashboardUserRoles-RequestBase_ufqlua'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/UpdateDashboardUserRoles-RequestBase_ufqlua'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/admin/logins:
+    get:
+      tags:
+        - DashboardUsers
+      summary: Dashboard users who have logged in
+      parameters:
+        - name: from
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: to
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: page
+          in: query
+          schema:
+            type: integer
+            format: int32
+            default: 1
+        - name: maxPerPage
+          in: query
+          schema:
+            type: integer
+            format: int32
+            default: 100
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  '/journey/details/{journeyId}':
+    get:
+      tags:
+        - Journey
+      summary: Details about given journey and basic info on the journey's owner
+      parameters:
+        - name: journeyId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: JourneyDetailsResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/JourneyDetailsResponseDto_qggrq'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JourneyDetailsResponseDto_qggrq'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/JourneyDetailsResponseDto_qggrq'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /password/reset:
+    post:
+      tags:
+        - Password
+      summary: Generates a password reset code and sends it to the user via email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequestDto_uweq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequestDto_uweq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequestDto_uweq'
+      responses:
+        '200':
+          description: PasswordResetResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PasswordResetResponseDto_pqsrdi'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PasswordResetResponseDto_pqsrdi'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/PasswordResetResponseDto_pqsrdi'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+  /push:
+    post:
+      tags:
+        - Push
+      summary: Registers the current device for push notifications
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PushTokenUpsert-BaseRequest_niua'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PushTokenUpsert-BaseRequest_niua'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PushTokenUpsert-BaseRequest_niua'
+      responses:
+        '200':
+          description: Successfully registered or updated device token for user
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /register:
+    post:
+      tags:
+        - Register
+      summary: Generates a password reset code and sends it to the user via email
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApiRegisterRequestDto_htjva'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ApiRegisterRequestDto_htjva'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ApiRegisterRequestDto_htjva'
+      responses:
+        '200':
+          description: ApiRegisterResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ApiRegisterResponseDto_mofvoq'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiRegisterResponseDto_mofvoq'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ApiRegisterResponseDto_mofvoq'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+  /test/hbs:
+    get:
+      tags:
+        - Test
+      responses:
+        '200':
+          description: Success
+  /test/templates:
+    get:
+      tags:
+        - Test
+      responses:
+        '200':
+          description: Success
+  /test/feature:
+    get:
+      tags:
+        - Test
+      responses:
+        '200':
+          description: Success
+  /test/overview:
+    get:
+      tags:
+        - Test
+      responses:
+        '200':
+          description: Success
+  /e2e-test/teardown:
+    post:
+      tags:
+        - Test
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClearCommunityTestData-Request_bglddti'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ClearCommunityTestData-Request_bglddti'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ClearCommunityTestData-Request_bglddti'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /token:
+    post:
+      tags:
+        - Token
+      summary: Main way of authenticating and generating a JWT
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenCreate-Request_hakhvwy'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/TokenCreate-Request_hakhvwy'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/TokenCreate-Request_hakhvwy'
+      responses:
+        '200':
+          description: Response
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TokenCreate-Response_ebhzqy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenCreate-Response_ebhzqy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/TokenCreate-Response_ebhzqy'
+        '401':
+          description: UnauthorizedResult
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+    get:
+      tags:
+        - Token
+      summary: Used to test and validate a JWT
+      responses:
+        '200':
+          description: List of claims
+          content:
+            text/plain:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+            text/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /token/facebook:
+    post:
+      tags:
+        - Token
+      summary: Used to authenticate using a Facebook access token and generate a JWT. User must have previously created an account by signing in to Facebook on Liftshare.com
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenFacebookRequestDto_ysyoki'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenFacebookRequestDto_ysyoki'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenFacebookRequestDto_ysyoki'
+      responses:
+        '200':
+          description: CreateTokenFacebookResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CreateTokenFacebookResponseDto_rzdixzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenFacebookResponseDto_rzdixzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenFacebookResponseDto_rzdixzy'
+        '401':
+          description: UnauthorizedResult
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+  /token/apple:
+    post:
+      tags:
+        - Token
+      summary: Used to authenticate using an Apple access token and generate a JWT. User must have previously created a Liftshare.com account with the same email registered with Apple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenAppleRequestDto_gscvby'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenAppleRequestDto_gscvby'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CreateTokenAppleRequestDto_gscvby'
+      responses:
+        '200':
+          description: CreateTokenAppleResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/CreateTokenAppleResponseDto_srywq'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenAppleResponseDto_srywq'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenAppleResponseDto_srywq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseDto
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
+components:
+  schemas:
+    AdminTokenCreate-Response_nnmuhq:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        resultType:
+          $ref: '#/components/schemas/AdminTokenCreate-ResultType_mlsaq'
+      additionalProperties: false
+    AdminTokenCreate-ResultType_mlsaq:
+      enum:
+        - 0 - Unknown
+        - 1 - Success
+        - 2 - TwoFactorRequiredYubikey
+        - 3 - TwoFactorRequiredGoogleAuthenticator
+        - 4 - InvalidEmailOrPassword
+        - 5 - InvalidToken
+        - 6 - InvalidRefreshToken
+        - 7 - InvalidTwoFactorCode
+      type: integer
+      format: int32
+    ApiRegisterRequestDto_htjva:
+      type: object
+      properties:
+        forename:
+          type: string
+          nullable: true
+        surname:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        publicCommunityId:
+          type: string
+          nullable: true
+        publicCommunityPassword:
+          type: string
+          nullable: true
+        missingCommunityName:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ApiRegisterResponseDto_mofvoq:
+      type: object
+      properties:
+        result:
+          $ref: '#/components/schemas/Register-RegisterResultType_qukloja'
+        oidcProvider:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AuthenticateTripDriverRequestBaseDto_eluguhi:
+      type: object
+      properties:
+        lat:
+          type: number
+          format: float
+        lng:
+          type: number
+          format: float
+        numberplate:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AuthenticateTripDriverResponseDto_wmhqyy:
+      type: object
+      properties:
+        qrToken:
+          type: string
+          format: uuid
+      additionalProperties: false
+    AuthenticateTripPassengerBaseResponseDto_ucnkima:
+      type: object
+      properties:
+        numberplate:
+          type: string
+          nullable: true
+        qrToken:
+          type: string
+          format: uuid
+        isFirstPassenger:
+          type: boolean
+        originLatitude:
+          type: number
+          format: double
+          nullable: true
+        originLongitude:
+          type: number
+          format: double
+          nullable: true
+        destinationLatitude:
+          type: number
+          format: double
+          nullable: true
+        destinationLongitude:
+          type: number
+          format: double
+          nullable: true
+        durationInSeconds:
+          type: integer
+          format: int32
+          nullable: true
+        teamCreated:
+          type: boolean
+        timeOfAuthenticationUtc:
+          type: string
+          format: date-time
+      additionalProperties: false
+    AuthenticateTripPassengerRequestBaseDto_poxnzaq:
+      type: object
+      properties:
+        qrToken:
+          type: string
+          nullable: true
+        lat:
+          type: number
+          format: float
+        lng:
+          type: number
+          format: float
+      additionalProperties: false
+    AuthenticatedTripsResponseDto_yptpiy:
+      type: object
+      properties:
+        trips:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuthenticatedTripsResponseItemDto_zxsxsa'
+          nullable: true
+      additionalProperties: false
+    AuthenticatedTripsResponseItemDto_zxsxsa:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        date:
+          type: string
+          format: date-time
+      additionalProperties: false
+    BookJourneyRequestBaseDto_yjbarzq:
+      type: object
+      properties:
+        journeyId:
+          type: string
+          nullable: true
+        mon:
+          type: boolean
+        tues:
+          type: boolean
+        wed:
+          type: boolean
+        thur:
+          type: boolean
+        fri:
+          type: boolean
+        sat:
+          type: boolean
+        sun:
+          type: boolean
+      additionalProperties: false
+    BookJourneyResponseDto_eqvlq:
+      type: object
+      properties:
+        publicBookingId:
+          type: string
+          format: uuid
+        seats:
+          type: integer
+          format: int32
+        journeyId:
+          type: string
+          nullable: true
+        dateOfLeg:
+          type: string
+          format: date-time
+        isReturnLeg:
+          type: boolean
+        confirmationPinCode:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BookParkingAssetRequestBaseDto_wqijsui:
+      type: object
+      properties:
+        parkingAssetId:
+          type: string
+          format: uuid
+        authenticatedTripId:
+          type: string
+          nullable: true
+        numberplate:
+          type: string
+          nullable: true
+      additionalProperties: false
+    BookParkingAssetResponseDto_yvsa:
+      type: object
+      properties:
+        statusCode:
+          $ref: '#/components/schemas/HttpStatusCode_bsaega'
+      additionalProperties: false
+    BookingStatus_vpkey:
+      enum:
+        - 0 - PendingConfirmation
+        - 1 - AutoConfirmed
+        - 2 - ManuallyConfirmed
+        - 3 - CanceledByPassenger
+        - 4 - CanceledByPassengerWithShortNotice
+        - 5 - CanceledByDriver
+        - 6 - CanceledByLiftshare
+        - 7 - CanceledByTimeout
+        - 8 - PendingConflictResolution
+        - 9 - CompletedSuccessfullyByPassenger
+        - 10 - CompletedSuccessfullyByDriver
+        - 11 - CompletedSuccessfullyAutomatically
+        - 12 - DeclinedByDriver
+      type: integer
+      format: int32
+    CancelBookingRequestBaseDto_tdrudvy:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CancelBookingResponseDto_edcwa:
+      type: object
+      properties:
+        publicBookingId:
+          type: string
+          format: uuid
+        bookingStatus:
+          $ref: '#/components/schemas/BookingStatus_vpkey'
+      additionalProperties: false
+    ClearCommunityTestData-Request_bglddti:
+      type: object
+      properties:
+        ptps:
+          type: array
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        batches:
+          type: array
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        surveys:
+          type: array
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        contacts:
+          type: array
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        widgets:
+          type: array
+          items:
+            type: string
+            format: uuid
+          nullable: true
+        scoping:
+          type: array
+          items:
+            type: string
+          nullable: true
+        acel:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    CommunityDetailsRequestDto_tgugsq:
+      type: object
+      properties:
+        communityId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CommunityFindByName-BaseRequest_qbmaui:
+      type: object
+      properties:
+        searchTerm:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CommunityFindByName-CommunityDetails_zvta:
+      type: object
+      properties:
+        communityId:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        emailRestrictions:
+          type: array
+          items:
+            type: string
+          nullable: true
+        passwordRestricted:
+          type: boolean
+        privacy:
+          $ref: '#/components/schemas/CommunityPrivacy_gcuvykq'
+        umbrella:
+          type: boolean
+        isMember:
+          type: boolean
+        oidcRequired:
+          type: boolean
+        redirectUrl:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CommunityFindByName-Response_gsuvy:
+      type: object
+      properties:
+        communities:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommunityFindByName-CommunityDetails_zvta'
+          nullable: true
+      additionalProperties: false
+    CommunityOptionDto_ykrq:
+      type: object
+      properties:
+        communityId:
+          type: integer
+          format: int32
+        optionKey:
+          type: string
+          nullable: true
+        optionValue:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CommunityOptionsHandler-CommunityOptionsResponseDto_tbbwxi:
+      type: object
+      properties:
+        options:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/CommunityOptionDto_ykrq'
+          nullable: true
+      additionalProperties: false
+    CommunityParkingAssetDto_qqldyva:
+      type: object
+      properties:
+        parkingAssetId:
+          type: string
+          format: uuid
+        description:
+          type: string
+          nullable: true
+        bays:
+          type: integer
+          format: int32
+        address:
+          type: string
+          nullable: true
+        latitude:
+          type: number
+          format: float
+        longitude:
+          type: number
+          format: float
+      additionalProperties: false
+    CommunityParkingAssetsForUserResponseDto_unhunja:
+      type: object
+      properties:
+        parkingAssets:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommunityParkingAssetDto_qqldyva'
+          nullable: true
+      additionalProperties: false
+    CommunityPrivacy_gcuvykq:
+      enum:
+        - 0 - Public
+        - 1 - Private
+        - 2 - Closed
+      type: integer
+      format: int32
+    ConfirmBookingResponseDto_cxydui:
+      type: object
+      properties:
+        publicBookingId:
+          type: string
+          format: uuid
+      additionalProperties: false
+    ConversationResponseDto_iyccxkq:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationResponseItemDto_wvqa'
+          nullable: true
+      additionalProperties: false
+    ConversationResponseItemDto_wvqa:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+        dateSent:
+          type: string
+          format: date-time
+        messageType:
+          $ref: '#/components/schemas/MessageType_glafuoa'
+        senderId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ConversationsResponseDto_yzawzqi:
+      type: object
+      properties:
+        conversations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ConversationsResponseItemDto_pfnuta'
+          nullable: true
+      additionalProperties: false
+    ConversationsResponseItemDto_pfnuta:
+      type: object
+      properties:
+        conversationId:
+          type: string
+          nullable: true
+        subject:
+          type: string
+          nullable: true
+        senderId:
+          type: string
+          nullable: true
+        senderName:
+          type: string
+          nullable: true
+        recipientId:
+          type: string
+          nullable: true
+        recipientName:
+          type: string
+          nullable: true
+        latestMessage:
+          type: string
+          nullable: true
+        latestMessageDate:
+          type: string
+          format: date-time
+        count:
+          type: integer
+          format: int32
+        unread:
+          type: integer
+          format: int32
+        journey:
+          $ref: '#/components/schemas/ConversationsResponseItemJourneyDto_jwqq'
+      additionalProperties: false
+    ConversationsResponseItemJourneyDto_jwqq:
+      type: object
+      properties:
+        journeyId:
+          type: string
+          nullable: true
+        journeyDate:
+          type: string
+          format: date-time
+        journeyLeg:
+          $ref: '#/components/schemas/JourneyLegType_bahdmny'
+      additionalProperties: false
+    CreateDashboardUser-Request_evlhlxy:
+      type: object
+      properties:
+        email:
+          type: string
+          nullable: true
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        comment:
+          type: string
+          nullable: true
+        isApproved:
+          type: boolean
+        password:
+          type: string
+          nullable: true
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/CreateDashboardUser-RoleDto_ltjbya'
+          nullable: true
+        sendWelcomeEmail:
+          type: boolean
+      additionalProperties: false
+    CreateDashboardUser-RoleDto_ltjbya:
+      type: object
+      properties:
+        role:
+          type: string
+          nullable: true
+        communityId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateReplyRequestBaseDto_uyptry:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateReplyResponseDto_qsizqa:
+      type: object
+      properties:
+        messageId:
+          type: string
+          nullable: true
+        conversationId:
+          type: string
+          nullable: true
+        dateCreated:
+          type: string
+          format: date-time
+      additionalProperties: false
+    CreateTokenAppleRequestDto_gscvby:
+      type: object
+      properties:
+        communityId:
+          type: string
+          nullable: true
+        identityToken:
+          type: string
+          nullable: true
+        culture:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateTokenAppleResponseDto_srywq:
+      type: object
+      properties:
+        successful:
+          type: boolean
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        result:
+          $ref: '#/components/schemas/ExternalLoginResult_iaxzli'
+        hasJustRegistered:
+          type: boolean
+      additionalProperties: false
+    CreateTokenFacebookRequestDto_ysyoki:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        communityId:
+          type: string
+          nullable: true
+        culture:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CreateTokenFacebookResponseDto_rzdixzy:
+      type: object
+      properties:
+        successful:
+          type: boolean
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        result:
+          $ref: '#/components/schemas/ExternalLoginResult_iaxzli'
+        nextAllowedAttempt:
+          type: string
+          format: date-time
+        isLockedOut:
+          type: boolean
+        hasJustRegistered:
+          type: boolean
+      additionalProperties: false
+    ExternalLoginResult_iaxzli:
+      enum:
+        - 0 - Registered
+        - 1 - LoggedIn
+        - 2 - AccountLocked
+        - 3 - Failed
+      type: integer
+      format: int32
+    FindDashboardUsers-Request_yenidi:
+      type: object
+      properties:
+        searchTerm:
+          type: string
+          nullable: true
+      additionalProperties: false
+    GetTokenForClientAccountHandler-Request_tthtui:
+      type: object
+      properties:
+        adminId:
+          type: string
+          nullable: true
+      additionalProperties: false
+    HasNumberplateResponseDto_mlta:
+      type: object
+      properties:
+        hasNumberplate:
+          type: boolean
+      additionalProperties: false
+    HttpStatusCode_bsaega:
+      enum:
+        - 100 - Continue
+        - 101 - SwitchingProtocols
+        - 102 - Processing
+        - 103 - EarlyHints
+        - 200 - OK
+        - 201 - Created
+        - 202 - Accepted
+        - 203 - NonAuthoritativeInformation
+        - 204 - NoContent
+        - 205 - ResetContent
+        - 206 - PartialContent
+        - 207 - MultiStatus
+        - 208 - AlreadyReported
+        - 226 - IMUsed
+        - 300 - MultipleChoices
+        - 300 - Ambiguous
+        - 301 - MovedPermanently
+        - 301 - Moved
+        - 302 - Found
+        - 302 - Redirect
+        - 303 - SeeOther
+        - 303 - RedirectMethod
+        - 304 - NotModified
+        - 305 - UseProxy
+        - 306 - Unused
+        - 307 - TemporaryRedirect
+        - 307 - RedirectKeepVerb
+        - 308 - PermanentRedirect
+        - 400 - BadRequest
+        - 401 - Unauthorized
+        - 402 - PaymentRequired
+        - 403 - Forbidden
+        - 404 - NotFound
+        - 405 - MethodNotAllowed
+        - 406 - NotAcceptable
+        - 407 - ProxyAuthenticationRequired
+        - 408 - RequestTimeout
+        - 409 - Conflict
+        - 410 - Gone
+        - 411 - LengthRequired
+        - 412 - PreconditionFailed
+        - 413 - RequestEntityTooLarge
+        - 414 - RequestUriTooLong
+        - 415 - UnsupportedMediaType
+        - 416 - RequestedRangeNotSatisfiable
+        - 417 - ExpectationFailed
+        - 421 - MisdirectedRequest
+        - 422 - UnprocessableEntity
+        - 423 - Locked
+        - 424 - FailedDependency
+        - 426 - UpgradeRequired
+        - 428 - PreconditionRequired
+        - 429 - TooManyRequests
+        - 431 - RequestHeaderFieldsTooLarge
+        - 451 - UnavailableForLegalReasons
+        - 500 - InternalServerError
+        - 501 - NotImplemented
+        - 502 - BadGateway
+        - 503 - ServiceUnavailable
+        - 504 - GatewayTimeout
+        - 505 - HttpVersionNotSupported
+        - 506 - VariantAlsoNegotiates
+        - 507 - InsufficientStorage
+        - 508 - LoopDetected
+        - 510 - NotExtended
+        - 511 - NetworkAuthenticationRequired
+      type: integer
+      format: int32
+    InsertOrUpdateNumberplateRequestBaseDto_eebfuhy:
+      type: object
+      properties:
+        numberplate:
+          type: string
+          nullable: true
+      additionalProperties: false
+    InsertOrUpdateNumberplateRequestDto_zpnhi:
+      type: object
+      properties:
+        numberplate:
+          type: string
+          nullable: true
+        subscriberId:
+          type: integer
+          format: int32
+      additionalProperties: false
+    JourneyDetailsResponseDto_qggrq:
+      type: object
+      properties:
+        jid:
+          type: integer
+          format: int32
+        mon:
+          type: boolean
+        tues:
+          type: boolean
+        wed:
+          type: boolean
+        thur:
+          type: boolean
+        fri:
+          type: boolean
+        sat:
+          type: boolean
+        sun:
+          type: boolean
+        polyline:
+          type: string
+          nullable: true
+        journeyType:
+          $ref: '#/components/schemas/JourneyType_idmei'
+        frequency:
+          $ref: '#/components/schemas/JourneyFrequency_vvhvfbq'
+        originText:
+          type: string
+          nullable: true
+        destinationText:
+          type: string
+          nullable: true
+        cost:
+          type: number
+          format: double
+        comments:
+          type: string
+          nullable: true
+        seatsOffered:
+          type: integer
+          format: int32
+        leavingTime:
+          type: string
+          format: date-time
+        smoking:
+          type: boolean
+        food:
+          type: boolean
+        pets:
+          type: boolean
+        hasExpired:
+          type: boolean
+        dateAdded:
+          type: string
+          format: date-time
+        bookingId:
+          type: string
+          format: uuid
+          nullable: true
+        subscriberId:
+          type: string
+          nullable: true
+        subscriberName:
+          type: string
+          nullable: true
+        subscriberDateRegistered:
+          type: string
+          format: date-time
+        hidden:
+          type: boolean
+      additionalProperties: false
+    JourneyFrequency_vvhvfbq:
+      enum:
+        - 1 - OneOff
+        - 2 - Regular
+        - 3 - Occasional
+        - 4 - Shift
+      type: integer
+      format: int32
+    JourneyLegType_bahdmny:
+      enum:
+        - 0 - Outbound
+        - 1 - Return
+      type: integer
+      format: int32
+    JourneyType_idmei:
+      enum:
+        - 1 - Passenger
+        - 2 - Driver
+        - 3 - Both
+      type: integer
+      format: int32
+    MessageType_glafuoa:
+      enum:
+        - 0 - Sender
+        - 1 - Recipient
+      type: integer
+      format: int32
+    MobileAppDashboard-Response_jshi:
+      type: object
+      properties:
+        forename:
+          type: string
+          nullable: true
+        surname:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        activated:
+          type: boolean
+        subscriberId:
+          type: string
+          nullable: true
+        communityPublicId:
+          type: string
+          nullable: true
+        communityName:
+          type: string
+          nullable: true
+        co2Saved:
+          type: number
+          format: double
+        milesSaved:
+          type: integer
+          format: int32
+        totalAuthenticatedTrips:
+          type: integer
+          format: int32
+        unreadMessages:
+          type: integer
+          format: int32
+        pendingBookings:
+          type: integer
+          format: int32
+        isOnBounceList:
+          type: boolean
+      additionalProperties: false
+    PasswordResetRequestDto_uweq:
+      type: object
+      properties:
+        email:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PasswordResetResponseDto_pqsrdi:
+      type: object
+      properties:
+        resetCode:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PendingBookingsResponseDto_nqieea:
+      type: object
+      properties:
+        bookings:
+          type: array
+          items:
+            $ref: '#/components/schemas/PendingBookingsResponseItemDto_rxxkqy'
+          nullable: true
+      additionalProperties: false
+    PendingBookingsResponseItemDto_rxxkqy:
+      type: object
+      properties:
+        bookingId:
+          type: string
+          format: uuid
+        origin:
+          type: string
+          nullable: true
+        destination:
+          type: string
+          nullable: true
+        passengerName:
+          type: string
+          nullable: true
+        seatsBooked:
+          type: integer
+          format: int32
+        status:
+          $ref: '#/components/schemas/BookingStatus_vpkey'
+        passengerId:
+          type: string
+          nullable: true
+        journeyFrequency:
+          $ref: '#/components/schemas/JourneyFrequency_vvhvfbq'
+        tripsPerWeek:
+          type: integer
+          format: int32
+        journeyDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    PushTokenUpsert-BaseRequest_niua:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        device:
+          $ref: '#/components/schemas/PushTokenUpsert-PushDevice_ljxhba'
+      additionalProperties: false
+    PushTokenUpsert-PushDevice_ljxhba:
+      enum:
+        - 0 - Android
+        - 1 - Apple
+        - 2 - Expo
+      type: integer
+      format: int32
+    Register-RegisterResultType_qukloja:
+      enum:
+        - 0 - Success
+        - 1 - EmailExists
+        - 2 - SuccessAndActivated
+        - 3 - SuccessAlreadyRegistered
+        - 4 - CommunityPasswordInvalid
+        - 5 - OidcRequired
+      type: integer
+      format: int32
+    TokenCreate-Request_hakhvwy:
+      type: object
+      properties:
+        email:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+      additionalProperties: false
+    TokenCreate-Response_ebhzqy:
+      type: object
+      properties:
+        successful:
+          type: boolean
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+      additionalProperties: false
+    UnauthorizedResult_pecray:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+      additionalProperties: false
+    UpdateDashboardUserRoles-RequestBase_ufqlua:
+      type: object
+      properties:
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/UpdateDashboardUserRoles-UserWithRoles_qynijq'
+          nullable: true
+      additionalProperties: false
+    UpdateDashboardUserRoles-UserWithRoles_qynijq:
+      type: object
+      properties:
+        userId:
+          type: string
+          nullable: true
+        roles:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    ValidationExceptionResponseBaseDto_vtrnlzi:
+      type: object
+      properties:
+        failures:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+    ValidationExceptionResponseDto_ltlwwzy:
+      type: object
+      properties:
+        message:
+          type: string
+          nullable: true
+        statusCode:
+          type: integer
+          format: int32
+        exception:
+          type: string
+          nullable: true
+        failures:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+  securitySchemes:
+    bearer:
+      type: http
+      description: Every request must include a valid JWT authentication header. Liftshare client tokens have a short expiration time of 30 minutes and will need to be periodically refreshed.
+      scheme: bearer
+      bearerFormat: JSON Web Token (JWT)
+security:
+  - bearer: []
