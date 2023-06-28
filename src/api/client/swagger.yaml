@@ -1,0 +1,378 @@
+openapi: 3.0.1
+info:
+  title: Liftshare Client API
+  description: Private API for Liftshare client and partner integrations.
+  termsOfService: https://liftshare.com/uk/terms-and-conditions
+  contact:
+    name: Liftshare support
+    url: https://business.liftshare.com/contact/
+  version: 1.0.0
+servers:
+  - url: https://interface.liftshare.com
+    description: Production
+  - url: http://localhost
+    description: Current server
+  - url: https://interface-dev.liftshare.com
+    description: Development
+  - url: https://liftshare-api-core-staging.azurewebsites.net
+    description: Staging
+paths:
+  /client/token:
+    post:
+      tags:
+        - Authentication tokens
+      summary: Generate authentication token
+      description: "Used to generate an admin JWT using Liftshare dashboard user credentials. \nToken is valid for 30 min. \nToken can be refreshed using the refresh token up to 90 days after issue."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminTokenCreate-Request_kiaya'
+      responses:
+        '200':
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTokenCreate-Response_nnmuhq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+  /client/token/refresh:
+    post:
+      tags:
+        - Authentication tokens
+      summary: Refresh authentication token
+      description: "Used to refresh an expired admin JWT using a one time refresh token. \nNew token is valid for 30 min. \nToken can be refreshed again using the refresh token up to 90 days after issue."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminTokenRefresh-Request_qwdywq'
+      responses:
+        '200':
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTokenRefresh-Response_qwnsq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+  /client/token/validate-two-factor:
+    post:
+      tags:
+        - Authentication tokens
+      summary: Validate two factor one time code
+      description: Takes an expired token and a one time two factor code and return a valid token and refresh token if successful.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminTokenTwoFactorCreate-Request_iifgka'
+      responses:
+        '200':
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminTokenTwoFactorCreate-Response_dmhny'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+  '/permit/scan/{teamId}':
+    get:
+      tags:
+        - Trip authentication
+        - Smart parking
+      summary: Validate parking permit
+      description: 'Allows users with the correct role to get information about parking permit status, and any associated trip authentication and team data.'
+      parameters:
+        - name: teamId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: ScanPermitResponseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanPermitResponseDto_fmtaoq'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /client/vehicle-registration/validate:
+    post:
+      tags:
+        - Trip authentication
+      summary: Validate vehicle registration mark
+      description: '[NOT ENABLED] Used to check if vehicle registration is registered and has trip authenticated recently'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleRegistrationLookupRequestDto_kawfefy'
+      responses:
+        '200':
+          description: VehicleRegistrationLookupRequestDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VehicleRegistrationLookupResponseDto_jtjgea'
+        '401':
+          description: UnauthorizedResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnauthorizedResult_pecray'
+        '422':
+          description: ValidationExceptionResponseBaseDto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationExceptionResponseBaseDto_vtrnlzi'
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+components:
+  schemas:
+    AdminTokenCreate-Request_kiaya:
+      required:
+        - Email
+        - Password
+      type: object
+      properties:
+        email:
+          type: string
+          nullable: true
+        password:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: Liftshare client administration credentials
+    AdminTokenCreate-Response_nnmuhq:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        resultType:
+          $ref: '#/components/schemas/AdminTokenCreate-ResultType_mlsaq'
+      additionalProperties: false
+    AdminTokenCreate-ResultType_mlsaq:
+      enum:
+        - 0 - Unknown
+        - 1 - Success
+        - 2 - TwoFactorRequiredYubikey
+        - 3 - TwoFactorRequiredGoogleAuthenticator
+        - 4 - InvalidEmailOrPassword
+        - 5 - InvalidToken
+        - 6 - InvalidRefreshToken
+        - 7 - InvalidTwoFactorCode
+      type: integer
+      format: int32
+    AdminTokenRefresh-Request_qwdywq:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AdminTokenRefresh-Response_qwnsq:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        resultType:
+          $ref: '#/components/schemas/AdminTokenCreate-ResultType_mlsaq'
+      additionalProperties: false
+    AdminTokenTwoFactorCreate-Request_iifgka:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        twoFactorCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AdminTokenTwoFactorCreate-Response_dmhny:
+      type: object
+      properties:
+        token:
+          type: string
+          nullable: true
+        refreshToken:
+          type: string
+          nullable: true
+        resultType:
+          $ref: '#/components/schemas/AdminTokenCreate-ResultType_mlsaq'
+      additionalProperties: false
+    AuthenticatedParkingPermitStatus_tuskzy:
+      enum:
+        - 0 - Valid
+        - 1 - Warning
+        - 2 - Invalid
+      type: integer
+      format: int32
+    PermitScanActivityDto_ryjcoi:
+      type: object
+      properties:
+        activityDate:
+          type: string
+          format: date-time
+        activity:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PermitScanTeamDto_xetha:
+      type: object
+      properties:
+        teamId:
+          type: integer
+          format: int64
+        origin:
+          type: string
+          nullable: true
+        destination:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PermitScanTeamMemberDto_sjluy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+          nullable: true
+        dateJoined:
+          type: string
+          format: date-time
+      additionalProperties: false
+    ScanPermitResponseDto_fmtaoq:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/AuthenticatedParkingPermitStatus_tuskzy'
+        statusReason:
+          type: string
+          nullable: true
+        statusFurtherDetails:
+          type: string
+          nullable: true
+        duplicateScanWarning:
+          type: string
+          nullable: true
+        isFirstFailedStatus:
+          type: boolean
+        team:
+          $ref: '#/components/schemas/PermitScanTeamDto_xetha'
+        teamMembers:
+          type: array
+          items:
+            $ref: '#/components/schemas/PermitScanTeamMemberDto_sjluy'
+          nullable: true
+        activity:
+          type: array
+          items:
+            $ref: '#/components/schemas/PermitScanActivityDto_ryjcoi'
+          nullable: true
+      additionalProperties: false
+    UnauthorizedResult_pecray:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+      additionalProperties: false
+    ValidationExceptionResponseBaseDto_vtrnlzi:
+      type: object
+      properties:
+        failures:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+    VehicleRegistrationLookupRequestDto_kawfefy:
+      type: object
+      properties:
+        vehicleRegistrationMark:
+          type: string
+          nullable: true
+      additionalProperties: false
+    VehicleRegistrationLookupResponseDto_jtjgea:
+      type: object
+      properties:
+        vehicleRegistrationFound:
+          type: boolean
+          description: Does vehicle registration belong to a registered member
+        vehicleRegistrationAuthenticated:
+          type: boolean
+          description: Has the driver of given vehicle successfully trip authenticated in past 24 hours
+      additionalProperties: false
+  securitySchemes:
+    bearer:
+      type: http
+      description: Every request must include a valid JWT authentication header. Liftshare client tokens have a short expiration time of 30 minutes and will need to be periodically refreshed.
+      scheme: bearer
+      bearerFormat: JSON Web Token (JWT)
+security:
+  - bearer: []

@@ -27,6 +27,10 @@ const saveFile = async (fileUrl, filePath) => {
 (async () => {
   try {
     await saveFile(
+      'https://interface-dev.liftshare.com/swagger/client/swagger.yaml',
+      './src/api/client/swagger.yaml',
+    );
+    await saveFile(
       'https://interface-dev.liftshare.com/swagger/private/swagger.yaml',
       './src/api/private/swagger.yaml',
     );

@@ -8,6 +8,25 @@ export default defineConfig({
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Liftshare%20Private%20API%201.0.0
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Mobilityways%20API%202.0.0
    */
+  liftshareClient: {
+    output: {
+      mode: 'tags-split',
+      target: './src/api/client/generated/liftshare-client.ts',
+      schemas: './src/api/client/generated/model',
+      client: 'vue-query',
+      mock: false,
+      clean: true,
+      override: {
+        mutator: {
+          path: './src/api/axiosInstance.ts',
+          name: 'customInstance'
+        }
+      }
+    },
+    input: {
+      target: './src/api/client/swagger.yaml'
+    }
+  },
   liftsharePrivate: {
     output: {
       mode: 'tags-split',
