@@ -6,10 +6,7 @@ export default defineConfig({
    * Note we're in the process of moving everything to V2, hence generating from both specs for now.
    *
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Liftshare%20Private%20API%201.0.0
-   * @see https://interface-dev.liftshare.com/swagger/private/swagger.yaml
-   *
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Mobilityways%20API%202.0.0
-   * @see https://interface-dev.liftshare.com/swagger/v2/swagger.yaml
    */
   liftsharePrivate: {
     output: {
