@@ -1,12 +1,13 @@
-import HelloWorld from '../HelloWorld.vue'
+import MainNav from '../MainNav.vue'
 
-describe('HelloWorld', () => {
+// TODO: Working test
+describe('MainNav', () => {
   it('playground', () => {
-    cy.mount(HelloWorld, { props: { msg: 'Hello Cypress' } })
+    cy.mount(MainNav, { props: { msg: 'Hello Cypress' } })
   })
 
   it('renders properly', () => {
-    cy.mount(HelloWorld, { props: { msg: 'Hello Cypress' } })
+    cy.mount(MainNav, { props: { msg: 'Hello Cypress' } })
     cy.get('h1').should('contain', 'Hello Cypress')
   })
 })
