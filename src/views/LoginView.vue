@@ -1,31 +1,33 @@
 <script setup lang="ts">
 import Card from 'primevue/card'
 import InputText from 'primevue/inputtext'
-import Password from 'primevue/password'
 import Button from 'primevue/button'
 
 import { ref } from 'vue'
 import { useQueryClient } from '@tanstack/vue-query'
 import { usePostClientToken } from '@/api/client/generated/authentication-tokens/authentication-tokens'
+import { STORAGE_TOKEN } from '@/api/constants'
 
 const email = ref(null)
 const password = ref(null)
 
 const queryClient = useQueryClient()
 
-const mutation = usePostClientToken({
+const { error, mutate, isLoading } = usePostClientToken({
   mutation: {
     onSuccess: (data) => {
       console.log('success', data)
-      queryClient.invalidateQueries()
+      if (data.token) {
+        localStorage.setItem(STORAGE_TOKEN, data.token)
+        queryClient.invalidateQueries()
+      }
     }
   }
 })
 
 const onSubmit = (e: Event) => {
   e.preventDefault()
-  console.log('sub')
-  mutation.mutate({
+  mutate({
     data: {
       email: email.value,
       password: password.value
@@ -39,13 +41,13 @@ const onSubmit = (e: Event) => {
     <div class="sm:w-96 w-full">
       <Card>
         <template #content>
-          <form @submit="onSubmit" class="flex flex-col gap-4">
+          <form @submit="onSubmit" class="flex flex-col justify-items-stretch gap-4">
             <p>Mobilityways</p>
             <label for="email">Email</label>
             <InputText id="email" type="text" v-model="email" />
             <label for="password">Password</label>
-            <Password id="password" v-model="password" :feedback="false" />
-            <Button type="submit" label="Submit" />
+            <InputText id="password" type="password" v-model="password" />
+            <Button type="submit" label="Submit" :loading="isLoading" />
           </form>
         </template>
       </Card>

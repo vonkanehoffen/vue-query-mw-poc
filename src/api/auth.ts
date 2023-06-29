@@ -1,7 +1,20 @@
-import { postClientToken } from './client/generated/authentication-tokens/authentication-tokens'
-import type { AdminTokenCreateRequestKiaya } from './client/generated/model'
+import { useGetV2Community } from '@/api/v2/generated/community/community'
+import { computed } from 'vue'
 
-// just do in component?
-export const login = async (args: AdminTokenCreateRequestKiaya) => {
-  const token = await postClientToken(args)
+export function useAuth() {
+  const { isLoading, failureReason } = useGetV2Community({
+    query: {
+      retry: false
+    }
+  })
+  const isAuthenticated = computed(() => {
+    const failStatus = failureReason?.value?.response?.status
+    console.log('isAuthenticated failStatus', failStatus)
+    return failStatus !== 401
+  })
+
+  return {
+    isLoading,
+    isAuthenticated
+  }
 }
