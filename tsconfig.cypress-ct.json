@@ -7,7 +7,9 @@
     "cypress/support/component.*",
     "cypress/support/commands.ts"
   ],
-  "exclude": [],
+  "exclude": [
+    "src/api/**/generated/*",
+  ],
   "compilerOptions": {
     "composite": true
   }
