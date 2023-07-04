@@ -14,6 +14,8 @@ import axios from 'axios'
 import { postClientTokenRefresh } from './api/client/generated/authentication-tokens/authentication-tokens'
 import { STORAGE_REFRESH_TOKEN, STORAGE_TOKEN } from './api/constants'
 import { useAuthStore } from './stores/auth'
+import Toast, { useToast, type PluginOptions, POSITION } from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
 
 const app = createApp(App)
 
@@ -27,14 +29,22 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
           console.log('DEFAULT ERROR', error, error.response?.status)
 
           const authStore = useAuthStore()
+          const toast = useToast()
+          toast(error.message)
+
           if (axios.isAxiosError(error)) {
             if (error.response?.status === 401 && authStore.isAuthenticated) {
-              const response = await postClientTokenRefresh({
-                token: localStorage.getItem(STORAGE_TOKEN),
-                refreshToken: localStorage.getItem(STORAGE_REFRESH_TOKEN)
-              })
-              console.log('refresh', response)
-              authStore.saveTokens(response.token, response.refreshToken)
+              console.log('gonna refresh')
+              try {
+                const response = await postClientTokenRefresh({
+                  token: localStorage.getItem(STORAGE_TOKEN),
+                  refreshToken: localStorage.getItem(STORAGE_REFRESH_TOKEN)
+                })
+                console.log('refreh suvvess', response)
+                authStore.saveTokens(response.token, response.refreshToken)
+              } catch (error) {
+                console.log('refresh error', error)
+              }
             }
           }
         }
@@ -43,9 +53,14 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
   }
 }
 
+const toastOptions: PluginOptions = {
+  position: POSITION.BOTTOM_RIGHT
+}
+
 app.use(createPinia())
 app.use(router)
 app.use(VueQueryPlugin, vueQueryPluginOptions)
 app.use(PrimeVue)
+app.use(Toast, toastOptions)
 
 app.mount('#app')
