@@ -6,12 +6,10 @@ const items = ref<MenubarProps['model']>([
     label: 'Dashboards',
     items: [
       {
-        label: 'Low-frequency dashboard',
-        to: '/low-frequency-dashboard'
+        label: 'Low-frequency dashboard'
       },
       {
-        label: 'Liftshare dashboard',
-        to: '/liftshare-dashboard'
+        label: 'Liftshare dashboard'
       }
     ]
   },
@@ -20,27 +18,22 @@ const items = ref<MenubarProps['model']>([
     to: '/contacts'
   },
   {
-    label: 'Scoping',
-    to: '/scoping'
+    label: 'Scoping'
   },
   {
-    label: 'Surveys',
-    to: '/surveys'
+    label: 'Surveys'
   },
   {
     label: 'ACEL',
     items: [
       {
-        label: 'ACEL Dashboard',
-        to: '/acel-dashboard'
+        label: 'ACEL Dashboard'
       },
       {
-        label: 'ACEL Reports',
-        to: '/acel-reports'
+        label: 'ACEL Reports'
       },
       {
-        label: 'ACEL Generator',
-        to: '/acel-generator'
+        label: 'ACEL Generator'
       }
     ]
   }
