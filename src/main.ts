@@ -9,7 +9,7 @@ import { VueQueryPlugin, type VueQueryPluginOptions } from '@tanstack/vue-query'
 import PrimeVue from 'primevue/config'
 
 import App from './App.vue'
-import router from './router'
+import { router } from './router'
 
 const app = createApp(App)
 
@@ -19,6 +19,7 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
       queries: {
         // TODO: Is this really gonna be depreciated in v5? See https://tkdodo.eu/blog/breaking-react-querys-api-on-purpose
         onError: (error) => {
+          // If it's 401 we need to update the auth state in pinia
           console.log('DEFAULT ERROR', error, error.response.status)
         }
       }
