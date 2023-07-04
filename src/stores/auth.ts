@@ -54,6 +54,7 @@ export const useAuthStore = defineStore('auth', {
         if (axios.isAxiosError(error)) {
           if (error.response?.status === 401) {
             this.destroyTokens();
+            this.clearRefreshTimeout();
             router.push('/login');
           }
         }
