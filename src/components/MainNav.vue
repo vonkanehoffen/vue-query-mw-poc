@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Menubar, { type MenubarProps } from 'primevue/menubar'
-import { getIsAuthenticated } from '@/api/helpers'
+import { useAuthStore } from '@/stores/auth'
 
-const isAuthenticated = getIsAuthenticated()
+const authStore = useAuthStore()
 
 const items = ref<MenubarProps['model']>([
   {
@@ -53,7 +53,7 @@ const items = ref<MenubarProps['model']>([
         </RouterLink>
       </template>
       <template #end>
-        <div v-if="isAuthenticated">AUTHED</div>
+        <div v-if="authStore.isAuthenticated">AUTHED</div>
         <div v-else>PUBLIC</div>
       </template>
     </Menubar>

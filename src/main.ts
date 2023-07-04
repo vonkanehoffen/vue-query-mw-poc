@@ -13,7 +13,7 @@ import { router } from './router'
 import axios from 'axios'
 import { postClientTokenRefresh } from './api/client/generated/authentication-tokens/authentication-tokens'
 import { STORAGE_REFRESH_TOKEN, STORAGE_TOKEN } from './api/constants'
-import { getIsAuthenticated } from './api/helpers'
+import { useAuthStore } from './stores/auth'
 
 const app = createApp(App)
 
@@ -25,13 +25,16 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
         onError: async (error) => {
           // If it's 401 we need to update the auth state in pinia
           console.log('DEFAULT ERROR', error, error.response?.status)
+
+          const authStore = useAuthStore()
           if (axios.isAxiosError(error)) {
-            if (error.response?.status === 401 && getIsAuthenticated()) {
-              const res = await postClientTokenRefresh({
+            if (error.response?.status === 401 && authStore.isAuthenticated) {
+              const response = await postClientTokenRefresh({
                 token: localStorage.getItem(STORAGE_TOKEN),
                 refreshToken: localStorage.getItem(STORAGE_REFRESH_TOKEN)
               })
-              console.log('refresh', res)
+              console.log('refresh', response)
+              authStore.saveTokens(response.token, response.refreshToken)
             }
           }
         }

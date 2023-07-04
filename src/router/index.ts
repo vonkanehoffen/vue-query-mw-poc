@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { useAuthStore } from '@/stores/auth'
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,10 +23,9 @@ export const router = createRouter({
       component: () => import('../views/ContactsView.vue'),
       beforeEnter: (to, from) => {
         console.log('onBeforeEnter', to, from)
-        // Nope. No vue query hooks here.
-        // So we need auth state in pinia.
-        // const { isAuthenticated } = useAuth()
-        return isAuthenticated || '/login'
+        const authStore = useAuthStore()
+
+        return authStore.isAuthenticated || '/login'
       }
     }
   ]

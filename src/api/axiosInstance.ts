@@ -1,7 +1,6 @@
 import Axios, { type AxiosRequestConfig } from 'axios'
 
 import { STORAGE_TOKEN } from './constants'
-import { settings } from '../settings'
 import { getApiBaseUrl } from './helpers'
 
 /**
