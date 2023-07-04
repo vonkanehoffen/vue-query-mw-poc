@@ -6,6 +6,6 @@
  */
 
 export interface TravelPlanResultsRouteDistanceBreakdownKmszlq {
-  miles?: number
-  count?: number
+  miles?: number;
+  count?: number;
 }

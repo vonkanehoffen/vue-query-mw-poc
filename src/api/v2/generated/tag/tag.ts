@@ -4,58 +4,60 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { AbstractModuleApiResponseTagListRequestTagListResponseTagListResponseDyncba } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '@tanstack/vue-query';
+import type { AbstractModuleApiResponseTagListRequestTagListResponseTagListResponseDyncba } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2Tag = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseTagListRequestTagListResponseTagListResponseDyncba>(
     { url: `/v2/tag`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2TagQueryKey = () => ['v2', 'tag'] as const
+export const getGetV2TagQueryKey = () => ['v2', 'tag'] as const;
 
 export const getGetV2TagQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2Tag>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Tag>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Tag>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2Tag>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TagQueryKey()
+  const queryKey = getGetV2TagQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2Tag>>> = ({ signal }) =>
-    getV2Tag(signal)
+    getV2Tag(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetV2TagQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Tag>>>
-export type GetV2TagQueryError = unknown
+export type GetV2TagQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Tag>>>;
+export type GetV2TagQueryError = unknown;
 
 export const useGetV2Tag = <
   TData = Awaited<ReturnType<typeof getV2Tag>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Tag>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Tag>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TagQueryOptions(options)
+  const queryOptions = getGetV2TagQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

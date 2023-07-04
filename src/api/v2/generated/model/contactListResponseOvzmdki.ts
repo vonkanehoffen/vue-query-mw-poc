@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactListResponseFullContactDtoTypri } from './contactListResponseFullContactDtoTypri'
+import type { ContactListResponseFullContactDtoTypri } from './contactListResponseFullContactDtoTypri';
 
 export interface ContactListResponseOvzmdki {
-  numContacts?: number
-  numPages?: number
-  page?: number
-  contacts?: ContactListResponseFullContactDtoTypri[] | null
+  numContacts?: number;
+  numPages?: number;
+  page?: number;
+  contacts?: ContactListResponseFullContactDtoTypri[] | null;
 }

@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,8 +12,8 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseTravelPlanBatchSearchRequestTravelPlanBatchSearchResponseTravelPlanBatchSearchResponseLuq,
   TravelPlanBatchSearchRequestJdcpq,
@@ -34,12 +34,12 @@ import type {
   GetV2TravelPlanBehaviorChangePlanMetricsParams,
   AbstractModuleApiResponseTravelPlanEmailCampaignMetricsRequestTravelPlanEmailCampaignMetricsResponseTravelPlanEmailCampaignMetricsResponseFfjlza,
   GetV2TravelPlanEmailMetricsParams
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2TravelPlanBatch = (
   travelPlanBatchSearchRequestJdcpq: MaybeRef<TravelPlanBatchSearchRequestJdcpq>
@@ -51,8 +51,8 @@ export const postV2TravelPlanBatch = (
       headers: { 'Content-Type': 'application/json' },
       data: travelPlanBatchSearchRequestJdcpq
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanBatchMutationOptions = <
   TError = unknown,
@@ -63,32 +63,32 @@ export const getPostV2TravelPlanBatchMutationOptions = <
     TError,
     { data: TravelPlanBatchSearchRequestJdcpq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanBatch>>,
   TError,
   { data: TravelPlanBatchSearchRequestJdcpq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanBatch>>,
     { data: TravelPlanBatchSearchRequestJdcpq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanBatch(data)
-  }
+    return postV2TravelPlanBatch(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanBatchMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanBatch>>
->
-export type PostV2TravelPlanBatchMutationBody = TravelPlanBatchSearchRequestJdcpq
-export type PostV2TravelPlanBatchMutationError = unknown
+>;
+export type PostV2TravelPlanBatchMutationBody = TravelPlanBatchSearchRequestJdcpq;
+export type PostV2TravelPlanBatchMutationError = unknown;
 
 export const usePostV2TravelPlanBatch = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -96,12 +96,12 @@ export const usePostV2TravelPlanBatch = <TError = unknown, TContext = unknown>(o
     TError,
     { data: TravelPlanBatchSearchRequestJdcpq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanBatchMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanBatchMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TravelPlanExport = (
   travelPlanListExportToCsvRequestOdfpocq: MaybeRef<TravelPlanListExportToCsvRequestOdfpocq>
 ) => {
@@ -110,8 +110,8 @@ export const postV2TravelPlanExport = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: travelPlanListExportToCsvRequestOdfpocq
-  })
-}
+  });
+};
 
 export const getPostV2TravelPlanExportMutationOptions = <
   TError = unknown,
@@ -122,32 +122,32 @@ export const getPostV2TravelPlanExportMutationOptions = <
     TError,
     { data: TravelPlanListExportToCsvRequestOdfpocq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanExport>>,
   TError,
   { data: TravelPlanListExportToCsvRequestOdfpocq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanExport>>,
     { data: TravelPlanListExportToCsvRequestOdfpocq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanExport(data)
-  }
+    return postV2TravelPlanExport(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanExportMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanExport>>
->
-export type PostV2TravelPlanExportMutationBody = TravelPlanListExportToCsvRequestOdfpocq
-export type PostV2TravelPlanExportMutationError = unknown
+>;
+export type PostV2TravelPlanExportMutationBody = TravelPlanListExportToCsvRequestOdfpocq;
+export type PostV2TravelPlanExportMutationError = unknown;
 
 export const usePostV2TravelPlanExport = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -155,24 +155,24 @@ export const usePostV2TravelPlanExport = <TError = unknown, TContext = unknown>(
     TError,
     { data: TravelPlanListExportToCsvRequestOdfpocq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanExportMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanExportMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2TravelPlanRateLimit = (
   params?: MaybeRef<GetV2TravelPlanRateLimitParams>,
   signal?: AbortSignal
 ) => {
   return customInstance<AbstractModuleApiResponseTravelPlanRateLimitRequestTravelPlanRateLimitResponseTravelPlanRateLimitResponseIgua>(
     { url: `/v2/travel-plan/rate-limit`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanRateLimitQueryKey = (
   params?: MaybeRef<GetV2TravelPlanRateLimitParams>
-) => ['v2', 'travel-plan', 'rate-limit', ...(params ? [params] : [])] as const
+) => ['v2', 'travel-plan', 'rate-limit', ...(params ? [params] : [])] as const;
 
 export const getGetV2TravelPlanRateLimitQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>,
@@ -180,24 +180,24 @@ export const getGetV2TravelPlanRateLimitQueryOptions = <
 >(
   params?: MaybeRef<GetV2TravelPlanRateLimitParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanRateLimitQueryKey(params)
+  const queryKey = getGetV2TravelPlanRateLimitQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>> = ({
     signal
-  }) => getV2TravelPlanRateLimit(params, signal)
+  }) => getV2TravelPlanRateLimit(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanRateLimitQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>
->
-export type GetV2TravelPlanRateLimitQueryError = unknown
+>;
+export type GetV2TravelPlanRateLimitQueryError = unknown;
 
 export const useGetV2TravelPlanRateLimit = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>,
@@ -205,17 +205,19 @@ export const useGetV2TravelPlanRateLimit = <
 >(
   params?: MaybeRef<GetV2TravelPlanRateLimitParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanRateLimit>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlanRateLimitQueryOptions(params, options)
+  const queryOptions = getGetV2TravelPlanRateLimitQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2TravelPlanSearch = (
   travelPlanSearchRequestZdxsyi: MaybeRef<TravelPlanSearchRequestZdxsyi>
@@ -227,8 +229,8 @@ export const postV2TravelPlanSearch = (
       headers: { 'Content-Type': 'application/json' },
       data: travelPlanSearchRequestZdxsyi
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanSearchMutationOptions = <
   TError = unknown,
@@ -239,32 +241,32 @@ export const getPostV2TravelPlanSearchMutationOptions = <
     TError,
     { data: TravelPlanSearchRequestZdxsyi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanSearch>>,
   TError,
   { data: TravelPlanSearchRequestZdxsyi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanSearch>>,
     { data: TravelPlanSearchRequestZdxsyi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanSearch(data)
-  }
+    return postV2TravelPlanSearch(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanSearchMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanSearch>>
->
-export type PostV2TravelPlanSearchMutationBody = TravelPlanSearchRequestZdxsyi
-export type PostV2TravelPlanSearchMutationError = unknown
+>;
+export type PostV2TravelPlanSearchMutationBody = TravelPlanSearchRequestZdxsyi;
+export type PostV2TravelPlanSearchMutationError = unknown;
 
 export const usePostV2TravelPlanSearch = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -272,20 +274,20 @@ export const usePostV2TravelPlanSearch = <TError = unknown, TContext = unknown>(
     TError,
     { data: TravelPlanSearchRequestZdxsyi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanSearchMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanSearchMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2TravelPlanBehaviorChangeDistanceBreakdown = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeDistanceBreakdownParams>,
   signal?: AbortSignal
 ) => {
   return customInstance<AbstractModuleApiResponseBehaviorChangeJourneyDistanceFrequencyBreakdownRequestBehaviorChangeJourneyDistanceFrequencyBreakdownResponseBehaviorChangeJourneyDistanceFrequencyBreakdownResponseSsbvdq>(
     { url: `/v2/travel-plan/behavior-change/distance-breakdown`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryKey = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeDistanceBreakdownParams>
@@ -296,7 +298,7 @@ export const getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryKey = (
     'behavior-change',
     'distance-breakdown',
     ...(params ? [params] : [])
-  ] as const
+  ] as const;
 
 export const getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>,
@@ -308,28 +310,28 @@ export const getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryOptions = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryKey(params)
+  const queryKey = getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>
-  > = ({ signal }) => getV2TravelPlanBehaviorChangeDistanceBreakdown(params, signal)
+  > = ({ signal }) => getV2TravelPlanBehaviorChangeDistanceBreakdown(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanBehaviorChangeDistanceBreakdownQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>
->
-export type GetV2TravelPlanBehaviorChangeDistanceBreakdownQueryError = unknown
+>;
+export type GetV2TravelPlanBehaviorChangeDistanceBreakdownQueryError = unknown;
 
 export const useGetV2TravelPlanBehaviorChangeDistanceBreakdown = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>,
@@ -341,20 +343,22 @@ export const useGetV2TravelPlanBehaviorChangeDistanceBreakdown = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeDistanceBreakdown>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetV2TravelPlanBehaviorChangeDistanceBreakdownQueryOptions(
     params,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2TravelPlanBehaviorChangeModalShift = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeModalShiftParams>,
@@ -362,12 +366,12 @@ export const getV2TravelPlanBehaviorChangeModalShift = (
 ) => {
   return customInstance<AbstractModuleApiResponseBehaviorChangeModalShiftChartRequestBehaviorChangeModalShiftChartResponseBehaviorChangeModalShiftChartResponseZupwmya>(
     { url: `/v2/travel-plan/behavior-change/modal-shift`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanBehaviorChangeModalShiftQueryKey = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeModalShiftParams>
-) => ['v2', 'travel-plan', 'behavior-change', 'modal-shift', ...(params ? [params] : [])] as const
+) => ['v2', 'travel-plan', 'behavior-change', 'modal-shift', ...(params ? [params] : [])] as const;
 
 export const getGetV2TravelPlanBehaviorChangeModalShiftQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>,
@@ -379,28 +383,28 @@ export const getGetV2TravelPlanBehaviorChangeModalShiftQueryOptions = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanBehaviorChangeModalShiftQueryKey(params)
+  const queryKey = getGetV2TravelPlanBehaviorChangeModalShiftQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>
-  > = ({ signal }) => getV2TravelPlanBehaviorChangeModalShift(params, signal)
+  > = ({ signal }) => getV2TravelPlanBehaviorChangeModalShift(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanBehaviorChangeModalShiftQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>
->
-export type GetV2TravelPlanBehaviorChangeModalShiftQueryError = unknown
+>;
+export type GetV2TravelPlanBehaviorChangeModalShiftQueryError = unknown;
 
 export const useGetV2TravelPlanBehaviorChangeModalShift = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>,
@@ -412,17 +416,19 @@ export const useGetV2TravelPlanBehaviorChangeModalShift = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeModalShift>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlanBehaviorChangeModalShiftQueryOptions(params, options)
+  const queryOptions = getGetV2TravelPlanBehaviorChangeModalShiftQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2TravelPlanBehaviorChangeResultsModeBreakdown = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeResultsModeBreakdownParams>,
@@ -430,8 +436,8 @@ export const getV2TravelPlanBehaviorChangeResultsModeBreakdown = (
 ) => {
   return customInstance<AbstractModuleApiResponseBehaviorChangePublicTransportResultsModeBreakdownRequestBehaviorChangePublicTransportResultsModeBreakdownResponseBehaviorChangePublicTransportResultsModeBreakdownResponseNfvwq>(
     { url: `/v2/travel-plan/behavior-change/results-mode-breakdown`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryKey = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeResultsModeBreakdownParams>
@@ -442,7 +448,7 @@ export const getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryKey = (
     'behavior-change',
     'results-mode-breakdown',
     ...(params ? [params] : [])
-  ] as const
+  ] as const;
 
 export const getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>,
@@ -454,28 +460,28 @@ export const getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryOptions = 
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryKey(params)
+  const queryKey = getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>
-  > = ({ signal }) => getV2TravelPlanBehaviorChangeResultsModeBreakdown(params, signal)
+  > = ({ signal }) => getV2TravelPlanBehaviorChangeResultsModeBreakdown(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>
->
-export type GetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryError = unknown
+>;
+export type GetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryError = unknown;
 
 export const useGetV2TravelPlanBehaviorChangeResultsModeBreakdown = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>,
@@ -487,20 +493,22 @@ export const useGetV2TravelPlanBehaviorChangeResultsModeBreakdown = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeResultsModeBreakdown>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetV2TravelPlanBehaviorChangeResultsModeBreakdownQueryOptions(
     params,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2TravelPlanBehaviorChangeBarriersToChange = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeBarriersToChangeParams>,
@@ -508,8 +516,8 @@ export const getV2TravelPlanBehaviorChangeBarriersToChange = (
 ) => {
   return customInstance<AbstractModuleApiResponseStillConsideringChangeChartRequestStillConsideringChangeChartResponseStillConsideringChangeChartResponseHolkpki>(
     { url: `/v2/travel-plan/behavior-change/barriers-to-change`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryKey = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangeBarriersToChangeParams>
@@ -520,7 +528,7 @@ export const getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryKey = (
     'behavior-change',
     'barriers-to-change',
     ...(params ? [params] : [])
-  ] as const
+  ] as const;
 
 export const getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>,
@@ -532,28 +540,28 @@ export const getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryOptions = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryKey(params)
+  const queryKey = getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>
-  > = ({ signal }) => getV2TravelPlanBehaviorChangeBarriersToChange(params, signal)
+  > = ({ signal }) => getV2TravelPlanBehaviorChangeBarriersToChange(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanBehaviorChangeBarriersToChangeQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>
->
-export type GetV2TravelPlanBehaviorChangeBarriersToChangeQueryError = unknown
+>;
+export type GetV2TravelPlanBehaviorChangeBarriersToChangeQueryError = unknown;
 
 export const useGetV2TravelPlanBehaviorChangeBarriersToChange = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>,
@@ -565,17 +573,22 @@ export const useGetV2TravelPlanBehaviorChangeBarriersToChange = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangeBarriersToChange>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryOptions(params, options)
+  const queryOptions = getGetV2TravelPlanBehaviorChangeBarriersToChangeQueryOptions(
+    params,
+    options
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2TravelPlanBehaviorChangePlanMetrics = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangePlanMetricsParams>,
@@ -583,12 +596,12 @@ export const getV2TravelPlanBehaviorChangePlanMetrics = (
 ) => {
   return customInstance<AbstractModuleApiResponseTravelPlanEmailConversionMetricsRequestTravelPlanEmailConversionMetricsResponseTravelPlanEmailConversionMetricsResponseArvqmxy>(
     { url: `/v2/travel-plan/behavior-change/plan-metrics`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanBehaviorChangePlanMetricsQueryKey = (
   params?: MaybeRef<GetV2TravelPlanBehaviorChangePlanMetricsParams>
-) => ['v2', 'travel-plan', 'behavior-change', 'plan-metrics', ...(params ? [params] : [])] as const
+) => ['v2', 'travel-plan', 'behavior-change', 'plan-metrics', ...(params ? [params] : [])] as const;
 
 export const getGetV2TravelPlanBehaviorChangePlanMetricsQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>,
@@ -600,28 +613,28 @@ export const getGetV2TravelPlanBehaviorChangePlanMetricsQueryOptions = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanBehaviorChangePlanMetricsQueryKey(params)
+  const queryKey = getGetV2TravelPlanBehaviorChangePlanMetricsQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>
-  > = ({ signal }) => getV2TravelPlanBehaviorChangePlanMetrics(params, signal)
+  > = ({ signal }) => getV2TravelPlanBehaviorChangePlanMetrics(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanBehaviorChangePlanMetricsQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>
->
-export type GetV2TravelPlanBehaviorChangePlanMetricsQueryError = unknown
+>;
+export type GetV2TravelPlanBehaviorChangePlanMetricsQueryError = unknown;
 
 export const useGetV2TravelPlanBehaviorChangePlanMetrics = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>,
@@ -633,17 +646,19 @@ export const useGetV2TravelPlanBehaviorChangePlanMetrics = <
       Awaited<ReturnType<typeof getV2TravelPlanBehaviorChangePlanMetrics>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlanBehaviorChangePlanMetricsQueryOptions(params, options)
+  const queryOptions = getGetV2TravelPlanBehaviorChangePlanMetricsQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2TravelPlanEmailMetrics = (
   params?: MaybeRef<GetV2TravelPlanEmailMetricsParams>,
@@ -651,12 +666,12 @@ export const getV2TravelPlanEmailMetrics = (
 ) => {
   return customInstance<AbstractModuleApiResponseTravelPlanEmailCampaignMetricsRequestTravelPlanEmailCampaignMetricsResponseTravelPlanEmailCampaignMetricsResponseFfjlza>(
     { url: `/v2/travel-plan/email-metrics`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2TravelPlanEmailMetricsQueryKey = (
   params?: MaybeRef<GetV2TravelPlanEmailMetricsParams>
-) => ['v2', 'travel-plan', 'email-metrics', ...(params ? [params] : [])] as const
+) => ['v2', 'travel-plan', 'email-metrics', ...(params ? [params] : [])] as const;
 
 export const getGetV2TravelPlanEmailMetricsQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>,
@@ -664,24 +679,24 @@ export const getGetV2TravelPlanEmailMetricsQueryOptions = <
 >(
   params?: MaybeRef<GetV2TravelPlanEmailMetricsParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlanEmailMetricsQueryKey(params)
+  const queryKey = getGetV2TravelPlanEmailMetricsQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>> = ({
     signal
-  }) => getV2TravelPlanEmailMetrics(params, signal)
+  }) => getV2TravelPlanEmailMetrics(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2TravelPlanEmailMetricsQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>
->
-export type GetV2TravelPlanEmailMetricsQueryError = unknown
+>;
+export type GetV2TravelPlanEmailMetricsQueryError = unknown;
 
 export const useGetV2TravelPlanEmailMetrics = <
   TData = Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>,
@@ -689,14 +704,16 @@ export const useGetV2TravelPlanEmailMetrics = <
 >(
   params?: MaybeRef<GetV2TravelPlanEmailMetricsParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlanEmailMetrics>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlanEmailMetricsQueryOptions(params, options)
+  const queryOptions = getGetV2TravelPlanEmailMetricsQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

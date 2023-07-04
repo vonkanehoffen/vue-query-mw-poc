@@ -4,13 +4,13 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BadgeListBadgeDetailsYgcq } from './badgeListBadgeDetailsYgcq'
-import type { GamificationServiceProgressDiwava } from './gamificationServiceProgressDiwava'
-import type { BadgeTypeOctufq } from './badgeTypeOctufq'
+import type { BadgeListBadgeDetailsYgcq } from './badgeListBadgeDetailsYgcq';
+import type { GamificationServiceProgressDiwava } from './gamificationServiceProgressDiwava';
+import type { BadgeTypeOctufq } from './badgeTypeOctufq';
 
 export interface BadgeListResponseHeodhy {
-  badges?: BadgeListBadgeDetailsYgcq[] | null
-  totalPoints?: number
-  progress?: GamificationServiceProgressDiwava[] | null
-  currentLevel?: BadgeTypeOctufq
+  badges?: BadgeListBadgeDetailsYgcq[] | null;
+  totalPoints?: number;
+  progress?: GamificationServiceProgressDiwava[] | null;
+  currentLevel?: BadgeTypeOctufq;
 }

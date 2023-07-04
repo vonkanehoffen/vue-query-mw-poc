@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsBehaviorChangeJourneyDistanceFrequencyBreakdownRequestBehaviorChangeJourneyDistanceFrequencyBreakdownResponseSngiiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

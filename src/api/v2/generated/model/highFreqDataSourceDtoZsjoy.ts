@@ -6,8 +6,8 @@
  */
 
 export interface HighFreqDataSourceDtoZsjoy {
-  id?: number
-  name?: string | null
-  mode?: number
-  description?: string | null
+  id?: number;
+  name?: string | null;
+  mode?: number;
+  description?: string | null;
 }

@@ -4,13 +4,13 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ManageSavedViewsSaveViewPersistenceGqtlxq } from './manageSavedViewsSaveViewPersistenceGqtlxq'
+import type { ManageSavedViewsSaveViewPersistenceGqtlxq } from './manageSavedViewsSaveViewPersistenceGqtlxq';
 
 export interface ManageSavedViewsQueryDtoQdctiji {
-  name?: string | null
-  persistenceType?: ManageSavedViewsSaveViewPersistenceGqtlxq
-  createdBy?: string | null
-  dateCreated?: string
-  numRecipients?: number
-  filterJson?: string | null
+  name?: string | null;
+  persistenceType?: ManageSavedViewsSaveViewPersistenceGqtlxq;
+  createdBy?: string | null;
+  dateCreated?: string;
+  numRecipients?: number;
+  filterJson?: string | null;
 }

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { NpsCategoryRohpa } from './npsCategoryRohpa'
+import type { NpsCategoryRohpa } from './npsCategoryRohpa';
 
 export interface NpsDetailsResponseZiavna {
-  npsRequired?: boolean
-  category?: NpsCategoryRohpa
+  npsRequired?: boolean;
+  category?: NpsCategoryRohpa;
 }

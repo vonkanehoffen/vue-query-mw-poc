@@ -6,9 +6,9 @@
  */
 
 export interface TravelPlanEmailConversionMetricsResponseIvojhci {
-  generated?: number
-  sent?: number
-  delivered?: number
-  opened?: number
-  views?: number
+  generated?: number;
+  sent?: number;
+  delivered?: number;
+  opened?: number;
+  views?: number;
 }

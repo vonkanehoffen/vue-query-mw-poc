@@ -6,5 +6,5 @@
  */
 
 export interface EmailCheckRequestZopznuy {
-  email?: string | null
+  email?: string | null;
 }

@@ -6,7 +6,7 @@
  */
 
 export interface CumulativeMembersInCommunityQueryDtoPzutszi {
-  dateAdded?: string
-  numMembersInCommunity?: number
-  totalNumMembersInCommunity?: number
+  dateAdded?: string;
+  numMembersInCommunity?: number;
+  totalNumMembersInCommunity?: number;
 }

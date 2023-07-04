@@ -6,7 +6,7 @@
  */
 
 export type ContactSearchPropertySktibq =
-  (typeof ContactSearchPropertySktibq)[keyof typeof ContactSearchPropertySktibq]
+  (typeof ContactSearchPropertySktibq)[keyof typeof ContactSearchPropertySktibq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactSearchPropertySktibq = {
@@ -28,4 +28,4 @@ export const ContactSearchPropertySktibq = {
   PersonalTravelPlanDate: 'PersonalTravelPlanDate',
   PersonalTravelPlanSent: 'PersonalTravelPlanSent',
   SubscriptionPreference: 'SubscriptionPreference'
-} as const
+} as const;

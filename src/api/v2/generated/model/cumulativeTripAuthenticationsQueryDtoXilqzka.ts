@@ -6,9 +6,9 @@
  */
 
 export interface CumulativeTripAuthenticationsQueryDtoXilqzka {
-  dateAuth?: string
-  numAuthentications?: number
-  numMembersAuthenticated?: number
-  cumulativeNumAuthentications?: number
-  cumulativeUniqueNumMembersAuthenticated?: number
+  dateAuth?: string;
+  numAuthentications?: number;
+  numMembersAuthenticated?: number;
+  cumulativeNumAuthentications?: number;
+  cumulativeUniqueNumMembersAuthenticated?: number;
 }

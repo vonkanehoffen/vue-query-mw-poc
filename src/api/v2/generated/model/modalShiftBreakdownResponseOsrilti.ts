@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ModalShiftBreakdownQueryDtoKulpki } from './modalShiftBreakdownQueryDtoKulpki'
+import type { ModalShiftBreakdownQueryDtoKulpki } from './modalShiftBreakdownQueryDtoKulpki';
 
 export interface ModalShiftBreakdownResponseOsrilti {
-  modalShiftBreakdown?: ModalShiftBreakdownQueryDtoKulpki[] | null
+  modalShiftBreakdown?: ModalShiftBreakdownQueryDtoKulpki[] | null;
 }

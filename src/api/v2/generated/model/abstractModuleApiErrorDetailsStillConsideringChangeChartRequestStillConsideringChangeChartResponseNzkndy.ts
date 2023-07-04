@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages } from './abstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages'
+import type { AbstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages } from './abstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages';
 
 export interface AbstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndy {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsStillConsideringChangeChartRequestStillConsideringChangeChartResponseNzkndyMessages;
 }

@@ -6,12 +6,12 @@
  */
 
 export interface BookJourneyRequestBaseDtoYjbarzq {
-  journeyId?: string | null
-  mon?: boolean
-  tues?: boolean
-  wed?: boolean
-  thur?: boolean
-  fri?: boolean
-  sat?: boolean
-  sun?: boolean
+  journeyId?: string | null;
+  mon?: boolean;
+  tues?: boolean;
+  wed?: boolean;
+  thur?: boolean;
+  fri?: boolean;
+  sat?: boolean;
+  sun?: boolean;
 }

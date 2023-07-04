@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqEmissionsHighFreqDataSourceItemRsdaq } from './highFreqEmissionsHighFreqDataSourceItemRsdaq'
+import type { HighFreqEmissionsHighFreqDataSourceItemRsdaq } from './highFreqEmissionsHighFreqDataSourceItemRsdaq';
 
 export interface HighFreqEmissionsHighFreqDatumLqjgni {
-  dateGrouping?: string | null
-  dataSources?: HighFreqEmissionsHighFreqDataSourceItemRsdaq[] | null
+  dateGrouping?: string | null;
+  dataSources?: HighFreqEmissionsHighFreqDataSourceItemRsdaq[] | null;
 }

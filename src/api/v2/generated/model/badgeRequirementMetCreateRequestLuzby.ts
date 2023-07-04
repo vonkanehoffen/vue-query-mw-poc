@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BadgeTypeOctufq } from './badgeTypeOctufq'
+import type { BadgeTypeOctufq } from './badgeTypeOctufq';
 
 export interface BadgeRequirementMetCreateRequestLuzby {
-  readonly eventId?: string
-  subscriberId?: number
-  badgeType?: BadgeTypeOctufq
+  readonly eventId?: string;
+  subscriberId?: number;
+  badgeType?: BadgeTypeOctufq;
 }

@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

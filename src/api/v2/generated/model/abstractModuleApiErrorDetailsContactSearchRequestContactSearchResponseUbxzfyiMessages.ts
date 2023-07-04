@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

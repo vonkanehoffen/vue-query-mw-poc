@@ -6,5 +6,5 @@
  */
 
 export interface ContactDeleteResponsePddva {
-  contactsDeleted?: number
+  contactsDeleted?: number;
 }

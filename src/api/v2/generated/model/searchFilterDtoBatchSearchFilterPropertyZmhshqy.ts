@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BatchSearchFilterPropertyUqumaq } from './batchSearchFilterPropertyUqumaq'
-import type { SearchFilterGroupBatchSearchFilterPropertyYjiuvi } from './searchFilterGroupBatchSearchFilterPropertyYjiuvi'
+import type { BatchSearchFilterPropertyUqumaq } from './batchSearchFilterPropertyUqumaq';
+import type { SearchFilterGroupBatchSearchFilterPropertyYjiuvi } from './searchFilterGroupBatchSearchFilterPropertyYjiuvi';
 
 export interface SearchFilterDtoBatchSearchFilterPropertyZmhshqy {
-  displayedProperties?: BatchSearchFilterPropertyUqumaq[] | null
-  filterGroups?: SearchFilterGroupBatchSearchFilterPropertyYjiuvi[] | null
+  displayedProperties?: BatchSearchFilterPropertyUqumaq[] | null;
+  filterGroups?: SearchFilterGroupBatchSearchFilterPropertyYjiuvi[] | null;
 }

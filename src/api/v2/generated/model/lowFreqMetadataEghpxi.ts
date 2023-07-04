@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LowFreqMetadataEghpxiMetadataItem } from './lowFreqMetadataEghpxiMetadataItem'
+import type { LowFreqMetadataEghpxiMetadataItem } from './lowFreqMetadataEghpxiMetadataItem';
 
 export interface LowFreqMetadataEghpxi {
-  date?: string
-  metadata?: LowFreqMetadataEghpxiMetadataItem[] | null
+  date?: string;
+  metadata?: LowFreqMetadataEghpxiMetadataItem[] | null;
 }

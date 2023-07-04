@@ -6,6 +6,6 @@
  */
 
 export interface ContactEmailExistsRequestUzjqjq {
-  communityId?: string | null
-  email?: string | null
+  communityId?: string | null;
+  email?: string | null;
 }

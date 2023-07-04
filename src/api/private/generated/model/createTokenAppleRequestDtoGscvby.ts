@@ -6,7 +6,7 @@
  */
 
 export interface CreateTokenAppleRequestDtoGscvby {
-  communityId?: string | null
-  identityToken?: string | null
-  culture?: string | null
+  communityId?: string | null;
+  identityToken?: string | null;
+  culture?: string | null;
 }

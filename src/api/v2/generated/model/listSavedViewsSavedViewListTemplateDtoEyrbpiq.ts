@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ResourceTypeTgphxy } from './resourceTypeTgphxy'
+import type { ResourceTypeTgphxy } from './resourceTypeTgphxy';
 
 export interface ListSavedViewsSavedViewListTemplateDtoEyrbpiq {
-  id?: string | null
-  name?: string | null
-  templateView?: boolean
-  staticView?: boolean
-  resourceType?: ResourceTypeTgphxy
+  id?: string | null;
+  name?: string | null;
+  templateView?: boolean;
+  staticView?: boolean;
+  resourceType?: ResourceTypeTgphxy;
 }

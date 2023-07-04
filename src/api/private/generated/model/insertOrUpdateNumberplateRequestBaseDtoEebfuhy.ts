@@ -6,5 +6,5 @@
  */
 
 export interface InsertOrUpdateNumberplateRequestBaseDtoEebfuhy {
-  numberplate?: string | null
+  numberplate?: string | null;
 }

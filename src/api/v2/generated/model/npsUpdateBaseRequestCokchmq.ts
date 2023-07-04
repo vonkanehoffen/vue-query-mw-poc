@@ -6,7 +6,7 @@
  */
 
 export interface NpsUpdateBaseRequestCokchmq {
-  score?: number
-  comment?: string | null
-  npsId?: string | null
+  score?: number;
+  comment?: string | null;
+  npsId?: string | null;
 }

@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ConversationsResponseItemDtoPfnuta } from './conversationsResponseItemDtoPfnuta'
+import type { ConversationsResponseItemDtoPfnuta } from './conversationsResponseItemDtoPfnuta';
 
 export interface ConversationsResponseDtoYzawzqi {
-  conversations?: ConversationsResponseItemDtoPfnuta[] | null
+  conversations?: ConversationsResponseItemDtoPfnuta[] | null;
 }

@@ -5,10 +5,10 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export type MessageTypeGlafuoa = (typeof MessageTypeGlafuoa)[keyof typeof MessageTypeGlafuoa]
+export type MessageTypeGlafuoa = (typeof MessageTypeGlafuoa)[keyof typeof MessageTypeGlafuoa];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const MessageTypeGlafuoa = {
   Sender: 'Sender',
   Recipient: 'Recipient'
-} as const
+} as const;

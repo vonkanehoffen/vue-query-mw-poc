@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { NotificationTemplateFactoryTemplateNlmpaqi } from './notificationTemplateFactoryTemplateNlmpaqi'
+import type { NotificationTemplateFactoryTemplateNlmpaqi } from './notificationTemplateFactoryTemplateNlmpaqi';
 
 export interface EmailTemplateListResponseGnxfwli {
-  templates?: NotificationTemplateFactoryTemplateNlmpaqi[] | null
+  templates?: NotificationTemplateFactoryTemplateNlmpaqi[] | null;
 }

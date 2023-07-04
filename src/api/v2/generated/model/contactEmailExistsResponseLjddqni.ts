@@ -6,5 +6,5 @@
  */
 
 export interface ContactEmailExistsResponseLjddqni {
-  emailTaken?: boolean
+  emailTaken?: boolean;
 }

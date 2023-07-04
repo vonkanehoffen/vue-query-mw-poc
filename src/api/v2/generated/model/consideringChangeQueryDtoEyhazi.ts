@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { DidChangeBehaviorAnswerValueTbzxoi } from './didChangeBehaviorAnswerValueTbzxoi'
+import type { DidChangeBehaviorAnswerValueTbzxoi } from './didChangeBehaviorAnswerValueTbzxoi';
 
 export interface ConsideringChangeQueryDtoEyhazi {
-  id?: DidChangeBehaviorAnswerValueTbzxoi
-  reason?: string | null
-  count?: number
+  id?: DidChangeBehaviorAnswerValueTbzxoi;
+  reason?: string | null;
+  count?: number;
 }

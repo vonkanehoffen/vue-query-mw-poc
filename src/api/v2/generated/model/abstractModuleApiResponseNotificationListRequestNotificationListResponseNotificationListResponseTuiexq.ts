@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { NotificationListResponseAgmvy } from './notificationListResponseAgmvy'
-import type { AbstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa } from './abstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa'
+import type { NotificationListResponseAgmvy } from './notificationListResponseAgmvy';
+import type { AbstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa } from './abstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa';
 
 export interface AbstractModuleApiResponseNotificationListRequestNotificationListResponseNotificationListResponseTuiexq {
-  response?: NotificationListResponseAgmvy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa
+  response?: NotificationListResponseAgmvy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsNotificationListRequestNotificationListResponseQlezjxa;
 }

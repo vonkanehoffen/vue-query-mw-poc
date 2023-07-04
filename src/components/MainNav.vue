@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import Menubar, { type MenubarProps } from 'primevue/menubar'
-import { useAuthStore } from '@/stores/auth'
+import { ref } from 'vue';
+import Menubar, { type MenubarProps } from 'primevue/menubar';
+import { useAuthStore } from '@/stores/auth';
 
-const authStore = useAuthStore()
+const authStore = useAuthStore();
 
 const items = ref<MenubarProps['model']>([
   {
@@ -41,7 +41,7 @@ const items = ref<MenubarProps['model']>([
       }
     ]
   }
-])
+]);
 </script>
 
 <template>

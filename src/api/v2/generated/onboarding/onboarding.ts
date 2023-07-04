@@ -4,21 +4,21 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
-import type { AbstractModuleApiResponseOnboardingChecklistRequestOnboardingChecklistResponseOnboardingChecklistResponseYyki } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
+import type { AbstractModuleApiResponseOnboardingChecklistRequestOnboardingChecklistResponseOnboardingChecklistResponseYyki } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2OnboardingChecklistCommunityId = (
   communityId: MaybeRef<string>,
@@ -26,11 +26,11 @@ export const getV2OnboardingChecklistCommunityId = (
 ) => {
   return customInstance<AbstractModuleApiResponseOnboardingChecklistRequestOnboardingChecklistResponseOnboardingChecklistResponseYyki>(
     { url: `/v2/onboarding-checklist/${unref(communityId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2OnboardingChecklistCommunityIdQueryKey = (communityId: MaybeRef<string>) =>
-  ['v2', 'onboarding-checklist', communityId] as const
+  ['v2', 'onboarding-checklist', communityId] as const;
 
 export const getGetV2OnboardingChecklistCommunityIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>,
@@ -42,28 +42,28 @@ export const getGetV2OnboardingChecklistCommunityIdQueryOptions = <
       Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2OnboardingChecklistCommunityIdQueryKey(communityId)
+  const queryKey = getGetV2OnboardingChecklistCommunityIdQueryKey(communityId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>> = ({
     signal
-  }) => getV2OnboardingChecklistCommunityId(communityId, signal)
+  }) => getV2OnboardingChecklistCommunityId(communityId, signal);
 
-  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions };
+};
 
 export type GetV2OnboardingChecklistCommunityIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>
->
-export type GetV2OnboardingChecklistCommunityIdQueryError = unknown
+>;
+export type GetV2OnboardingChecklistCommunityIdQueryError = unknown;
 
 export const useGetV2OnboardingChecklistCommunityId = <
   TData = Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>,
@@ -75,14 +75,16 @@ export const useGetV2OnboardingChecklistCommunityId = <
       Awaited<ReturnType<typeof getV2OnboardingChecklistCommunityId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2OnboardingChecklistCommunityIdQueryOptions(communityId, options)
+  const queryOptions = getGetV2OnboardingChecklistCommunityIdQueryOptions(communityId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

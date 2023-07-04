@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TokenCreateResponseEbhzqy } from './tokenCreateResponseEbhzqy'
-import type { AbstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq } from './abstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq'
+import type { TokenCreateResponseEbhzqy } from './tokenCreateResponseEbhzqy';
+import type { AbstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq } from './abstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq';
 
 export interface AbstractModuleApiResponseTokenCreateRequestTokenCreateResponseTokenCreateResponseZumua {
-  response?: TokenCreateResponseEbhzqy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq
+  response?: TokenCreateResponseEbhzqy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvq;
 }

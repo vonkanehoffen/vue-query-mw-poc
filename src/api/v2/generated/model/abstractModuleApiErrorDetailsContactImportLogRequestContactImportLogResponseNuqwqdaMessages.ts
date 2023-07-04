@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactImportLogRequestContactImportLogResponseNuqwqdaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

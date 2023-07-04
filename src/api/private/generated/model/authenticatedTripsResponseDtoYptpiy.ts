@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { AuthenticatedTripsResponseItemDtoZxsxsa } from './authenticatedTripsResponseItemDtoZxsxsa'
+import type { AuthenticatedTripsResponseItemDtoZxsxsa } from './authenticatedTripsResponseItemDtoZxsxsa';
 
 export interface AuthenticatedTripsResponseDtoYptpiy {
-  trips?: AuthenticatedTripsResponseItemDtoZxsxsa[] | null
+  trips?: AuthenticatedTripsResponseItemDtoZxsxsa[] | null;
 }

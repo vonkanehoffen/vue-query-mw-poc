@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages } from './abstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages'
+import type { AbstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages } from './abstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages';
 
 export interface AbstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkaka {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsLiftshareTeamsInCommunityRequestLiftshareTeamsInCommunityResponseLkakaMessages;
 }

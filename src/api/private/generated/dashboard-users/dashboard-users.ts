@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,20 +12,20 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   CreateDashboardUserRequestEvlhlxy,
   FindDashboardUsersRequestYenidi,
   UpdateDashboardUserRolesRequestBaseUfqlua,
   GetDashboardAdminLoginsParams
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Create a new dashboard user with roles
@@ -38,8 +38,8 @@ export const postDashboardAdminUser = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: createDashboardUserRequestEvlhlxy
-  })
-}
+  });
+};
 
 export const getPostDashboardAdminUserMutationOptions = <
   TError = unknown,
@@ -50,32 +50,32 @@ export const getPostDashboardAdminUserMutationOptions = <
     TError,
     { data: CreateDashboardUserRequestEvlhlxy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postDashboardAdminUser>>,
   TError,
   { data: CreateDashboardUserRequestEvlhlxy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postDashboardAdminUser>>,
     { data: CreateDashboardUserRequestEvlhlxy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postDashboardAdminUser(data)
-  }
+    return postDashboardAdminUser(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostDashboardAdminUserMutationResult = NonNullable<
   Awaited<ReturnType<typeof postDashboardAdminUser>>
->
-export type PostDashboardAdminUserMutationBody = CreateDashboardUserRequestEvlhlxy
-export type PostDashboardAdminUserMutationError = unknown
+>;
+export type PostDashboardAdminUserMutationBody = CreateDashboardUserRequestEvlhlxy;
+export type PostDashboardAdminUserMutationError = unknown;
 
 /**
  * @summary Create a new dashboard user with roles
@@ -86,12 +86,12 @@ export const usePostDashboardAdminUser = <TError = unknown, TContext = unknown>(
     TError,
     { data: CreateDashboardUserRequestEvlhlxy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostDashboardAdminUserMutationOptions(options)
+  const mutationOptions = getPostDashboardAdminUserMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Full details about a dashboard user
  */
@@ -100,11 +100,11 @@ export const getDashboardAdminUserUserId = (userId: MaybeRef<string>, signal?: A
     url: `/dashboard/admin/user/${unref(userId)}`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetDashboardAdminUserUserIdQueryKey = (userId: MaybeRef<string>) =>
-  ['dashboard', 'admin', 'user', userId] as const
+  ['dashboard', 'admin', 'user', userId] as const;
 
 export const getGetDashboardAdminUserUserIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getDashboardAdminUserUserId>>,
@@ -112,24 +112,24 @@ export const getGetDashboardAdminUserUserIdQueryOptions = <
 >(
   userId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetDashboardAdminUserUserIdQueryKey(userId)
+  const queryKey = getGetDashboardAdminUserUserIdQueryKey(userId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>> = ({
     signal
-  }) => getDashboardAdminUserUserId(userId, signal)
+  }) => getDashboardAdminUserUserId(userId, signal);
 
-  return { queryKey, queryFn, enabled: !!userId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!userId, ...queryOptions };
+};
 
 export type GetDashboardAdminUserUserIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getDashboardAdminUserUserId>>
->
-export type GetDashboardAdminUserUserIdQueryError = unknown
+>;
+export type GetDashboardAdminUserUserIdQueryError = unknown;
 
 /**
  * @summary Full details about a dashboard user
@@ -140,17 +140,19 @@ export const useGetDashboardAdminUserUserId = <
 >(
   userId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminUserUserId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetDashboardAdminUserUserIdQueryOptions(userId, options)
+  const queryOptions = getGetDashboardAdminUserUserIdQueryOptions(userId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Send a welcome email to the dashboard user
@@ -159,8 +161,8 @@ export const postDashboardAdminUserUserIdSendWelcomeEmail = (userId: MaybeRef<st
   return customInstance<void>({
     url: `/dashboard/admin/user/${unref(userId)}/send-welcome-email`,
     method: 'post'
-  })
-}
+  });
+};
 
 export const getPostDashboardAdminUserUserIdSendWelcomeEmailMutationOptions = <
   TError = unknown,
@@ -171,32 +173,32 @@ export const getPostDashboardAdminUserUserIdSendWelcomeEmailMutationOptions = <
     TError,
     { userId: string },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postDashboardAdminUserUserIdSendWelcomeEmail>>,
   TError,
   { userId: string },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postDashboardAdminUserUserIdSendWelcomeEmail>>,
     { userId: string }
   > = (props) => {
-    const { userId } = props ?? {}
+    const { userId } = props ?? {};
 
-    return postDashboardAdminUserUserIdSendWelcomeEmail(userId)
-  }
+    return postDashboardAdminUserUserIdSendWelcomeEmail(userId);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostDashboardAdminUserUserIdSendWelcomeEmailMutationResult = NonNullable<
   Awaited<ReturnType<typeof postDashboardAdminUserUserIdSendWelcomeEmail>>
->
+>;
 
-export type PostDashboardAdminUserUserIdSendWelcomeEmailMutationError = unknown
+export type PostDashboardAdminUserUserIdSendWelcomeEmailMutationError = unknown;
 
 /**
  * @summary Send a welcome email to the dashboard user
@@ -210,12 +212,12 @@ export const usePostDashboardAdminUserUserIdSendWelcomeEmail = <
     TError,
     { userId: string },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostDashboardAdminUserUserIdSendWelcomeEmailMutationOptions(options)
+  const mutationOptions = getPostDashboardAdminUserUserIdSendWelcomeEmailMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Find dashboard users by name, surname, email, id, encrypted id, or hashed id
  */
@@ -227,8 +229,8 @@ export const postDashboardAdminUserSearch = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: findDashboardUsersRequestYenidi
-  })
-}
+  });
+};
 
 export const getPostDashboardAdminUserSearchMutationOptions = <
   TError = unknown,
@@ -239,32 +241,32 @@ export const getPostDashboardAdminUserSearchMutationOptions = <
     TError,
     { data: FindDashboardUsersRequestYenidi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postDashboardAdminUserSearch>>,
   TError,
   { data: FindDashboardUsersRequestYenidi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postDashboardAdminUserSearch>>,
     { data: FindDashboardUsersRequestYenidi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postDashboardAdminUserSearch(data)
-  }
+    return postDashboardAdminUserSearch(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostDashboardAdminUserSearchMutationResult = NonNullable<
   Awaited<ReturnType<typeof postDashboardAdminUserSearch>>
->
-export type PostDashboardAdminUserSearchMutationBody = FindDashboardUsersRequestYenidi
-export type PostDashboardAdminUserSearchMutationError = unknown
+>;
+export type PostDashboardAdminUserSearchMutationBody = FindDashboardUsersRequestYenidi;
+export type PostDashboardAdminUserSearchMutationError = unknown;
 
 /**
  * @summary Find dashboard users by name, surname, email, id, encrypted id, or hashed id
@@ -275,12 +277,12 @@ export const usePostDashboardAdminUserSearch = <TError = unknown, TContext = unk
     TError,
     { data: FindDashboardUsersRequestYenidi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostDashboardAdminUserSearchMutationOptions(options)
+  const mutationOptions = getPostDashboardAdminUserSearchMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Summary of users and their roles with access to the community
  */
@@ -292,12 +294,12 @@ export const getDashboardAdminCommunityCommunityIdUsers = (
     url: `/dashboard/admin/community/${unref(communityId)}/users`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetDashboardAdminCommunityCommunityIdUsersQueryKey = (
   communityId: MaybeRef<string>
-) => ['dashboard', 'admin', 'community', communityId, 'users'] as const
+) => ['dashboard', 'admin', 'community', communityId, 'users'] as const;
 
 export const getGetDashboardAdminCommunityCommunityIdUsersQueryOptions = <
   TData = Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>,
@@ -309,28 +311,28 @@ export const getGetDashboardAdminCommunityCommunityIdUsersQueryOptions = <
       Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetDashboardAdminCommunityCommunityIdUsersQueryKey(communityId)
+  const queryKey = getGetDashboardAdminCommunityCommunityIdUsersQueryKey(communityId);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>
-  > = ({ signal }) => getDashboardAdminCommunityCommunityIdUsers(communityId, signal)
+  > = ({ signal }) => getDashboardAdminCommunityCommunityIdUsers(communityId, signal);
 
-  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions };
+};
 
 export type GetDashboardAdminCommunityCommunityIdUsersQueryResult = NonNullable<
   Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>
->
-export type GetDashboardAdminCommunityCommunityIdUsersQueryError = unknown
+>;
+export type GetDashboardAdminCommunityCommunityIdUsersQueryError = unknown;
 
 /**
  * @summary Summary of users and their roles with access to the community
@@ -345,20 +347,22 @@ export const useGetDashboardAdminCommunityCommunityIdUsers = <
       Awaited<ReturnType<typeof getDashboardAdminCommunityCommunityIdUsers>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetDashboardAdminCommunityCommunityIdUsersQueryOptions(
     communityId,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Updates all roles for this dashboard user for this community. Adds missing roles, deletes roles not posted.
@@ -372,8 +376,8 @@ export const postDashboardAdminCommunityCommunityIdUsersRoles = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: updateDashboardUserRolesRequestBaseUfqlua
-  })
-}
+  });
+};
 
 export const getPostDashboardAdminCommunityCommunityIdUsersRolesMutationOptions = <
   TError = unknown,
@@ -384,33 +388,33 @@ export const getPostDashboardAdminCommunityCommunityIdUsersRolesMutationOptions 
     TError,
     { communityId: string; data: UpdateDashboardUserRolesRequestBaseUfqlua },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postDashboardAdminCommunityCommunityIdUsersRoles>>,
   TError,
   { communityId: string; data: UpdateDashboardUserRolesRequestBaseUfqlua },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postDashboardAdminCommunityCommunityIdUsersRoles>>,
     { communityId: string; data: UpdateDashboardUserRolesRequestBaseUfqlua }
   > = (props) => {
-    const { communityId, data } = props ?? {}
+    const { communityId, data } = props ?? {};
 
-    return postDashboardAdminCommunityCommunityIdUsersRoles(communityId, data)
-  }
+    return postDashboardAdminCommunityCommunityIdUsersRoles(communityId, data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostDashboardAdminCommunityCommunityIdUsersRolesMutationResult = NonNullable<
   Awaited<ReturnType<typeof postDashboardAdminCommunityCommunityIdUsersRoles>>
->
+>;
 export type PostDashboardAdminCommunityCommunityIdUsersRolesMutationBody =
-  UpdateDashboardUserRolesRequestBaseUfqlua
-export type PostDashboardAdminCommunityCommunityIdUsersRolesMutationError = unknown
+  UpdateDashboardUserRolesRequestBaseUfqlua;
+export type PostDashboardAdminCommunityCommunityIdUsersRolesMutationError = unknown;
 
 /**
  * @summary Updates all roles for this dashboard user for this community. Adds missing roles, deletes roles not posted.
@@ -424,13 +428,13 @@ export const usePostDashboardAdminCommunityCommunityIdUsersRoles = <
     TError,
     { communityId: string; data: UpdateDashboardUserRolesRequestBaseUfqlua },
     TContext
-  >
+  >;
 }) => {
   const mutationOptions =
-    getPostDashboardAdminCommunityCommunityIdUsersRolesMutationOptions(options)
+    getPostDashboardAdminCommunityCommunityIdUsersRolesMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Dashboard users who have logged in
  */
@@ -438,12 +442,12 @@ export const getDashboardAdminLogins = (
   params?: MaybeRef<GetDashboardAdminLoginsParams>,
   signal?: AbortSignal
 ) => {
-  return customInstance<void>({ url: `/dashboard/admin/logins`, method: 'get', params, signal })
-}
+  return customInstance<void>({ url: `/dashboard/admin/logins`, method: 'get', params, signal });
+};
 
 export const getGetDashboardAdminLoginsQueryKey = (
   params?: MaybeRef<GetDashboardAdminLoginsParams>
-) => ['dashboard', 'admin', 'logins', ...(params ? [params] : [])] as const
+) => ['dashboard', 'admin', 'logins', ...(params ? [params] : [])] as const;
 
 export const getGetDashboardAdminLoginsQueryOptions = <
   TData = Awaited<ReturnType<typeof getDashboardAdminLogins>>,
@@ -451,24 +455,24 @@ export const getGetDashboardAdminLoginsQueryOptions = <
 >(
   params?: MaybeRef<GetDashboardAdminLoginsParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminLogins>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminLogins>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminLogins>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetDashboardAdminLoginsQueryKey(params)
+  const queryKey = getGetDashboardAdminLoginsQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getDashboardAdminLogins>>> = ({
     signal
-  }) => getDashboardAdminLogins(params, signal)
+  }) => getDashboardAdminLogins(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetDashboardAdminLoginsQueryResult = NonNullable<
   Awaited<ReturnType<typeof getDashboardAdminLogins>>
->
-export type GetDashboardAdminLoginsQueryError = unknown
+>;
+export type GetDashboardAdminLoginsQueryError = unknown;
 
 /**
  * @summary Dashboard users who have logged in
@@ -479,14 +483,16 @@ export const useGetDashboardAdminLogins = <
 >(
   params?: MaybeRef<GetDashboardAdminLoginsParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminLogins>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getDashboardAdminLogins>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetDashboardAdminLoginsQueryOptions(params, options)
+  const queryOptions = getGetDashboardAdminLoginsQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SurveyListResponseElkjhra } from './surveyListResponseElkjhra'
-import type { AbstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq } from './abstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq'
+import type { SurveyListResponseElkjhra } from './surveyListResponseElkjhra';
+import type { AbstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq } from './abstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq';
 
 export interface AbstractModuleApiResponseSurveyListRequestSurveyListResponseSurveyListResponseUtoki {
-  response?: SurveyListResponseElkjhra
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq
+  response?: SurveyListResponseElkjhra;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsSurveyListRequestSurveyListResponseGpeeq;
 }

@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

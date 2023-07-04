@@ -6,14 +6,14 @@
  */
 
 export interface AuthenticateTripPassengerBaseResponseDtoUcnkima {
-  numberplate?: string | null
-  qrToken?: string
-  isFirstPassenger?: boolean
-  originLatitude?: number | null
-  originLongitude?: number | null
-  destinationLatitude?: number | null
-  destinationLongitude?: number | null
-  durationInSeconds?: number | null
-  teamCreated?: boolean
-  timeOfAuthenticationUtc?: string
+  numberplate?: string | null;
+  qrToken?: string;
+  isFirstPassenger?: boolean;
+  originLatitude?: number | null;
+  originLongitude?: number | null;
+  destinationLatitude?: number | null;
+  destinationLongitude?: number | null;
+  durationInSeconds?: number | null;
+  teamCreated?: boolean;
+  timeOfAuthenticationUtc?: string;
 }

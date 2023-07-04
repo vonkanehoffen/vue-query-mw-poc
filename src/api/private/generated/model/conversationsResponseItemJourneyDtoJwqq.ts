@@ -4,10 +4,10 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { JourneyLegTypeBahdmny } from './journeyLegTypeBahdmny'
+import type { JourneyLegTypeBahdmny } from './journeyLegTypeBahdmny';
 
 export interface ConversationsResponseItemJourneyDtoJwqq {
-  journeyId?: string | null
-  journeyDate?: string
-  journeyLeg?: JourneyLegTypeBahdmny
+  journeyId?: string | null;
+  journeyDate?: string;
+  journeyLeg?: JourneyLegTypeBahdmny;
 }

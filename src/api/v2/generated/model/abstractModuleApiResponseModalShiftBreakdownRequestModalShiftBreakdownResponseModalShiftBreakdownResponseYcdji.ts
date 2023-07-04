@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ModalShiftBreakdownResponseOsrilti } from './modalShiftBreakdownResponseOsrilti'
-import type { AbstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq } from './abstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq'
+import type { ModalShiftBreakdownResponseOsrilti } from './modalShiftBreakdownResponseOsrilti';
+import type { AbstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq } from './abstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq';
 
 export interface AbstractModuleApiResponseModalShiftBreakdownRequestModalShiftBreakdownResponseModalShiftBreakdownResponseYcdji {
-  response?: ModalShiftBreakdownResponseOsrilti
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq
+  response?: ModalShiftBreakdownResponseOsrilti;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsModalShiftBreakdownRequestModalShiftBreakdownResponseFnszq;
 }

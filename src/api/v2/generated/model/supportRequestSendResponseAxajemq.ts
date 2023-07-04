@@ -6,5 +6,5 @@
  */
 
 export interface SupportRequestSendResponseAxajemq {
-  [key: string]: any
+  [key: string]: any;
 }

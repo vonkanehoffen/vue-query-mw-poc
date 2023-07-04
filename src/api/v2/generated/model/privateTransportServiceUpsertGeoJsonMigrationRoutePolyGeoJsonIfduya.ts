@@ -6,6 +6,6 @@
  */
 
 export interface PrivateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya {
-  type?: string | null
-  coordinates?: number[][] | null
+  type?: string | null;
+  coordinates?: number[][] | null;
 }

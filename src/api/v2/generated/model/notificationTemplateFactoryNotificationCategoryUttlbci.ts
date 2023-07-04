@@ -6,7 +6,7 @@
  */
 
 export type NotificationTemplateFactoryNotificationCategoryUttlbci =
-  (typeof NotificationTemplateFactoryNotificationCategoryUttlbci)[keyof typeof NotificationTemplateFactoryNotificationCategoryUttlbci]
+  (typeof NotificationTemplateFactoryNotificationCategoryUttlbci)[keyof typeof NotificationTemplateFactoryNotificationCategoryUttlbci];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const NotificationTemplateFactoryNotificationCategoryUttlbci = {
@@ -21,4 +21,4 @@ export const NotificationTemplateFactoryNotificationCategoryUttlbci = {
   System: 'System',
   SystemPending: 'SystemPending',
   MobilitywaysAdmin: 'MobilitywaysAdmin'
-} as const
+} as const;

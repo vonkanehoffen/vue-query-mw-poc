@@ -6,7 +6,7 @@
  */
 
 export type SearchFilterOperatorYomly =
-  (typeof SearchFilterOperatorYomly)[keyof typeof SearchFilterOperatorYomly]
+  (typeof SearchFilterOperatorYomly)[keyof typeof SearchFilterOperatorYomly];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SearchFilterOperatorYomly = {
@@ -23,4 +23,4 @@ export const SearchFilterOperatorYomly = {
   Between: 'Between',
   LessThan: 'LessThan',
   GreaterThan: 'GreaterThan'
-} as const
+} as const;

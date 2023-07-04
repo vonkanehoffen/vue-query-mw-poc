@@ -6,7 +6,7 @@
  */
 
 export type AdminTokenCreateResultTypeMlsaq =
-  (typeof AdminTokenCreateResultTypeMlsaq)[keyof typeof AdminTokenCreateResultTypeMlsaq]
+  (typeof AdminTokenCreateResultTypeMlsaq)[keyof typeof AdminTokenCreateResultTypeMlsaq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AdminTokenCreateResultTypeMlsaq = {
@@ -18,4 +18,4 @@ export const AdminTokenCreateResultTypeMlsaq = {
   InvalidToken: 'InvalidToken',
   InvalidRefreshToken: 'InvalidRefreshToken',
   InvalidTwoFactorCode: 'InvalidTwoFactorCode'
-} as const
+} as const;

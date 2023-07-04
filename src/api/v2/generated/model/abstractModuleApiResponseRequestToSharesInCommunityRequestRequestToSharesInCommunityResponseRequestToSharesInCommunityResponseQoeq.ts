@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { RequestToSharesInCommunityResponseYstlgy } from './requestToSharesInCommunityResponseYstlgy'
-import type { AbstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany } from './abstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany'
+import type { RequestToSharesInCommunityResponseYstlgy } from './requestToSharesInCommunityResponseYstlgy';
+import type { AbstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany } from './abstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany';
 
 export interface AbstractModuleApiResponseRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseRequestToSharesInCommunityResponseQoeq {
-  response?: RequestToSharesInCommunityResponseYstlgy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany
+  response?: RequestToSharesInCommunityResponseYstlgy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszany;
 }

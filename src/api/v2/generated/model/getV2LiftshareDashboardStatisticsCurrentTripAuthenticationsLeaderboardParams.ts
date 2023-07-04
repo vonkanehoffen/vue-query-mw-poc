@@ -6,5 +6,5 @@
  */
 
 export type GetV2LiftshareDashboardStatisticsCurrentTripAuthenticationsLeaderboardParams = {
-  cid?: string[]
-}
+  cid?: string[];
+};

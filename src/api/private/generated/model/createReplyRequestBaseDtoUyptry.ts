@@ -6,5 +6,5 @@
  */
 
 export interface CreateReplyRequestBaseDtoUyptry {
-  message?: string | null
+  message?: string | null;
 }

@@ -4,15 +4,15 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanSearchDtoSjdwy } from './travelPlanSearchDtoSjdwy'
-import type { TravelPlansListOrderByVbaoiy } from './travelPlansListOrderByVbaoiy'
-import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa'
+import type { TravelPlanSearchDtoSjdwy } from './travelPlanSearchDtoSjdwy';
+import type { TravelPlansListOrderByVbaoiy } from './travelPlansListOrderByVbaoiy';
+import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa';
 
 export interface TravelPlanSearchResponseYatxwq {
-  data?: TravelPlanSearchDtoSjdwy[] | null
-  page?: number
-  numPages?: number
-  totalPlans?: number
-  orderBy?: TravelPlansListOrderByVbaoiy
-  orderByDirection?: PaginationHelpersOrderByDirectionArusa
+  data?: TravelPlanSearchDtoSjdwy[] | null;
+  page?: number;
+  numPages?: number;
+  totalPlans?: number;
+  orderBy?: TravelPlansListOrderByVbaoiy;
+  orderByDirection?: PaginationHelpersOrderByDirectionArusa;
 }

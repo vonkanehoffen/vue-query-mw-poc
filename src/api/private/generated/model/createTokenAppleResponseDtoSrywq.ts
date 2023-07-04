@@ -4,12 +4,12 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ExternalLoginResultIaxzli } from './externalLoginResultIaxzli'
+import type { ExternalLoginResultIaxzli } from './externalLoginResultIaxzli';
 
 export interface CreateTokenAppleResponseDtoSrywq {
-  successful?: boolean
-  token?: string | null
-  refreshToken?: string | null
-  result?: ExternalLoginResultIaxzli
-  hasJustRegistered?: boolean
+  successful?: boolean;
+  token?: string | null;
+  refreshToken?: string | null;
+  result?: ExternalLoginResultIaxzli;
+  hasJustRegistered?: boolean;
 }

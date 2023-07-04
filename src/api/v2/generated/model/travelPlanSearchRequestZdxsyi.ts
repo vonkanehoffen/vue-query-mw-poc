@@ -4,15 +4,15 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlansListOrderByVbaoiy } from './travelPlansListOrderByVbaoiy'
-import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa'
-import type { SearchFilterDtoTravelPlanSearchFilterPropertyMlzmfei } from './searchFilterDtoTravelPlanSearchFilterPropertyMlzmfei'
+import type { TravelPlansListOrderByVbaoiy } from './travelPlansListOrderByVbaoiy';
+import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa';
+import type { SearchFilterDtoTravelPlanSearchFilterPropertyMlzmfei } from './searchFilterDtoTravelPlanSearchFilterPropertyMlzmfei';
 
 export interface TravelPlanSearchRequestZdxsyi {
-  page?: number
-  maxPerPage?: number
-  orderBy?: TravelPlansListOrderByVbaoiy
-  orderByDirection?: PaginationHelpersOrderByDirectionArusa
-  communityId?: string | null
-  searchFilter?: SearchFilterDtoTravelPlanSearchFilterPropertyMlzmfei
+  page?: number;
+  maxPerPage?: number;
+  orderBy?: TravelPlansListOrderByVbaoiy;
+  orderByDirection?: PaginationHelpersOrderByDirectionArusa;
+  communityId?: string | null;
+  searchFilter?: SearchFilterDtoTravelPlanSearchFilterPropertyMlzmfei;
 }

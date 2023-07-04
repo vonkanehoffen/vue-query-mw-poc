@@ -5,7 +5,7 @@
  * Private API for Liftshare client and partner integrations.
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -13,21 +13,21 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   ScanPermitResponseDtoFmtaoq,
   UnauthorizedResultPecray,
   ValidationExceptionResponseBaseDtoVtrnlzi,
   VehicleRegistrationLookupResponseDtoJtjgea,
   VehicleRegistrationLookupRequestDtoKawfefy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * Allows users with the correct role to get information about parking permit status, and any associated trip authentication and team data.
@@ -38,11 +38,11 @@ export const getPermitScanTeamId = (teamId: MaybeRef<number>, signal?: AbortSign
     url: `/permit/scan/${unref(teamId)}`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetPermitScanTeamIdQueryKey = (teamId: MaybeRef<number>) =>
-  ['permit', 'scan', teamId] as const
+  ['permit', 'scan', teamId] as const;
 
 export const getGetPermitScanTeamIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getPermitScanTeamId>>,
@@ -50,25 +50,25 @@ export const getGetPermitScanTeamIdQueryOptions = <
 >(
   teamId: MaybeRef<number>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getPermitScanTeamId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getPermitScanTeamId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getPermitScanTeamId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetPermitScanTeamIdQueryKey(teamId)
+  const queryKey = getGetPermitScanTeamIdQueryKey(teamId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getPermitScanTeamId>>> = ({ signal }) =>
-    getPermitScanTeamId(teamId, signal)
+    getPermitScanTeamId(teamId, signal);
 
-  return { queryKey, queryFn, enabled: !!teamId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!teamId, ...queryOptions };
+};
 
 export type GetPermitScanTeamIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getPermitScanTeamId>>
->
+>;
 export type GetPermitScanTeamIdQueryError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Validate parking permit
@@ -79,17 +79,19 @@ export const useGetPermitScanTeamId = <
 >(
   teamId: MaybeRef<number>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getPermitScanTeamId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getPermitScanTeamId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetPermitScanTeamIdQueryOptions(teamId, options)
+  const queryOptions = getGetPermitScanTeamIdQueryOptions(teamId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * [NOT ENABLED] Used to check if vehicle registration is registered and has trip authenticated recently
@@ -103,8 +105,8 @@ export const postClientVehicleRegistrationValidate = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: vehicleRegistrationLookupRequestDtoKawfefy
-  })
-}
+  });
+};
 
 export const getPostClientVehicleRegistrationValidateMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -115,35 +117,35 @@ export const getPostClientVehicleRegistrationValidateMutationOptions = <
     TError,
     { data: VehicleRegistrationLookupRequestDtoKawfefy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postClientVehicleRegistrationValidate>>,
   TError,
   { data: VehicleRegistrationLookupRequestDtoKawfefy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postClientVehicleRegistrationValidate>>,
     { data: VehicleRegistrationLookupRequestDtoKawfefy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postClientVehicleRegistrationValidate(data)
-  }
+    return postClientVehicleRegistrationValidate(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostClientVehicleRegistrationValidateMutationResult = NonNullable<
   Awaited<ReturnType<typeof postClientVehicleRegistrationValidate>>
->
+>;
 export type PostClientVehicleRegistrationValidateMutationBody =
-  VehicleRegistrationLookupRequestDtoKawfefy
+  VehicleRegistrationLookupRequestDtoKawfefy;
 export type PostClientVehicleRegistrationValidateMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Validate vehicle registration mark
@@ -157,9 +159,9 @@ export const usePostClientVehicleRegistrationValidate = <
     TError,
     { data: VehicleRegistrationLookupRequestDtoKawfefy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostClientVehicleRegistrationValidateMutationOptions(options)
+  const mutationOptions = getPostClientVehicleRegistrationValidateMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

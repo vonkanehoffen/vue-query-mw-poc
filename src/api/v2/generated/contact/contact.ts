@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,9 +12,9 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseContactDeleteRequestContactDeleteResponseContactDeleteResponseScoli,
   ContactDeleteRequestAtfqfq,
@@ -52,12 +52,12 @@ import type {
   CreateContactViewFromFilterRequestRpiqq,
   AbstractModuleApiResponseContactSearchRequestContactSearchResponseContactSearchResponseWqtci,
   ContactSearchRequestPvty
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const deleteV2ContactDelete = (
   contactDeleteRequestAtfqfq: MaybeRef<ContactDeleteRequestAtfqfq>
@@ -69,8 +69,8 @@ export const deleteV2ContactDelete = (
       headers: { 'Content-Type': 'application/json' },
       data: contactDeleteRequestAtfqfq
     }
-  )
-}
+  );
+};
 
 export const getDeleteV2ContactDeleteMutationOptions = <
   TError = unknown,
@@ -81,32 +81,32 @@ export const getDeleteV2ContactDeleteMutationOptions = <
     TError,
     { data: ContactDeleteRequestAtfqfq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof deleteV2ContactDelete>>,
   TError,
   { data: ContactDeleteRequestAtfqfq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof deleteV2ContactDelete>>,
     { data: ContactDeleteRequestAtfqfq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return deleteV2ContactDelete(data)
-  }
+    return deleteV2ContactDelete(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type DeleteV2ContactDeleteMutationResult = NonNullable<
   Awaited<ReturnType<typeof deleteV2ContactDelete>>
->
-export type DeleteV2ContactDeleteMutationBody = ContactDeleteRequestAtfqfq
-export type DeleteV2ContactDeleteMutationError = unknown
+>;
+export type DeleteV2ContactDeleteMutationBody = ContactDeleteRequestAtfqfq;
+export type DeleteV2ContactDeleteMutationError = unknown;
 
 export const useDeleteV2ContactDelete = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -114,20 +114,20 @@ export const useDeleteV2ContactDelete = <TError = unknown, TContext = unknown>(o
     TError,
     { data: ContactDeleteRequestAtfqfq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getDeleteV2ContactDeleteMutationOptions(options)
+  const mutationOptions = getDeleteV2ContactDeleteMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2ContactPublicId = (publicId: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseContactDetailsRequestContactDetailsResponseContactDetailsResponseMwea>(
     { url: `/v2/contact/${unref(publicId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactPublicIdQueryKey = (publicId: MaybeRef<string>) =>
-  ['v2', 'contact', publicId] as const
+  ['v2', 'contact', publicId] as const;
 
 export const getGetV2ContactPublicIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactPublicId>>,
@@ -135,23 +135,23 @@ export const getGetV2ContactPublicIdQueryOptions = <
 >(
   publicId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactPublicId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactPublicId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactPublicId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactPublicIdQueryKey(publicId)
+  const queryKey = getGetV2ContactPublicIdQueryKey(publicId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactPublicId>>> = ({ signal }) =>
-    getV2ContactPublicId(publicId, signal)
+    getV2ContactPublicId(publicId, signal);
 
-  return { queryKey, queryFn, enabled: !!publicId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!publicId, ...queryOptions };
+};
 
 export type GetV2ContactPublicIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactPublicId>>
->
-export type GetV2ContactPublicIdQueryError = unknown
+>;
+export type GetV2ContactPublicIdQueryError = unknown;
 
 export const useGetV2ContactPublicId = <
   TData = Awaited<ReturnType<typeof getV2ContactPublicId>>,
@@ -159,17 +159,19 @@ export const useGetV2ContactPublicId = <
 >(
   publicId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactPublicId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactPublicId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactPublicIdQueryOptions(publicId, options)
+  const queryOptions = getGetV2ContactPublicIdQueryOptions(publicId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2ContactEmailTaken = (
   contactEmailExistsRequestUzjqjq: MaybeRef<ContactEmailExistsRequestUzjqjq>
@@ -181,8 +183,8 @@ export const postV2ContactEmailTaken = (
       headers: { 'Content-Type': 'application/json' },
       data: contactEmailExistsRequestUzjqjq
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactEmailTakenMutationOptions = <
   TError = unknown,
@@ -193,32 +195,32 @@ export const getPostV2ContactEmailTakenMutationOptions = <
     TError,
     { data: ContactEmailExistsRequestUzjqjq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactEmailTaken>>,
   TError,
   { data: ContactEmailExistsRequestUzjqjq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactEmailTaken>>,
     { data: ContactEmailExistsRequestUzjqjq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactEmailTaken(data)
-  }
+    return postV2ContactEmailTaken(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactEmailTakenMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactEmailTaken>>
->
-export type PostV2ContactEmailTakenMutationBody = ContactEmailExistsRequestUzjqjq
-export type PostV2ContactEmailTakenMutationError = unknown
+>;
+export type PostV2ContactEmailTakenMutationBody = ContactEmailExistsRequestUzjqjq;
+export type PostV2ContactEmailTakenMutationError = unknown;
 
 export const usePostV2ContactEmailTaken = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -226,21 +228,21 @@ export const usePostV2ContactEmailTaken = <TError = unknown, TContext = unknown>
     TError,
     { data: ContactEmailExistsRequestUzjqjq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactEmailTakenMutationOptions(options)
+  const mutationOptions = getPostV2ContactEmailTakenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2ContactExport = (
   params?: MaybeRef<GetV2ContactExportParams>,
   signal?: AbortSignal
 ) => {
-  return customInstance<void>({ url: `/v2/contact/export`, method: 'get', params, signal })
-}
+  return customInstance<void>({ url: `/v2/contact/export`, method: 'get', params, signal });
+};
 
 export const getGetV2ContactExportQueryKey = (params?: MaybeRef<GetV2ContactExportParams>) =>
-  ['v2', 'contact', 'export', ...(params ? [params] : [])] as const
+  ['v2', 'contact', 'export', ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactExportQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactExport>>,
@@ -248,23 +250,23 @@ export const getGetV2ContactExportQueryOptions = <
 >(
   params?: MaybeRef<GetV2ContactExportParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactExport>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactExport>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactExport>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactExportQueryKey(params)
+  const queryKey = getGetV2ContactExportQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactExport>>> = ({ signal }) =>
-    getV2ContactExport(params, signal)
+    getV2ContactExport(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2ContactExportQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactExport>>
->
-export type GetV2ContactExportQueryError = unknown
+>;
+export type GetV2ContactExportQueryError = unknown;
 
 export const useGetV2ContactExport = <
   TData = Awaited<ReturnType<typeof getV2ContactExport>>,
@@ -272,17 +274,19 @@ export const useGetV2ContactExport = <
 >(
   params?: MaybeRef<GetV2ContactExportParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactExport>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactExport>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactExportQueryOptions(params, options)
+  const queryOptions = getGetV2ContactExportQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2ContactFilteredExport = (
   contactFilteredExportRequestLenfq: MaybeRef<ContactFilteredExportRequestLenfq>
@@ -292,8 +296,8 @@ export const postV2ContactFilteredExport = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: contactFilteredExportRequestLenfq
-  })
-}
+  });
+};
 
 export const getPostV2ContactFilteredExportMutationOptions = <
   TError = unknown,
@@ -304,32 +308,32 @@ export const getPostV2ContactFilteredExportMutationOptions = <
     TError,
     { data: ContactFilteredExportRequestLenfq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactFilteredExport>>,
   TError,
   { data: ContactFilteredExportRequestLenfq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactFilteredExport>>,
     { data: ContactFilteredExportRequestLenfq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactFilteredExport(data)
-  }
+    return postV2ContactFilteredExport(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactFilteredExportMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactFilteredExport>>
->
-export type PostV2ContactFilteredExportMutationBody = ContactFilteredExportRequestLenfq
-export type PostV2ContactFilteredExportMutationError = unknown
+>;
+export type PostV2ContactFilteredExportMutationBody = ContactFilteredExportRequestLenfq;
+export type PostV2ContactFilteredExportMutationError = unknown;
 
 export const usePostV2ContactFilteredExport = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -337,17 +341,17 @@ export const usePostV2ContactFilteredExport = <TError = unknown, TContext = unkn
     TError,
     { data: ContactFilteredExportRequestLenfq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactFilteredExportMutationOptions(options)
+  const mutationOptions = getPostV2ContactFilteredExportMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2ContactImport = () => {
   return customInstance<AbstractModuleApiResponseContactImportRequestContactImportResponseContactImportResponseCmweui>(
     { url: `/v2/contact/import`, method: 'post' }
-  )
-}
+  );
+};
 
 export const getPostV2ContactImportMutationOptions = <
   TError = unknown,
@@ -359,30 +363,30 @@ export const getPostV2ContactImportMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactImport>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactImport>>,
     TVariables
   > = () => {
-    return postV2ContactImport()
-  }
+    return postV2ContactImport();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactImportMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactImport>>
->
+>;
 
-export type PostV2ContactImportMutationError = unknown
+export type PostV2ContactImportMutationError = unknown;
 
 export const usePostV2ContactImport = <
   TError = unknown,
@@ -394,17 +398,17 @@ export const usePostV2ContactImport = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactImportMutationOptions(options)
+  const mutationOptions = getPostV2ContactImportMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2ContactImportHeaders = () => {
   return customInstance<AbstractModuleApiResponseContactImportHeadersRequestContactImportHeadersResponseContactImportHeadersResponseTacalzy>(
     { url: `/v2/contact/import/headers`, method: 'post' }
-  )
-}
+  );
+};
 
 export const getPostV2ContactImportHeadersMutationOptions = <
   TError = unknown,
@@ -416,30 +420,30 @@ export const getPostV2ContactImportHeadersMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactImportHeaders>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactImportHeaders>>,
     TVariables
   > = () => {
-    return postV2ContactImportHeaders()
-  }
+    return postV2ContactImportHeaders();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactImportHeadersMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactImportHeaders>>
->
+>;
 
-export type PostV2ContactImportHeadersMutationError = unknown
+export type PostV2ContactImportHeadersMutationError = unknown;
 
 export const usePostV2ContactImportHeaders = <
   TError = unknown,
@@ -451,55 +455,57 @@ export const usePostV2ContactImportHeaders = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactImportHeadersMutationOptions(options)
+  const mutationOptions = getPostV2ContactImportHeadersMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2ContactImportLog = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseContactImportLogRequestContactImportLogResponseContactImportLogResponseGeobaq>(
     { url: `/v2/contact/import/log`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2ContactImportLogQueryKey = () => ['v2', 'contact', 'import', 'log'] as const
+export const getGetV2ContactImportLogQueryKey = () => ['v2', 'contact', 'import', 'log'] as const;
 
 export const getGetV2ContactImportLogQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactImportLog>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactImportLog>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactImportLog>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactImportLog>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactImportLogQueryKey()
+  const queryKey = getGetV2ContactImportLogQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactImportLog>>> = ({ signal }) =>
-    getV2ContactImportLog(signal)
+    getV2ContactImportLog(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2ContactImportLogQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactImportLog>>
->
-export type GetV2ContactImportLogQueryError = unknown
+>;
+export type GetV2ContactImportLogQueryError = unknown;
 
 export const useGetV2ContactImportLog = <
   TData = Awaited<ReturnType<typeof getV2ContactImportLog>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactImportLog>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactImportLog>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactImportLogQueryOptions(options)
+  const queryOptions = getGetV2ContactImportLogQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2ContactImportProgressImportId = (
   importId: MaybeRef<string>,
@@ -507,11 +513,11 @@ export const getV2ContactImportProgressImportId = (
 ) => {
   return customInstance<AbstractModuleApiResponseContactImportProgressRequestContactImportProgressResponseContactImportProgressResponseTncypra>(
     { url: `/v2/contact/import/progress/${unref(importId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactImportProgressImportIdQueryKey = (importId: MaybeRef<string>) =>
-  ['v2', 'contact', 'import', 'progress', importId] as const
+  ['v2', 'contact', 'import', 'progress', importId] as const;
 
 export const getGetV2ContactImportProgressImportIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>,
@@ -523,28 +529,28 @@ export const getGetV2ContactImportProgressImportIdQueryOptions = <
       Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactImportProgressImportIdQueryKey(importId)
+  const queryKey = getGetV2ContactImportProgressImportIdQueryKey(importId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>> = ({
     signal
-  }) => getV2ContactImportProgressImportId(importId, signal)
+  }) => getV2ContactImportProgressImportId(importId, signal);
 
-  return { queryKey, queryFn, enabled: !!importId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!importId, ...queryOptions };
+};
 
 export type GetV2ContactImportProgressImportIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>
->
-export type GetV2ContactImportProgressImportIdQueryError = unknown
+>;
+export type GetV2ContactImportProgressImportIdQueryError = unknown;
 
 export const useGetV2ContactImportProgressImportId = <
   TData = Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>,
@@ -556,17 +562,19 @@ export const useGetV2ContactImportProgressImportId = <
       Awaited<ReturnType<typeof getV2ContactImportProgressImportId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactImportProgressImportIdQueryOptions(importId, options)
+  const queryOptions = getGetV2ContactImportProgressImportIdQueryOptions(importId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2ContactLimit = (
   params?: MaybeRef<GetV2ContactLimitParams>,
@@ -574,11 +582,11 @@ export const getV2ContactLimit = (
 ) => {
   return customInstance<AbstractModuleApiResponseContactLimitRequestContactLimitResponseContactLimitResponsePcqlnwi>(
     { url: `/v2/contact/limit`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactLimitQueryKey = (params?: MaybeRef<GetV2ContactLimitParams>) =>
-  ['v2', 'contact', 'limit', ...(params ? [params] : [])] as const
+  ['v2', 'contact', 'limit', ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactLimitQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactLimit>>,
@@ -586,23 +594,23 @@ export const getGetV2ContactLimitQueryOptions = <
 >(
   params?: MaybeRef<GetV2ContactLimitParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactLimit>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactLimit>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactLimit>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactLimitQueryKey(params)
+  const queryKey = getGetV2ContactLimitQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactLimit>>> = ({ signal }) =>
-    getV2ContactLimit(params, signal)
+    getV2ContactLimit(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2ContactLimitQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactLimit>>
->
-export type GetV2ContactLimitQueryError = unknown
+>;
+export type GetV2ContactLimitQueryError = unknown;
 
 export const useGetV2ContactLimit = <
   TData = Awaited<ReturnType<typeof getV2ContactLimit>>,
@@ -610,26 +618,28 @@ export const useGetV2ContactLimit = <
 >(
   params?: MaybeRef<GetV2ContactLimitParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactLimit>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactLimit>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactLimitQueryOptions(params, options)
+  const queryOptions = getGetV2ContactLimitQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2Contact = (params?: MaybeRef<GetV2ContactParams>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseContactListRequestContactListResponseContactListResponseMiqdq>(
     { url: `/v2/contact`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactQueryKey = (params?: MaybeRef<GetV2ContactParams>) =>
-  ['v2', 'contact', ...(params ? [params] : [])] as const
+  ['v2', 'contact', ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2Contact>>,
@@ -638,31 +648,33 @@ export const getGetV2ContactQueryOptions = <
   params?: MaybeRef<GetV2ContactParams>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Contact>>, TError, TData> }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2Contact>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactQueryKey(params)
+  const queryKey = getGetV2ContactQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2Contact>>> = ({ signal }) =>
-    getV2Contact(params, signal)
+    getV2Contact(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetV2ContactQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Contact>>>
-export type GetV2ContactQueryError = unknown
+export type GetV2ContactQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Contact>>>;
+export type GetV2ContactQueryError = unknown;
 
 export const useGetV2Contact = <TData = Awaited<ReturnType<typeof getV2Contact>>, TError = unknown>(
   params?: MaybeRef<GetV2ContactParams>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Contact>>, TError, TData> }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactQueryOptions(params, options)
+  const queryOptions = getGetV2ContactQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const putV2Contact = (contactUpdateRequestMfaxy: MaybeRef<ContactUpdateRequestMfaxy>) => {
   return customInstance<AbstractModuleApiResponseContactUpdateRequestContactUpdateResponseContactUpdateResponseAemijvq>(
@@ -672,8 +684,8 @@ export const putV2Contact = (contactUpdateRequestMfaxy: MaybeRef<ContactUpdateRe
       headers: { 'Content-Type': 'application/json' },
       data: contactUpdateRequestMfaxy
     }
-  )
-}
+  );
+};
 
 export const getPutV2ContactMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -681,30 +693,30 @@ export const getPutV2ContactMutationOptions = <TError = unknown, TContext = unkn
     TError,
     { data: ContactUpdateRequestMfaxy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2Contact>>,
   TError,
   { data: ContactUpdateRequestMfaxy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2Contact>>,
     { data: ContactUpdateRequestMfaxy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2Contact(data)
-  }
+    return putV2Contact(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PutV2ContactMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Contact>>>
-export type PutV2ContactMutationBody = ContactUpdateRequestMfaxy
-export type PutV2ContactMutationError = unknown
+export type PutV2ContactMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Contact>>>;
+export type PutV2ContactMutationBody = ContactUpdateRequestMfaxy;
+export type PutV2ContactMutationError = unknown;
 
 export const usePutV2Contact = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -712,12 +724,12 @@ export const usePutV2Contact = <TError = unknown, TContext = unknown>(options?: 
     TError,
     { data: ContactUpdateRequestMfaxy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2ContactMutationOptions(options)
+  const mutationOptions = getPutV2ContactMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2Contact = (contactUpsertRequestKtyqkq: MaybeRef<ContactUpsertRequestKtyqkq>) => {
   return customInstance<AbstractModuleApiResponseContactUpsertRequestContactUpsertResponseContactUpsertResponseScrxhuq>(
     {
@@ -726,8 +738,8 @@ export const postV2Contact = (contactUpsertRequestKtyqkq: MaybeRef<ContactUpsert
       headers: { 'Content-Type': 'application/json' },
       data: contactUpsertRequestKtyqkq
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -735,30 +747,30 @@ export const getPostV2ContactMutationOptions = <TError = unknown, TContext = unk
     TError,
     { data: ContactUpsertRequestKtyqkq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2Contact>>,
   TError,
   { data: ContactUpsertRequestKtyqkq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2Contact>>,
     { data: ContactUpsertRequestKtyqkq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2Contact(data)
-  }
+    return postV2Contact(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostV2ContactMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Contact>>>
-export type PostV2ContactMutationBody = ContactUpsertRequestKtyqkq
-export type PostV2ContactMutationError = unknown
+export type PostV2ContactMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Contact>>>;
+export type PostV2ContactMutationBody = ContactUpsertRequestKtyqkq;
+export type PostV2ContactMutationError = unknown;
 
 export const usePostV2Contact = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -766,12 +778,12 @@ export const usePostV2Contact = <TError = unknown, TContext = unknown>(options?:
     TError,
     { data: ContactUpsertRequestKtyqkq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactMutationOptions(options)
+  const mutationOptions = getPostV2ContactMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2ContactMerge = (
   contactMergeRequestKcndtq: MaybeRef<ContactMergeRequestKcndtq>
 ) => {
@@ -782,8 +794,8 @@ export const postV2ContactMerge = (
       headers: { 'Content-Type': 'application/json' },
       data: contactMergeRequestKcndtq
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactMergeMutationOptions = <
   TError = unknown,
@@ -794,32 +806,32 @@ export const getPostV2ContactMergeMutationOptions = <
     TError,
     { data: ContactMergeRequestKcndtq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactMerge>>,
   TError,
   { data: ContactMergeRequestKcndtq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactMerge>>,
     { data: ContactMergeRequestKcndtq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactMerge(data)
-  }
+    return postV2ContactMerge(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactMergeMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactMerge>>
->
-export type PostV2ContactMergeMutationBody = ContactMergeRequestKcndtq
-export type PostV2ContactMergeMutationError = unknown
+>;
+export type PostV2ContactMergeMutationBody = ContactMergeRequestKcndtq;
+export type PostV2ContactMergeMutationError = unknown;
 
 export const usePostV2ContactMerge = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -827,12 +839,12 @@ export const usePostV2ContactMerge = <TError = unknown, TContext = unknown>(opti
     TError,
     { data: ContactMergeRequestKcndtq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactMergeMutationOptions(options)
+  const mutationOptions = getPostV2ContactMergeMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const putV2ContactTag = (
   contactTagReplaceRequestOdpaffa: MaybeRef<ContactTagReplaceRequestOdpaffa>
 ) => {
@@ -843,8 +855,8 @@ export const putV2ContactTag = (
       headers: { 'Content-Type': 'application/json' },
       data: contactTagReplaceRequestOdpaffa
     }
-  )
-}
+  );
+};
 
 export const getPutV2ContactTagMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -852,30 +864,32 @@ export const getPutV2ContactTagMutationOptions = <TError = unknown, TContext = u
     TError,
     { data: ContactTagReplaceRequestOdpaffa },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2ContactTag>>,
   TError,
   { data: ContactTagReplaceRequestOdpaffa },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2ContactTag>>,
     { data: ContactTagReplaceRequestOdpaffa }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2ContactTag(data)
-  }
+    return putV2ContactTag(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PutV2ContactTagMutationResult = NonNullable<Awaited<ReturnType<typeof putV2ContactTag>>>
-export type PutV2ContactTagMutationBody = ContactTagReplaceRequestOdpaffa
-export type PutV2ContactTagMutationError = unknown
+export type PutV2ContactTagMutationResult = NonNullable<
+  Awaited<ReturnType<typeof putV2ContactTag>>
+>;
+export type PutV2ContactTagMutationBody = ContactTagReplaceRequestOdpaffa;
+export type PutV2ContactTagMutationError = unknown;
 
 export const usePutV2ContactTag = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -883,24 +897,24 @@ export const usePutV2ContactTag = <TError = unknown, TContext = unknown>(options
     TError,
     { data: ContactTagReplaceRequestOdpaffa },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2ContactTagMutationOptions(options)
+  const mutationOptions = getPutV2ContactTagMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2ContactFilterProperties = (
   params?: MaybeRef<GetV2ContactFilterPropertiesParams>,
   signal?: AbortSignal
 ) => {
   return customInstance<AbstractModuleApiResponseContactPropertyColumnsRequestContactPropertyColumnsResponseContactPropertyColumnsResponseNggai>(
     { url: `/v2/contact/filter/properties`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactFilterPropertiesQueryKey = (
   params?: MaybeRef<GetV2ContactFilterPropertiesParams>
-) => ['v2', 'contact', 'filter', 'properties', ...(params ? [params] : [])] as const
+) => ['v2', 'contact', 'filter', 'properties', ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactFilterPropertiesQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactFilterProperties>>,
@@ -908,24 +922,28 @@ export const getGetV2ContactFilterPropertiesQueryOptions = <
 >(
   params?: MaybeRef<GetV2ContactFilterPropertiesParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactFilterProperties>>, TError, TData>
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getV2ContactFilterProperties>>,
+      TError,
+      TData
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactFilterProperties>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactFilterPropertiesQueryKey(params)
+  const queryKey = getGetV2ContactFilterPropertiesQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactFilterProperties>>> = ({
     signal
-  }) => getV2ContactFilterProperties(params, signal)
+  }) => getV2ContactFilterProperties(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2ContactFilterPropertiesQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactFilterProperties>>
->
-export type GetV2ContactFilterPropertiesQueryError = unknown
+>;
+export type GetV2ContactFilterPropertiesQueryError = unknown;
 
 export const useGetV2ContactFilterProperties = <
   TData = Awaited<ReturnType<typeof getV2ContactFilterProperties>>,
@@ -933,26 +951,32 @@ export const useGetV2ContactFilterProperties = <
 >(
   params?: MaybeRef<GetV2ContactFilterPropertiesParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactFilterProperties>>, TError, TData>
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getV2ContactFilterProperties>>,
+      TError,
+      TData
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactFilterPropertiesQueryOptions(params, options)
+  const queryOptions = getGetV2ContactFilterPropertiesQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2ContactViewsCid = (cid: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseListSavedViewsRequestListSavedViewsResponseListSavedViewsResponseBhschsa>(
     { url: `/v2/contact/views/${unref(cid)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactViewsCidQueryKey = (cid: MaybeRef<string>) =>
-  ['v2', 'contact', 'views', cid] as const
+  ['v2', 'contact', 'views', cid] as const;
 
 export const getGetV2ContactViewsCidQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactViewsCid>>,
@@ -960,23 +984,23 @@ export const getGetV2ContactViewsCidQueryOptions = <
 >(
   cid: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewsCid>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewsCid>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewsCid>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactViewsCidQueryKey(cid)
+  const queryKey = getGetV2ContactViewsCidQueryKey(cid);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactViewsCid>>> = ({ signal }) =>
-    getV2ContactViewsCid(cid, signal)
+    getV2ContactViewsCid(cid, signal);
 
-  return { queryKey, queryFn, enabled: !!cid, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!cid, ...queryOptions };
+};
 
 export type GetV2ContactViewsCidQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactViewsCid>>
->
-export type GetV2ContactViewsCidQueryError = unknown
+>;
+export type GetV2ContactViewsCidQueryError = unknown;
 
 export const useGetV2ContactViewsCid = <
   TData = Awaited<ReturnType<typeof getV2ContactViewsCid>>,
@@ -984,17 +1008,19 @@ export const useGetV2ContactViewsCid = <
 >(
   cid: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewsCid>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewsCid>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactViewsCidQueryOptions(cid, options)
+  const queryOptions = getGetV2ContactViewsCidQueryOptions(cid, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2ContactViewsManageCommunityId = (
   communityId: MaybeRef<string>,
@@ -1003,13 +1029,13 @@ export const getV2ContactViewsManageCommunityId = (
 ) => {
   return customInstance<AbstractModuleApiResponseManageSavedViewsRequestManageSavedViewsResponseManageSavedViewsResponseIyyia>(
     { url: `/v2/contact/views/manage/${unref(communityId)}`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactViewsManageCommunityIdQueryKey = (
   communityId: MaybeRef<string>,
   params: MaybeRef<GetV2ContactViewsManageCommunityIdParams>
-) => ['v2', 'contact', 'views', 'manage', communityId, ...(params ? [params] : [])] as const
+) => ['v2', 'contact', 'views', 'manage', communityId, ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactViewsManageCommunityIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>,
@@ -1022,28 +1048,28 @@ export const getGetV2ContactViewsManageCommunityIdQueryOptions = <
       Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactViewsManageCommunityIdQueryKey(communityId, params)
+  const queryKey = getGetV2ContactViewsManageCommunityIdQueryKey(communityId, params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>> = ({
     signal
-  }) => getV2ContactViewsManageCommunityId(communityId, params, signal)
+  }) => getV2ContactViewsManageCommunityId(communityId, params, signal);
 
-  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!communityId, ...queryOptions };
+};
 
 export type GetV2ContactViewsManageCommunityIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>
->
-export type GetV2ContactViewsManageCommunityIdQueryError = unknown
+>;
+export type GetV2ContactViewsManageCommunityIdQueryError = unknown;
 
 export const useGetV2ContactViewsManageCommunityId = <
   TData = Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>,
@@ -1056,21 +1082,23 @@ export const useGetV2ContactViewsManageCommunityId = <
       Awaited<ReturnType<typeof getV2ContactViewsManageCommunityId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetV2ContactViewsManageCommunityIdQueryOptions(
     communityId,
     params,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2ContactViewAddContacts = (
   addIndividualContactsToSavedViewRequestKaliurq: MaybeRef<AddIndividualContactsToSavedViewRequestKaliurq>
@@ -1082,8 +1110,8 @@ export const postV2ContactViewAddContacts = (
       headers: { 'Content-Type': 'application/json' },
       data: addIndividualContactsToSavedViewRequestKaliurq
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactViewAddContactsMutationOptions = <
   TError = unknown,
@@ -1094,33 +1122,33 @@ export const getPostV2ContactViewAddContactsMutationOptions = <
     TError,
     { data: AddIndividualContactsToSavedViewRequestKaliurq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactViewAddContacts>>,
   TError,
   { data: AddIndividualContactsToSavedViewRequestKaliurq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactViewAddContacts>>,
     { data: AddIndividualContactsToSavedViewRequestKaliurq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactViewAddContacts(data)
-  }
+    return postV2ContactViewAddContacts(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactViewAddContactsMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactViewAddContacts>>
->
+>;
 export type PostV2ContactViewAddContactsMutationBody =
-  AddIndividualContactsToSavedViewRequestKaliurq
-export type PostV2ContactViewAddContactsMutationError = unknown
+  AddIndividualContactsToSavedViewRequestKaliurq;
+export type PostV2ContactViewAddContactsMutationError = unknown;
 
 export const usePostV2ContactViewAddContacts = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -1128,12 +1156,12 @@ export const usePostV2ContactViewAddContacts = <TError = unknown, TContext = unk
     TError,
     { data: AddIndividualContactsToSavedViewRequestKaliurq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactViewAddContactsMutationOptions(options)
+  const mutationOptions = getPostV2ContactViewAddContactsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2ContactViewLoadId = (
   id: MaybeRef<string>,
   params?: MaybeRef<GetV2ContactViewLoadIdParams>,
@@ -1141,13 +1169,13 @@ export const getV2ContactViewLoadId = (
 ) => {
   return customInstance<AbstractModuleApiResponseLoadContactsFromViewRequestLoadContactsFromViewResponseLoadContactsFromViewResponseHbamxi>(
     { url: `/v2/contact/view/load/${unref(id)}`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2ContactViewLoadIdQueryKey = (
   id: MaybeRef<string>,
   params?: MaybeRef<GetV2ContactViewLoadIdParams>
-) => ['v2', 'contact', 'view', 'load', id, ...(params ? [params] : [])] as const
+) => ['v2', 'contact', 'view', 'load', id, ...(params ? [params] : [])] as const;
 
 export const getGetV2ContactViewLoadIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2ContactViewLoadId>>,
@@ -1156,23 +1184,23 @@ export const getGetV2ContactViewLoadIdQueryOptions = <
   id: MaybeRef<string>,
   params?: MaybeRef<GetV2ContactViewLoadIdParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewLoadId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewLoadId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewLoadId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2ContactViewLoadIdQueryKey(id, params)
+  const queryKey = getGetV2ContactViewLoadIdQueryKey(id, params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2ContactViewLoadId>>> = ({ signal }) =>
-    getV2ContactViewLoadId(id, params, signal)
+    getV2ContactViewLoadId(id, params, signal);
 
-  return { queryKey, queryFn, enabled: !!id, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!id, ...queryOptions };
+};
 
 export type GetV2ContactViewLoadIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2ContactViewLoadId>>
->
-export type GetV2ContactViewLoadIdQueryError = unknown
+>;
+export type GetV2ContactViewLoadIdQueryError = unknown;
 
 export const useGetV2ContactViewLoadId = <
   TData = Awaited<ReturnType<typeof getV2ContactViewLoadId>>,
@@ -1181,17 +1209,19 @@ export const useGetV2ContactViewLoadId = <
   id: MaybeRef<string>,
   params?: MaybeRef<GetV2ContactViewLoadIdParams>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewLoadId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2ContactViewLoadId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2ContactViewLoadIdQueryOptions(id, params, options)
+  const queryOptions = getGetV2ContactViewLoadIdQueryOptions(id, params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2ContactViewSave = (
   createContactViewFromFilterRequestRpiqq: MaybeRef<CreateContactViewFromFilterRequestRpiqq>
@@ -1203,8 +1233,8 @@ export const postV2ContactViewSave = (
       headers: { 'Content-Type': 'application/json' },
       data: createContactViewFromFilterRequestRpiqq
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactViewSaveMutationOptions = <
   TError = unknown,
@@ -1215,32 +1245,32 @@ export const getPostV2ContactViewSaveMutationOptions = <
     TError,
     { data: CreateContactViewFromFilterRequestRpiqq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactViewSave>>,
   TError,
   { data: CreateContactViewFromFilterRequestRpiqq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactViewSave>>,
     { data: CreateContactViewFromFilterRequestRpiqq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactViewSave(data)
-  }
+    return postV2ContactViewSave(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactViewSaveMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactViewSave>>
->
-export type PostV2ContactViewSaveMutationBody = CreateContactViewFromFilterRequestRpiqq
-export type PostV2ContactViewSaveMutationError = unknown
+>;
+export type PostV2ContactViewSaveMutationBody = CreateContactViewFromFilterRequestRpiqq;
+export type PostV2ContactViewSaveMutationError = unknown;
 
 export const usePostV2ContactViewSave = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -1248,12 +1278,12 @@ export const usePostV2ContactViewSave = <TError = unknown, TContext = unknown>(o
     TError,
     { data: CreateContactViewFromFilterRequestRpiqq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactViewSaveMutationOptions(options)
+  const mutationOptions = getPostV2ContactViewSaveMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2ContactFilter = (
   contactSearchRequestPvty: MaybeRef<ContactSearchRequestPvty>
 ) => {
@@ -1264,8 +1294,8 @@ export const postV2ContactFilter = (
       headers: { 'Content-Type': 'application/json' },
       data: contactSearchRequestPvty
     }
-  )
-}
+  );
+};
 
 export const getPostV2ContactFilterMutationOptions = <
   TError = unknown,
@@ -1276,32 +1306,32 @@ export const getPostV2ContactFilterMutationOptions = <
     TError,
     { data: ContactSearchRequestPvty },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ContactFilter>>,
   TError,
   { data: ContactSearchRequestPvty },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ContactFilter>>,
     { data: ContactSearchRequestPvty }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2ContactFilter(data)
-  }
+    return postV2ContactFilter(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ContactFilterMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ContactFilter>>
->
-export type PostV2ContactFilterMutationBody = ContactSearchRequestPvty
-export type PostV2ContactFilterMutationError = unknown
+>;
+export type PostV2ContactFilterMutationBody = ContactSearchRequestPvty;
+export type PostV2ContactFilterMutationError = unknown;
 
 export const usePostV2ContactFilter = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -1309,9 +1339,9 @@ export const usePostV2ContactFilter = <TError = unknown, TContext = unknown>(opt
     TError,
     { data: ContactSearchRequestPvty },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ContactFilterMutationOptions(options)
+  const mutationOptions = getPostV2ContactFilterMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

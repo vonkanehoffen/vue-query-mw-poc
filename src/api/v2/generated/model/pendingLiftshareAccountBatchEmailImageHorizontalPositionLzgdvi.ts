@@ -6,11 +6,11 @@
  */
 
 export type PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi =
-  (typeof PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi)[keyof typeof PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi]
+  (typeof PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi)[keyof typeof PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi = {
   Left: 'Left',
   Center: 'Center',
   Right: 'Right'
-} as const
+} as const;

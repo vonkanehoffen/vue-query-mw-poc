@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactImportHeadersParsedCsvHeaderDtoCfhxli } from './contactImportHeadersParsedCsvHeaderDtoCfhxli'
+import type { ContactImportHeadersParsedCsvHeaderDtoCfhxli } from './contactImportHeadersParsedCsvHeaderDtoCfhxli';
 
 export interface ContactImportHeadersResponseBbmsq {
-  headers?: ContactImportHeadersParsedCsvHeaderDtoCfhxli[] | null
+  headers?: ContactImportHeadersParsedCsvHeaderDtoCfhxli[] | null;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LowFreqEmissionsResponseUyqty } from './lowFreqEmissionsResponseUyqty'
-import type { AbstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti } from './abstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti'
+import type { LowFreqEmissionsResponseUyqty } from './lowFreqEmissionsResponseUyqty';
+import type { AbstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti } from './abstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti';
 
 export interface AbstractModuleApiResponseLowFreqEmissionsRequestLowFreqEmissionsResponseLowFreqEmissionsResponseTkjglby {
-  response?: LowFreqEmissionsResponseUyqty
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti
+  response?: LowFreqEmissionsResponseUyqty;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsLowFreqEmissionsRequestLowFreqEmissionsResponseEnvbti;
 }

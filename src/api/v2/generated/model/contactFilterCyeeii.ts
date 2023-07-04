@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactSearchPropertySktibq } from './contactSearchPropertySktibq'
-import type { ContactFilterGroupVugsdy } from './contactFilterGroupVugsdy'
+import type { ContactSearchPropertySktibq } from './contactSearchPropertySktibq';
+import type { ContactFilterGroupVugsdy } from './contactFilterGroupVugsdy';
 
 export interface ContactFilterCyeeii {
-  displayedProperties?: ContactSearchPropertySktibq[] | null
-  filterGroups?: ContactFilterGroupVugsdy[] | null
-  searchTerm?: string | null
+  displayedProperties?: ContactSearchPropertySktibq[] | null;
+  filterGroups?: ContactFilterGroupVugsdy[] | null;
+  searchTerm?: string | null;
 }

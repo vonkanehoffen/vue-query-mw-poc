@@ -6,10 +6,10 @@
  */
 
 export type PaginationHelpersOrderByDirectionArusa =
-  (typeof PaginationHelpersOrderByDirectionArusa)[keyof typeof PaginationHelpersOrderByDirectionArusa]
+  (typeof PaginationHelpersOrderByDirectionArusa)[keyof typeof PaginationHelpersOrderByDirectionArusa];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PaginationHelpersOrderByDirectionArusa = {
   Asc: 'Asc',
   Desc: 'Desc'
-} as const
+} as const;

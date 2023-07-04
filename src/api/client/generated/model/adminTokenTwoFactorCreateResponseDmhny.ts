@@ -5,10 +5,10 @@
  * Private API for Liftshare client and partner integrations.
  * OpenAPI spec version: 1.0.0
  */
-import type { AdminTokenCreateResultTypeMlsaq } from './adminTokenCreateResultTypeMlsaq'
+import type { AdminTokenCreateResultTypeMlsaq } from './adminTokenCreateResultTypeMlsaq';
 
 export interface AdminTokenTwoFactorCreateResponseDmhny {
-  token?: string | null
-  refreshToken?: string | null
-  resultType?: AdminTokenCreateResultTypeMlsaq
+  token?: string | null;
+  refreshToken?: string | null;
+  resultType?: AdminTokenCreateResultTypeMlsaq;
 }

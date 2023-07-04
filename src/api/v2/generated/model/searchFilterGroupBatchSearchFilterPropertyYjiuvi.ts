@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SearchFilterExpressionBatchSearchFilterPropertyLzscdjy } from './searchFilterExpressionBatchSearchFilterPropertyLzscdjy'
+import type { SearchFilterExpressionBatchSearchFilterPropertyLzscdjy } from './searchFilterExpressionBatchSearchFilterPropertyLzscdjy';
 
 export interface SearchFilterGroupBatchSearchFilterPropertyYjiuvi {
-  expressions?: SearchFilterExpressionBatchSearchFilterPropertyLzscdjy[] | null
+  expressions?: SearchFilterExpressionBatchSearchFilterPropertyLzscdjy[] | null;
 }

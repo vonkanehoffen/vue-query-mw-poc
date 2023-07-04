@@ -6,5 +6,5 @@
  */
 
 export interface LogRequestGvmhyq {
-  url?: string | null
+  url?: string | null;
 }

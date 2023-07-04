@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PublicTransportResultsModeBreakdownResponseZzhxffy } from './publicTransportResultsModeBreakdownResponseZzhxffy'
-import type { AbstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa } from './abstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa'
+import type { PublicTransportResultsModeBreakdownResponseZzhxffy } from './publicTransportResultsModeBreakdownResponseZzhxffy';
+import type { AbstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa } from './abstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa';
 
 export interface AbstractModuleApiResponsePublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponsePublicTransportResultsModeBreakdownResponseArefi {
-  response?: PublicTransportResultsModeBreakdownResponseZzhxffy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa
+  response?: PublicTransportResultsModeBreakdownResponseZzhxffy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqa;
 }

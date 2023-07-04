@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqEmissionsHighFreqFiguresBlupi } from './highFreqEmissionsHighFreqFiguresBlupi'
+import type { HighFreqEmissionsHighFreqFiguresBlupi } from './highFreqEmissionsHighFreqFiguresBlupi';
 
 export interface HighFreqEmissionsHighFreqDataSourceItemRsdaq {
-  id?: number
-  figures?: HighFreqEmissionsHighFreqFiguresBlupi
+  id?: number;
+  figures?: HighFreqEmissionsHighFreqFiguresBlupi;
 }

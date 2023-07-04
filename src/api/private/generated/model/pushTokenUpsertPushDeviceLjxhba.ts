@@ -6,11 +6,11 @@
  */
 
 export type PushTokenUpsertPushDeviceLjxhba =
-  (typeof PushTokenUpsertPushDeviceLjxhba)[keyof typeof PushTokenUpsertPushDeviceLjxhba]
+  (typeof PushTokenUpsertPushDeviceLjxhba)[keyof typeof PushTokenUpsertPushDeviceLjxhba];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PushTokenUpsertPushDeviceLjxhba = {
   Android: 'Android',
   Apple: 'Apple',
   Expo: 'Expo'
-} as const
+} as const;

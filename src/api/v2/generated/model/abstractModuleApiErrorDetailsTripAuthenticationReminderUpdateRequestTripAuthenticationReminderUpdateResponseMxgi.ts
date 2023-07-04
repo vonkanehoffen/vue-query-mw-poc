@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages } from './abstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages'
+import type { AbstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages } from './abstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages';
 
 export interface AbstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgi {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseMxgiMessages;
 }

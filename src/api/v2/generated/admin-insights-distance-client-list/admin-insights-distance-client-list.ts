@@ -4,41 +4,41 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseClientOverviewRequestClientOverviewResponseClientOverviewResponseGzdqi,
   ClientOverviewRequestQonqzzi
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
 // https://stackoverflow.com/questions/49579094/typescript-conditional-types-filter-out-readonly-properties-pick-only-requir/49579497#49579497
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y
   ? 1
   : 2
   ? A
-  : B
+  : B;
 
 type WritableKeys<T> = {
-  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>
-}[keyof T]
+  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>;
+}[keyof T];
 
 type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void
   ? I
-  : never
-type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never
+  : never;
+type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never;
 
-type Writable<T> = Pick<T, WritableKeys<T>>
+type Writable<T> = Pick<T, WritableKeys<T>>;
 type NonReadonly<T> = [T] extends [UnionToIntersection<T>]
   ? {
-      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P]
+      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P];
     }
-  : DistributeReadOnlyOverUnions<T>
+  : DistributeReadOnlyOverUnions<T>;
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2TravelPlanAdminOverviewClientList = (
   clientOverviewRequestQonqzzi: MaybeRef<NonReadonly<ClientOverviewRequestQonqzzi>>
@@ -50,8 +50,8 @@ export const postV2TravelPlanAdminOverviewClientList = (
       headers: { 'Content-Type': 'application/json' },
       data: clientOverviewRequestQonqzzi
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanAdminOverviewClientListMutationOptions = <
   TError = unknown,
@@ -62,33 +62,33 @@ export const getPostV2TravelPlanAdminOverviewClientListMutationOptions = <
     TError,
     { data: NonReadonly<ClientOverviewRequestQonqzzi> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewClientList>>,
   TError,
   { data: NonReadonly<ClientOverviewRequestQonqzzi> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewClientList>>,
     { data: NonReadonly<ClientOverviewRequestQonqzzi> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanAdminOverviewClientList(data)
-  }
+    return postV2TravelPlanAdminOverviewClientList(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanAdminOverviewClientListMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewClientList>>
->
+>;
 export type PostV2TravelPlanAdminOverviewClientListMutationBody =
-  NonReadonly<ClientOverviewRequestQonqzzi>
-export type PostV2TravelPlanAdminOverviewClientListMutationError = unknown
+  NonReadonly<ClientOverviewRequestQonqzzi>;
+export type PostV2TravelPlanAdminOverviewClientListMutationError = unknown;
 
 export const usePostV2TravelPlanAdminOverviewClientList = <
   TError = unknown,
@@ -99,9 +99,9 @@ export const usePostV2TravelPlanAdminOverviewClientList = <
     TError,
     { data: NonReadonly<ClientOverviewRequestQonqzzi> },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanAdminOverviewClientListMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanAdminOverviewClientListMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

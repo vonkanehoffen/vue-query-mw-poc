@@ -4,9 +4,9 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { RegisterRegisterResultTypeQukloja } from './registerRegisterResultTypeQukloja'
+import type { RegisterRegisterResultTypeQukloja } from './registerRegisterResultTypeQukloja';
 
 export interface ApiRegisterResponseDtoMofvoq {
-  result?: RegisterRegisterResultTypeQukloja
-  oidcProvider?: string | null
+  result?: RegisterRegisterResultTypeQukloja;
+  oidcProvider?: string | null;
 }

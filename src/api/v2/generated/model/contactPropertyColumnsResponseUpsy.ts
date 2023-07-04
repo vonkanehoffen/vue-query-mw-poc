@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPropertyColumnsQueryDtoZzooy } from './contactPropertyColumnsQueryDtoZzooy'
+import type { ContactPropertyColumnsQueryDtoZzooy } from './contactPropertyColumnsQueryDtoZzooy';
 
 export interface ContactPropertyColumnsResponseUpsy {
-  contactPropertyColumns?: ContactPropertyColumnsQueryDtoZzooy[] | null
+  contactPropertyColumns?: ContactPropertyColumnsQueryDtoZzooy[] | null;
 }

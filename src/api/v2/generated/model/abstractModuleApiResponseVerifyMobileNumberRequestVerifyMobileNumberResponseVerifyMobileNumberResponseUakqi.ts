@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { VerifyMobileNumberResponseYxlmfa } from './verifyMobileNumberResponseYxlmfa'
-import type { AbstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja } from './abstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja'
+import type { VerifyMobileNumberResponseYxlmfa } from './verifyMobileNumberResponseYxlmfa';
+import type { AbstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja } from './abstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja';
 
 export interface AbstractModuleApiResponseVerifyMobileNumberRequestVerifyMobileNumberResponseVerifyMobileNumberResponseUakqi {
-  response?: VerifyMobileNumberResponseYxlmfa
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja
+  response?: VerifyMobileNumberResponseYxlmfa;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokja;
 }

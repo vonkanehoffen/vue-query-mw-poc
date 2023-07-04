@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CumulativeTripAuthenticationsResponseTorxyha } from './cumulativeTripAuthenticationsResponseTorxyha'
-import type { AbstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki } from './abstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki'
+import type { CumulativeTripAuthenticationsResponseTorxyha } from './cumulativeTripAuthenticationsResponseTorxyha';
+import type { AbstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki } from './abstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki';
 
 export interface AbstractModuleApiResponseCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseCumulativeTripAuthenticationsResponseEpyni {
-  response?: CumulativeTripAuthenticationsResponseTorxyha
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki
+  response?: CumulativeTripAuthenticationsResponseTorxyha;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwaki;
 }

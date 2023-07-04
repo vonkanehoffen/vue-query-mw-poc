@@ -4,19 +4,19 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   PasswordResetResponseDtoPqsrdi,
   ValidationExceptionResponseDtoLtlwwzy,
   PasswordResetRequestDtoUweq
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Generates a password reset code and sends it to the user via email
@@ -29,8 +29,8 @@ export const postPasswordReset = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: passwordResetRequestDtoUweq
-  })
-}
+  });
+};
 
 export const getPostPasswordResetMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -41,32 +41,32 @@ export const getPostPasswordResetMutationOptions = <
     TError,
     { data: PasswordResetRequestDtoUweq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postPasswordReset>>,
   TError,
   { data: PasswordResetRequestDtoUweq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postPasswordReset>>,
     { data: PasswordResetRequestDtoUweq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postPasswordReset(data)
-  }
+    return postPasswordReset(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostPasswordResetMutationResult = NonNullable<
   Awaited<ReturnType<typeof postPasswordReset>>
->
-export type PostPasswordResetMutationBody = PasswordResetRequestDtoUweq
-export type PostPasswordResetMutationError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type PostPasswordResetMutationBody = PasswordResetRequestDtoUweq;
+export type PostPasswordResetMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Generates a password reset code and sends it to the user via email
@@ -80,9 +80,9 @@ export const usePostPasswordReset = <
     TError,
     { data: PasswordResetRequestDtoUweq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostPasswordResetMutationOptions(options)
+  const mutationOptions = getPostPasswordResetMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,44 +12,44 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseBadgeRequirementMetCreateRequestBadgeRequirementMetCreateResponseBadgeRequirementMetCreateResponseMqmnq,
   BadgeRequirementMetCreateRequestLuzby,
   AbstractModuleApiResponseBadgeDetailsRequestBadgeDetailsResponseBadgeDetailsResponseRdjafi,
   AbstractModuleApiResponseBadgeListRequestBadgeListResponseBadgeListResponseWqjhasa,
   AbstractModuleApiResponseBadgeViewedUpdateRequestBadgeViewedUpdateResponseBadgeViewedUpdateResponseZomyi
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
 // https://stackoverflow.com/questions/49579094/typescript-conditional-types-filter-out-readonly-properties-pick-only-requir/49579497#49579497
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y
   ? 1
   : 2
   ? A
-  : B
+  : B;
 
 type WritableKeys<T> = {
-  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>
-}[keyof T]
+  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>;
+}[keyof T];
 
 type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void
   ? I
-  : never
-type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never
+  : never;
+type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never;
 
-type Writable<T> = Pick<T, WritableKeys<T>>
+type Writable<T> = Pick<T, WritableKeys<T>>;
 type NonReadonly<T> = [T] extends [UnionToIntersection<T>]
   ? {
-      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P]
+      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P];
     }
-  : DistributeReadOnlyOverUnions<T>
+  : DistributeReadOnlyOverUnions<T>;
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2BadgeRequirementMet = (
   badgeRequirementMetCreateRequestLuzby: MaybeRef<
@@ -63,8 +63,8 @@ export const postV2BadgeRequirementMet = (
       headers: { 'Content-Type': 'application/json' },
       data: badgeRequirementMetCreateRequestLuzby
     }
-  )
-}
+  );
+};
 
 export const getPostV2BadgeRequirementMetMutationOptions = <
   TError = unknown,
@@ -75,33 +75,33 @@ export const getPostV2BadgeRequirementMetMutationOptions = <
     TError,
     { data: NonReadonly<BadgeRequirementMetCreateRequestLuzby> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2BadgeRequirementMet>>,
   TError,
   { data: NonReadonly<BadgeRequirementMetCreateRequestLuzby> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2BadgeRequirementMet>>,
     { data: NonReadonly<BadgeRequirementMetCreateRequestLuzby> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2BadgeRequirementMet(data)
-  }
+    return postV2BadgeRequirementMet(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2BadgeRequirementMetMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2BadgeRequirementMet>>
->
+>;
 export type PostV2BadgeRequirementMetMutationBody =
-  NonReadonly<BadgeRequirementMetCreateRequestLuzby>
-export type PostV2BadgeRequirementMetMutationError = unknown
+  NonReadonly<BadgeRequirementMetCreateRequestLuzby>;
+export type PostV2BadgeRequirementMetMutationError = unknown;
 
 export const usePostV2BadgeRequirementMet = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -109,20 +109,20 @@ export const usePostV2BadgeRequirementMet = <TError = unknown, TContext = unknow
     TError,
     { data: NonReadonly<BadgeRequirementMetCreateRequestLuzby> },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2BadgeRequirementMetMutationOptions(options)
+  const mutationOptions = getPostV2BadgeRequirementMetMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2LiftshareBadgeBadgeType = (badgeType: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseBadgeDetailsRequestBadgeDetailsResponseBadgeDetailsResponseRdjafi>(
     { url: `/v2/liftshare/badge/${unref(badgeType)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2LiftshareBadgeBadgeTypeQueryKey = (badgeType: MaybeRef<string>) =>
-  ['v2', 'liftshare', 'badge', badgeType] as const
+  ['v2', 'liftshare', 'badge', badgeType] as const;
 
 export const getGetV2LiftshareBadgeBadgeTypeQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>,
@@ -130,24 +130,28 @@ export const getGetV2LiftshareBadgeBadgeTypeQueryOptions = <
 >(
   badgeType: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>, TError, TData>
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>,
+      TError,
+      TData
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareBadgeBadgeTypeQueryKey(badgeType)
+  const queryKey = getGetV2LiftshareBadgeBadgeTypeQueryKey(badgeType);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>> = ({
     signal
-  }) => getV2LiftshareBadgeBadgeType(badgeType, signal)
+  }) => getV2LiftshareBadgeBadgeType(badgeType, signal);
 
-  return { queryKey, queryFn, enabled: !!badgeType, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!badgeType, ...queryOptions };
+};
 
 export type GetV2LiftshareBadgeBadgeTypeQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>
->
-export type GetV2LiftshareBadgeBadgeTypeQueryError = unknown
+>;
+export type GetV2LiftshareBadgeBadgeTypeQueryError = unknown;
 
 export const useGetV2LiftshareBadgeBadgeType = <
   TData = Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>,
@@ -155,67 +159,75 @@ export const useGetV2LiftshareBadgeBadgeType = <
 >(
   badgeType: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>, TError, TData>
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getV2LiftshareBadgeBadgeType>>,
+      TError,
+      TData
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareBadgeBadgeTypeQueryOptions(badgeType, options)
+  const queryOptions = getGetV2LiftshareBadgeBadgeTypeQueryOptions(badgeType, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2LiftshareBadge = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseBadgeListRequestBadgeListResponseBadgeListResponseWqjhasa>(
     { url: `/v2/liftshare/badge`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2LiftshareBadgeQueryKey = () => ['v2', 'liftshare', 'badge'] as const
+export const getGetV2LiftshareBadgeQueryKey = () => ['v2', 'liftshare', 'badge'] as const;
 
 export const getGetV2LiftshareBadgeQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareBadge>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadge>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadge>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadge>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareBadgeQueryKey()
+  const queryKey = getGetV2LiftshareBadgeQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2LiftshareBadge>>> = ({ signal }) =>
-    getV2LiftshareBadge(signal)
+    getV2LiftshareBadge(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2LiftshareBadgeQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareBadge>>
->
-export type GetV2LiftshareBadgeQueryError = unknown
+>;
+export type GetV2LiftshareBadgeQueryError = unknown;
 
 export const useGetV2LiftshareBadge = <
   TData = Awaited<ReturnType<typeof getV2LiftshareBadge>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadge>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareBadge>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareBadgeQueryOptions(options)
+  const queryOptions = getGetV2LiftshareBadgeQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const putV2LiftshareBadge = () => {
   return customInstance<AbstractModuleApiResponseBadgeViewedUpdateRequestBadgeViewedUpdateResponseBadgeViewedUpdateResponseZomyi>(
     { url: `/v2/liftshare/badge`, method: 'put' }
-  )
-}
+  );
+};
 
 export const getPutV2LiftshareBadgeMutationOptions = <
   TError = unknown,
@@ -227,30 +239,30 @@ export const getPutV2LiftshareBadgeMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2LiftshareBadge>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2LiftshareBadge>>,
     TVariables
   > = () => {
-    return putV2LiftshareBadge()
-  }
+    return putV2LiftshareBadge();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2LiftshareBadgeMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2LiftshareBadge>>
->
+>;
 
-export type PutV2LiftshareBadgeMutationError = unknown
+export type PutV2LiftshareBadgeMutationError = unknown;
 
 export const usePutV2LiftshareBadge = <
   TError = unknown,
@@ -262,9 +274,9 @@ export const usePutV2LiftshareBadge = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2LiftshareBadgeMutationOptions(options)
+  const mutationOptions = getPutV2LiftshareBadgeMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

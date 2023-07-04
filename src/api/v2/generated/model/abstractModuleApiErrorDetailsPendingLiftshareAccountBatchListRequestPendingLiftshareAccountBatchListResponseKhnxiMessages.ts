@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

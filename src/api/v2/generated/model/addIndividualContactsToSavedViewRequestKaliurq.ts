@@ -6,9 +6,9 @@
  */
 
 export interface AddIndividualContactsToSavedViewRequestKaliurq {
-  contactIds?: string[] | null
-  viewId?: string | null
-  communityId?: string | null
-  viewName?: string | null
-  adminId?: string | null
+  contactIds?: string[] | null;
+  viewId?: string | null;
+  communityId?: string | null;
+  viewName?: string | null;
+  adminId?: string | null;
 }

@@ -6,11 +6,11 @@
  */
 
 export interface ClearCommunityTestDataRequestBglddti {
-  ptps?: string[] | null
-  batches?: string[] | null
-  surveys?: string[] | null
-  contacts?: string[] | null
-  widgets?: string[] | null
-  scoping?: string[] | null
-  acel?: string[] | null
+  ptps?: string[] | null;
+  batches?: string[] | null;
+  surveys?: string[] | null;
+  contacts?: string[] | null;
+  widgets?: string[] | null;
+  scoping?: string[] | null;
+  acel?: string[] | null;
 }

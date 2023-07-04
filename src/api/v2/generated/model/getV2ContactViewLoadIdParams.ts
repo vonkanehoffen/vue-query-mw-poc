@@ -6,6 +6,6 @@
  */
 
 export type GetV2ContactViewLoadIdParams = {
-  page?: number
-  maxPerPage?: number
-}
+  page?: number;
+  maxPerPage?: number;
+};

@@ -6,8 +6,8 @@
  */
 
 export interface LowFreqDashboardResponseHtoggi {
-  netZeroTargetDate?: string
-  latestAcelScore?: number
-  latestTotalEmissionsInKg?: number
-  emissionsChangePercentage?: number
+  netZeroTargetDate?: string;
+  latestAcelScore?: number;
+  latestTotalEmissionsInKg?: number;
+  emissionsChangePercentage?: number;
 }

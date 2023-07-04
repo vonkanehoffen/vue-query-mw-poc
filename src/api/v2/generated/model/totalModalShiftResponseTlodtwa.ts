@@ -6,9 +6,9 @@
  */
 
 export interface TotalModalShiftResponseTlodtwa {
-  didChange?: number
-  positiveShift?: number
-  negativeShift?: number
-  neutralShift?: number
-  noChange?: number
+  didChange?: number;
+  positiveShift?: number;
+  negativeShift?: number;
+  neutralShift?: number;
+  noChange?: number;
 }

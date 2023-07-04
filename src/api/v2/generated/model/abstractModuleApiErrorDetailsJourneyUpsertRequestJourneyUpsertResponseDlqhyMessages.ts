@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsJourneyUpsertRequestJourneyUpsertResponseDlqhyMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

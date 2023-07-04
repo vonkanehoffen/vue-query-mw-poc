@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchListResponseZdtjq } from './pendingLiftshareAccountBatchListResponseZdtjq'
-import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi'
+import type { PendingLiftshareAccountBatchListResponseZdtjq } from './pendingLiftshareAccountBatchListResponseZdtjq';
+import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi';
 
 export interface AbstractModuleApiResponsePendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponsePendingLiftshareAccountBatchListResponseIvqja {
-  response?: PendingLiftshareAccountBatchListResponseZdtjq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi
+  response?: PendingLiftshareAccountBatchListResponseZdtjq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponseKhnxi;
 }

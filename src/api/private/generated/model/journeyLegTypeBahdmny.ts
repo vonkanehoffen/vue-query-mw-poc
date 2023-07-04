@@ -6,10 +6,10 @@
  */
 
 export type JourneyLegTypeBahdmny =
-  (typeof JourneyLegTypeBahdmny)[keyof typeof JourneyLegTypeBahdmny]
+  (typeof JourneyLegTypeBahdmny)[keyof typeof JourneyLegTypeBahdmny];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyLegTypeBahdmny = {
   Outbound: 'Outbound',
   Return: 'Return'
-} as const
+} as const;

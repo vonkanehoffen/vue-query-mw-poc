@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { DistanceFrequencyBreakdownResponseIsyiq } from './distanceFrequencyBreakdownResponseIsyiq'
-import type { AbstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq } from './abstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq'
+import type { DistanceFrequencyBreakdownResponseIsyiq } from './distanceFrequencyBreakdownResponseIsyiq';
+import type { AbstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq } from './abstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq';
 
 export interface AbstractModuleApiResponseDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseDistanceFrequencyBreakdownResponseNxti {
-  response?: DistanceFrequencyBreakdownResponseIsyiq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq
+  response?: DistanceFrequencyBreakdownResponseIsyiq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsDistanceFrequencyBreakdownRequestDistanceFrequencyBreakdownResponseBtextq;
 }

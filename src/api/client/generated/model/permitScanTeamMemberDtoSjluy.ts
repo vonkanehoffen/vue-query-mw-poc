@@ -7,7 +7,7 @@
  */
 
 export interface PermitScanTeamMemberDtoSjluy {
-  id?: number
-  name?: string | null
-  dateJoined?: string
+  id?: number;
+  name?: string | null;
+  dateJoined?: string;
 }

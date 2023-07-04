@@ -6,7 +6,7 @@
  */
 
 export type TravelPlanListStatusIgktghq =
-  (typeof TravelPlanListStatusIgktghq)[keyof typeof TravelPlanListStatusIgktghq]
+  (typeof TravelPlanListStatusIgktghq)[keyof typeof TravelPlanListStatusIgktghq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanListStatusIgktghq = {
@@ -15,4 +15,4 @@ export const TravelPlanListStatusIgktghq = {
   Scheduled: 'Scheduled',
   Sent: 'Sent',
   Failed: 'Failed'
-} as const
+} as const;

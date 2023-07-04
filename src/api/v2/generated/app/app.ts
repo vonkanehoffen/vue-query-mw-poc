@@ -4,20 +4,20 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { AbstractModuleApiResponseMobileAppDashboardRequestMobileAppDashboardResponseMobileAppDashboardResponseDkwpgzi } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { AbstractModuleApiResponseMobileAppDashboardRequestMobileAppDashboardResponseMobileAppDashboardResponseDkwpgzi } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2LiftshareAppDashboard = () => {
   return customInstance<AbstractModuleApiResponseMobileAppDashboardRequestMobileAppDashboardResponseMobileAppDashboardResponseDkwpgzi>(
     { url: `/v2/liftshare/app/dashboard`, method: 'post' }
-  )
-}
+  );
+};
 
 export const getPostV2LiftshareAppDashboardMutationOptions = <
   TError = unknown,
@@ -29,30 +29,30 @@ export const getPostV2LiftshareAppDashboardMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2LiftshareAppDashboard>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2LiftshareAppDashboard>>,
     TVariables
   > = () => {
-    return postV2LiftshareAppDashboard()
-  }
+    return postV2LiftshareAppDashboard();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2LiftshareAppDashboardMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2LiftshareAppDashboard>>
->
+>;
 
-export type PostV2LiftshareAppDashboardMutationError = unknown
+export type PostV2LiftshareAppDashboardMutationError = unknown;
 
 export const usePostV2LiftshareAppDashboard = <
   TError = unknown,
@@ -64,9 +64,9 @@ export const usePostV2LiftshareAppDashboard = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2LiftshareAppDashboardMutationOptions(options)
+  const mutationOptions = getPostV2LiftshareAppDashboardMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

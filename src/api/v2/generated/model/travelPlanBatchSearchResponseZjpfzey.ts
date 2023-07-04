@@ -4,15 +4,15 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanBatchSearchBatchListDtoMtauwji } from './travelPlanBatchSearchBatchListDtoMtauwji'
-import type { BatchListOrderByZvtuny } from './batchListOrderByZvtuny'
-import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa'
+import type { TravelPlanBatchSearchBatchListDtoMtauwji } from './travelPlanBatchSearchBatchListDtoMtauwji';
+import type { BatchListOrderByZvtuny } from './batchListOrderByZvtuny';
+import type { PaginationHelpersOrderByDirectionArusa } from './paginationHelpersOrderByDirectionArusa';
 
 export interface TravelPlanBatchSearchResponseZjpfzey {
-  data?: TravelPlanBatchSearchBatchListDtoMtauwji[] | null
-  page?: number
-  numPages?: number
-  totalPlans?: number
-  orderBy?: BatchListOrderByZvtuny
-  orderByDirection?: PaginationHelpersOrderByDirectionArusa
+  data?: TravelPlanBatchSearchBatchListDtoMtauwji[] | null;
+  page?: number;
+  numPages?: number;
+  totalPlans?: number;
+  orderBy?: BatchListOrderByZvtuny;
+  orderByDirection?: PaginationHelpersOrderByDirectionArusa;
 }

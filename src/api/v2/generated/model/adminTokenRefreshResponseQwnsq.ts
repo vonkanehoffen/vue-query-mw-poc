@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AdminTokenCreateResultTypeMlsaq } from './adminTokenCreateResultTypeMlsaq'
+import type { AdminTokenCreateResultTypeMlsaq } from './adminTokenCreateResultTypeMlsaq';
 
 export interface AdminTokenRefreshResponseQwnsq {
-  token?: string | null
-  refreshToken?: string | null
-  resultType?: AdminTokenCreateResultTypeMlsaq
+  token?: string | null;
+  refreshToken?: string | null;
+  resultType?: AdminTokenCreateResultTypeMlsaq;
 }

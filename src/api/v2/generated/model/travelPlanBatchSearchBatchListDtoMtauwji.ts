@@ -4,22 +4,22 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BatchListStatusBvvhqsi } from './batchListStatusBvvhqsi'
+import type { BatchListStatusBvvhqsi } from './batchListStatusBvvhqsi';
 
 export interface TravelPlanBatchSearchBatchListDtoMtauwji {
-  publicBatchId?: string
-  name?: string | null
-  destination?: string | null
-  status?: BatchListStatusBvvhqsi
-  numRecipients?: number
-  createdBy?: string | null
-  dateCreated?: string
-  dateModified?: string
-  dateBatchEMailsScheduledForUtc?: string | null
-  dateBatchEmailsSentUtc?: string | null
-  pendingCount?: number
-  generatedCount?: number
-  sentCount?: number
-  noValidSustainableRoutesCount?: number
-  failedCount?: number
+  publicBatchId?: string;
+  name?: string | null;
+  destination?: string | null;
+  status?: BatchListStatusBvvhqsi;
+  numRecipients?: number;
+  createdBy?: string | null;
+  dateCreated?: string;
+  dateModified?: string;
+  dateBatchEMailsScheduledForUtc?: string | null;
+  dateBatchEmailsSentUtc?: string | null;
+  pendingCount?: number;
+  generatedCount?: number;
+  sentCount?: number;
+  noValidSustainableRoutesCount?: number;
+  failedCount?: number;
 }

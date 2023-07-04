@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,20 +12,20 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   ConversationsResponseDtoYzawzqi,
   ConversationResponseDtoIyccxkq,
   CreateReplyResponseDtoQsizqa,
   CreateReplyRequestBaseDtoUyptry
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Get a list of all current conversations
@@ -35,29 +35,29 @@ export const getConversation = (signal?: AbortSignal) => {
     url: `/conversation`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetConversationQueryKey = () => ['conversation'] as const
+export const getGetConversationQueryKey = () => ['conversation'] as const;
 
 export const getGetConversationQueryOptions = <
   TData = Awaited<ReturnType<typeof getConversation>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getConversation>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getConversation>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getConversation>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetConversationQueryKey()
+  const queryKey = getGetConversationQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getConversation>>> = ({ signal }) =>
-    getConversation(signal)
+    getConversation(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetConversationQueryResult = NonNullable<Awaited<ReturnType<typeof getConversation>>>
-export type GetConversationQueryError = unknown
+export type GetConversationQueryResult = NonNullable<Awaited<ReturnType<typeof getConversation>>>;
+export type GetConversationQueryError = unknown;
 
 /**
  * @summary Get a list of all current conversations
@@ -66,16 +66,18 @@ export const useGetConversation = <
   TData = Awaited<ReturnType<typeof getConversation>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getConversation>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getConversation>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetConversationQueryOptions(options)
+  const queryOptions = getGetConversationQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Get a list of all messages for a given conversation
@@ -88,11 +90,11 @@ export const getConversationConversationId = (
     url: `/conversation/${unref(conversationId)}`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetConversationConversationIdQueryKey = (conversationId: MaybeRef<string>) =>
-  ['conversation', conversationId] as const
+  ['conversation', conversationId] as const;
 
 export const getGetConversationConversationIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getConversationConversationId>>,
@@ -104,24 +106,24 @@ export const getGetConversationConversationIdQueryOptions = <
       Awaited<ReturnType<typeof getConversationConversationId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getConversationConversationId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetConversationConversationIdQueryKey(conversationId)
+  const queryKey = getGetConversationConversationIdQueryKey(conversationId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getConversationConversationId>>> = ({
     signal
-  }) => getConversationConversationId(conversationId, signal)
+  }) => getConversationConversationId(conversationId, signal);
 
-  return { queryKey, queryFn, enabled: !!conversationId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!conversationId, ...queryOptions };
+};
 
 export type GetConversationConversationIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getConversationConversationId>>
->
-export type GetConversationConversationIdQueryError = unknown
+>;
+export type GetConversationConversationIdQueryError = unknown;
 
 /**
  * @summary Get a list of all messages for a given conversation
@@ -136,17 +138,19 @@ export const useGetConversationConversationId = <
       Awaited<ReturnType<typeof getConversationConversationId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetConversationConversationIdQueryOptions(conversationId, options)
+  const queryOptions = getGetConversationConversationIdQueryOptions(conversationId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Post reply to conversation
@@ -160,8 +164,8 @@ export const postConversationConversationId = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: createReplyRequestBaseDtoUyptry
-  })
-}
+  });
+};
 
 export const getPostConversationConversationIdMutationOptions = <
   TError = unknown,
@@ -172,32 +176,32 @@ export const getPostConversationConversationIdMutationOptions = <
     TError,
     { conversationId: string; data: CreateReplyRequestBaseDtoUyptry },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postConversationConversationId>>,
   TError,
   { conversationId: string; data: CreateReplyRequestBaseDtoUyptry },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postConversationConversationId>>,
     { conversationId: string; data: CreateReplyRequestBaseDtoUyptry }
   > = (props) => {
-    const { conversationId, data } = props ?? {}
+    const { conversationId, data } = props ?? {};
 
-    return postConversationConversationId(conversationId, data)
-  }
+    return postConversationConversationId(conversationId, data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostConversationConversationIdMutationResult = NonNullable<
   Awaited<ReturnType<typeof postConversationConversationId>>
->
-export type PostConversationConversationIdMutationBody = CreateReplyRequestBaseDtoUyptry
-export type PostConversationConversationIdMutationError = unknown
+>;
+export type PostConversationConversationIdMutationBody = CreateReplyRequestBaseDtoUyptry;
+export type PostConversationConversationIdMutationError = unknown;
 
 /**
  * @summary Post reply to conversation
@@ -208,9 +212,9 @@ export const usePostConversationConversationId = <TError = unknown, TContext = u
     TError,
     { conversationId: string; data: CreateReplyRequestBaseDtoUyptry },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostConversationConversationIdMutationOptions(options)
+  const mutationOptions = getPostConversationConversationIdMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

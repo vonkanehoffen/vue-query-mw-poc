@@ -6,5 +6,5 @@
  */
 
 export type GetV2TravelPlanRateLimitParams = {
-  plans?: number
-}
+  plans?: number;
+};

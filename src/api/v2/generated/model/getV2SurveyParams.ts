@@ -6,5 +6,5 @@
  */
 
 export type GetV2SurveyParams = {
-  publicSurveyId: string
-}
+  publicSurveyId: string;
+};

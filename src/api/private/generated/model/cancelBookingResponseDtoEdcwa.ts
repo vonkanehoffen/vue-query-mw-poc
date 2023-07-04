@@ -4,9 +4,9 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { BookingStatusVpkey } from './bookingStatusVpkey'
+import type { BookingStatusVpkey } from './bookingStatusVpkey';
 
 export interface CancelBookingResponseDtoEdcwa {
-  publicBookingId?: string
-  bookingStatus?: BookingStatusVpkey
+  publicBookingId?: string;
+  bookingStatus?: BookingStatusVpkey;
 }

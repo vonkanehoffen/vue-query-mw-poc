@@ -6,9 +6,9 @@
  */
 
 export interface HighFreqEmissionsHighFreqFiguresBlupi {
-  emissionsInKg?: number
-  cumulativeEmissionsInKg?: number
-  driveAloneEquivalent?: number
-  cumulativeDriveAloneEquivalent?: number
-  employees?: number
+  emissionsInKg?: number;
+  cumulativeEmissionsInKg?: number;
+  driveAloneEquivalent?: number;
+  cumulativeDriveAloneEquivalent?: number;
+  employees?: number;
 }

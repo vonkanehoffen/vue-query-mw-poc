@@ -6,7 +6,7 @@
  */
 
 export interface PendingLiftshareAccountBatchAccountSettingsYjxni {
-  autoCreateJourneysForNewMembers?: boolean
-  resendActivationForNonActivatedMembers?: boolean
-  sendInvitesToJoinCommunity?: boolean
+  autoCreateJourneysForNewMembers?: boolean;
+  resendActivationForNonActivatedMembers?: boolean;
+  sendInvitesToJoinCommunity?: boolean;
 }

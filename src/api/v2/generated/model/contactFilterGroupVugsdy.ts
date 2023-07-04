@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactFilterExpressionYyenjda } from './contactFilterExpressionYyenjda'
+import type { ContactFilterExpressionYyenjda } from './contactFilterExpressionYyenjda';
 
 export interface ContactFilterGroupVugsdy {
-  expressions?: ContactFilterExpressionYyenjda[] | null
+  expressions?: ContactFilterExpressionYyenjda[] | null;
 }

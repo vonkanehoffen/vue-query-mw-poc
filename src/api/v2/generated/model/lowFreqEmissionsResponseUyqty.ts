@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LowFreqModeGdfza } from './lowFreqModeGdfza'
-import type { LowFreqMetadataEghpxi } from './lowFreqMetadataEghpxi'
+import type { LowFreqModeGdfza } from './lowFreqModeGdfza';
+import type { LowFreqMetadataEghpxi } from './lowFreqMetadataEghpxi';
 
 export interface LowFreqEmissionsResponseUyqty {
-  modes?: LowFreqModeGdfza[] | null
-  metadata?: LowFreqMetadataEghpxi[] | null
+  modes?: LowFreqModeGdfza[] | null;
+  metadata?: LowFreqMetadataEghpxi[] | null;
 }

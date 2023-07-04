@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PublicLeaderboardPublicLeaderboardEntryIxtdsca } from './publicLeaderboardPublicLeaderboardEntryIxtdsca'
+import type { PublicLeaderboardPublicLeaderboardEntryIxtdsca } from './publicLeaderboardPublicLeaderboardEntryIxtdsca';
 
 export interface PublicLeaderboardResponseJgqgzy {
-  top10?: PublicLeaderboardPublicLeaderboardEntryIxtdsca[] | null
-  nearMe?: PublicLeaderboardPublicLeaderboardEntryIxtdsca[] | null
-  publicLeaderboard?: boolean
-  numInLeaderboard?: number
-  numInCommunity?: number
+  top10?: PublicLeaderboardPublicLeaderboardEntryIxtdsca[] | null;
+  nearMe?: PublicLeaderboardPublicLeaderboardEntryIxtdsca[] | null;
+  publicLeaderboard?: boolean;
+  numInLeaderboard?: number;
+  numInCommunity?: number;
 }

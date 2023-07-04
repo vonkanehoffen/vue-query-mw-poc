@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages } from './abstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages'
+import type { AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages } from './abstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages';
 
 export interface AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages;
 }

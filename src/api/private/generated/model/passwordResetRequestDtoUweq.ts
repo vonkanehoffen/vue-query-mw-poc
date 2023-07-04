@@ -6,5 +6,5 @@
  */
 
 export interface PasswordResetRequestDtoUweq {
-  email?: string | null
+  email?: string | null;
 }

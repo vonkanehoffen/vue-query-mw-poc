@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SearchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq } from './searchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq'
+import type { SearchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq } from './searchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq';
 
 export interface SearchFilterGroupTravelPlanSearchFilterPropertyOyfoy {
-  expressions?: SearchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq[] | null
+  expressions?: SearchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq[] | null;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LiftshareCurrentStatsSummaryResponseOdca } from './liftshareCurrentStatsSummaryResponseOdca'
-import type { AbstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua } from './abstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua'
+import type { LiftshareCurrentStatsSummaryResponseOdca } from './liftshareCurrentStatsSummaryResponseOdca';
+import type { AbstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua } from './abstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua';
 
 export interface AbstractModuleApiResponseLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseLiftshareCurrentStatsSummaryResponseKeqvzhq {
-  response?: LiftshareCurrentStatsSummaryResponseOdca
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua
+  response?: LiftshareCurrentStatsSummaryResponseOdca;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsLiftshareCurrentStatsSummaryRequestLiftshareCurrentStatsSummaryResponseSkxwaua;
 }

@@ -6,6 +6,6 @@
  */
 
 export interface PrivateTransportServiceUpsertRouteGeoJsonEorna {
-  type?: string | null
-  coordinates?: number[][] | null
+  type?: string | null;
+  coordinates?: number[][] | null;
 }

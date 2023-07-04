@@ -5,4 +5,4 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type FeatureManagerListResponseJzhghiFeatures = { [key: string]: boolean } | null
+export type FeatureManagerListResponseJzhghiFeatures = { [key: string]: boolean } | null;

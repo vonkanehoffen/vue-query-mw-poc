@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ScopingReportUploadResponseRsjdgqq } from './scopingReportUploadResponseRsjdgqq'
-import type { AbstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy } from './abstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy'
+import type { ScopingReportUploadResponseRsjdgqq } from './scopingReportUploadResponseRsjdgqq';
+import type { AbstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy } from './abstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy';
 
 export interface AbstractModuleApiResponseScopingReportUploadRequestScopingReportUploadResponseScopingReportUploadResponseVzdfza {
-  response?: ScopingReportUploadResponseRsjdgqq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy
+  response?: ScopingReportUploadResponseRsjdgqq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvy;
 }

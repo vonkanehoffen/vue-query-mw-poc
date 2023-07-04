@@ -4,19 +4,19 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   ApiRegisterResponseDtoMofvoq,
   ValidationExceptionResponseDtoLtlwwzy,
   ApiRegisterRequestDtoHtjva
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Generates a password reset code and sends it to the user via email
@@ -27,8 +27,8 @@ export const postRegister = (apiRegisterRequestDtoHtjva: MaybeRef<ApiRegisterReq
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: apiRegisterRequestDtoHtjva
-  })
-}
+  });
+};
 
 export const getPostRegisterMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -39,30 +39,30 @@ export const getPostRegisterMutationOptions = <
     TError,
     { data: ApiRegisterRequestDtoHtjva },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postRegister>>,
   TError,
   { data: ApiRegisterRequestDtoHtjva },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postRegister>>,
     { data: ApiRegisterRequestDtoHtjva }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postRegister(data)
-  }
+    return postRegister(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostRegisterMutationResult = NonNullable<Awaited<ReturnType<typeof postRegister>>>
-export type PostRegisterMutationBody = ApiRegisterRequestDtoHtjva
-export type PostRegisterMutationError = ValidationExceptionResponseDtoLtlwwzy
+export type PostRegisterMutationResult = NonNullable<Awaited<ReturnType<typeof postRegister>>>;
+export type PostRegisterMutationBody = ApiRegisterRequestDtoHtjva;
+export type PostRegisterMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Generates a password reset code and sends it to the user via email
@@ -76,9 +76,9 @@ export const usePostRegister = <
     TError,
     { data: ApiRegisterRequestDtoHtjva },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostRegisterMutationOptions(options)
+  const mutationOptions = getPostRegisterMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

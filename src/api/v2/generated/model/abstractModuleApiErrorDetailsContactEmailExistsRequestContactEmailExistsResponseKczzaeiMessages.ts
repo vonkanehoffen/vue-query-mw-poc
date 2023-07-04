@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactEmailExistsRequestContactEmailExistsResponseKczzaeiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

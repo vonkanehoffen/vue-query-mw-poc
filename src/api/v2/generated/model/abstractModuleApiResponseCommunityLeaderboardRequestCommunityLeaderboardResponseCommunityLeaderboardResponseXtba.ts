@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CommunityLeaderboardResponseSsmri } from './communityLeaderboardResponseSsmri'
-import type { AbstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq } from './abstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq'
+import type { CommunityLeaderboardResponseSsmri } from './communityLeaderboardResponseSsmri';
+import type { AbstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq } from './abstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq';
 
 export interface AbstractModuleApiResponseCommunityLeaderboardRequestCommunityLeaderboardResponseCommunityLeaderboardResponseXtba {
-  response?: CommunityLeaderboardResponseSsmri
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq
+  response?: CommunityLeaderboardResponseSsmri;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsCommunityLeaderboardRequestCommunityLeaderboardResponseRxeq;
 }

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { GamificationServiceHashedCommunityLeaderboardDtoOuggcaq } from './gamificationServiceHashedCommunityLeaderboardDtoOuggcaq'
+import type { GamificationServiceHashedCommunityLeaderboardDtoOuggcaq } from './gamificationServiceHashedCommunityLeaderboardDtoOuggcaq';
 
 export interface MyLeaderboardCommunitiesResponseNrmi {
-  communities?: GamificationServiceHashedCommunityLeaderboardDtoOuggcaq[] | null
-  displayPublicLeaderboard?: boolean
+  communities?: GamificationServiceHashedCommunityLeaderboardDtoOuggcaq[] | null;
+  displayPublicLeaderboard?: boolean;
 }

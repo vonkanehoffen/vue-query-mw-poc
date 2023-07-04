@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactImportLogResponseItemAgqypgi } from './contactImportLogResponseItemAgqypgi'
+import type { ContactImportLogResponseItemAgqypgi } from './contactImportLogResponseItemAgqypgi';
 
 export interface ContactImportLogResponseJkmdriq {
-  previousImports?: ContactImportLogResponseItemAgqypgi[] | null
+  previousImports?: ContactImportLogResponseItemAgqypgi[] | null;
 }

@@ -4,36 +4,36 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AcelTravelModesBinlxy } from './acelTravelModesBinlxy'
-import type { ContactPreferenceTypeOlhhhi } from './contactPreferenceTypeOlhhhi'
-import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha'
+import type { AcelTravelModesBinlxy } from './acelTravelModesBinlxy';
+import type { ContactPreferenceTypeOlhhhi } from './contactPreferenceTypeOlhhhi';
+import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha';
 
 export interface ContactPreviewRowXejy {
-  publicId?: string
-  firstName?: string | null
-  lastName?: string | null
-  readonly name?: string | null
-  email?: string | null
-  homeAddress?: string | null
-  homeLatitude?: number | null
-  homeLongitude?: number | null
-  geocoded?: boolean
-  dateCreatedUtc?: string
-  currentTravelMode?: AcelTravelModesBinlxy
-  previousTravelMode?: AcelTravelModesBinlxy
-  readonly travellingDifferently?: boolean
-  unsubscribedFrom?: ContactPreferenceTypeOlhhhi[] | null
-  inSuppressionList?: boolean
-  inPendingInviteSystem?: boolean
-  workLocation?: string | null
-  workDepartment?: string | null
-  workStartTime?: string | null
-  workFinishTime?: string | null
-  currentCommuteMode?: MobilitywaysTransportTypeAswbha
-  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null
-  commuteDistanceInMeters?: number | null
-  commuteDaysPerWeek?: number | null
-  personalTravelPlanDate?: string | null
-  personalTravelPlanSent?: boolean
-  tags?: string[] | null
+  publicId?: string;
+  firstName?: string | null;
+  lastName?: string | null;
+  readonly name?: string | null;
+  email?: string | null;
+  homeAddress?: string | null;
+  homeLatitude?: number | null;
+  homeLongitude?: number | null;
+  geocoded?: boolean;
+  dateCreatedUtc?: string;
+  currentTravelMode?: AcelTravelModesBinlxy;
+  previousTravelMode?: AcelTravelModesBinlxy;
+  readonly travellingDifferently?: boolean;
+  unsubscribedFrom?: ContactPreferenceTypeOlhhhi[] | null;
+  inSuppressionList?: boolean;
+  inPendingInviteSystem?: boolean;
+  workLocation?: string | null;
+  workDepartment?: string | null;
+  workStartTime?: string | null;
+  workFinishTime?: string | null;
+  currentCommuteMode?: MobilitywaysTransportTypeAswbha;
+  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null;
+  commuteDistanceInMeters?: number | null;
+  commuteDaysPerWeek?: number | null;
+  personalTravelPlanDate?: string | null;
+  personalTravelPlanSent?: boolean;
+  tags?: string[] | null;
 }

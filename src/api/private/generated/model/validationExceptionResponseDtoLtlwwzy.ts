@@ -4,11 +4,11 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ValidationExceptionResponseDtoLtlwwzyFailures } from './validationExceptionResponseDtoLtlwwzyFailures'
+import type { ValidationExceptionResponseDtoLtlwwzyFailures } from './validationExceptionResponseDtoLtlwwzyFailures';
 
 export interface ValidationExceptionResponseDtoLtlwwzy {
-  message?: string | null
-  statusCode?: number
-  exception?: string | null
-  readonly failures?: ValidationExceptionResponseDtoLtlwwzyFailures
+  message?: string | null;
+  statusCode?: number;
+  exception?: string | null;
+  readonly failures?: ValidationExceptionResponseDtoLtlwwzyFailures;
 }

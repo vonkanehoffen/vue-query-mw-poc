@@ -4,25 +4,25 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchStatusVtwhkvq } from './pendingLiftshareAccountBatchStatusVtwhkvq'
-import type { PendingLiftshareAccountBatchEmailSettingsMcidey } from './pendingLiftshareAccountBatchEmailSettingsMcidey'
-import type { PendingLiftshareAccountBatchRecipientSettingsSoxbrfy } from './pendingLiftshareAccountBatchRecipientSettingsSoxbrfy'
-import type { PendingLiftshareAccountBatchAccountSettingsYjxni } from './pendingLiftshareAccountBatchAccountSettingsYjxni'
-import type { PendingLiftshareAccountBatchJourneySettingsTyly } from './pendingLiftshareAccountBatchJourneySettingsTyly'
+import type { PendingLiftshareAccountBatchStatusVtwhkvq } from './pendingLiftshareAccountBatchStatusVtwhkvq';
+import type { PendingLiftshareAccountBatchEmailSettingsMcidey } from './pendingLiftshareAccountBatchEmailSettingsMcidey';
+import type { PendingLiftshareAccountBatchRecipientSettingsSoxbrfy } from './pendingLiftshareAccountBatchRecipientSettingsSoxbrfy';
+import type { PendingLiftshareAccountBatchAccountSettingsYjxni } from './pendingLiftshareAccountBatchAccountSettingsYjxni';
+import type { PendingLiftshareAccountBatchJourneySettingsTyly } from './pendingLiftshareAccountBatchJourneySettingsTyly';
 
 export interface PendingLiftshareAccountBatchDetailsResponseUcpjci {
-  id?: string | null
-  communityId?: string | null
-  name?: string | null
-  status?: PendingLiftshareAccountBatchStatusVtwhkvq
-  emailSettings?: PendingLiftshareAccountBatchEmailSettingsMcidey
-  recipientSettings?: PendingLiftshareAccountBatchRecipientSettingsSoxbrfy
-  accountSettings?: PendingLiftshareAccountBatchAccountSettingsYjxni
-  journeySettings?: PendingLiftshareAccountBatchJourneySettingsTyly
-  dateCreatedUtc?: string
-  createdById?: string | null
-  createdByName?: string | null
-  dateLastEditedUtc?: string
-  editedById?: string | null
-  editedByName?: string | null
+  id?: string | null;
+  communityId?: string | null;
+  name?: string | null;
+  status?: PendingLiftshareAccountBatchStatusVtwhkvq;
+  emailSettings?: PendingLiftshareAccountBatchEmailSettingsMcidey;
+  recipientSettings?: PendingLiftshareAccountBatchRecipientSettingsSoxbrfy;
+  accountSettings?: PendingLiftshareAccountBatchAccountSettingsYjxni;
+  journeySettings?: PendingLiftshareAccountBatchJourneySettingsTyly;
+  dateCreatedUtc?: string;
+  createdById?: string | null;
+  createdByName?: string | null;
+  dateLastEditedUtc?: string;
+  editedById?: string | null;
+  editedByName?: string | null;
 }

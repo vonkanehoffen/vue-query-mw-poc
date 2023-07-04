@@ -6,10 +6,10 @@
  */
 
 export interface PendingLiftshareAccountBatchPreviewRequestOlxgra {
-  batchId?: string
-  recipients?: string[] | null
-  publicContactPersonalisationId?: string
-  invite?: boolean
-  reminder1?: boolean
-  reminder2?: boolean
+  batchId?: string;
+  recipients?: string[] | null;
+  publicContactPersonalisationId?: string;
+  invite?: boolean;
+  reminder1?: boolean;
+  reminder2?: boolean;
 }

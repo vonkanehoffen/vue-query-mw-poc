@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsNpsUpdateRequestNpsUpdateResponseAaetniMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

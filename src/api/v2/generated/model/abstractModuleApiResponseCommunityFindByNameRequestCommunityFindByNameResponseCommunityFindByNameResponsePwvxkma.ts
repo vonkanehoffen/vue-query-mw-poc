@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CommunityFindByNameResponseGsuvy } from './communityFindByNameResponseGsuvy'
-import type { AbstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa } from './abstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa'
+import type { CommunityFindByNameResponseGsuvy } from './communityFindByNameResponseGsuvy';
+import type { AbstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa } from './abstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa';
 
 export interface AbstractModuleApiResponseCommunityFindByNameRequestCommunityFindByNameResponseCommunityFindByNameResponsePwvxkma {
-  response?: CommunityFindByNameResponseGsuvy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa
+  response?: CommunityFindByNameResponseGsuvy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsCommunityFindByNameRequestCommunityFindByNameResponseSfnonaa;
 }

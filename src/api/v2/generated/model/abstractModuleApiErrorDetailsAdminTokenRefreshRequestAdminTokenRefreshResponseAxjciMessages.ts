@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjciMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

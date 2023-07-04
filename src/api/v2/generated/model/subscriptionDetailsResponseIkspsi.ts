@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SubscriptionDetailsQueryDtoMmiitwi } from './subscriptionDetailsQueryDtoMmiitwi'
+import type { SubscriptionDetailsQueryDtoMmiitwi } from './subscriptionDetailsQueryDtoMmiitwi';
 
 export interface SubscriptionDetailsResponseIkspsi {
-  subscriptionPreferences?: SubscriptionDetailsQueryDtoMmiitwi[] | null
-  token?: string | null
-  email?: string | null
+  subscriptionPreferences?: SubscriptionDetailsQueryDtoMmiitwi[] | null;
+  token?: string | null;
+  email?: string | null;
 }

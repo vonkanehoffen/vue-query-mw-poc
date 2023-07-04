@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqImportDtoYiyri } from './highFreqImportDtoYiyri'
+import type { HighFreqImportDtoYiyri } from './highFreqImportDtoYiyri';
 
 export interface HighFreqDataImportsResponseBrlgptq {
-  imports?: HighFreqImportDtoYiyri[] | null
+  imports?: HighFreqImportDtoYiyri[] | null;
 }

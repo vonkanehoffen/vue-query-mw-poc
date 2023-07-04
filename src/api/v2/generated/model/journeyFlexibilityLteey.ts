@@ -6,7 +6,7 @@
  */
 
 export type JourneyFlexibilityLteey =
-  (typeof JourneyFlexibilityLteey)[keyof typeof JourneyFlexibilityLteey]
+  (typeof JourneyFlexibilityLteey)[keyof typeof JourneyFlexibilityLteey];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyFlexibilityLteey = {
@@ -18,4 +18,4 @@ export const JourneyFlexibilityLteey = {
   PlusMinus4Hours: 'PlusMinus4Hours',
   PlusMinus12Hours: 'PlusMinus12Hours',
   Anytime: 'Anytime'
-} as const
+} as const;

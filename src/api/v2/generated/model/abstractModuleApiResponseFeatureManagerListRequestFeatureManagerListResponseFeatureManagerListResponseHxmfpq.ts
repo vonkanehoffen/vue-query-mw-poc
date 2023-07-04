@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { FeatureManagerListResponseJzhghi } from './featureManagerListResponseJzhghi'
-import type { AbstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq } from './abstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq'
+import type { FeatureManagerListResponseJzhghi } from './featureManagerListResponseJzhghi';
+import type { AbstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq } from './abstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq';
 
 export interface AbstractModuleApiResponseFeatureManagerListRequestFeatureManagerListResponseFeatureManagerListResponseHxmfpq {
-  response?: FeatureManagerListResponseJzhghi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq
+  response?: FeatureManagerListResponseJzhghi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsFeatureManagerListRequestFeatureManagerListResponseMrrxwpq;
 }

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages } from './abstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages'
+import type { AbstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages } from './abstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages';
 
 export interface AbstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdly {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsAdminTokenTwoFactorCreateRequestAdminTokenTwoFactorCreateResponseIxxrdlyMessages;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PaymentLinkUpdateResponseSgrwey } from './paymentLinkUpdateResponseSgrwey'
-import type { AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi } from './abstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi'
+import type { PaymentLinkUpdateResponseSgrwey } from './paymentLinkUpdateResponseSgrwey';
+import type { AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi } from './abstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi';
 
 export interface AbstractModuleApiResponsePaymentLinkUpdateRequestPaymentLinkUpdateResponsePaymentLinkUpdateResponseMvddpbq {
-  response?: PaymentLinkUpdateResponseSgrwey
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi
+  response?: PaymentLinkUpdateResponseSgrwey;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi;
 }

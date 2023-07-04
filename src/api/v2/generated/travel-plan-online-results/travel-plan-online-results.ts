@@ -4,21 +4,21 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
-import type { GetV2TravelPlansPlanResultsIdParams } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
+import type { GetV2TravelPlansPlanResultsIdParams } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2TravelPlansPlanResultsId = (
   id: MaybeRef<string>,
@@ -30,13 +30,13 @@ export const getV2TravelPlansPlanResultsId = (
     method: 'get',
     params,
     signal
-  })
-}
+  });
+};
 
 export const getGetV2TravelPlansPlanResultsIdQueryKey = (
   id: MaybeRef<string>,
   params: MaybeRef<GetV2TravelPlansPlanResultsIdParams>
-) => ['v2', 'travel-plans', 'plan-results', id, ...(params ? [params] : [])] as const
+) => ['v2', 'travel-plans', 'plan-results', id, ...(params ? [params] : [])] as const;
 
 export const getGetV2TravelPlansPlanResultsIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>,
@@ -49,24 +49,24 @@ export const getGetV2TravelPlansPlanResultsIdQueryOptions = <
       Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2TravelPlansPlanResultsIdQueryKey(id, params)
+  const queryKey = getGetV2TravelPlansPlanResultsIdQueryKey(id, params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>> = ({
     signal
-  }) => getV2TravelPlansPlanResultsId(id, params, signal)
+  }) => getV2TravelPlansPlanResultsId(id, params, signal);
 
-  return { queryKey, queryFn, enabled: !!id, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!id, ...queryOptions };
+};
 
 export type GetV2TravelPlansPlanResultsIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>
->
-export type GetV2TravelPlansPlanResultsIdQueryError = unknown
+>;
+export type GetV2TravelPlansPlanResultsIdQueryError = unknown;
 
 export const useGetV2TravelPlansPlanResultsId = <
   TData = Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>,
@@ -79,14 +79,16 @@ export const useGetV2TravelPlansPlanResultsId = <
       Awaited<ReturnType<typeof getV2TravelPlansPlanResultsId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2TravelPlansPlanResultsIdQueryOptions(id, params, options)
+  const queryOptions = getGetV2TravelPlansPlanResultsIdQueryOptions(id, params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

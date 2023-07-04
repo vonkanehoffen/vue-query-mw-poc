@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanSearchFilterPropertyEcdala } from './travelPlanSearchFilterPropertyEcdala'
-import type { SearchFilterGroupTravelPlanSearchFilterPropertyOyfoy } from './searchFilterGroupTravelPlanSearchFilterPropertyOyfoy'
+import type { TravelPlanSearchFilterPropertyEcdala } from './travelPlanSearchFilterPropertyEcdala';
+import type { SearchFilterGroupTravelPlanSearchFilterPropertyOyfoy } from './searchFilterGroupTravelPlanSearchFilterPropertyOyfoy';
 
 export interface SearchFilterDtoTravelPlanSearchFilterPropertyMlzmfei {
-  displayedProperties?: TravelPlanSearchFilterPropertyEcdala[] | null
-  filterGroups?: SearchFilterGroupTravelPlanSearchFilterPropertyOyfoy[] | null
+  displayedProperties?: TravelPlanSearchFilterPropertyEcdala[] | null;
+  filterGroups?: SearchFilterGroupTravelPlanSearchFilterPropertyOyfoy[] | null;
 }

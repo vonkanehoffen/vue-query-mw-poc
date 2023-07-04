@@ -6,11 +6,11 @@
  */
 
 export type CommunityPrivacyGcuvykq =
-  (typeof CommunityPrivacyGcuvykq)[keyof typeof CommunityPrivacyGcuvykq]
+  (typeof CommunityPrivacyGcuvykq)[keyof typeof CommunityPrivacyGcuvykq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const CommunityPrivacyGcuvykq = {
   Public: 'Public',
   Private: 'Private',
   Closed: 'Closed'
-} as const
+} as const;

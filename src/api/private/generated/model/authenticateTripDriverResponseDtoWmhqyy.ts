@@ -6,5 +6,5 @@
  */
 
 export interface AuthenticateTripDriverResponseDtoWmhqyy {
-  qrToken?: string
+  qrToken?: string;
 }

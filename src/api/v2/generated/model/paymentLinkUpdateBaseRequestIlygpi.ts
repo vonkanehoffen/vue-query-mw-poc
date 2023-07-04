@@ -6,5 +6,5 @@
  */
 
 export interface PaymentLinkUpdateBaseRequestIlygpi {
-  paymentLink?: string | null
+  paymentLink?: string | null;
 }

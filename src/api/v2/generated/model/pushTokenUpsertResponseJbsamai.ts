@@ -6,5 +6,5 @@
  */
 
 export interface PushTokenUpsertResponseJbsamai {
-  [key: string]: any
+  [key: string]: any;
 }

@@ -6,8 +6,8 @@
  */
 
 export type GetDashboardAdminLoginsParams = {
-  from?: string
-  to?: string
-  page?: number
-  maxPerPage?: number
-}
+  from?: string;
+  to?: string;
+  page?: number;
+  maxPerPage?: number;
+};

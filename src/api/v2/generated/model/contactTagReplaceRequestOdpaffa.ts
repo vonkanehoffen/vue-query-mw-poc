@@ -6,6 +6,6 @@
  */
 
 export interface ContactTagReplaceRequestOdpaffa {
-  publicContactId?: string
-  tags?: string[] | null
+  publicContactId?: string;
+  tags?: string[] | null;
 }

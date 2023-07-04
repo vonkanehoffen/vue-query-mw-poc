@@ -6,7 +6,7 @@
  */
 
 export type TravelPlansListOrderByVbaoiy =
-  (typeof TravelPlansListOrderByVbaoiy)[keyof typeof TravelPlansListOrderByVbaoiy]
+  (typeof TravelPlansListOrderByVbaoiy)[keyof typeof TravelPlansListOrderByVbaoiy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlansListOrderByVbaoiy = {
@@ -17,4 +17,4 @@ export const TravelPlansListOrderByVbaoiy = {
   DateSurveySentUtc: 'DateSurveySentUtc',
   BatchName: 'BatchName',
   ContactName: 'ContactName'
-} as const
+} as const;

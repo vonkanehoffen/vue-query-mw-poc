@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CumulativeTripAuthenticationsDateGranularityIoemq } from './cumulativeTripAuthenticationsDateGranularityIoemq'
-import type { CumulativeTripAuthenticationsQueryDtoXilqzka } from './cumulativeTripAuthenticationsQueryDtoXilqzka'
+import type { CumulativeTripAuthenticationsDateGranularityIoemq } from './cumulativeTripAuthenticationsDateGranularityIoemq';
+import type { CumulativeTripAuthenticationsQueryDtoXilqzka } from './cumulativeTripAuthenticationsQueryDtoXilqzka';
 
 export interface CumulativeTripAuthenticationsResponseTorxyha {
-  dateGranularity?: CumulativeTripAuthenticationsDateGranularityIoemq
-  data?: CumulativeTripAuthenticationsQueryDtoXilqzka[] | null
-  totalUniqueMembersTripAuthenticated?: number
+  dateGranularity?: CumulativeTripAuthenticationsDateGranularityIoemq;
+  data?: CumulativeTripAuthenticationsQueryDtoXilqzka[] | null;
+  totalUniqueMembersTripAuthenticated?: number;
 }

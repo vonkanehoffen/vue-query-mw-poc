@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisnaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

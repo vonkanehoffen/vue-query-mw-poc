@@ -6,6 +6,6 @@
  */
 
 export interface TagListTagWithCommunityLjxjzi {
-  communityId?: string | null
-  tag?: string | null
+  communityId?: string | null;
+  tag?: string | null;
 }

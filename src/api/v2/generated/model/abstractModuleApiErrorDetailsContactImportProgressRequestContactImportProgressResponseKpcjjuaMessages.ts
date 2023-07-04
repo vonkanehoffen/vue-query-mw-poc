@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactImportProgressRequestContactImportProgressResponseKpcjjuaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

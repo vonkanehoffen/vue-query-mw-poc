@@ -5,11 +5,11 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type SurveyStatusFguygi = (typeof SurveyStatusFguygi)[keyof typeof SurveyStatusFguygi]
+export type SurveyStatusFguygi = (typeof SurveyStatusFguygi)[keyof typeof SurveyStatusFguygi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SurveyStatusFguygi = {
   Draft: 'Draft',
   Published: 'Published',
   Unpublished: 'Unpublished'
-} as const
+} as const;

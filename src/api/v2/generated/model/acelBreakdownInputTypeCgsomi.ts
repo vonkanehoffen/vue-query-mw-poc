@@ -6,11 +6,11 @@
  */
 
 export type AcelBreakdownInputTypeCgsomi =
-  (typeof AcelBreakdownInputTypeCgsomi)[keyof typeof AcelBreakdownInputTypeCgsomi]
+  (typeof AcelBreakdownInputTypeCgsomi)[keyof typeof AcelBreakdownInputTypeCgsomi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AcelBreakdownInputTypeCgsomi = {
   Responses: 'Responses',
   Percentages: 'Percentages',
   Employees: 'Employees'
-} as const
+} as const;

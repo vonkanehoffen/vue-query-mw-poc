@@ -6,5 +6,5 @@
  */
 
 export interface RequestToSharesInCommunityResponseYstlgy {
-  membersSentRts?: number
+  membersSentRts?: number;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface MembershipStatsResponseVvuzsy {
-  count?: number
+  count?: number;
 }

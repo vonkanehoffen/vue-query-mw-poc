@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BadgeViewedUpdateResponseYhohxbi } from './badgeViewedUpdateResponseYhohxbi'
-import type { AbstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy } from './abstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy'
+import type { BadgeViewedUpdateResponseYhohxbi } from './badgeViewedUpdateResponseYhohxbi';
+import type { AbstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy } from './abstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy';
 
 export interface AbstractModuleApiResponseBadgeViewedUpdateRequestBadgeViewedUpdateResponseBadgeViewedUpdateResponseZomyi {
-  response?: BadgeViewedUpdateResponseYhohxbi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy
+  response?: BadgeViewedUpdateResponseYhohxbi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsBadgeViewedUpdateRequestBadgeViewedUpdateResponseJbemjpy;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface BadgeViewedUpdateResponseYhohxbi {
-  viewed?: number
+  viewed?: number;
 }

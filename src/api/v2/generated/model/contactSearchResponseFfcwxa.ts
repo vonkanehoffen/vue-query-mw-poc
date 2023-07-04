@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPreviewRowXejy } from './contactPreviewRowXejy'
+import type { ContactPreviewRowXejy } from './contactPreviewRowXejy';
 
 export interface ContactSearchResponseFfcwxa {
-  totalContacts?: number
-  estimatedContacts?: number
-  contacts?: ContactPreviewRowXejy[] | null
-  numPages?: number
-  page?: number
-  contactsPerPage?: number
-  unsubscribedFromSurvey?: number
-  unsubscribedFromTravelPlans?: number
-  noStartPostcode?: number
-  noInSuppressionList?: number
-  noInPendingAccountProcess?: number
+  totalContacts?: number;
+  estimatedContacts?: number;
+  contacts?: ContactPreviewRowXejy[] | null;
+  numPages?: number;
+  page?: number;
+  contactsPerPage?: number;
+  unsubscribedFromSurvey?: number;
+  unsubscribedFromTravelPlans?: number;
+  noStartPostcode?: number;
+  noInSuppressionList?: number;
+  noInPendingAccountProcess?: number;
 }

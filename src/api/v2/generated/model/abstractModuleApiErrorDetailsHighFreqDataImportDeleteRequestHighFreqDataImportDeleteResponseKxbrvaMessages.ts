@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsHighFreqDataImportDeleteRequestHighFreqDataImportDeleteResponseKxbrvaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

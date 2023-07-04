@@ -6,5 +6,5 @@
  */
 
 export interface BadgeRequirementMetCreateResponseWyzq {
-  [key: string]: any
+  [key: string]: any;
 }

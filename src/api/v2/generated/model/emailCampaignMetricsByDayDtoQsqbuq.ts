@@ -6,23 +6,23 @@
  */
 
 export interface EmailCampaignMetricsByDayDtoQsqbuq {
-  countInjected?: number
-  countAccepted?: number
-  countBounce?: number
-  countClicked?: number
-  countDelivered?: number
-  countHardBounce?: number
-  countInitialRendered?: number
-  countPolicyRejection?: number
-  countRejected?: number
-  countRendered?: number
-  countSent?: number
-  countSoftBounce?: number
-  countSpamComplaint?: number
-  countUniqueClicked?: number
-  countUniqueConfirmedOpened?: number
-  countUniqueInitialRendered?: number
-  countUniqueRendered?: number
-  countUnsubscribe?: number
-  dateUtc?: string
+  countInjected?: number;
+  countAccepted?: number;
+  countBounce?: number;
+  countClicked?: number;
+  countDelivered?: number;
+  countHardBounce?: number;
+  countInitialRendered?: number;
+  countPolicyRejection?: number;
+  countRejected?: number;
+  countRendered?: number;
+  countSent?: number;
+  countSoftBounce?: number;
+  countSpamComplaint?: number;
+  countUniqueClicked?: number;
+  countUniqueConfirmedOpened?: number;
+  countUniqueInitialRendered?: number;
+  countUniqueRendered?: number;
+  countUnsubscribe?: number;
+  dateUtc?: string;
 }

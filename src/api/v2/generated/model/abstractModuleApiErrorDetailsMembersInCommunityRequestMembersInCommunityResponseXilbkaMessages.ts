@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsMembersInCommunityRequestMembersInCommunityResponseXilbkaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

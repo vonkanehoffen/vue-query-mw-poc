@@ -6,7 +6,7 @@
  */
 
 export interface LowFreqEmissionsRequestMysha {
-  communityIds?: string[] | null
-  dateFrom?: string
-  dateTo?: string
+  communityIds?: string[] | null;
+  dateFrom?: string;
+  dateTo?: string;
 }

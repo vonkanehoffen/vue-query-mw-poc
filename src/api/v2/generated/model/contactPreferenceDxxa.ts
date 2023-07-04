@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPreferenceTypeOlhhhi } from './contactPreferenceTypeOlhhhi'
+import type { ContactPreferenceTypeOlhhhi } from './contactPreferenceTypeOlhhhi';
 
 export interface ContactPreferenceDxxa {
-  type?: ContactPreferenceTypeOlhhhi
-  optedIn?: boolean
+  type?: ContactPreferenceTypeOlhhhi;
+  optedIn?: boolean;
 }

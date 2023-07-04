@@ -6,6 +6,6 @@
  */
 
 export interface TripAuthenticationsLeagueTableLeaderboardQueryDtoJxrhi {
-  name?: string | null
-  numAuthentications?: number
+  name?: string | null;
+  numAuthentications?: number;
 }

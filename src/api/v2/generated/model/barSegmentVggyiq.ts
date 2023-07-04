@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { DidChangeBehaviorAnswerValueTbzxoi } from './didChangeBehaviorAnswerValueTbzxoi'
+import type { DidChangeBehaviorAnswerValueTbzxoi } from './didChangeBehaviorAnswerValueTbzxoi';
 
 export interface BarSegmentVggyiq {
-  consideringChangeAnswer?: DidChangeBehaviorAnswerValueTbzxoi
-  count?: number
-  consideringChangeText?: string | null
+  consideringChangeAnswer?: DidChangeBehaviorAnswerValueTbzxoi;
+  count?: number;
+  consideringChangeText?: string | null;
 }

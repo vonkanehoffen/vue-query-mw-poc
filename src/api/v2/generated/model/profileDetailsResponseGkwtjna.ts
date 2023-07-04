@@ -6,16 +6,16 @@
  */
 
 export interface ProfileDetailsResponseGkwtjna {
-  id?: string | null
-  firstname?: string | null
-  surname?: string | null
-  primaryCommunity?: string | null
-  isAct?: boolean
-  dateJoined?: string
-  averageRating?: number
-  ratingsReceived?: number
-  isMyProfile?: boolean
-  bio?: string | null
-  responseTimeMins?: number | null
-  paymentLink?: string | null
+  id?: string | null;
+  firstname?: string | null;
+  surname?: string | null;
+  primaryCommunity?: string | null;
+  isAct?: boolean;
+  dateJoined?: string;
+  averageRating?: number;
+  ratingsReceived?: number;
+  isMyProfile?: boolean;
+  bio?: string | null;
+  responseTimeMins?: number | null;
+  paymentLink?: string | null;
 }

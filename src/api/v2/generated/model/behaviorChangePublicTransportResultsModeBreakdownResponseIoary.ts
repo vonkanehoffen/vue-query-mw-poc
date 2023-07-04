@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanResultsModeBreakdownAgwq } from './travelPlanResultsModeBreakdownAgwq'
+import type { TravelPlanResultsModeBreakdownAgwq } from './travelPlanResultsModeBreakdownAgwq';
 
 export interface BehaviorChangePublicTransportResultsModeBreakdownResponseIoary {
-  breakdown?: TravelPlanResultsModeBreakdownAgwq
+  breakdown?: TravelPlanResultsModeBreakdownAgwq;
 }

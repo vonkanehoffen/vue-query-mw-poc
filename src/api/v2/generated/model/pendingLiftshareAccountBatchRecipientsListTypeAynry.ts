@@ -6,10 +6,10 @@
  */
 
 export type PendingLiftshareAccountBatchRecipientsListTypeAynry =
-  (typeof PendingLiftshareAccountBatchRecipientsListTypeAynry)[keyof typeof PendingLiftshareAccountBatchRecipientsListTypeAynry]
+  (typeof PendingLiftshareAccountBatchRecipientsListTypeAynry)[keyof typeof PendingLiftshareAccountBatchRecipientsListTypeAynry];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchRecipientsListTypeAynry = {
   Individual: 'Individual',
   ContactSearchFilter: 'ContactSearchFilter'
-} as const
+} as const;

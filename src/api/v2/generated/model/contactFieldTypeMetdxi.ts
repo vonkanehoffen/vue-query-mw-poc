@@ -6,7 +6,7 @@
  */
 
 export type ContactFieldTypeMetdxi =
-  (typeof ContactFieldTypeMetdxi)[keyof typeof ContactFieldTypeMetdxi]
+  (typeof ContactFieldTypeMetdxi)[keyof typeof ContactFieldTypeMetdxi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactFieldTypeMetdxi = {
@@ -25,4 +25,4 @@ export const ContactFieldTypeMetdxi = {
   CommuteDistance: 'CommuteDistance',
   CommuteDaysPerWeek: 'CommuteDaysPerWeek',
   Unknown: 'Unknown'
-} as const
+} as const;

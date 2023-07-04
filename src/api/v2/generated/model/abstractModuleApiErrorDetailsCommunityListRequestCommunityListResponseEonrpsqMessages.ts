@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

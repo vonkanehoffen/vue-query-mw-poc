@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactImportHeadersResponseBbmsq } from './contactImportHeadersResponseBbmsq'
-import type { AbstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa } from './abstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa'
+import type { ContactImportHeadersResponseBbmsq } from './contactImportHeadersResponseBbmsq';
+import type { AbstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa } from './abstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa';
 
 export interface AbstractModuleApiResponseContactImportHeadersRequestContactImportHeadersResponseContactImportHeadersResponseTacalzy {
-  response?: ContactImportHeadersResponseBbmsq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa
+  response?: ContactImportHeadersResponseBbmsq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsContactImportHeadersRequestContactImportHeadersResponseVktzfa;
 }

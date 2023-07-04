@@ -6,7 +6,7 @@
  */
 
 export interface CreateTokenFacebookRequestDtoYsyoki {
-  token?: string | null
-  communityId?: string | null
-  culture?: string | null
+  token?: string | null;
+  communityId?: string | null;
+  culture?: string | null;
 }

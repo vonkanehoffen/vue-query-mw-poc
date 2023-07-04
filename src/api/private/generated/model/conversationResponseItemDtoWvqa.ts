@@ -4,11 +4,11 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { MessageTypeGlafuoa } from './messageTypeGlafuoa'
+import type { MessageTypeGlafuoa } from './messageTypeGlafuoa';
 
 export interface ConversationResponseItemDtoWvqa {
-  message?: string | null
-  dateSent?: string
-  messageType?: MessageTypeGlafuoa
-  senderId?: string | null
+  message?: string | null;
+  dateSent?: string;
+  messageType?: MessageTypeGlafuoa;
+  senderId?: string | null;
 }

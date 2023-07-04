@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPropertyColumnsContactFilterPropertyTypeItqdmky } from './contactPropertyColumnsContactFilterPropertyTypeItqdmky'
+import type { ContactPropertyColumnsContactFilterPropertyTypeItqdmky } from './contactPropertyColumnsContactFilterPropertyTypeItqdmky';
 
 export interface ContactPropertyColumnsQueryDtoZzooy {
-  name?: string | null
-  displayName?: string | null
-  valueType?: ContactPropertyColumnsContactFilterPropertyTypeItqdmky
+  name?: string | null;
+  displayName?: string | null;
+  valueType?: ContactPropertyColumnsContactFilterPropertyTypeItqdmky;
 }

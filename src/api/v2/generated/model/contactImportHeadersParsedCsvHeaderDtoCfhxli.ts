@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactFieldTypeMetdxi } from './contactFieldTypeMetdxi'
+import type { ContactFieldTypeMetdxi } from './contactFieldTypeMetdxi';
 
 export interface ContactImportHeadersParsedCsvHeaderDtoCfhxli {
-  index?: number
-  value?: string | null
-  example?: string | null
-  predictedFieldType?: ContactFieldTypeMetdxi
+  index?: number;
+  value?: string | null;
+  example?: string | null;
+  predictedFieldType?: ContactFieldTypeMetdxi;
 }

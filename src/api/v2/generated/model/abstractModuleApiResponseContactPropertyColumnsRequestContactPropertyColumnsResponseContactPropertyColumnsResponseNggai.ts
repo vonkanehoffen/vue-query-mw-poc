@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPropertyColumnsResponseUpsy } from './contactPropertyColumnsResponseUpsy'
-import type { AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq } from './abstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq'
+import type { ContactPropertyColumnsResponseUpsy } from './contactPropertyColumnsResponseUpsy';
+import type { AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq } from './abstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq';
 
 export interface AbstractModuleApiResponseContactPropertyColumnsRequestContactPropertyColumnsResponseContactPropertyColumnsResponseNggai {
-  response?: ContactPropertyColumnsResponseUpsy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq
+  response?: ContactPropertyColumnsResponseUpsy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq;
 }

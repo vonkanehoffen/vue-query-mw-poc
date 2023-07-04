@@ -6,7 +6,7 @@
  */
 
 export type TravelPlanSourceVskea =
-  (typeof TravelPlanSourceVskea)[keyof typeof TravelPlanSourceVskea]
+  (typeof TravelPlanSourceVskea)[keyof typeof TravelPlanSourceVskea];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSourceVskea = {
@@ -14,4 +14,4 @@ export const TravelPlanSourceVskea = {
   Batch: 'Batch',
   Widget: 'Widget',
   Other: 'Other'
-} as const
+} as const;

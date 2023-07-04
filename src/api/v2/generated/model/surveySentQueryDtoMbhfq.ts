@@ -6,9 +6,9 @@
  */
 
 export interface SurveySentQueryDtoMbhfq {
-  dateSentUtc?: string
-  contactEmail?: string | null
-  contactFirstName?: string | null
-  contactLastName?: string | null
-  contactPublicId?: string
+  dateSentUtc?: string;
+  contactEmail?: string | null;
+  contactFirstName?: string | null;
+  contactLastName?: string | null;
+  contactPublicId?: string;
 }

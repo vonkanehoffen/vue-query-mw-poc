@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

@@ -6,5 +6,5 @@
  */
 
 export interface NpsUpdateResponseJapny {
-  [key: string]: any
+  [key: string]: any;
 }

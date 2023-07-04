@@ -4,18 +4,18 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ConversationsResponseItemJourneyDtoJwqq } from './conversationsResponseItemJourneyDtoJwqq'
+import type { ConversationsResponseItemJourneyDtoJwqq } from './conversationsResponseItemJourneyDtoJwqq';
 
 export interface ConversationsResponseItemDtoPfnuta {
-  conversationId?: string | null
-  subject?: string | null
-  senderId?: string | null
-  senderName?: string | null
-  recipientId?: string | null
-  recipientName?: string | null
-  latestMessage?: string | null
-  latestMessageDate?: string
-  count?: number
-  unread?: number
-  journey?: ConversationsResponseItemJourneyDtoJwqq
+  conversationId?: string | null;
+  subject?: string | null;
+  senderId?: string | null;
+  senderName?: string | null;
+  recipientId?: string | null;
+  recipientName?: string | null;
+  latestMessage?: string | null;
+  latestMessageDate?: string;
+  count?: number;
+  unread?: number;
+  journey?: ConversationsResponseItemJourneyDtoJwqq;
 }

@@ -6,18 +6,18 @@
  */
 
 export interface ClientOverviewQueryDtoRuvicky {
-  communityId?: number
-  communityName?: string | null
-  planEmailsSent?: number
-  behaviorChangeSurveysSent?: number
-  followupSurveysSent?: number
-  zeroCommuters?: number
-  lowCommuters?: number
-  highCommuters?: number
-  noAnswer?: number
-  totalModalShift?: number
-  zeroShift?: number
-  lowShift?: number
-  highShift?: number
-  noShift?: number
+  communityId?: number;
+  communityName?: string | null;
+  planEmailsSent?: number;
+  behaviorChangeSurveysSent?: number;
+  followupSurveysSent?: number;
+  zeroCommuters?: number;
+  lowCommuters?: number;
+  highCommuters?: number;
+  noAnswer?: number;
+  totalModalShift?: number;
+  zeroShift?: number;
+  lowShift?: number;
+  highShift?: number;
+  noShift?: number;
 }

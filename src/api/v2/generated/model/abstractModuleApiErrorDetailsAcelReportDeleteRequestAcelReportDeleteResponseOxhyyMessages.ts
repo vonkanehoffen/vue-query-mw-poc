@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsAcelReportDeleteRequestAcelReportDeleteResponseOxhyyMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

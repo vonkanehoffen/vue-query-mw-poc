@@ -6,6 +6,6 @@
  */
 
 export type GetV2SurveyQuestionExportPublicSurveyIdQuestionIdParams = {
-  dateFrom: string
-  dateTo: string
-}
+  dateFrom: string;
+  dateTo: string;
+};

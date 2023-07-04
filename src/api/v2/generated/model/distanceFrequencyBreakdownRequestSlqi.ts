@@ -6,11 +6,11 @@
  */
 
 export interface DistanceFrequencyBreakdownRequestSlqi {
-  maybeDateFrom?: string | null
-  maybeDateTo?: string | null
-  readonly dateFromUtc?: string
-  readonly dateToUtc?: string
-  communityIds?: string[] | null
-  dateFrom?: string | null
-  dateTo?: string | null
+  maybeDateFrom?: string | null;
+  maybeDateTo?: string | null;
+  readonly dateFromUtc?: string;
+  readonly dateToUtc?: string;
+  communityIds?: string[] | null;
+  dateFrom?: string | null;
+  dateTo?: string | null;
 }

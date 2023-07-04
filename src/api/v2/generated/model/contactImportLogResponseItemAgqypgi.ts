@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactImportStatusLbavzha } from './contactImportStatusLbavzha'
+import type { ContactImportStatusLbavzha } from './contactImportStatusLbavzha';
 
 export interface ContactImportLogResponseItemAgqypgi {
-  importName?: string | null
-  numberOfContacts?: number
-  numberOfValidContacts?: number
-  numberOfInvalidContacts?: number
-  numberOfUpdatedContacts?: number
-  importStatus?: ContactImportStatusLbavzha
-  readonly importStatusDescription?: string | null
-  geocodingComplete?: boolean
-  dateCreatedUtc?: string
-  readonly importId?: string | null
-  readonly adminName?: string | null
+  importName?: string | null;
+  numberOfContacts?: number;
+  numberOfValidContacts?: number;
+  numberOfInvalidContacts?: number;
+  numberOfUpdatedContacts?: number;
+  importStatus?: ContactImportStatusLbavzha;
+  readonly importStatusDescription?: string | null;
+  geocodingComplete?: boolean;
+  dateCreatedUtc?: string;
+  readonly importId?: string | null;
+  readonly adminName?: string | null;
 }

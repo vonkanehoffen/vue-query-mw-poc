@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsEmailCheckRequestEmailCheckResponseZdotgqMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

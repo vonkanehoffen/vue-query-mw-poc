@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

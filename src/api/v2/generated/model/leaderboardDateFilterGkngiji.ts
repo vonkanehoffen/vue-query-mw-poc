@@ -6,11 +6,11 @@
  */
 
 export type LeaderboardDateFilterGkngiji =
-  (typeof LeaderboardDateFilterGkngiji)[keyof typeof LeaderboardDateFilterGkngiji]
+  (typeof LeaderboardDateFilterGkngiji)[keyof typeof LeaderboardDateFilterGkngiji];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const LeaderboardDateFilterGkngiji = {
   AllTime: 'AllTime',
   ThisMonth: 'ThisMonth',
   ThisWeek: 'ThisWeek'
-} as const
+} as const;

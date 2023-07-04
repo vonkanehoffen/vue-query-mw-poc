@@ -6,5 +6,5 @@
  */
 
 export interface ContactDeleteRequestAtfqfq {
-  publicContactIds?: string[] | null
+  publicContactIds?: string[] | null;
 }

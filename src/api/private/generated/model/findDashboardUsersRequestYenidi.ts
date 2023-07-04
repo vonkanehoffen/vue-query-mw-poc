@@ -6,5 +6,5 @@
  */
 
 export interface FindDashboardUsersRequestYenidi {
-  searchTerm?: string | null
+  searchTerm?: string | null;
 }

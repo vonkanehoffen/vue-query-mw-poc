@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { CommunityFindByNameCommunityDetailsZvta } from './communityFindByNameCommunityDetailsZvta'
+import type { CommunityFindByNameCommunityDetailsZvta } from './communityFindByNameCommunityDetailsZvta';
 
 export interface CommunityFindByNameResponseGsuvy {
-  communities?: CommunityFindByNameCommunityDetailsZvta[] | null
+  communities?: CommunityFindByNameCommunityDetailsZvta[] | null;
 }

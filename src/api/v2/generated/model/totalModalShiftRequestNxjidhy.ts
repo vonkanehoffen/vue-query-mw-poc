@@ -6,11 +6,11 @@
  */
 
 export interface TotalModalShiftRequestNxjidhy {
-  maybeDateFrom?: string | null
-  maybeDateTo?: string | null
-  readonly dateFromUtc?: string
-  readonly dateToUtc?: string
-  dateFrom?: string
-  dateTo?: string
-  communityIds?: string[] | null
+  maybeDateFrom?: string | null;
+  maybeDateTo?: string | null;
+  readonly dateFromUtc?: string;
+  readonly dateToUtc?: string;
+  dateFrom?: string;
+  dateTo?: string;
+  communityIds?: string[] | null;
 }

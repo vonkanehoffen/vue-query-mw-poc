@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccqMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsTotalModalShiftRequestTotalModalShiftResponseNneeiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

@@ -10,6 +10,6 @@
  * Liftshare client administration credentials
  */
 export interface AdminTokenCreateRequestKiaya {
-  email?: string | null
-  password?: string | null
+  email?: string | null;
+  password?: string | null;
 }

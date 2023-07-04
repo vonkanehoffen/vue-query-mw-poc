@@ -6,5 +6,5 @@
  */
 
 export interface ContactImportResponseZemkboq {
-  importId?: string | null
+  importId?: string | null;
 }

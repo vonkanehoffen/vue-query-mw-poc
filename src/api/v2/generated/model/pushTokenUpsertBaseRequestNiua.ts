@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PushTokenUpsertPushDeviceLjxhba } from './pushTokenUpsertPushDeviceLjxhba'
+import type { PushTokenUpsertPushDeviceLjxhba } from './pushTokenUpsertPushDeviceLjxhba';
 
 export interface PushTokenUpsertBaseRequestNiua {
-  token?: string | null
-  device?: PushTokenUpsertPushDeviceLjxhba
+  token?: string | null;
+  device?: PushTokenUpsertPushDeviceLjxhba;
 }

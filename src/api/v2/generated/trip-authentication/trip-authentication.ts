@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,20 +12,20 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseAuthenticatedTripsRequestAuthenticatedTripsResponseAuthenticatedTripsResponseSqylhza,
   AbstractModuleApiResponseTripAuthenticationReminderDetailsRequestTripAuthenticationReminderDetailsResponseTripAuthenticationReminderDetailsResponseSwoq,
   AbstractModuleApiResponseTripAuthenticationReminderUpdateRequestTripAuthenticationReminderUpdateResponseTripAuthenticationReminderUpdateResponseAkhrq,
   TripAuthenticationReminderUpdateBaseRequestCsidjia
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2LiftshareTripAuthenticationTeamId = (
   teamId?: MaybeRef<number>,
@@ -33,11 +33,11 @@ export const getV2LiftshareTripAuthenticationTeamId = (
 ) => {
   return customInstance<AbstractModuleApiResponseAuthenticatedTripsRequestAuthenticatedTripsResponseAuthenticatedTripsResponseSqylhza>(
     { url: `/v2/liftshare/trip-authentication/${unref(teamId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2LiftshareTripAuthenticationTeamIdQueryKey = (teamId?: MaybeRef<number>) =>
-  ['v2', 'liftshare', 'trip-authentication', teamId] as const
+  ['v2', 'liftshare', 'trip-authentication', teamId] as const;
 
 export const getGetV2LiftshareTripAuthenticationTeamIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>,
@@ -49,28 +49,28 @@ export const getGetV2LiftshareTripAuthenticationTeamIdQueryOptions = <
       Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareTripAuthenticationTeamIdQueryKey(teamId)
+  const queryKey = getGetV2LiftshareTripAuthenticationTeamIdQueryKey(teamId);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>
-  > = ({ signal }) => getV2LiftshareTripAuthenticationTeamId(teamId, signal)
+  > = ({ signal }) => getV2LiftshareTripAuthenticationTeamId(teamId, signal);
 
-  return { queryKey, queryFn, enabled: !!teamId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!teamId, ...queryOptions };
+};
 
 export type GetV2LiftshareTripAuthenticationTeamIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>
->
-export type GetV2LiftshareTripAuthenticationTeamIdQueryError = unknown
+>;
+export type GetV2LiftshareTripAuthenticationTeamIdQueryError = unknown;
 
 export const useGetV2LiftshareTripAuthenticationTeamId = <
   TData = Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>,
@@ -82,26 +82,28 @@ export const useGetV2LiftshareTripAuthenticationTeamId = <
       Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationTeamId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareTripAuthenticationTeamIdQueryOptions(teamId, options)
+  const queryOptions = getGetV2LiftshareTripAuthenticationTeamIdQueryOptions(teamId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2LiftshareTripAuthenticationReminder = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseTripAuthenticationReminderDetailsRequestTripAuthenticationReminderDetailsResponseTripAuthenticationReminderDetailsResponseSwoq>(
     { url: `/v2/liftshare/trip-authentication/reminder`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2LiftshareTripAuthenticationReminderQueryKey = () =>
-  ['v2', 'liftshare', 'trip-authentication', 'reminder'] as const
+  ['v2', 'liftshare', 'trip-authentication', 'reminder'] as const;
 
 export const getGetV2LiftshareTripAuthenticationReminderQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>,
@@ -111,27 +113,27 @@ export const getGetV2LiftshareTripAuthenticationReminderQueryOptions = <
     Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>,
     TError,
     TData
-  >
+  >;
 }): UseQueryOptions<
   Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareTripAuthenticationReminderQueryKey()
+  const queryKey = getGetV2LiftshareTripAuthenticationReminderQueryKey();
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>
-  > = ({ signal }) => getV2LiftshareTripAuthenticationReminder(signal)
+  > = ({ signal }) => getV2LiftshareTripAuthenticationReminder(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2LiftshareTripAuthenticationReminderQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>
->
-export type GetV2LiftshareTripAuthenticationReminderQueryError = unknown
+>;
+export type GetV2LiftshareTripAuthenticationReminderQueryError = unknown;
 
 export const useGetV2LiftshareTripAuthenticationReminder = <
   TData = Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>,
@@ -141,16 +143,18 @@ export const useGetV2LiftshareTripAuthenticationReminder = <
     Awaited<ReturnType<typeof getV2LiftshareTripAuthenticationReminder>>,
     TError,
     TData
-  >
+  >;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareTripAuthenticationReminderQueryOptions(options)
+  const queryOptions = getGetV2LiftshareTripAuthenticationReminderQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const putV2LiftshareTripAuthenticationReminder = (
   tripAuthenticationReminderUpdateBaseRequestCsidjia: MaybeRef<TripAuthenticationReminderUpdateBaseRequestCsidjia>
@@ -162,8 +166,8 @@ export const putV2LiftshareTripAuthenticationReminder = (
       headers: { 'Content-Type': 'application/json' },
       data: tripAuthenticationReminderUpdateBaseRequestCsidjia
     }
-  )
-}
+  );
+};
 
 export const getPutV2LiftshareTripAuthenticationReminderMutationOptions = <
   TError = unknown,
@@ -174,33 +178,33 @@ export const getPutV2LiftshareTripAuthenticationReminderMutationOptions = <
     TError,
     { data: TripAuthenticationReminderUpdateBaseRequestCsidjia },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2LiftshareTripAuthenticationReminder>>,
   TError,
   { data: TripAuthenticationReminderUpdateBaseRequestCsidjia },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2LiftshareTripAuthenticationReminder>>,
     { data: TripAuthenticationReminderUpdateBaseRequestCsidjia }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2LiftshareTripAuthenticationReminder(data)
-  }
+    return putV2LiftshareTripAuthenticationReminder(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2LiftshareTripAuthenticationReminderMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2LiftshareTripAuthenticationReminder>>
->
+>;
 export type PutV2LiftshareTripAuthenticationReminderMutationBody =
-  TripAuthenticationReminderUpdateBaseRequestCsidjia
-export type PutV2LiftshareTripAuthenticationReminderMutationError = unknown
+  TripAuthenticationReminderUpdateBaseRequestCsidjia;
+export type PutV2LiftshareTripAuthenticationReminderMutationError = unknown;
 
 export const usePutV2LiftshareTripAuthenticationReminder = <
   TError = unknown,
@@ -211,9 +215,9 @@ export const usePutV2LiftshareTripAuthenticationReminder = <
     TError,
     { data: TripAuthenticationReminderUpdateBaseRequestCsidjia },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2LiftshareTripAuthenticationReminderMutationOptions(options)
+  const mutationOptions = getPutV2LiftshareTripAuthenticationReminderMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

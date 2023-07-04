@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchDeleteResponseFdipi } from './pendingLiftshareAccountBatchDeleteResponseFdipi'
-import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna'
+import type { PendingLiftshareAccountBatchDeleteResponseFdipi } from './pendingLiftshareAccountBatchDeleteResponseFdipi';
+import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna';
 
 export interface AbstractModuleApiResponsePendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponsePendingLiftshareAccountBatchDeleteResponseBrvrri {
-  response?: PendingLiftshareAccountBatchDeleteResponseFdipi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna
+  response?: PendingLiftshareAccountBatchDeleteResponseFdipi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponseFkwisna;
 }

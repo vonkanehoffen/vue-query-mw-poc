@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import { useAuthStore } from '@/stores/auth'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import { useAuthStore } from '@/stores/auth';
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,11 +22,11 @@ export const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ContactsView.vue'),
       beforeEnter: (to, from) => {
-        console.log('onBeforeEnter', to, from)
-        const authStore = useAuthStore()
+        console.log('onBeforeEnter', to, from);
+        const authStore = useAuthStore();
 
-        return authStore.isAuthenticated || '/login'
+        return authStore.isAuthenticated || '/login';
       }
     }
   ]
-})
+});

@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,9 +12,9 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseAcelBreakdownFromSurveyRequestAcelBreakdownFromSurveyResponseAcelBreakdownFromSurveyResponseItgumri,
   AbstractModuleApiResponseAcelReportCreateRequestAcelReportCreateResponseAcelReportCreateResponseSrci,
@@ -29,12 +29,12 @@ import type {
   GetV2SurveyQuestionExportPublicSurveyIdQuestionIdParams,
   AbstractModuleApiResponseSurveySentRequestSurveySentResponseSurveySentResponseSsuetda,
   AbstractModuleApiResponseSurveyQuestionsListRequestSurveyQuestionsListResponseSurveyQuestionsListResponseCcsifmy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * Get a breakdown of ACEL response data from a survey that contains ACEL questions
@@ -45,11 +45,11 @@ export const getV2AcelFromSurveyPublicSurveyId = (
 ) => {
   return customInstance<AbstractModuleApiResponseAcelBreakdownFromSurveyRequestAcelBreakdownFromSurveyResponseAcelBreakdownFromSurveyResponseItgumri>(
     { url: `/v2/acel/from-survey/${unref(publicSurveyId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2AcelFromSurveyPublicSurveyIdQueryKey = (publicSurveyId: MaybeRef<string>) =>
-  ['v2', 'acel', 'from-survey', publicSurveyId] as const
+  ['v2', 'acel', 'from-survey', publicSurveyId] as const;
 
 export const getGetV2AcelFromSurveyPublicSurveyIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>,
@@ -61,28 +61,28 @@ export const getGetV2AcelFromSurveyPublicSurveyIdQueryOptions = <
       Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2AcelFromSurveyPublicSurveyIdQueryKey(publicSurveyId)
+  const queryKey = getGetV2AcelFromSurveyPublicSurveyIdQueryKey(publicSurveyId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>> = ({
     signal
-  }) => getV2AcelFromSurveyPublicSurveyId(publicSurveyId, signal)
+  }) => getV2AcelFromSurveyPublicSurveyId(publicSurveyId, signal);
 
-  return { queryKey, queryFn, enabled: !!publicSurveyId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!publicSurveyId, ...queryOptions };
+};
 
 export type GetV2AcelFromSurveyPublicSurveyIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>
->
-export type GetV2AcelFromSurveyPublicSurveyIdQueryError = unknown
+>;
+export type GetV2AcelFromSurveyPublicSurveyIdQueryError = unknown;
 
 export const useGetV2AcelFromSurveyPublicSurveyId = <
   TData = Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>,
@@ -94,17 +94,19 @@ export const useGetV2AcelFromSurveyPublicSurveyId = <
       Awaited<ReturnType<typeof getV2AcelFromSurveyPublicSurveyId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2AcelFromSurveyPublicSurveyIdQueryOptions(publicSurveyId, options)
+  const queryOptions = getGetV2AcelFromSurveyPublicSurveyIdQueryOptions(publicSurveyId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2Acel = (
   acelReportCreateBaseRequestFuollui: MaybeRef<AcelReportCreateBaseRequestFuollui>
@@ -116,8 +118,8 @@ export const postV2Acel = (
       headers: { 'Content-Type': 'application/json' },
       data: acelReportCreateBaseRequestFuollui
     }
-  )
-}
+  );
+};
 
 export const getPostV2AcelMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -125,30 +127,30 @@ export const getPostV2AcelMutationOptions = <TError = unknown, TContext = unknow
     TError,
     { data: AcelReportCreateBaseRequestFuollui },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2Acel>>,
   TError,
   { data: AcelReportCreateBaseRequestFuollui },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2Acel>>,
     { data: AcelReportCreateBaseRequestFuollui }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2Acel(data)
-  }
+    return postV2Acel(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostV2AcelMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Acel>>>
-export type PostV2AcelMutationBody = AcelReportCreateBaseRequestFuollui
-export type PostV2AcelMutationError = unknown
+export type PostV2AcelMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Acel>>>;
+export type PostV2AcelMutationBody = AcelReportCreateBaseRequestFuollui;
+export type PostV2AcelMutationError = unknown;
 
 export const usePostV2Acel = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -156,12 +158,12 @@ export const usePostV2Acel = <TError = unknown, TContext = unknown>(options?: {
     TError,
     { data: AcelReportCreateBaseRequestFuollui },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2AcelMutationOptions(options)
+  const mutationOptions = getPostV2AcelMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2AcelFromSurvey = (
   acelReportCreateFromSurveyBaseRequestFeeyti: MaybeRef<AcelReportCreateFromSurveyBaseRequestFeeyti>
 ) => {
@@ -172,8 +174,8 @@ export const postV2AcelFromSurvey = (
       headers: { 'Content-Type': 'application/json' },
       data: acelReportCreateFromSurveyBaseRequestFeeyti
     }
-  )
-}
+  );
+};
 
 export const getPostV2AcelFromSurveyMutationOptions = <
   TError = unknown,
@@ -184,32 +186,32 @@ export const getPostV2AcelFromSurveyMutationOptions = <
     TError,
     { data: AcelReportCreateFromSurveyBaseRequestFeeyti },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2AcelFromSurvey>>,
   TError,
   { data: AcelReportCreateFromSurveyBaseRequestFeeyti },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2AcelFromSurvey>>,
     { data: AcelReportCreateFromSurveyBaseRequestFeeyti }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2AcelFromSurvey(data)
-  }
+    return postV2AcelFromSurvey(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2AcelFromSurveyMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2AcelFromSurvey>>
->
-export type PostV2AcelFromSurveyMutationBody = AcelReportCreateFromSurveyBaseRequestFeeyti
-export type PostV2AcelFromSurveyMutationError = unknown
+>;
+export type PostV2AcelFromSurveyMutationBody = AcelReportCreateFromSurveyBaseRequestFeeyti;
+export type PostV2AcelFromSurveyMutationError = unknown;
 
 export const usePostV2AcelFromSurvey = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -217,17 +219,17 @@ export const usePostV2AcelFromSurvey = <TError = unknown, TContext = unknown>(op
     TError,
     { data: AcelReportCreateFromSurveyBaseRequestFeeyti },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2AcelFromSurveyMutationOptions(options)
+  const mutationOptions = getPostV2AcelFromSurveyMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const deleteV2AcelReportId = (reportId: MaybeRef<string>) => {
   return customInstance<AbstractModuleApiResponseAcelReportDeleteRequestAcelReportDeleteResponseAcelReportDeleteResponseLfnbjki>(
     { url: `/v2/acel/${unref(reportId)}`, method: 'delete' }
-  )
-}
+  );
+};
 
 export const getDeleteV2AcelReportIdMutationOptions = <
   TError = unknown,
@@ -238,32 +240,32 @@ export const getDeleteV2AcelReportIdMutationOptions = <
     TError,
     { reportId: string },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof deleteV2AcelReportId>>,
   TError,
   { reportId: string },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof deleteV2AcelReportId>>,
     { reportId: string }
   > = (props) => {
-    const { reportId } = props ?? {}
+    const { reportId } = props ?? {};
 
-    return deleteV2AcelReportId(reportId)
-  }
+    return deleteV2AcelReportId(reportId);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type DeleteV2AcelReportIdMutationResult = NonNullable<
   Awaited<ReturnType<typeof deleteV2AcelReportId>>
->
+>;
 
-export type DeleteV2AcelReportIdMutationError = unknown
+export type DeleteV2AcelReportIdMutationError = unknown;
 
 export const useDeleteV2AcelReportId = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -271,20 +273,20 @@ export const useDeleteV2AcelReportId = <TError = unknown, TContext = unknown>(op
     TError,
     { reportId: string },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getDeleteV2AcelReportIdMutationOptions(options)
+  const mutationOptions = getDeleteV2AcelReportIdMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2AcelReportId = (reportId: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseAcelReportDetailsRequestAcelReportDetailsResponseAcelReportDetailsResponseObrydii>(
     { url: `/v2/acel/${unref(reportId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2AcelReportIdQueryKey = (reportId: MaybeRef<string>) =>
-  ['v2', 'acel', reportId] as const
+  ['v2', 'acel', reportId] as const;
 
 export const getGetV2AcelReportIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2AcelReportId>>,
@@ -292,23 +294,23 @@ export const getGetV2AcelReportIdQueryOptions = <
 >(
   reportId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2AcelReportId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2AcelReportId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2AcelReportId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2AcelReportIdQueryKey(reportId)
+  const queryKey = getGetV2AcelReportIdQueryKey(reportId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2AcelReportId>>> = ({ signal }) =>
-    getV2AcelReportId(reportId, signal)
+    getV2AcelReportId(reportId, signal);
 
-  return { queryKey, queryFn, enabled: !!reportId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!reportId, ...queryOptions };
+};
 
 export type GetV2AcelReportIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2AcelReportId>>
->
-export type GetV2AcelReportIdQueryError = unknown
+>;
+export type GetV2AcelReportIdQueryError = unknown;
 
 export const useGetV2AcelReportId = <
   TData = Awaited<ReturnType<typeof getV2AcelReportId>>,
@@ -316,26 +318,28 @@ export const useGetV2AcelReportId = <
 >(
   reportId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2AcelReportId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2AcelReportId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2AcelReportIdQueryOptions(reportId, options)
+  const queryOptions = getGetV2AcelReportIdQueryOptions(reportId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2Survey = (params: MaybeRef<GetV2SurveyParams>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseSurveyDetailRequestSurveyDetailResponseSurveyDetailResponseAprvy>(
     { url: `/v2/survey`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2SurveyQueryKey = (params: MaybeRef<GetV2SurveyParams>) =>
-  ['v2', 'survey', ...(params ? [params] : [])] as const
+  ['v2', 'survey', ...(params ? [params] : [])] as const;
 
 export const getGetV2SurveyQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2Survey>>,
@@ -344,75 +348,79 @@ export const getGetV2SurveyQueryOptions = <
   params: MaybeRef<GetV2SurveyParams>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Survey>>, TError, TData> }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2Survey>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2SurveyQueryKey(params)
+  const queryKey = getGetV2SurveyQueryKey(params);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2Survey>>> = ({ signal }) =>
-    getV2Survey(params, signal)
+    getV2Survey(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetV2SurveyQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Survey>>>
-export type GetV2SurveyQueryError = unknown
+export type GetV2SurveyQueryResult = NonNullable<Awaited<ReturnType<typeof getV2Survey>>>;
+export type GetV2SurveyQueryError = unknown;
 
 export const useGetV2Survey = <TData = Awaited<ReturnType<typeof getV2Survey>>, TError = unknown>(
   params: MaybeRef<GetV2SurveyParams>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2Survey>>, TError, TData> }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2SurveyQueryOptions(params, options)
+  const queryOptions = getGetV2SurveyQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2SurveyPrevious = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseSurveyListRequestSurveyListResponseSurveyListResponseUtoki>(
     { url: `/v2/survey/previous`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2SurveyPreviousQueryKey = () => ['v2', 'survey', 'previous'] as const
+export const getGetV2SurveyPreviousQueryKey = () => ['v2', 'survey', 'previous'] as const;
 
 export const getGetV2SurveyPreviousQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2SurveyPrevious>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyPrevious>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyPrevious>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyPrevious>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2SurveyPreviousQueryKey()
+  const queryKey = getGetV2SurveyPreviousQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2SurveyPrevious>>> = ({ signal }) =>
-    getV2SurveyPrevious(signal)
+    getV2SurveyPrevious(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2SurveyPreviousQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2SurveyPrevious>>
->
-export type GetV2SurveyPreviousQueryError = unknown
+>;
+export type GetV2SurveyPreviousQueryError = unknown;
 
 export const useGetV2SurveyPrevious = <
   TData = Awaited<ReturnType<typeof getV2SurveyPrevious>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyPrevious>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyPrevious>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2SurveyPreviousQueryOptions(options)
+  const queryOptions = getGetV2SurveyPreviousQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2SurveyQuestionExportPublicSurveyIdQuestionId = (
   publicSurveyId: MaybeRef<string>,
@@ -425,8 +433,8 @@ export const getV2SurveyQuestionExportPublicSurveyIdQuestionId = (
     method: 'get',
     params,
     signal
-  })
-}
+  });
+};
 
 export const getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryKey = (
   publicSurveyId: MaybeRef<string>,
@@ -441,7 +449,7 @@ export const getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryKey = (
     publicSurveyId,
     questionId,
     ...(params ? [params] : [])
-  ] as const
+  ] as const;
 
 export const getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>,
@@ -455,33 +463,33 @@ export const getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryOptions = 
       Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
   const queryKey = getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryKey(
     publicSurveyId,
     questionId,
     params
-  )
+  );
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>
   > = ({ signal }) =>
-    getV2SurveyQuestionExportPublicSurveyIdQuestionId(publicSurveyId, questionId, params, signal)
+    getV2SurveyQuestionExportPublicSurveyIdQuestionId(publicSurveyId, questionId, params, signal);
 
-  return { queryKey, queryFn, enabled: !!(publicSurveyId && questionId), ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!(publicSurveyId && questionId), ...queryOptions };
+};
 
 export type GetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>
->
-export type GetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryError = unknown
+>;
+export type GetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryError = unknown;
 
 export const useGetV2SurveyQuestionExportPublicSurveyIdQuestionId = <
   TData = Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>,
@@ -495,7 +503,7 @@ export const useGetV2SurveyQuestionExportPublicSurveyIdQuestionId = <
       Awaited<ReturnType<typeof getV2SurveyQuestionExportPublicSurveyIdQuestionId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetV2SurveyQuestionExportPublicSurveyIdQuestionIdQueryOptions(
@@ -503,23 +511,25 @@ export const useGetV2SurveyQuestionExportPublicSurveyIdQuestionId = <
     questionId,
     params,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2SurveyIdSent = (id: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseSurveySentRequestSurveySentResponseSurveySentResponseSsuetda>(
     { url: `/v2/survey/${unref(id)}/sent`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2SurveyIdSentQueryKey = (id: MaybeRef<string>) =>
-  ['v2', 'survey', id, 'sent'] as const
+  ['v2', 'survey', id, 'sent'] as const;
 
 export const getGetV2SurveyIdSentQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2SurveyIdSent>>,
@@ -527,23 +537,23 @@ export const getGetV2SurveyIdSentQueryOptions = <
 >(
   id: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyIdSent>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyIdSent>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyIdSent>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2SurveyIdSentQueryKey(id)
+  const queryKey = getGetV2SurveyIdSentQueryKey(id);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2SurveyIdSent>>> = ({ signal }) =>
-    getV2SurveyIdSent(id, signal)
+    getV2SurveyIdSent(id, signal);
 
-  return { queryKey, queryFn, enabled: !!id, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!id, ...queryOptions };
+};
 
 export type GetV2SurveyIdSentQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2SurveyIdSent>>
->
-export type GetV2SurveyIdSentQueryError = unknown
+>;
+export type GetV2SurveyIdSentQueryError = unknown;
 
 export const useGetV2SurveyIdSent = <
   TData = Awaited<ReturnType<typeof getV2SurveyIdSent>>,
@@ -551,17 +561,19 @@ export const useGetV2SurveyIdSent = <
 >(
   id: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyIdSent>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getV2SurveyIdSent>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2SurveyIdSentQueryOptions(id, options)
+  const queryOptions = getGetV2SurveyIdSentQueryOptions(id, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const getV2SurveySummaryQuestionsPublicSurveyId = (
   publicSurveyId: MaybeRef<string>,
@@ -569,12 +581,12 @@ export const getV2SurveySummaryQuestionsPublicSurveyId = (
 ) => {
   return customInstance<AbstractModuleApiResponseSurveyQuestionsListRequestSurveyQuestionsListResponseSurveyQuestionsListResponseCcsifmy>(
     { url: `/v2/survey/summary/questions/${unref(publicSurveyId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2SurveySummaryQuestionsPublicSurveyIdQueryKey = (
   publicSurveyId: MaybeRef<string>
-) => ['v2', 'survey', 'summary', 'questions', publicSurveyId] as const
+) => ['v2', 'survey', 'summary', 'questions', publicSurveyId] as const;
 
 export const getGetV2SurveySummaryQuestionsPublicSurveyIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>,
@@ -586,28 +598,28 @@ export const getGetV2SurveySummaryQuestionsPublicSurveyIdQueryOptions = <
       Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2SurveySummaryQuestionsPublicSurveyIdQueryKey(publicSurveyId)
+  const queryKey = getGetV2SurveySummaryQuestionsPublicSurveyIdQueryKey(publicSurveyId);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>
-  > = ({ signal }) => getV2SurveySummaryQuestionsPublicSurveyId(publicSurveyId, signal)
+  > = ({ signal }) => getV2SurveySummaryQuestionsPublicSurveyId(publicSurveyId, signal);
 
-  return { queryKey, queryFn, enabled: !!publicSurveyId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!publicSurveyId, ...queryOptions };
+};
 
 export type GetV2SurveySummaryQuestionsPublicSurveyIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>
->
-export type GetV2SurveySummaryQuestionsPublicSurveyIdQueryError = unknown
+>;
+export type GetV2SurveySummaryQuestionsPublicSurveyIdQueryError = unknown;
 
 export const useGetV2SurveySummaryQuestionsPublicSurveyId = <
   TData = Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>,
@@ -619,17 +631,19 @@ export const useGetV2SurveySummaryQuestionsPublicSurveyId = <
       Awaited<ReturnType<typeof getV2SurveySummaryQuestionsPublicSurveyId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
   const queryOptions = getGetV2SurveySummaryQuestionsPublicSurveyIdQueryOptions(
     publicSurveyId,
     options
-  )
+  );
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

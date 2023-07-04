@@ -6,11 +6,11 @@
  */
 
 export type SurveyDeliveryMethodZbwy =
-  (typeof SurveyDeliveryMethodZbwy)[keyof typeof SurveyDeliveryMethodZbwy]
+  (typeof SurveyDeliveryMethodZbwy)[keyof typeof SurveyDeliveryMethodZbwy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SurveyDeliveryMethodZbwy = {
   SharableLink: 'SharableLink',
   Email: 'Email',
   Either: 'Either'
-} as const
+} as const;

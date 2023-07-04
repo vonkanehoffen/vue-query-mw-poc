@@ -6,11 +6,11 @@
  */
 
 export interface OnboardingChecklistResponseHamjti {
-  contactsImported?: boolean
-  surveySent?: boolean
-  pendingLiftshareAccountsSent?: boolean
-  acelReportGenerated?: boolean
-  travelPlanBatchSent?: boolean
-  scopingReportInitiated?: boolean
-  readonly progressPercent?: number
+  contactsImported?: boolean;
+  surveySent?: boolean;
+  pendingLiftshareAccountsSent?: boolean;
+  acelReportGenerated?: boolean;
+  travelPlanBatchSent?: boolean;
+  scopingReportInitiated?: boolean;
+  readonly progressPercent?: number;
 }

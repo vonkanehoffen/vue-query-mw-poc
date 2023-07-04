@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { MembershipStatsResponseVvuzsy } from './membershipStatsResponseVvuzsy'
-import type { AbstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy } from './abstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy'
+import type { MembershipStatsResponseVvuzsy } from './membershipStatsResponseVvuzsy';
+import type { AbstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy } from './abstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy';
 
 export interface AbstractModuleApiResponseMembershipStatsRequestMembershipStatsResponseMembershipStatsResponseXhety {
-  response?: MembershipStatsResponseVvuzsy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy
+  response?: MembershipStatsResponseVvuzsy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsMembershipStatsRequestMembershipStatsResponseNaugpy;
 }

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseModalShiftBreakdownRequestModalShiftBreakdownResponseModalShiftBreakdownResponseYcdji,
   ModalShiftBreakdownRequestGbfi,
@@ -16,35 +16,35 @@ import type {
   TotalModalShiftRequestNxjidhy,
   AbstractModuleApiResponseTravelPlanEmailMetricsRequestTravelPlanEmailMetricsResponseTravelPlanEmailMetricsResponseBkgxy,
   TravelPlanEmailMetricsRequestIlngfmy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
 // https://stackoverflow.com/questions/49579094/typescript-conditional-types-filter-out-readonly-properties-pick-only-requir/49579497#49579497
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y
   ? 1
   : 2
   ? A
-  : B
+  : B;
 
 type WritableKeys<T> = {
-  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>
-}[keyof T]
+  [P in keyof T]-?: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>;
+}[keyof T];
 
 type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void
   ? I
-  : never
-type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never
+  : never;
+type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never;
 
-type Writable<T> = Pick<T, WritableKeys<T>>
+type Writable<T> = Pick<T, WritableKeys<T>>;
 type NonReadonly<T> = [T] extends [UnionToIntersection<T>]
   ? {
-      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P]
+      [P in keyof Writable<T>]: T[P] extends object ? NonReadonly<NonNullable<T[P]>> : T[P];
     }
-  : DistributeReadOnlyOverUnions<T>
+  : DistributeReadOnlyOverUnions<T>;
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2TravelPlanAdminOverviewModalShiftBreakdown = (
   modalShiftBreakdownRequestGbfi: MaybeRef<NonReadonly<ModalShiftBreakdownRequestGbfi>>
@@ -56,8 +56,8 @@ export const postV2TravelPlanAdminOverviewModalShiftBreakdown = (
       headers: { 'Content-Type': 'application/json' },
       data: modalShiftBreakdownRequestGbfi
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanAdminOverviewModalShiftBreakdownMutationOptions = <
   TError = unknown,
@@ -68,33 +68,33 @@ export const getPostV2TravelPlanAdminOverviewModalShiftBreakdownMutationOptions 
     TError,
     { data: NonReadonly<ModalShiftBreakdownRequestGbfi> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewModalShiftBreakdown>>,
   TError,
   { data: NonReadonly<ModalShiftBreakdownRequestGbfi> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewModalShiftBreakdown>>,
     { data: NonReadonly<ModalShiftBreakdownRequestGbfi> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanAdminOverviewModalShiftBreakdown(data)
-  }
+    return postV2TravelPlanAdminOverviewModalShiftBreakdown(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanAdminOverviewModalShiftBreakdownMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewModalShiftBreakdown>>
->
+>;
 export type PostV2TravelPlanAdminOverviewModalShiftBreakdownMutationBody =
-  NonReadonly<ModalShiftBreakdownRequestGbfi>
-export type PostV2TravelPlanAdminOverviewModalShiftBreakdownMutationError = unknown
+  NonReadonly<ModalShiftBreakdownRequestGbfi>;
+export type PostV2TravelPlanAdminOverviewModalShiftBreakdownMutationError = unknown;
 
 export const usePostV2TravelPlanAdminOverviewModalShiftBreakdown = <
   TError = unknown,
@@ -105,13 +105,13 @@ export const usePostV2TravelPlanAdminOverviewModalShiftBreakdown = <
     TError,
     { data: NonReadonly<ModalShiftBreakdownRequestGbfi> },
     TContext
-  >
+  >;
 }) => {
   const mutationOptions =
-    getPostV2TravelPlanAdminOverviewModalShiftBreakdownMutationOptions(options)
+    getPostV2TravelPlanAdminOverviewModalShiftBreakdownMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TravelPlanAdminOverviewPublicTransportModes = (
   publicTransportResultsModeBreakdownRequestZkoacy: MaybeRef<
     NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy>
@@ -124,8 +124,8 @@ export const postV2TravelPlanAdminOverviewPublicTransportModes = (
       headers: { 'Content-Type': 'application/json' },
       data: publicTransportResultsModeBreakdownRequestZkoacy
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanAdminOverviewPublicTransportModesMutationOptions = <
   TError = unknown,
@@ -136,33 +136,33 @@ export const getPostV2TravelPlanAdminOverviewPublicTransportModesMutationOptions
     TError,
     { data: NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPublicTransportModes>>,
   TError,
   { data: NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPublicTransportModes>>,
     { data: NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanAdminOverviewPublicTransportModes(data)
-  }
+    return postV2TravelPlanAdminOverviewPublicTransportModes(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanAdminOverviewPublicTransportModesMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPublicTransportModes>>
->
+>;
 export type PostV2TravelPlanAdminOverviewPublicTransportModesMutationBody =
-  NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy>
-export type PostV2TravelPlanAdminOverviewPublicTransportModesMutationError = unknown
+  NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy>;
+export type PostV2TravelPlanAdminOverviewPublicTransportModesMutationError = unknown;
 
 export const usePostV2TravelPlanAdminOverviewPublicTransportModes = <
   TError = unknown,
@@ -173,13 +173,13 @@ export const usePostV2TravelPlanAdminOverviewPublicTransportModes = <
     TError,
     { data: NonReadonly<PublicTransportResultsModeBreakdownRequestZkoacy> },
     TContext
-  >
+  >;
 }) => {
   const mutationOptions =
-    getPostV2TravelPlanAdminOverviewPublicTransportModesMutationOptions(options)
+    getPostV2TravelPlanAdminOverviewPublicTransportModesMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TravelPlanAdminOverviewTotalModalShift = (
   totalModalShiftRequestNxjidhy: MaybeRef<NonReadonly<TotalModalShiftRequestNxjidhy>>
 ) => {
@@ -190,8 +190,8 @@ export const postV2TravelPlanAdminOverviewTotalModalShift = (
       headers: { 'Content-Type': 'application/json' },
       data: totalModalShiftRequestNxjidhy
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanAdminOverviewTotalModalShiftMutationOptions = <
   TError = unknown,
@@ -202,33 +202,33 @@ export const getPostV2TravelPlanAdminOverviewTotalModalShiftMutationOptions = <
     TError,
     { data: NonReadonly<TotalModalShiftRequestNxjidhy> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewTotalModalShift>>,
   TError,
   { data: NonReadonly<TotalModalShiftRequestNxjidhy> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewTotalModalShift>>,
     { data: NonReadonly<TotalModalShiftRequestNxjidhy> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanAdminOverviewTotalModalShift(data)
-  }
+    return postV2TravelPlanAdminOverviewTotalModalShift(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanAdminOverviewTotalModalShiftMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewTotalModalShift>>
->
+>;
 export type PostV2TravelPlanAdminOverviewTotalModalShiftMutationBody =
-  NonReadonly<TotalModalShiftRequestNxjidhy>
-export type PostV2TravelPlanAdminOverviewTotalModalShiftMutationError = unknown
+  NonReadonly<TotalModalShiftRequestNxjidhy>;
+export type PostV2TravelPlanAdminOverviewTotalModalShiftMutationError = unknown;
 
 export const usePostV2TravelPlanAdminOverviewTotalModalShift = <
   TError = unknown,
@@ -239,12 +239,12 @@ export const usePostV2TravelPlanAdminOverviewTotalModalShift = <
     TError,
     { data: NonReadonly<TotalModalShiftRequestNxjidhy> },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanAdminOverviewTotalModalShiftMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanAdminOverviewTotalModalShiftMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TravelPlanAdminOverviewPlanEmailMetrics = (
   travelPlanEmailMetricsRequestIlngfmy: MaybeRef<NonReadonly<TravelPlanEmailMetricsRequestIlngfmy>>
 ) => {
@@ -255,8 +255,8 @@ export const postV2TravelPlanAdminOverviewPlanEmailMetrics = (
       headers: { 'Content-Type': 'application/json' },
       data: travelPlanEmailMetricsRequestIlngfmy
     }
-  )
-}
+  );
+};
 
 export const getPostV2TravelPlanAdminOverviewPlanEmailMetricsMutationOptions = <
   TError = unknown,
@@ -267,33 +267,33 @@ export const getPostV2TravelPlanAdminOverviewPlanEmailMetricsMutationOptions = <
     TError,
     { data: NonReadonly<TravelPlanEmailMetricsRequestIlngfmy> },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPlanEmailMetrics>>,
   TError,
   { data: NonReadonly<TravelPlanEmailMetricsRequestIlngfmy> },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPlanEmailMetrics>>,
     { data: NonReadonly<TravelPlanEmailMetricsRequestIlngfmy> }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TravelPlanAdminOverviewPlanEmailMetrics(data)
-  }
+    return postV2TravelPlanAdminOverviewPlanEmailMetrics(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TravelPlanAdminOverviewPlanEmailMetricsMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TravelPlanAdminOverviewPlanEmailMetrics>>
->
+>;
 export type PostV2TravelPlanAdminOverviewPlanEmailMetricsMutationBody =
-  NonReadonly<TravelPlanEmailMetricsRequestIlngfmy>
-export type PostV2TravelPlanAdminOverviewPlanEmailMetricsMutationError = unknown
+  NonReadonly<TravelPlanEmailMetricsRequestIlngfmy>;
+export type PostV2TravelPlanAdminOverviewPlanEmailMetricsMutationError = unknown;
 
 export const usePostV2TravelPlanAdminOverviewPlanEmailMetrics = <
   TError = unknown,
@@ -304,9 +304,9 @@ export const usePostV2TravelPlanAdminOverviewPlanEmailMetrics = <
     TError,
     { data: NonReadonly<TravelPlanEmailMetricsRequestIlngfmy> },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TravelPlanAdminOverviewPlanEmailMetricsMutationOptions(options)
+  const mutationOptions = getPostV2TravelPlanAdminOverviewPlanEmailMetricsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

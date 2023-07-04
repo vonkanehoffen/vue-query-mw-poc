@@ -6,5 +6,5 @@
  */
 
 export interface LogResponseDjpi {
-  [key: string]: any
+  [key: string]: any;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface HasNumberplateResponseDtoMlta {
-  hasNumberplate?: boolean
+  hasNumberplate?: boolean;
 }

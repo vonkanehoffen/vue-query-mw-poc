@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SurveyListSurveyQueryDtoAyixcwy } from './surveyListSurveyQueryDtoAyixcwy'
+import type { SurveyListSurveyQueryDtoAyixcwy } from './surveyListSurveyQueryDtoAyixcwy';
 
 export interface SurveyListResponseElkjhra {
-  surveys?: SurveyListSurveyQueryDtoAyixcwy[] | null
+  surveys?: SurveyListSurveyQueryDtoAyixcwy[] | null;
 }

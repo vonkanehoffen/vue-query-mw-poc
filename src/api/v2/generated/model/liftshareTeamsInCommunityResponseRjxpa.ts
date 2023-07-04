@@ -6,6 +6,6 @@
  */
 
 export interface LiftshareTeamsInCommunityResponseRjxpa {
-  totalTeams?: number
-  totalSharers?: number
+  totalTeams?: number;
+  totalSharers?: number;
 }

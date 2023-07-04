@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SubscriptionReasonCreateResponseOlpkva } from './subscriptionReasonCreateResponseOlpkva'
-import type { AbstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq } from './abstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq'
+import type { SubscriptionReasonCreateResponseOlpkva } from './subscriptionReasonCreateResponseOlpkva';
+import type { AbstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq } from './abstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq';
 
 export interface AbstractModuleApiResponseSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseSubscriptionReasonCreateResponseDybtfly {
-  response?: SubscriptionReasonCreateResponseOlpkva
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq
+  response?: SubscriptionReasonCreateResponseOlpkva;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseGpbicq;
 }

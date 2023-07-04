@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataSourceDtoZsjoy } from './highFreqDataSourceDtoZsjoy'
+import type { HighFreqDataSourceDtoZsjoy } from './highFreqDataSourceDtoZsjoy';
 
 export interface HighFreqDataSourcesResponseLswpay {
-  dataSources?: HighFreqDataSourceDtoZsjoy[] | null
+  dataSources?: HighFreqDataSourceDtoZsjoy[] | null;
 }

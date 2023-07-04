@@ -6,6 +6,6 @@
  */
 
 export interface PasswordResetResponseDtoPqsrdi {
-  resetCode?: string | null
-  firstname?: string | null
+  resetCode?: string | null;
+  firstname?: string | null;
 }

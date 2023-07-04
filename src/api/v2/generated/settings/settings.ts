@@ -4,20 +4,20 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseDashboardSettingsUpdateRequestDashboardSettingsUpdateResponseDashboardSettingsUpdateResponseUlsbya,
   DashboardSettingsUpdateBaseRequestDgtyi,
   AbstractModuleApiResponsePaymentLinkUpdateRequestPaymentLinkUpdateResponsePaymentLinkUpdateResponseMvddpbq,
   PaymentLinkUpdateBaseRequestIlygpi
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const putV2Settings = (
   dashboardSettingsUpdateBaseRequestDgtyi: MaybeRef<DashboardSettingsUpdateBaseRequestDgtyi>
@@ -29,8 +29,8 @@ export const putV2Settings = (
       headers: { 'Content-Type': 'application/json' },
       data: dashboardSettingsUpdateBaseRequestDgtyi
     }
-  )
-}
+  );
+};
 
 export const getPutV2SettingsMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -38,30 +38,30 @@ export const getPutV2SettingsMutationOptions = <TError = unknown, TContext = unk
     TError,
     { data: DashboardSettingsUpdateBaseRequestDgtyi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2Settings>>,
   TError,
   { data: DashboardSettingsUpdateBaseRequestDgtyi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2Settings>>,
     { data: DashboardSettingsUpdateBaseRequestDgtyi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2Settings(data)
-  }
+    return putV2Settings(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PutV2SettingsMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Settings>>>
-export type PutV2SettingsMutationBody = DashboardSettingsUpdateBaseRequestDgtyi
-export type PutV2SettingsMutationError = unknown
+export type PutV2SettingsMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Settings>>>;
+export type PutV2SettingsMutationBody = DashboardSettingsUpdateBaseRequestDgtyi;
+export type PutV2SettingsMutationError = unknown;
 
 export const usePutV2Settings = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -69,12 +69,12 @@ export const usePutV2Settings = <TError = unknown, TContext = unknown>(options?:
     TError,
     { data: DashboardSettingsUpdateBaseRequestDgtyi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2SettingsMutationOptions(options)
+  const mutationOptions = getPutV2SettingsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const putV2LiftsharePaymentLink = (
   paymentLinkUpdateBaseRequestIlygpi: MaybeRef<PaymentLinkUpdateBaseRequestIlygpi>
 ) => {
@@ -85,8 +85,8 @@ export const putV2LiftsharePaymentLink = (
       headers: { 'Content-Type': 'application/json' },
       data: paymentLinkUpdateBaseRequestIlygpi
     }
-  )
-}
+  );
+};
 
 export const getPutV2LiftsharePaymentLinkMutationOptions = <
   TError = unknown,
@@ -97,32 +97,32 @@ export const getPutV2LiftsharePaymentLinkMutationOptions = <
     TError,
     { data: PaymentLinkUpdateBaseRequestIlygpi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
   TError,
   { data: PaymentLinkUpdateBaseRequestIlygpi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
     { data: PaymentLinkUpdateBaseRequestIlygpi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2LiftsharePaymentLink(data)
-  }
+    return putV2LiftsharePaymentLink(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2LiftsharePaymentLinkMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>
->
-export type PutV2LiftsharePaymentLinkMutationBody = PaymentLinkUpdateBaseRequestIlygpi
-export type PutV2LiftsharePaymentLinkMutationError = unknown
+>;
+export type PutV2LiftsharePaymentLinkMutationBody = PaymentLinkUpdateBaseRequestIlygpi;
+export type PutV2LiftsharePaymentLinkMutationError = unknown;
 
 export const usePutV2LiftsharePaymentLink = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -130,9 +130,9 @@ export const usePutV2LiftsharePaymentLink = <TError = unknown, TContext = unknow
     TError,
     { data: PaymentLinkUpdateBaseRequestIlygpi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2LiftsharePaymentLinkMutationOptions(options)
+  const mutationOptions = getPutV2LiftsharePaymentLinkMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

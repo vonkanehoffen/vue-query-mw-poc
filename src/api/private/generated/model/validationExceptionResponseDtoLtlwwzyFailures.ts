@@ -5,4 +5,4 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export type ValidationExceptionResponseDtoLtlwwzyFailures = { [key: string]: string[] } | null
+export type ValidationExceptionResponseDtoLtlwwzyFailures = { [key: string]: string[] } | null;

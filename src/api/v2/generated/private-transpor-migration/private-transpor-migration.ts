@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponsePrivateTransportServiceUpsertGeoJsonMigrationRequestPrivateTransportServiceUpsertGeoJsonMigrationResponsePrivateTransportServiceUpsertGeoJsonMigrationResponseOpbcnuq,
   PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const putV2PrivateTransportServiceMigration = (
   privateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy: MaybeRef<PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy>
@@ -27,8 +27,8 @@ export const putV2PrivateTransportServiceMigration = (
       headers: { 'Content-Type': 'application/json' },
       data: privateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy
     }
-  )
-}
+  );
+};
 
 export const getPutV2PrivateTransportServiceMigrationMutationOptions = <
   TError = unknown,
@@ -39,33 +39,33 @@ export const getPutV2PrivateTransportServiceMigrationMutationOptions = <
     TError,
     { data: PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2PrivateTransportServiceMigration>>,
   TError,
   { data: PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2PrivateTransportServiceMigration>>,
     { data: PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2PrivateTransportServiceMigration(data)
-  }
+    return putV2PrivateTransportServiceMigration(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2PrivateTransportServiceMigrationMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2PrivateTransportServiceMigration>>
->
+>;
 export type PutV2PrivateTransportServiceMigrationMutationBody =
-  PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy
-export type PutV2PrivateTransportServiceMigrationMutationError = unknown
+  PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy;
+export type PutV2PrivateTransportServiceMigrationMutationError = unknown;
 
 export const usePutV2PrivateTransportServiceMigration = <
   TError = unknown,
@@ -76,9 +76,9 @@ export const usePutV2PrivateTransportServiceMigration = <
     TError,
     { data: PrivateTransportServiceUpsertGeoJsonMigrationRequestJpbqyfy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2PrivateTransportServiceMigrationMutationOptions(options)
+  const mutationOptions = getPutV2PrivateTransportServiceMigrationMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

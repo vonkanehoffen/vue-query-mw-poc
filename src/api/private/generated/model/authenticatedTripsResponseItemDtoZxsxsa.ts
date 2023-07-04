@@ -6,6 +6,6 @@
  */
 
 export interface AuthenticatedTripsResponseItemDtoZxsxsa {
-  name?: string | null
-  date?: string
+  name?: string | null;
+  date?: string;
 }

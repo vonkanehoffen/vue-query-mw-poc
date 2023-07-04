@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages } from './abstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages'
+import type { AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages } from './abstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages';
 
 export interface AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttq {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages;
 }

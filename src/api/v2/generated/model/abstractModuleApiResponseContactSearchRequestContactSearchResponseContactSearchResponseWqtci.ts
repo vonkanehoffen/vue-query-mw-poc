@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactSearchResponseFfcwxa } from './contactSearchResponseFfcwxa'
-import type { AbstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi } from './abstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi'
+import type { ContactSearchResponseFfcwxa } from './contactSearchResponseFfcwxa';
+import type { AbstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi } from './abstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi';
 
 export interface AbstractModuleApiResponseContactSearchRequestContactSearchResponseContactSearchResponseWqtci {
-  response?: ContactSearchResponseFfcwxa
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi
+  response?: ContactSearchResponseFfcwxa;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsContactSearchRequestContactSearchResponseUbxzfyi;
 }

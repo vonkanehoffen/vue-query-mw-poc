@@ -1,5 +1,5 @@
-import { STORAGE_REFRESH_TOKEN, STORAGE_TOKEN } from '@/api/constants'
-import { defineStore } from 'pinia'
+import { STORAGE_REFRESH_TOKEN, STORAGE_TOKEN } from '@/api/constants';
+import { defineStore } from 'pinia';
 
 /**
  * Auth store
@@ -23,16 +23,16 @@ export const useAuthStore = defineStore('auth', {
   },
   actions: {
     saveTokens(token: string, refreshToken: string) {
-      this.token = token
-      this.refreshToken = refreshToken
-      localStorage.setItem(STORAGE_TOKEN, token)
-      localStorage.setItem(STORAGE_REFRESH_TOKEN, refreshToken)
+      this.token = token;
+      this.refreshToken = refreshToken;
+      localStorage.setItem(STORAGE_TOKEN, token);
+      localStorage.setItem(STORAGE_REFRESH_TOKEN, refreshToken);
     },
     destroyTokens() {
-      this.token = null
-      this.refreshToken = null
-      localStorage.removeItem(STORAGE_TOKEN)
-      localStorage.removeItem(STORAGE_REFRESH_TOKEN)
+      this.token = null;
+      this.refreshToken = null;
+      localStorage.removeItem(STORAGE_TOKEN);
+      localStorage.removeItem(STORAGE_REFRESH_TOKEN);
     }
   }
-})
+});

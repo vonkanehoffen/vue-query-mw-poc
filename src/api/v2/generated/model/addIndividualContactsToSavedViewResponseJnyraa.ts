@@ -6,5 +6,5 @@
  */
 
 export interface AddIndividualContactsToSavedViewResponseJnyraa {
-  id?: string | null
+  id?: string | null;
 }

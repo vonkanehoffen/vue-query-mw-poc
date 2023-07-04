@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SurveyQuestionsListQuestionDtoUssblny } from './surveyQuestionsListQuestionDtoUssblny'
+import type { SurveyQuestionsListQuestionDtoUssblny } from './surveyQuestionsListQuestionDtoUssblny';
 
 export interface SurveyQuestionsListResponseKjxfy {
-  questions?: SurveyQuestionsListQuestionDtoUssblny[] | null
-  publicSurveyId?: string
-  fromPublicLink?: boolean
-  numbered?: boolean
-  headingAnnotation?: string | null
+  questions?: SurveyQuestionsListQuestionDtoUssblny[] | null;
+  publicSurveyId?: string;
+  fromPublicLink?: boolean;
+  numbered?: boolean;
+  headingAnnotation?: string | null;
 }

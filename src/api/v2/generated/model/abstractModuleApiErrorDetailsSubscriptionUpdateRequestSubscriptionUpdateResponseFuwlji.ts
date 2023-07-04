@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages } from './abstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages'
+import type { AbstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages } from './abstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages';
 
 export interface AbstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwlji {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsSubscriptionUpdateRequestSubscriptionUpdateResponseFuwljiMessages;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataSourcesResponseLswpay } from './highFreqDataSourcesResponseLswpay'
-import type { AbstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq } from './abstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq'
+import type { HighFreqDataSourcesResponseLswpay } from './highFreqDataSourcesResponseLswpay';
+import type { AbstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq } from './abstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq';
 
 export interface AbstractModuleApiResponseHighFreqDataSourcesRequestHighFreqDataSourcesResponseHighFreqDataSourcesResponseGjwy {
-  response?: HighFreqDataSourcesResponseLswpay
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq
+  response?: HighFreqDataSourcesResponseLswpay;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsHighFreqDataSourcesRequestHighFreqDataSourcesResponseLvjqq;
 }

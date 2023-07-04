@@ -6,7 +6,7 @@
  */
 
 export interface AuthenticateTripDriverRequestBaseDtoEluguhi {
-  lat?: number
-  lng?: number
-  numberplate?: string | null
+  lat?: number;
+  lng?: number;
+  numberplate?: string | null;
 }

@@ -6,29 +6,29 @@
  */
 
 export interface AcelTravelModesBinlxy {
-  companyShuttleBus?: number
-  electricCompanyShuttleBus?: number
-  electricMotorcycle?: number
-  vanPool?: number
-  electricVanPool?: number
-  busOrCoach?: number
-  carshare?: number
-  cycle?: number
-  drive?: number
-  electricBusOrCoach?: number
-  electricCarshare?: number
-  electricDrive?: number
-  electricScooter?: number
-  electricTaxi?: number
-  fly?: number
-  lightRail?: number
-  motorcycle?: number
-  parkAndRide?: number
-  taxi?: number
-  train?: number
-  walk?: number
-  workFromHome?: number
-  readonly other?: number
-  readonly total?: number
-  numberOfPeople?: number
+  companyShuttleBus?: number;
+  electricCompanyShuttleBus?: number;
+  electricMotorcycle?: number;
+  vanPool?: number;
+  electricVanPool?: number;
+  busOrCoach?: number;
+  carshare?: number;
+  cycle?: number;
+  drive?: number;
+  electricBusOrCoach?: number;
+  electricCarshare?: number;
+  electricDrive?: number;
+  electricScooter?: number;
+  electricTaxi?: number;
+  fly?: number;
+  lightRail?: number;
+  motorcycle?: number;
+  parkAndRide?: number;
+  taxi?: number;
+  train?: number;
+  walk?: number;
+  workFromHome?: number;
+  readonly other?: number;
+  readonly total?: number;
+  numberOfPeople?: number;
 }

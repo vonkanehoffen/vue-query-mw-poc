@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanResultsRouteDistanceBreakdownKmszlq } from './travelPlanResultsRouteDistanceBreakdownKmszlq'
+import type { TravelPlanResultsRouteDistanceBreakdownKmszlq } from './travelPlanResultsRouteDistanceBreakdownKmszlq';
 
 export interface DistanceFrequencyBreakdownResponseIsyiq {
-  distanceBreakdown?: TravelPlanResultsRouteDistanceBreakdownKmszlq[] | null
+  distanceBreakdown?: TravelPlanResultsRouteDistanceBreakdownKmszlq[] | null;
 }

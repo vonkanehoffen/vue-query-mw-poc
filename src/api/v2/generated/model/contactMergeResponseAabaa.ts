@@ -6,5 +6,5 @@
  */
 
 export interface ContactMergeResponseAabaa {
-  [key: string]: any
+  [key: string]: any;
 }

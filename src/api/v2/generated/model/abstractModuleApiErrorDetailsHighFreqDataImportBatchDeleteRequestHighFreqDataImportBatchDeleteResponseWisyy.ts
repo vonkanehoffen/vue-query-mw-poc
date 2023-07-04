@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages } from './abstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages'
+import type { AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages } from './abstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages';
 
 export interface AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyyMessages;
 }

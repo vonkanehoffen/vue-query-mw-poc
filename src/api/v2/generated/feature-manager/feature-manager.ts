@@ -4,60 +4,62 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { AbstractModuleApiResponseFeatureManagerListRequestFeatureManagerListResponseFeatureManagerListResponseHxmfpq } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '@tanstack/vue-query';
+import type { AbstractModuleApiResponseFeatureManagerListRequestFeatureManagerListResponseFeatureManagerListResponseHxmfpq } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2FeatureManager = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseFeatureManagerListRequestFeatureManagerListResponseFeatureManagerListResponseHxmfpq>(
     { url: `/v2/feature-manager`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2FeatureManagerQueryKey = () => ['v2', 'feature-manager'] as const
+export const getGetV2FeatureManagerQueryKey = () => ['v2', 'feature-manager'] as const;
 
 export const getGetV2FeatureManagerQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2FeatureManager>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2FeatureManager>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2FeatureManager>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2FeatureManager>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2FeatureManagerQueryKey()
+  const queryKey = getGetV2FeatureManagerQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2FeatureManager>>> = ({ signal }) =>
-    getV2FeatureManager(signal)
+    getV2FeatureManager(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2FeatureManagerQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2FeatureManager>>
->
-export type GetV2FeatureManagerQueryError = unknown
+>;
+export type GetV2FeatureManagerQueryError = unknown;
 
 export const useGetV2FeatureManager = <
   TData = Awaited<ReturnType<typeof getV2FeatureManager>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2FeatureManager>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2FeatureManager>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2FeatureManagerQueryOptions(options)
+  const queryOptions = getGetV2FeatureManagerQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

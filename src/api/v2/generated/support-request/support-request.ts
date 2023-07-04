@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseSupportRequestSendRequestSupportRequestSendResponseSupportRequestSendResponseFeqxhy,
   SupportRequestSendRequestFnvyi
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2SupportRequest = (
   supportRequestSendRequestFnvyi: MaybeRef<SupportRequestSendRequestFnvyi>
@@ -27,8 +27,8 @@ export const postV2SupportRequest = (
       headers: { 'Content-Type': 'application/json' },
       data: supportRequestSendRequestFnvyi
     }
-  )
-}
+  );
+};
 
 export const getPostV2SupportRequestMutationOptions = <
   TError = unknown,
@@ -39,32 +39,32 @@ export const getPostV2SupportRequestMutationOptions = <
     TError,
     { data: SupportRequestSendRequestFnvyi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2SupportRequest>>,
   TError,
   { data: SupportRequestSendRequestFnvyi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2SupportRequest>>,
     { data: SupportRequestSendRequestFnvyi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2SupportRequest(data)
-  }
+    return postV2SupportRequest(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2SupportRequestMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2SupportRequest>>
->
-export type PostV2SupportRequestMutationBody = SupportRequestSendRequestFnvyi
-export type PostV2SupportRequestMutationError = unknown
+>;
+export type PostV2SupportRequestMutationBody = SupportRequestSendRequestFnvyi;
+export type PostV2SupportRequestMutationError = unknown;
 
 export const usePostV2SupportRequest = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -72,9 +72,9 @@ export const usePostV2SupportRequest = <TError = unknown, TContext = unknown>(op
     TError,
     { data: SupportRequestSendRequestFnvyi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2SupportRequestMutationOptions(options)
+  const mutationOptions = getPostV2SupportRequestMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

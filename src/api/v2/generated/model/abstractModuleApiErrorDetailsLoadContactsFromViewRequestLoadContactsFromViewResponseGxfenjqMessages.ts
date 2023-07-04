@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsLoadContactsFromViewRequestLoadContactsFromViewResponseGxfenjqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

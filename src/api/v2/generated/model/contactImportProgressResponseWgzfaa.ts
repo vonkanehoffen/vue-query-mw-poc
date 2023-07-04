@@ -6,6 +6,6 @@
  */
 
 export interface ContactImportProgressResponseWgzfaa {
-  progress?: number
-  readonly formatted?: string | null
+  progress?: number;
+  readonly formatted?: string | null;
 }

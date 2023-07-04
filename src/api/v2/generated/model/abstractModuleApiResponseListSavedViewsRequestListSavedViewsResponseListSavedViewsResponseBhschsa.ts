@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ListSavedViewsResponseZznny } from './listSavedViewsResponseZznny'
-import type { AbstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli } from './abstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli'
+import type { ListSavedViewsResponseZznny } from './listSavedViewsResponseZznny';
+import type { AbstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli } from './abstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli';
 
 export interface AbstractModuleApiResponseListSavedViewsRequestListSavedViewsResponseListSavedViewsResponseBhschsa {
-  response?: ListSavedViewsResponseZznny
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli
+  response?: ListSavedViewsResponseZznny;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsli;
 }

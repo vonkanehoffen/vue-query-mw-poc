@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TagListTagWithCommunityLjxjzi } from './tagListTagWithCommunityLjxjzi'
+import type { TagListTagWithCommunityLjxjzi } from './tagListTagWithCommunityLjxjzi';
 
 export interface TagListResponseCesiy {
-  tags?: TagListTagWithCommunityLjxjzi[] | null
+  tags?: TagListTagWithCommunityLjxjzi[] | null;
 }

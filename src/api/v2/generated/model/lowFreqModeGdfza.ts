@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LowFreqDatumNyxbmlq } from './lowFreqDatumNyxbmlq'
+import type { LowFreqDatumNyxbmlq } from './lowFreqDatumNyxbmlq';
 
 export interface LowFreqModeGdfza {
-  mode?: number
-  description?: string | null
-  data?: LowFreqDatumNyxbmlq[] | null
+  mode?: number;
+  description?: string | null;
+  data?: LowFreqDatumNyxbmlq[] | null;
 }

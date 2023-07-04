@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataCsvValidationFailureRlyvky } from './highFreqDataCsvValidationFailureRlyvky'
+import type { HighFreqDataCsvValidationFailureRlyvky } from './highFreqDataCsvValidationFailureRlyvky';
 
 export interface HighFreqDataImportCreateResponseHrpbofq {
-  importId?: string | null
-  validationFailures?: HighFreqDataCsvValidationFailureRlyvky[] | null
-  errorMessage?: string | null
+  importId?: string | null;
+  validationFailures?: HighFreqDataCsvValidationFailureRlyvky[] | null;
+  errorMessage?: string | null;
 }

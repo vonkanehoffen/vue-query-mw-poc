@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

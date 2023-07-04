@@ -6,6 +6,6 @@
  */
 
 export interface RespawnCommunityResponseRgrjkvq {
-  communityId?: number
-  publicCommunityId?: string | null
+  communityId?: number;
+  publicCommunityId?: string | null;
 }

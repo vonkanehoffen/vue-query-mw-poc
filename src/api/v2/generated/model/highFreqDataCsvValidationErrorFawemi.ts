@@ -6,7 +6,7 @@
  */
 
 export type HighFreqDataCsvValidationErrorFawemi =
-  (typeof HighFreqDataCsvValidationErrorFawemi)[keyof typeof HighFreqDataCsvValidationErrorFawemi]
+  (typeof HighFreqDataCsvValidationErrorFawemi)[keyof typeof HighFreqDataCsvValidationErrorFawemi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const HighFreqDataCsvValidationErrorFawemi = {
@@ -15,4 +15,4 @@ export const HighFreqDataCsvValidationErrorFawemi = {
   MissingDistanceColumn: 'MissingDistanceColumn',
   MissingOrInvalidDateValue: 'MissingOrInvalidDateValue',
   MissingOrInvalidDistanceValue: 'MissingOrInvalidDistanceValue'
-} as const
+} as const;

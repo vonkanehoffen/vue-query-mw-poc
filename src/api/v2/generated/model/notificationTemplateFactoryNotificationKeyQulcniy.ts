@@ -6,7 +6,7 @@
  */
 
 export type NotificationTemplateFactoryNotificationKeyQulcniy =
-  (typeof NotificationTemplateFactoryNotificationKeyQulcniy)[keyof typeof NotificationTemplateFactoryNotificationKeyQulcniy]
+  (typeof NotificationTemplateFactoryNotificationKeyQulcniy)[keyof typeof NotificationTemplateFactoryNotificationKeyQulcniy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const NotificationTemplateFactoryNotificationKeyQulcniy = {
@@ -159,4 +159,4 @@ export const NotificationTemplateFactoryNotificationKeyQulcniy = {
   CommuterCensus2023Reminder: 'CommuterCensus2023Reminder',
   WelcomeNewMembersToLiftshareNectar: 'WelcomeNewMembersToLiftshareNectar',
   WelcomeExistingMembersToLiftshareNectar: 'WelcomeExistingMembersToLiftshareNectar'
-} as const
+} as const;

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactLimitResponseIwki } from './contactLimitResponseIwki'
-import type { AbstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy } from './abstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy'
+import type { ContactLimitResponseIwki } from './contactLimitResponseIwki';
+import type { AbstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy } from './abstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy';
 
 export interface AbstractModuleApiResponseContactLimitRequestContactLimitResponseContactLimitResponsePcqlnwi {
-  response?: ContactLimitResponseIwki
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy
+  response?: ContactLimitResponseIwki;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjy;
 }

@@ -6,7 +6,7 @@
  */
 
 export interface LocationPjjkoa {
-  address?: string | null
-  latitude?: number
-  longitude?: number
+  address?: string | null;
+  latitude?: number;
+  longitude?: number;
 }

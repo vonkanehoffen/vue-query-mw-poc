@@ -6,6 +6,6 @@
  */
 
 export interface SupportRequestSendRequestFnvyi {
-  token?: string | null
-  integrity?: string | null
+  token?: string | null;
+  integrity?: string | null;
 }

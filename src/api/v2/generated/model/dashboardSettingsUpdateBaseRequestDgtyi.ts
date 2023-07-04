@@ -6,7 +6,7 @@
  */
 
 export interface DashboardSettingsUpdateBaseRequestDgtyi {
-  firstName?: string | null
-  lastname?: string | null
-  paginationRowsPerPageDefault?: number
+  firstName?: string | null;
+  lastname?: string | null;
+  paginationRowsPerPageDefault?: number;
 }

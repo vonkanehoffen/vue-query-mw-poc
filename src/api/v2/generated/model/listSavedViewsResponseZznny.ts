@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ListSavedViewsSavedViewListTemplateDtoEyrbpiq } from './listSavedViewsSavedViewListTemplateDtoEyrbpiq'
+import type { ListSavedViewsSavedViewListTemplateDtoEyrbpiq } from './listSavedViewsSavedViewListTemplateDtoEyrbpiq';
 
 export interface ListSavedViewsResponseZznny {
-  views?: ListSavedViewsSavedViewListTemplateDtoEyrbpiq[] | null
+  views?: ListSavedViewsSavedViewListTemplateDtoEyrbpiq[] | null;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface GetTokenForClientAccountHandlerRequestTthtui {
-  adminId?: string | null
+  adminId?: string | null;
 }

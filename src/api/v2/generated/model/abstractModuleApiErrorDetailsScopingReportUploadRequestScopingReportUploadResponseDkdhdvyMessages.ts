@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsScopingReportUploadRequestScopingReportUploadResponseDkdhdvyMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { MobileAppDashboardResponseJshi } from './mobileAppDashboardResponseJshi'
-import type { AbstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia } from './abstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia'
+import type { MobileAppDashboardResponseJshi } from './mobileAppDashboardResponseJshi';
+import type { AbstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia } from './abstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia';
 
 export interface AbstractModuleApiResponseMobileAppDashboardRequestMobileAppDashboardResponseMobileAppDashboardResponseDkwpgzi {
-  response?: MobileAppDashboardResponseJshi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia
+  response?: MobileAppDashboardResponseJshi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsMobileAppDashboardRequestMobileAppDashboardResponseZzwia;
 }

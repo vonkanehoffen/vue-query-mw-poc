@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsCumulativeTripAuthenticationsRequestCumulativeTripAuthenticationsResponseJrwakiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

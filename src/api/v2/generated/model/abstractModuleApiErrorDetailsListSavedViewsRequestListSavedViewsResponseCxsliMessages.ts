@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsListSavedViewsRequestListSavedViewsResponseCxsliMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

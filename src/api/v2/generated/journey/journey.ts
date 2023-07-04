@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseJourneyUpsertRequestJourneyUpsertResponseJourneyUpsertResponseHtjha,
   JourneyUpsertRequestXbmluey
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2LiftshareJourney = (
   journeyUpsertRequestXbmluey: MaybeRef<JourneyUpsertRequestXbmluey>
@@ -27,8 +27,8 @@ export const postV2LiftshareJourney = (
       headers: { 'Content-Type': 'application/json' },
       data: journeyUpsertRequestXbmluey
     }
-  )
-}
+  );
+};
 
 export const getPostV2LiftshareJourneyMutationOptions = <
   TError = unknown,
@@ -39,32 +39,32 @@ export const getPostV2LiftshareJourneyMutationOptions = <
     TError,
     { data: JourneyUpsertRequestXbmluey },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2LiftshareJourney>>,
   TError,
   { data: JourneyUpsertRequestXbmluey },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2LiftshareJourney>>,
     { data: JourneyUpsertRequestXbmluey }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2LiftshareJourney(data)
-  }
+    return postV2LiftshareJourney(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2LiftshareJourneyMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2LiftshareJourney>>
->
-export type PostV2LiftshareJourneyMutationBody = JourneyUpsertRequestXbmluey
-export type PostV2LiftshareJourneyMutationError = unknown
+>;
+export type PostV2LiftshareJourneyMutationBody = JourneyUpsertRequestXbmluey;
+export type PostV2LiftshareJourneyMutationError = unknown;
 
 export const usePostV2LiftshareJourney = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -72,9 +72,9 @@ export const usePostV2LiftshareJourney = <TError = unknown, TContext = unknown>(
     TError,
     { data: JourneyUpsertRequestXbmluey },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2LiftshareJourneyMutationOptions(options)
+  const mutationOptions = getPostV2LiftshareJourneyMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

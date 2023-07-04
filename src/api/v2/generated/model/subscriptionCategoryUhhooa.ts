@@ -6,7 +6,7 @@
  */
 
 export type SubscriptionCategoryUhhooa =
-  (typeof SubscriptionCategoryUhhooa)[keyof typeof SubscriptionCategoryUhhooa]
+  (typeof SubscriptionCategoryUhhooa)[keyof typeof SubscriptionCategoryUhhooa];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SubscriptionCategoryUhhooa = {
@@ -19,4 +19,4 @@ export const SubscriptionCategoryUhhooa = {
   CaseStudy: 'CaseStudy',
   Ambassador: 'Ambassador',
   AddJourneyReminders: 'AddJourneyReminders'
-} as const
+} as const;

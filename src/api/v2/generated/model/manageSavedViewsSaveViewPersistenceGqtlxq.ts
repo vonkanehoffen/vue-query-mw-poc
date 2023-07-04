@@ -6,10 +6,10 @@
  */
 
 export type ManageSavedViewsSaveViewPersistenceGqtlxq =
-  (typeof ManageSavedViewsSaveViewPersistenceGqtlxq)[keyof typeof ManageSavedViewsSaveViewPersistenceGqtlxq]
+  (typeof ManageSavedViewsSaveViewPersistenceGqtlxq)[keyof typeof ManageSavedViewsSaveViewPersistenceGqtlxq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ManageSavedViewsSaveViewPersistenceGqtlxq = {
   Dynamic: 'Dynamic',
   Static: 'Static'
-} as const
+} as const;

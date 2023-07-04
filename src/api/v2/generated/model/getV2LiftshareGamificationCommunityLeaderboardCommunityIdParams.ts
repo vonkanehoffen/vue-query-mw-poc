@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LeaderboardDateFilterGkngiji } from './leaderboardDateFilterGkngiji'
+import type { LeaderboardDateFilterGkngiji } from './leaderboardDateFilterGkngiji';
 
 export type GetV2LiftshareGamificationCommunityLeaderboardCommunityIdParams = {
-  dateFilter?: LeaderboardDateFilterGkngiji
-}
+  dateFilter?: LeaderboardDateFilterGkngiji;
+};

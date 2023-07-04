@@ -6,5 +6,5 @@
  */
 
 export interface CancelBookingRequestBaseDtoTdrudvy {
-  message?: string | null
+  message?: string | null;
 }

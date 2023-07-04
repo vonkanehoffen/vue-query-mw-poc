@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AddOrEditJourneyRequestLocationDtoPtcly } from './addOrEditJourneyRequestLocationDtoPtcly'
+import type { AddOrEditJourneyRequestLocationDtoPtcly } from './addOrEditJourneyRequestLocationDtoPtcly';
 
 export interface JourneyUpsertResponseJpaqylq {
-  id?: string | null
-  origin?: AddOrEditJourneyRequestLocationDtoPtcly
-  destination?: AddOrEditJourneyRequestLocationDtoPtcly
+  id?: string | null;
+  origin?: AddOrEditJourneyRequestLocationDtoPtcly;
+  destination?: AddOrEditJourneyRequestLocationDtoPtcly;
 }

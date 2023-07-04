@@ -6,11 +6,11 @@
  */
 
 export interface ApiRegisterRequestDtoHtjva {
-  forename?: string | null
-  surname?: string | null
-  password?: string | null
-  email?: string | null
-  publicCommunityId?: string | null
-  publicCommunityPassword?: string | null
-  missingCommunityName?: string | null
+  forename?: string | null;
+  surname?: string | null;
+  password?: string | null;
+  email?: string | null;
+  publicCommunityId?: string | null;
+  publicCommunityPassword?: string | null;
+  missingCommunityName?: string | null;
 }

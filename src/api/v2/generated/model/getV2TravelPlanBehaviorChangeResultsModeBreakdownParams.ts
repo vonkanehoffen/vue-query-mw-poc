@@ -6,7 +6,7 @@
  */
 
 export type GetV2TravelPlanBehaviorChangeResultsModeBreakdownParams = {
-  cid?: string
-  dateFrom?: string
-  dateTo?: string
-}
+  cid?: string;
+  dateFrom?: string;
+  dateTo?: string;
+};

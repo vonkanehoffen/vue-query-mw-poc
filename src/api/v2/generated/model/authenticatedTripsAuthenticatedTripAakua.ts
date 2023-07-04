@@ -6,8 +6,8 @@
  */
 
 export interface AuthenticatedTripsAuthenticatedTripAakua {
-  teamId?: number
-  name?: string | null
-  encSubscriberId?: string | null
-  date?: string
+  teamId?: number;
+  name?: string | null;
+  encSubscriberId?: string | null;
+  date?: string;
 }

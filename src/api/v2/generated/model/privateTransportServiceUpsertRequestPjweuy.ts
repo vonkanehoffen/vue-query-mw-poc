@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PrivateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy } from './privateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy'
+import type { PrivateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy } from './privateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy';
 
 export interface PrivateTransportServiceUpsertRequestPjweuy {
-  upsertDto?: PrivateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy[] | null
+  upsertDto?: PrivateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy[] | null;
 }

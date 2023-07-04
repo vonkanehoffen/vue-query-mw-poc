@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { PendingBookingsResponseItemDtoRxxkqy } from './pendingBookingsResponseItemDtoRxxkqy'
+import type { PendingBookingsResponseItemDtoRxxkqy } from './pendingBookingsResponseItemDtoRxxkqy';
 
 export interface PendingBookingsResponseDtoNqieea {
-  bookings?: PendingBookingsResponseItemDtoRxxkqy[] | null
+  bookings?: PendingBookingsResponseItemDtoRxxkqy[] | null;
 }

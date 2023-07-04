@@ -6,11 +6,11 @@
  */
 
 export interface ClientOverviewRequestQonqzzi {
-  maybeDateFrom?: string | null
-  maybeDateTo?: string | null
-  readonly dateFromUtc?: string
-  readonly dateToUtc?: string
-  dateFrom?: string | null
-  dateTo?: string | null
-  communityIds?: string[] | null
+  maybeDateFrom?: string | null;
+  maybeDateTo?: string | null;
+  readonly dateFromUtc?: string;
+  readonly dateToUtc?: string;
+  dateFrom?: string | null;
+  dateTo?: string | null;
+  communityIds?: string[] | null;
 }

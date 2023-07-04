@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPrivateTransportServiceUpsertRequestPrivateTransportServiceUpsertResponseZaayMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

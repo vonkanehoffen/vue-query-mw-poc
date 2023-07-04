@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsSupportRequestSendRequestSupportRequestSendResponseIllhiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

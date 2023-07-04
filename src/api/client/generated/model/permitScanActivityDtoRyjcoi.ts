@@ -7,6 +7,6 @@
  */
 
 export interface PermitScanActivityDtoRyjcoi {
-  activityDate?: string
-  activity?: string | null
+  activityDate?: string;
+  activity?: string | null;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataImportBatchDeleteResponseZwmkq } from './highFreqDataImportBatchDeleteResponseZwmkq'
-import type { AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy } from './abstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy'
+import type { HighFreqDataImportBatchDeleteResponseZwmkq } from './highFreqDataImportBatchDeleteResponseZwmkq';
+import type { AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy } from './abstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy';
 
 export interface AbstractModuleApiResponseHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseHighFreqDataImportBatchDeleteResponseVsmgma {
-  response?: HighFreqDataImportBatchDeleteResponseZwmkq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy
+  response?: HighFreqDataImportBatchDeleteResponseZwmkq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseWisyy;
 }

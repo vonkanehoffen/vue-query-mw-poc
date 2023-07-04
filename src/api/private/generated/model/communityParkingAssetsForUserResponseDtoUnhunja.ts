@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { CommunityParkingAssetDtoQqldyva } from './communityParkingAssetDtoQqldyva'
+import type { CommunityParkingAssetDtoQqldyva } from './communityParkingAssetDtoQqldyva';
 
 export interface CommunityParkingAssetsForUserResponseDtoUnhunja {
-  parkingAssets?: CommunityParkingAssetDtoQqldyva[] | null
+  parkingAssets?: CommunityParkingAssetDtoQqldyva[] | null;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface EmailVerifyResponseMnweckq {
-  success?: boolean
+  success?: boolean;
 }

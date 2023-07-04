@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsTokenCreateRequestTokenCreateResponseVkvqMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

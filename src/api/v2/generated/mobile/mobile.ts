@@ -4,22 +4,22 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
-import type { AbstractModuleApiResponseVerifyMobileNumberRequestVerifyMobileNumberResponseVerifyMobileNumberResponseUakqi } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
+import type { AbstractModuleApiResponseVerifyMobileNumberRequestVerifyMobileNumberResponseVerifyMobileNumberResponseUakqi } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2LiftshareMobileVerifyToken = (token: MaybeRef<string>) => {
   return customInstance<AbstractModuleApiResponseVerifyMobileNumberRequestVerifyMobileNumberResponseVerifyMobileNumberResponseUakqi>(
     { url: `/v2/liftshare/mobile/verify/${unref(token)}`, method: 'post' }
-  )
-}
+  );
+};
 
 export const getPostV2LiftshareMobileVerifyTokenMutationOptions = <
   TError = unknown,
@@ -30,32 +30,32 @@ export const getPostV2LiftshareMobileVerifyTokenMutationOptions = <
     TError,
     { token: string },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2LiftshareMobileVerifyToken>>,
   TError,
   { token: string },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2LiftshareMobileVerifyToken>>,
     { token: string }
   > = (props) => {
-    const { token } = props ?? {}
+    const { token } = props ?? {};
 
-    return postV2LiftshareMobileVerifyToken(token)
-  }
+    return postV2LiftshareMobileVerifyToken(token);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2LiftshareMobileVerifyTokenMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2LiftshareMobileVerifyToken>>
->
+>;
 
-export type PostV2LiftshareMobileVerifyTokenMutationError = unknown
+export type PostV2LiftshareMobileVerifyTokenMutationError = unknown;
 
 export const usePostV2LiftshareMobileVerifyToken = <
   TError = unknown,
@@ -66,9 +66,9 @@ export const usePostV2LiftshareMobileVerifyToken = <
     TError,
     { token: string },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2LiftshareMobileVerifyTokenMutationOptions(options)
+  const mutationOptions = getPostV2LiftshareMobileVerifyTokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

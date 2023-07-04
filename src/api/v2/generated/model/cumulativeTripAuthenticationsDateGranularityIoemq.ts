@@ -6,11 +6,11 @@
  */
 
 export type CumulativeTripAuthenticationsDateGranularityIoemq =
-  (typeof CumulativeTripAuthenticationsDateGranularityIoemq)[keyof typeof CumulativeTripAuthenticationsDateGranularityIoemq]
+  (typeof CumulativeTripAuthenticationsDateGranularityIoemq)[keyof typeof CumulativeTripAuthenticationsDateGranularityIoemq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const CumulativeTripAuthenticationsDateGranularityIoemq = {
   Day: 'Day',
   Month: 'Month',
   Year: 'Year'
-} as const
+} as const;

@@ -6,11 +6,11 @@
  */
 
 export type ModalShiftBreakdownModeEmissionsRankDhugea =
-  (typeof ModalShiftBreakdownModeEmissionsRankDhugea)[keyof typeof ModalShiftBreakdownModeEmissionsRankDhugea]
+  (typeof ModalShiftBreakdownModeEmissionsRankDhugea)[keyof typeof ModalShiftBreakdownModeEmissionsRankDhugea];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ModalShiftBreakdownModeEmissionsRankDhugea = {
   Zero: 'Zero',
   Low: 'Low',
   High: 'High'
-} as const
+} as const;

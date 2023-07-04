@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LowFreqDatumFiguresHokoaq } from './lowFreqDatumFiguresHokoaq'
+import type { LowFreqDatumFiguresHokoaq } from './lowFreqDatumFiguresHokoaq';
 
 export interface LowFreqDatumNyxbmlq {
-  date?: string
-  figures?: LowFreqDatumFiguresHokoaq
-  prediction?: boolean
+  date?: string;
+  figures?: LowFreqDatumFiguresHokoaq;
+  prediction?: boolean;
 }

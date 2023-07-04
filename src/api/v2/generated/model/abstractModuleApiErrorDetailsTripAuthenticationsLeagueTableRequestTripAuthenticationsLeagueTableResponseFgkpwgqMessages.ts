@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

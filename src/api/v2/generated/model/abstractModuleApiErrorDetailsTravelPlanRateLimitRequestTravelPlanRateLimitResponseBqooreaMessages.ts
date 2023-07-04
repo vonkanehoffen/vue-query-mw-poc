@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

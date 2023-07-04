@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages } from './abstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages'
+import type { AbstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages } from './abstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages';
 
 export interface AbstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncma {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsNpsCreateRequestNpsCreateResponseGjdncmaMessages;
 }

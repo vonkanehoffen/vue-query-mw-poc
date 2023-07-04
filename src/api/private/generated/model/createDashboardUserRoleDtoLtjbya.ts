@@ -6,6 +6,6 @@
  */
 
 export interface CreateDashboardUserRoleDtoLtjbya {
-  role?: string | null
-  communityId?: string | null
+  role?: string | null;
+  communityId?: string | null;
 }

@@ -6,6 +6,6 @@
  */
 
 export type GetV2ContactViewsManageCommunityIdParams = {
-  page: number
-  maxPerPage: number
-}
+  page: number;
+  maxPerPage: number;
+};

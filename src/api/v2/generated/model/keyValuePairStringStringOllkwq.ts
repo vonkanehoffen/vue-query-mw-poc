@@ -6,6 +6,6 @@
  */
 
 export interface KeyValuePairStringStringOllkwq {
-  key?: string | null
-  value?: string | null
+  key?: string | null;
+  value?: string | null;
 }

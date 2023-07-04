@@ -6,7 +6,7 @@
  */
 
 export type BatchListStatusBvvhqsi =
-  (typeof BatchListStatusBvvhqsi)[keyof typeof BatchListStatusBvvhqsi]
+  (typeof BatchListStatusBvvhqsi)[keyof typeof BatchListStatusBvvhqsi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchListStatusBvvhqsi = {
@@ -14,4 +14,4 @@ export const BatchListStatusBvvhqsi = {
   NotSent: 'NotSent',
   Scheduled: 'Scheduled',
   Sent: 'Sent'
-} as const
+} as const;

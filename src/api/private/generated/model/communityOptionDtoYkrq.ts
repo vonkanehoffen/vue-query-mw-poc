@@ -6,7 +6,7 @@
  */
 
 export interface CommunityOptionDtoYkrq {
-  communityId?: number
-  optionKey?: string | null
-  optionValue?: string | null
+  communityId?: number;
+  optionKey?: string | null;
+  optionValue?: string | null;
 }

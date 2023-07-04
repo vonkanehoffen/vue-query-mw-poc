@@ -6,10 +6,10 @@
  */
 
 export type PendingLiftshareAccountBatchEmailDelayTypeDrlq =
-  (typeof PendingLiftshareAccountBatchEmailDelayTypeDrlq)[keyof typeof PendingLiftshareAccountBatchEmailDelayTypeDrlq]
+  (typeof PendingLiftshareAccountBatchEmailDelayTypeDrlq)[keyof typeof PendingLiftshareAccountBatchEmailDelayTypeDrlq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchEmailDelayTypeDrlq = {
   Immediately: 'Immediately',
   Delayed: 'Delayed'
-} as const
+} as const;

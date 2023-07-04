@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TripAuthenticationsLeagueTableResponseMwecei } from './tripAuthenticationsLeagueTableResponseMwecei'
-import type { AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq } from './abstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq'
+import type { TripAuthenticationsLeagueTableResponseMwecei } from './tripAuthenticationsLeagueTableResponseMwecei';
+import type { AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq } from './abstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq';
 
 export interface AbstractModuleApiResponseTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseTripAuthenticationsLeagueTableResponseQkkdui {
-  response?: TripAuthenticationsLeagueTableResponseMwecei
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq
+  response?: TripAuthenticationsLeagueTableResponseMwecei;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsTripAuthenticationsLeagueTableRequestTripAuthenticationsLeagueTableResponseFgkpwgq;
 }

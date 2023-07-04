@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,8 +12,8 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   CommunityParkingAssetsForUserResponseDtoUnhunja,
   HasNumberplateResponseDtoMlta,
@@ -22,12 +22,12 @@ import type {
   InsertOrUpdateNumberplateRequestBaseDtoEebfuhy,
   BookParkingAssetResponseDtoYvsa,
   BookParkingAssetRequestBaseDtoWqijsui
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary List of appy parking assets assigned to user
@@ -37,29 +37,29 @@ export const getParkingAssets = (signal?: AbortSignal) => {
     url: `/parking/assets`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetParkingAssetsQueryKey = () => ['parking', 'assets'] as const
+export const getGetParkingAssetsQueryKey = () => ['parking', 'assets'] as const;
 
 export const getGetParkingAssetsQueryOptions = <
   TData = Awaited<ReturnType<typeof getParkingAssets>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingAssets>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingAssets>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getParkingAssets>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetParkingAssetsQueryKey()
+  const queryKey = getGetParkingAssetsQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getParkingAssets>>> = ({ signal }) =>
-    getParkingAssets(signal)
+    getParkingAssets(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetParkingAssetsQueryResult = NonNullable<Awaited<ReturnType<typeof getParkingAssets>>>
-export type GetParkingAssetsQueryError = unknown
+export type GetParkingAssetsQueryResult = NonNullable<Awaited<ReturnType<typeof getParkingAssets>>>;
+export type GetParkingAssetsQueryError = unknown;
 
 /**
  * @summary List of appy parking assets assigned to user
@@ -68,16 +68,18 @@ export const useGetParkingAssets = <
   TData = Awaited<ReturnType<typeof getParkingAssets>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingAssets>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingAssets>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetParkingAssetsQueryOptions(options)
+  const queryOptions = getGetParkingAssetsQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Determine if user as added there numberplate as an answer to an optional question with category = numberplate
@@ -87,32 +89,32 @@ export const getParkingHasNumberplate = (signal?: AbortSignal) => {
     url: `/parking/has-numberplate`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetParkingHasNumberplateQueryKey = () => ['parking', 'has-numberplate'] as const
+export const getGetParkingHasNumberplateQueryKey = () => ['parking', 'has-numberplate'] as const;
 
 export const getGetParkingHasNumberplateQueryOptions = <
   TData = Awaited<ReturnType<typeof getParkingHasNumberplate>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingHasNumberplate>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingHasNumberplate>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getParkingHasNumberplate>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetParkingHasNumberplateQueryKey()
+  const queryKey = getGetParkingHasNumberplateQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getParkingHasNumberplate>>> = ({
     signal
-  }) => getParkingHasNumberplate(signal)
+  }) => getParkingHasNumberplate(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetParkingHasNumberplateQueryResult = NonNullable<
   Awaited<ReturnType<typeof getParkingHasNumberplate>>
->
-export type GetParkingHasNumberplateQueryError = unknown
+>;
+export type GetParkingHasNumberplateQueryError = unknown;
 
 /**
  * @summary Determine if user as added there numberplate as an answer to an optional question with category = numberplate
@@ -121,16 +123,18 @@ export const useGetParkingHasNumberplate = <
   TData = Awaited<ReturnType<typeof getParkingHasNumberplate>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingHasNumberplate>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getParkingHasNumberplate>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetParkingHasNumberplateQueryOptions(options)
+  const queryOptions = getGetParkingHasNumberplateQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Insert or update a users numberplate
@@ -143,8 +147,8 @@ export const postParkingNumberplate = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: insertOrUpdateNumberplateRequestBaseDtoEebfuhy
-  })
-}
+  });
+};
 
 export const getPostParkingNumberplateMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -155,32 +159,32 @@ export const getPostParkingNumberplateMutationOptions = <
     TError,
     { data: InsertOrUpdateNumberplateRequestBaseDtoEebfuhy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postParkingNumberplate>>,
   TError,
   { data: InsertOrUpdateNumberplateRequestBaseDtoEebfuhy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postParkingNumberplate>>,
     { data: InsertOrUpdateNumberplateRequestBaseDtoEebfuhy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postParkingNumberplate(data)
-  }
+    return postParkingNumberplate(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostParkingNumberplateMutationResult = NonNullable<
   Awaited<ReturnType<typeof postParkingNumberplate>>
->
-export type PostParkingNumberplateMutationBody = InsertOrUpdateNumberplateRequestBaseDtoEebfuhy
-export type PostParkingNumberplateMutationError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type PostParkingNumberplateMutationBody = InsertOrUpdateNumberplateRequestBaseDtoEebfuhy;
+export type PostParkingNumberplateMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Insert or update a users numberplate
@@ -194,12 +198,12 @@ export const usePostParkingNumberplate = <
     TError,
     { data: InsertOrUpdateNumberplateRequestBaseDtoEebfuhy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostParkingNumberplateMutationOptions(options)
+  const mutationOptions = getPostParkingNumberplateMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Starts a parking session with appy parking for the current user
  */
@@ -211,8 +215,8 @@ export const postParkingBeginSession = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: bookParkingAssetRequestBaseDtoWqijsui
-  })
-}
+  });
+};
 
 export const getPostParkingBeginSessionMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -223,32 +227,32 @@ export const getPostParkingBeginSessionMutationOptions = <
     TError,
     { data: BookParkingAssetRequestBaseDtoWqijsui },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postParkingBeginSession>>,
   TError,
   { data: BookParkingAssetRequestBaseDtoWqijsui },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postParkingBeginSession>>,
     { data: BookParkingAssetRequestBaseDtoWqijsui }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postParkingBeginSession(data)
-  }
+    return postParkingBeginSession(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostParkingBeginSessionMutationResult = NonNullable<
   Awaited<ReturnType<typeof postParkingBeginSession>>
->
-export type PostParkingBeginSessionMutationBody = BookParkingAssetRequestBaseDtoWqijsui
-export type PostParkingBeginSessionMutationError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type PostParkingBeginSessionMutationBody = BookParkingAssetRequestBaseDtoWqijsui;
+export type PostParkingBeginSessionMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Starts a parking session with appy parking for the current user
@@ -262,9 +266,9 @@ export const usePostParkingBeginSession = <
     TError,
     { data: BookParkingAssetRequestBaseDtoWqijsui },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostParkingBeginSessionMutationOptions(options)
+  const mutationOptions = getPostParkingBeginSessionMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

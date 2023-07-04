@@ -6,11 +6,11 @@
  */
 
 export type RateLimitStatusDpnvxq =
-  (typeof RateLimitStatusDpnvxq)[keyof typeof RateLimitStatusDpnvxq]
+  (typeof RateLimitStatusDpnvxq)[keyof typeof RateLimitStatusDpnvxq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const RateLimitStatusDpnvxq = {
   Under: 'Under',
   Warning: 'Warning',
   Over: 'Over'
-} as const
+} as const;

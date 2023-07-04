@@ -6,6 +6,6 @@
  */
 
 export interface InsertOrUpdateNumberplateRequestDtoZpnhi {
-  numberplate?: string | null
-  subscriberId?: number
+  numberplate?: string | null;
+  subscriberId?: number;
 }

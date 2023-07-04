@@ -6,6 +6,6 @@
  */
 
 export interface EmailCheckResponseBlgbzy {
-  oidcRequired?: boolean
-  redirectUrl?: string | null
+  oidcRequired?: boolean;
+  redirectUrl?: string | null;
 }

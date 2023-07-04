@@ -6,6 +6,6 @@
  */
 
 export interface RespawnCommunityRequestAbbdi {
-  communityId?: number
-  resetCosmosData?: boolean
+  communityId?: number;
+  resetCosmosData?: boolean;
 }

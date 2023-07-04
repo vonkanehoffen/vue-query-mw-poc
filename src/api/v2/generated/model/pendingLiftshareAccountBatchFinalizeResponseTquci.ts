@@ -6,5 +6,5 @@
  */
 
 export interface PendingLiftshareAccountBatchFinalizeResponseTquci {
-  id?: string
+  id?: string;
 }

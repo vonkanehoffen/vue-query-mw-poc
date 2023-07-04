@@ -6,5 +6,5 @@
  */
 
 export interface PendingLiftshareAccountBatchUpsertResponseOcitoa {
-  id?: string
+  id?: string;
 }

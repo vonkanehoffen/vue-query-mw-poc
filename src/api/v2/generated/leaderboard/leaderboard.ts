@@ -4,23 +4,23 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponsePublicLeaderboardRequestPublicLeaderboardResponsePublicLeaderboardResponseZarxwcy,
   GetV2LiftshareGamificationPublicLeaderboardParams
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2LiftshareGamificationPublicLeaderboard = (
   params?: MaybeRef<GetV2LiftshareGamificationPublicLeaderboardParams>,
@@ -28,12 +28,13 @@ export const getV2LiftshareGamificationPublicLeaderboard = (
 ) => {
   return customInstance<AbstractModuleApiResponsePublicLeaderboardRequestPublicLeaderboardResponsePublicLeaderboardResponseZarxwcy>(
     { url: `/v2/liftshare/gamification/public-leaderboard`, method: 'get', params, signal }
-  )
-}
+  );
+};
 
 export const getGetV2LiftshareGamificationPublicLeaderboardQueryKey = (
   params?: MaybeRef<GetV2LiftshareGamificationPublicLeaderboardParams>
-) => ['v2', 'liftshare', 'gamification', 'public-leaderboard', ...(params ? [params] : [])] as const
+) =>
+  ['v2', 'liftshare', 'gamification', 'public-leaderboard', ...(params ? [params] : [])] as const;
 
 export const getGetV2LiftshareGamificationPublicLeaderboardQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>,
@@ -45,28 +46,28 @@ export const getGetV2LiftshareGamificationPublicLeaderboardQueryOptions = <
       Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<
   Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>,
   TError,
   TData
 > => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareGamificationPublicLeaderboardQueryKey(params)
+  const queryKey = getGetV2LiftshareGamificationPublicLeaderboardQueryKey(params);
 
   const queryFn: QueryFunction<
     Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>
-  > = ({ signal }) => getV2LiftshareGamificationPublicLeaderboard(params, signal)
+  > = ({ signal }) => getV2LiftshareGamificationPublicLeaderboard(params, signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2LiftshareGamificationPublicLeaderboardQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>
->
-export type GetV2LiftshareGamificationPublicLeaderboardQueryError = unknown
+>;
+export type GetV2LiftshareGamificationPublicLeaderboardQueryError = unknown;
 
 export const useGetV2LiftshareGamificationPublicLeaderboard = <
   TData = Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>,
@@ -78,14 +79,16 @@ export const useGetV2LiftshareGamificationPublicLeaderboard = <
       Awaited<ReturnType<typeof getV2LiftshareGamificationPublicLeaderboard>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareGamificationPublicLeaderboardQueryOptions(params, options)
+  const queryOptions = getGetV2LiftshareGamificationPublicLeaderboardQueryOptions(params, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactFilterCyeeii } from './contactFilterCyeeii'
+import type { ContactFilterCyeeii } from './contactFilterCyeeii';
 
 export interface ContactSearchRequestPvty {
-  communityId?: string | null
-  filter?: ContactFilterCyeeii
-  page?: number
-  contactsPerPage?: number
+  communityId?: string | null;
+  filter?: ContactFilterCyeeii;
+  page?: number;
+  contactsPerPage?: number;
 }

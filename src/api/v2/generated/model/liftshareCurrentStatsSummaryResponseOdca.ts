@@ -6,9 +6,9 @@
  */
 
 export interface LiftshareCurrentStatsSummaryResponseOdca {
-  totalMembers?: number
-  membersWithJourney?: number
-  membersSentRts?: number
-  totalSharers?: number
-  totalUniqueMembersTripAuthenticated?: number
+  totalMembers?: number;
+  membersWithJourney?: number;
+  membersSentRts?: number;
+  totalSharers?: number;
+  totalUniqueMembersTripAuthenticated?: number;
 }

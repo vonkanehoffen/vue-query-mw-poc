@@ -5,7 +5,7 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type BadgeCategoryUewjpq = (typeof BadgeCategoryUewjpq)[keyof typeof BadgeCategoryUewjpq]
+export type BadgeCategoryUewjpq = (typeof BadgeCategoryUewjpq)[keyof typeof BadgeCategoryUewjpq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BadgeCategoryUewjpq = {
@@ -16,4 +16,4 @@ export const BadgeCategoryUewjpq = {
   Distance: 'Distance',
   Activity: 'Activity',
   Profile: 'Profile'
-} as const
+} as const;

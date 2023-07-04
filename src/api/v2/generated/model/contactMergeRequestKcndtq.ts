@@ -6,6 +6,6 @@
  */
 
 export interface ContactMergeRequestKcndtq {
-  publicContactIdToKeep?: string
-  publicContactIdToMergeAndDelete?: string
+  publicContactIdToKeep?: string;
+  publicContactIdToMergeAndDelete?: string;
 }

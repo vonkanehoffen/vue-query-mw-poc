@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsVerifyMobileNumberRequestVerifyMobileNumberResponseZlmokjaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

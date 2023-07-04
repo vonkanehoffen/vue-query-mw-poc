@@ -6,5 +6,5 @@
  */
 
 export type GetV2TravelPlansPlanResultsIdParams = {
-  preview: boolean
-}
+  preview: boolean;
+};

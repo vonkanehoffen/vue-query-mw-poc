@@ -5,7 +5,7 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type BadgeTypeOctufq = (typeof BadgeTypeOctufq)[keyof typeof BadgeTypeOctufq]
+export type BadgeTypeOctufq = (typeof BadgeTypeOctufq)[keyof typeof BadgeTypeOctufq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BadgeTypeOctufq = {
@@ -65,4 +65,4 @@ export const BadgeTypeOctufq = {
   AddedProfilePicture: 'AddedProfilePicture',
   AddedBio: 'AddedBio',
   VerifiedEmailAddress: 'VerifiedEmailAddress'
-} as const
+} as const;

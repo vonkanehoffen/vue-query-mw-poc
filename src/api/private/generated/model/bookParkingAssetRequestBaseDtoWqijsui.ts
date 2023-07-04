@@ -6,7 +6,7 @@
  */
 
 export interface BookParkingAssetRequestBaseDtoWqijsui {
-  parkingAssetId?: string
-  authenticatedTripId?: string | null
-  numberplate?: string | null
+  parkingAssetId?: string;
+  authenticatedTripId?: string | null;
+  numberplate?: string | null;
 }

@@ -6,7 +6,7 @@
  */
 
 export type PendingLiftshareAccountBatchStatusVtwhkvq =
-  (typeof PendingLiftshareAccountBatchStatusVtwhkvq)[keyof typeof PendingLiftshareAccountBatchStatusVtwhkvq]
+  (typeof PendingLiftshareAccountBatchStatusVtwhkvq)[keyof typeof PendingLiftshareAccountBatchStatusVtwhkvq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchStatusVtwhkvq = {
@@ -14,4 +14,4 @@ export const PendingLiftshareAccountBatchStatusVtwhkvq = {
   Final: 'Final',
   Processed: 'Processed',
   Scheduled: 'Scheduled'
-} as const
+} as const;

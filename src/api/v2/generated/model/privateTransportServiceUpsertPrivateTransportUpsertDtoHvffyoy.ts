@@ -4,25 +4,25 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PrivateTransportServiceUpsertRouteGeoJsonEorna } from './privateTransportServiceUpsertRouteGeoJsonEorna'
-import type { LocationPjjkoa } from './locationPjjkoa'
+import type { PrivateTransportServiceUpsertRouteGeoJsonEorna } from './privateTransportServiceUpsertRouteGeoJsonEorna';
+import type { LocationPjjkoa } from './locationPjjkoa';
 
 export interface PrivateTransportServiceUpsertPrivateTransportUpsertDtoHvffyoy {
-  id?: string | null
-  name?: string | null
-  communityId?: number
-  isPrivate?: boolean
-  operator?: string | null
-  websiteLink?: string | null
-  daysOfOperation?: string[] | null
-  operatingTimes?: string[] | null
-  allowedUsages?: string[] | null
-  fare?: string | null
-  booking?: string | null
-  criteria?: string | null
-  vehicleAccessibility?: string | null
-  otherInfo?: string | null
-  routePolyGeoJson?: PrivateTransportServiceUpsertRouteGeoJsonEorna
-  stopLocations?: LocationPjjkoa[] | null
-  routePolylines?: string[] | null
+  id?: string | null;
+  name?: string | null;
+  communityId?: number;
+  isPrivate?: boolean;
+  operator?: string | null;
+  websiteLink?: string | null;
+  daysOfOperation?: string[] | null;
+  operatingTimes?: string[] | null;
+  allowedUsages?: string[] | null;
+  fare?: string | null;
+  booking?: string | null;
+  criteria?: string | null;
+  vehicleAccessibility?: string | null;
+  otherInfo?: string | null;
+  routePolyGeoJson?: PrivateTransportServiceUpsertRouteGeoJsonEorna;
+  stopLocations?: LocationPjjkoa[] | null;
+  routePolylines?: string[] | null;
 }

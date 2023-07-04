@@ -6,5 +6,5 @@
  */
 
 export interface AcelReportCreateResponseKvjley {
-  acelReportId?: string | null
+  acelReportId?: string | null;
 }

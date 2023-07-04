@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages } from './abstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages'
+import type { AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages } from './abstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages';
 
 export interface AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqa {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsHighFreqDataImportsRequestHighFreqDataImportsResponseFzeqaMessages;
 }

@@ -7,7 +7,7 @@
  */
 
 export interface PermitScanTeamDtoXetha {
-  teamId?: number
-  origin?: string | null
-  destination?: string | null
+  teamId?: number;
+  origin?: string | null;
+  destination?: string | null;
 }

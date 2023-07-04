@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy } from './tripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy'
+import type { TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy } from './tripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy';
 
 export interface TripAuthenticationReminderUpdateResponseStmxoq {
-  status?: TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy
-  mon?: boolean
-  tues?: boolean
-  wed?: boolean
-  thur?: boolean
-  fri?: boolean
-  sat?: boolean
-  sun?: boolean
-  timeOfDay?: string | null
-  timeZone?: string | null
-  validFromDate?: string | null
+  status?: TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy;
+  mon?: boolean;
+  tues?: boolean;
+  wed?: boolean;
+  thur?: boolean;
+  fri?: boolean;
+  sat?: boolean;
+  sun?: boolean;
+  timeOfDay?: string | null;
+  timeZone?: string | null;
+  validFromDate?: string | null;
 }

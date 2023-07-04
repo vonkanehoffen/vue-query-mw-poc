@@ -6,6 +6,6 @@
  */
 
 export interface SubscriptionReasonCreateRequestGnalpaa {
-  token?: string | null
-  reason?: string | null
+  token?: string | null;
+  reason?: string | null;
 }

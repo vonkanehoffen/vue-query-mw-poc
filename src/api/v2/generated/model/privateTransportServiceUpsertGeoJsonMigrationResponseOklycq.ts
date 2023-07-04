@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PrivateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi } from './privateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi'
+import type { PrivateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi } from './privateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi';
 
 export interface PrivateTransportServiceUpsertGeoJsonMigrationResponseOklycq {
-  upsertDto?: PrivateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi[] | null
+  upsertDto?: PrivateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi[] | null;
 }

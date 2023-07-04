@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchListBatchResultsWithStatusDfzney } from './pendingLiftshareAccountBatchListBatchResultsWithStatusDfzney'
+import type { PendingLiftshareAccountBatchListBatchResultsWithStatusDfzney } from './pendingLiftshareAccountBatchListBatchResultsWithStatusDfzney';
 
 export interface PendingLiftshareAccountBatchListResponseZdtjq {
-  batches?: PendingLiftshareAccountBatchListBatchResultsWithStatusDfzney[] | null
+  batches?: PendingLiftshareAccountBatchListBatchResultsWithStatusDfzney[] | null;
 }

@@ -8,7 +8,7 @@
 
 export interface VehicleRegistrationLookupResponseDtoJtjgea {
   /** Does vehicle registration belong to a registered member */
-  vehicleRegistrationFound?: boolean
+  vehicleRegistrationFound?: boolean;
   /** Has the driver of given vehicle successfully trip authenticated in past 24 hours */
-  vehicleRegistrationAuthenticated?: boolean
+  vehicleRegistrationAuthenticated?: boolean;
 }

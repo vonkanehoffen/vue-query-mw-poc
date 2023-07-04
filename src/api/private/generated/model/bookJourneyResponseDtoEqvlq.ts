@@ -6,11 +6,11 @@
  */
 
 export interface BookJourneyResponseDtoEqvlq {
-  publicBookingId?: string
-  seats?: number
-  journeyId?: string | null
-  dateOfLeg?: string
-  isReturnLeg?: boolean
-  confirmationPinCode?: string | null
-  phoneNumber?: string | null
+  publicBookingId?: string;
+  seats?: number;
+  journeyId?: string | null;
+  dateOfLeg?: string;
+  isReturnLeg?: boolean;
+  confirmationPinCode?: string | null;
+  phoneNumber?: string | null;
 }

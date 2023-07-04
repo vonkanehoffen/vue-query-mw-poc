@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataImportCreateResponseHrpbofq } from './highFreqDataImportCreateResponseHrpbofq'
-import type { AbstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy } from './abstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy'
+import type { HighFreqDataImportCreateResponseHrpbofq } from './highFreqDataImportCreateResponseHrpbofq';
+import type { AbstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy } from './abstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy';
 
 export interface AbstractModuleApiResponseHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseHighFreqDataImportCreateResponseSyoijzq {
-  response?: HighFreqDataImportCreateResponseHrpbofq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy
+  response?: HighFreqDataImportCreateResponseHrpbofq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseYgjvy;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface DashboardSettingsUpdateResponseTscosy {
-  [key: string]: any
+  [key: string]: any;
 }

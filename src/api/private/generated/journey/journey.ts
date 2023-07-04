@@ -4,24 +4,24 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery } from '@tanstack/vue-query'
+import { useQuery } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   QueryFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   JourneyDetailsResponseDtoQggrq,
   ValidationExceptionResponseDtoLtlwwzy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Details about given journey and basic info on the journey's owner
@@ -31,11 +31,11 @@ export const getJourneyDetailsJourneyId = (journeyId: MaybeRef<string>, signal?:
     url: `/journey/details/${unref(journeyId)}`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetJourneyDetailsJourneyIdQueryKey = (journeyId: MaybeRef<string>) =>
-  ['journey', 'details', journeyId] as const
+  ['journey', 'details', journeyId] as const;
 
 export const getGetJourneyDetailsJourneyIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>,
@@ -43,24 +43,24 @@ export const getGetJourneyDetailsJourneyIdQueryOptions = <
 >(
   journeyId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>, TError, TData>;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetJourneyDetailsJourneyIdQueryKey(journeyId)
+  const queryKey = getGetJourneyDetailsJourneyIdQueryKey(journeyId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>> = ({
     signal
-  }) => getJourneyDetailsJourneyId(journeyId, signal)
+  }) => getJourneyDetailsJourneyId(journeyId, signal);
 
-  return { queryKey, queryFn, enabled: !!journeyId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!journeyId, ...queryOptions };
+};
 
 export type GetJourneyDetailsJourneyIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>
->
-export type GetJourneyDetailsJourneyIdQueryError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type GetJourneyDetailsJourneyIdQueryError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Details about given journey and basic info on the journey's owner
@@ -71,14 +71,16 @@ export const useGetJourneyDetailsJourneyId = <
 >(
   journeyId: MaybeRef<string>,
   options?: {
-    query?: UseQueryOptions<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>, TError, TData>
+    query?: UseQueryOptions<Awaited<ReturnType<typeof getJourneyDetailsJourneyId>>, TError, TData>;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetJourneyDetailsJourneyIdQueryOptions(journeyId, options)
+  const queryOptions = getGetJourneyDetailsJourneyIdQueryOptions(journeyId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

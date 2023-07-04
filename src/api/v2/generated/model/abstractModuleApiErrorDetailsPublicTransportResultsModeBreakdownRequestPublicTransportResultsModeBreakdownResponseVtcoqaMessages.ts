@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPublicTransportResultsModeBreakdownRequestPublicTransportResultsModeBreakdownResponseVtcoqaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

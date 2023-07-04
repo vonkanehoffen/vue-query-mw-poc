@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ManageSavedViewsQueryDtoQdctiji } from './manageSavedViewsQueryDtoQdctiji'
+import type { ManageSavedViewsQueryDtoQdctiji } from './manageSavedViewsQueryDtoQdctiji';
 
 export interface ManageSavedViewsResponseUfyujei {
-  data?: ManageSavedViewsQueryDtoQdctiji[] | null
-  totalCount?: number
-  page?: number
-  maxPerPage?: number
-  numPages?: number
+  data?: ManageSavedViewsQueryDtoQdctiji[] | null;
+  totalCount?: number;
+  page?: number;
+  maxPerPage?: number;
+  numPages?: number;
 }

@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CommunityLeaderboardResponseQueryDtoQza } from './communityLeaderboardResponseQueryDtoQza'
+import type { CommunityLeaderboardResponseQueryDtoQza } from './communityLeaderboardResponseQueryDtoQza';
 
 export interface CommunityLeaderboardResponseSsmri {
-  top10?: CommunityLeaderboardResponseQueryDtoQza[] | null
-  nearMe?: CommunityLeaderboardResponseQueryDtoQza[] | null
-  publicLeaderboard?: boolean
-  numInLeaderboard?: number
-  numInCommunity?: number
+  top10?: CommunityLeaderboardResponseQueryDtoQza[] | null;
+  nearMe?: CommunityLeaderboardResponseQueryDtoQza[] | null;
+  publicLeaderboard?: boolean;
+  numInLeaderboard?: number;
+  numInCommunity?: number;
 }

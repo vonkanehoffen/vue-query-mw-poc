@@ -6,5 +6,5 @@
  */
 
 export type GetV2EmissionsLowFrequencyDashboardParams = {
-  cid?: string
-}
+  cid?: string;
+};

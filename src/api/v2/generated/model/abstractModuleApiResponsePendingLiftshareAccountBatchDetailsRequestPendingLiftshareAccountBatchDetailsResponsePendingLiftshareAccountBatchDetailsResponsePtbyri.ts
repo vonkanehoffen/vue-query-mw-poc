@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchDetailsResponseUcpjci } from './pendingLiftshareAccountBatchDetailsResponseUcpjci'
-import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni'
+import type { PendingLiftshareAccountBatchDetailsResponseUcpjci } from './pendingLiftshareAccountBatchDetailsResponseUcpjci';
+import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni';
 
 export interface AbstractModuleApiResponsePendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponsePendingLiftshareAccountBatchDetailsResponsePtbyri {
-  response?: PendingLiftshareAccountBatchDetailsResponseUcpjci
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni
+  response?: PendingLiftshareAccountBatchDetailsResponseUcpjci;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponseFkyni;
 }

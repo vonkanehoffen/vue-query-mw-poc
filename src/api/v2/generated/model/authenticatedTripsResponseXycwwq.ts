@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AuthenticatedTripsAuthenticatedTripAakua } from './authenticatedTripsAuthenticatedTripAakua'
+import type { AuthenticatedTripsAuthenticatedTripAakua } from './authenticatedTripsAuthenticatedTripAakua';
 
 export interface AuthenticatedTripsResponseXycwwq {
-  authentications?: AuthenticatedTripsAuthenticatedTripAakua[] | null
-  trips?: number
+  authentications?: AuthenticatedTripsAuthenticatedTripAakua[] | null;
+  trips?: number;
 }

@@ -5,9 +5,9 @@
  * Private API for Liftshare client and partner integrations.
  * OpenAPI spec version: 1.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AdminTokenCreateResponseNnmuhq,
   UnauthorizedResultPecray,
@@ -17,12 +17,12 @@ import type {
   AdminTokenRefreshRequestQwdywq,
   AdminTokenTwoFactorCreateResponseDmhny,
   AdminTokenTwoFactorCreateRequestIifgka
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * Used to generate an admin JWT using Liftshare dashboard user credentials. 
@@ -38,8 +38,8 @@ export const postClientToken = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: adminTokenCreateRequestKiaya
-  })
-}
+  });
+};
 
 export const getPostClientTokenMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -50,32 +50,34 @@ export const getPostClientTokenMutationOptions = <
     TError,
     { data: AdminTokenCreateRequestKiaya },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postClientToken>>,
   TError,
   { data: AdminTokenCreateRequestKiaya },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postClientToken>>,
     { data: AdminTokenCreateRequestKiaya }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postClientToken(data)
-  }
+    return postClientToken(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostClientTokenMutationResult = NonNullable<Awaited<ReturnType<typeof postClientToken>>>
-export type PostClientTokenMutationBody = AdminTokenCreateRequestKiaya
+export type PostClientTokenMutationResult = NonNullable<
+  Awaited<ReturnType<typeof postClientToken>>
+>;
+export type PostClientTokenMutationBody = AdminTokenCreateRequestKiaya;
 export type PostClientTokenMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Generate authentication token
@@ -89,12 +91,12 @@ export const usePostClientToken = <
     TError,
     { data: AdminTokenCreateRequestKiaya },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostClientTokenMutationOptions(options)
+  const mutationOptions = getPostClientTokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * Used to refresh an expired admin JWT using a one time refresh token. 
 New token is valid for 30 min. 
@@ -109,8 +111,8 @@ export const postClientTokenRefresh = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: adminTokenRefreshRequestQwdywq
-  })
-}
+  });
+};
 
 export const getPostClientTokenRefreshMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -121,34 +123,34 @@ export const getPostClientTokenRefreshMutationOptions = <
     TError,
     { data: AdminTokenRefreshRequestQwdywq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postClientTokenRefresh>>,
   TError,
   { data: AdminTokenRefreshRequestQwdywq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postClientTokenRefresh>>,
     { data: AdminTokenRefreshRequestQwdywq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postClientTokenRefresh(data)
-  }
+    return postClientTokenRefresh(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostClientTokenRefreshMutationResult = NonNullable<
   Awaited<ReturnType<typeof postClientTokenRefresh>>
->
-export type PostClientTokenRefreshMutationBody = AdminTokenRefreshRequestQwdywq
+>;
+export type PostClientTokenRefreshMutationBody = AdminTokenRefreshRequestQwdywq;
 export type PostClientTokenRefreshMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Refresh authentication token
@@ -162,12 +164,12 @@ export const usePostClientTokenRefresh = <
     TError,
     { data: AdminTokenRefreshRequestQwdywq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostClientTokenRefreshMutationOptions(options)
+  const mutationOptions = getPostClientTokenRefreshMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * Takes an expired token and a one time two factor code and return a valid token and refresh token if successful.
  * @summary Validate two factor one time code
@@ -180,8 +182,8 @@ export const postClientTokenValidateTwoFactor = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: adminTokenTwoFactorCreateRequestIifgka
-  })
-}
+  });
+};
 
 export const getPostClientTokenValidateTwoFactorMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -192,34 +194,34 @@ export const getPostClientTokenValidateTwoFactorMutationOptions = <
     TError,
     { data: AdminTokenTwoFactorCreateRequestIifgka },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postClientTokenValidateTwoFactor>>,
   TError,
   { data: AdminTokenTwoFactorCreateRequestIifgka },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postClientTokenValidateTwoFactor>>,
     { data: AdminTokenTwoFactorCreateRequestIifgka }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postClientTokenValidateTwoFactor(data)
-  }
+    return postClientTokenValidateTwoFactor(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostClientTokenValidateTwoFactorMutationResult = NonNullable<
   Awaited<ReturnType<typeof postClientTokenValidateTwoFactor>>
->
-export type PostClientTokenValidateTwoFactorMutationBody = AdminTokenTwoFactorCreateRequestIifgka
+>;
+export type PostClientTokenValidateTwoFactorMutationBody = AdminTokenTwoFactorCreateRequestIifgka;
 export type PostClientTokenValidateTwoFactorMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Validate two factor one time code
@@ -233,9 +235,9 @@ export const usePostClientTokenValidateTwoFactor = <
     TError,
     { data: AdminTokenTwoFactorCreateRequestIifgka },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostClientTokenValidateTwoFactorMutationOptions(options)
+  const mutationOptions = getPostClientTokenValidateTwoFactorMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

@@ -5,10 +5,10 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type NpsCategoryRohpa = (typeof NpsCategoryRohpa)[keyof typeof NpsCategoryRohpa]
+export type NpsCategoryRohpa = (typeof NpsCategoryRohpa)[keyof typeof NpsCategoryRohpa];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const NpsCategoryRohpa = {
   Unknown: 'Unknown',
   MobilitywaysDashboard: 'MobilitywaysDashboard'
-} as const
+} as const;

@@ -6,5 +6,5 @@
  */
 
 export interface HighFreqDataImportDeleteResponseRiwja {
-  [key: string]: any
+  [key: string]: any;
 }

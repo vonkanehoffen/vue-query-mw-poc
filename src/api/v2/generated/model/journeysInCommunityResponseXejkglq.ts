@@ -6,8 +6,8 @@
  */
 
 export interface JourneysInCommunityResponseXejkglq {
-  totalJourneys?: number
-  oneOffJourneys?: number
-  shiftJourneys?: number
-  regularJourneys?: number
+  totalJourneys?: number;
+  oneOffJourneys?: number;
+  shiftJourneys?: number;
+  regularJourneys?: number;
 }

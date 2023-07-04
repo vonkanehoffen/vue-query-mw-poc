@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CommunityListResponseBokky } from './communityListResponseBokky'
-import type { AbstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq } from './abstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq'
+import type { CommunityListResponseBokky } from './communityListResponseBokky';
+import type { AbstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq } from './abstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq';
 
 export interface AbstractModuleApiResponseCommunityListRequestCommunityListResponseCommunityListResponseLoiapy {
-  response?: CommunityListResponseBokky
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq
+  response?: CommunityListResponseBokky;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsCommunityListRequestCommunityListResponseEonrpsq;
 }

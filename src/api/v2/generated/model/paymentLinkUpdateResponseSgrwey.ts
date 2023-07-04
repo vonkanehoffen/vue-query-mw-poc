@@ -6,5 +6,5 @@
  */
 
 export interface PaymentLinkUpdateResponseSgrwey {
-  [key: string]: any
+  [key: string]: any;
 }

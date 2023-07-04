@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages } from './abstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages'
+import type { AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages } from './abstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages';
 
 export interface AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeera {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsAddIndividualContactsToSavedViewRequestAddIndividualContactsToSavedViewResponsePhyeeraMessages;
 }

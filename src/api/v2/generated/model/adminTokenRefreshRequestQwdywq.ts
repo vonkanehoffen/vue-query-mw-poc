@@ -6,6 +6,6 @@
  */
 
 export interface AdminTokenRefreshRequestQwdywq {
-  token?: string | null
-  refreshToken?: string | null
+  token?: string | null;
+  refreshToken?: string | null;
 }

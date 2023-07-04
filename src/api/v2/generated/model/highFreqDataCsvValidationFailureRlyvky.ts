@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { HighFreqDataCsvValidationErrorFawemi } from './highFreqDataCsvValidationErrorFawemi'
+import type { HighFreqDataCsvValidationErrorFawemi } from './highFreqDataCsvValidationErrorFawemi';
 
 export interface HighFreqDataCsvValidationFailureRlyvky {
-  lineNumber?: number | null
-  errorCode?: HighFreqDataCsvValidationErrorFawemi
-  errorMessage?: string | null
+  lineNumber?: number | null;
+  errorCode?: HighFreqDataCsvValidationErrorFawemi;
+  errorMessage?: string | null;
 }

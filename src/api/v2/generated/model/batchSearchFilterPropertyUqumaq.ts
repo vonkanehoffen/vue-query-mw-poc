@@ -6,7 +6,7 @@
  */
 
 export type BatchSearchFilterPropertyUqumaq =
-  (typeof BatchSearchFilterPropertyUqumaq)[keyof typeof BatchSearchFilterPropertyUqumaq]
+  (typeof BatchSearchFilterPropertyUqumaq)[keyof typeof BatchSearchFilterPropertyUqumaq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchSearchFilterPropertyUqumaq = {
@@ -17,4 +17,4 @@ export const BatchSearchFilterPropertyUqumaq = {
   CreatedBy: 'CreatedBy',
   DateLastUpdated: 'DateLastUpdated',
   NumRecipients: 'NumRecipients'
-} as const
+} as const;

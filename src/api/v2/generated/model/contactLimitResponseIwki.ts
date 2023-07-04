@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { RateLimitStatusDpnvxq } from './rateLimitStatusDpnvxq'
+import type { RateLimitStatusDpnvxq } from './rateLimitStatusDpnvxq';
 
 export interface ContactLimitResponseIwki {
-  contactsPurchased?: number
-  contactsUsed?: number
-  rateLimitStatus?: RateLimitStatusDpnvxq
+  contactsPurchased?: number;
+  contactsUsed?: number;
+  rateLimitStatus?: RateLimitStatusDpnvxq;
 }

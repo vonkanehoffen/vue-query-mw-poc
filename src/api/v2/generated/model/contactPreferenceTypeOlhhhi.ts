@@ -6,11 +6,11 @@
  */
 
 export type ContactPreferenceTypeOlhhhi =
-  (typeof ContactPreferenceTypeOlhhhi)[keyof typeof ContactPreferenceTypeOlhhhi]
+  (typeof ContactPreferenceTypeOlhhhi)[keyof typeof ContactPreferenceTypeOlhhhi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactPreferenceTypeOlhhhi = {
   MarketingInformation: 'MarketingInformation',
   Surveys: 'Surveys',
   TravelPlans: 'TravelPlans'
-} as const
+} as const;

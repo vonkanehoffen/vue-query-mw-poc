@@ -4,18 +4,18 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseRespawnCommunityRequestRespawnCommunityResponseRespawnCommunityResponseKhgceji,
   RespawnCommunityRequestAbbdi
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2E2eTestsRespawnCommunity = (
   respawnCommunityRequestAbbdi: MaybeRef<RespawnCommunityRequestAbbdi>
@@ -27,8 +27,8 @@ export const postV2E2eTestsRespawnCommunity = (
       headers: { 'Content-Type': 'application/json' },
       data: respawnCommunityRequestAbbdi
     }
-  )
-}
+  );
+};
 
 export const getPostV2E2eTestsRespawnCommunityMutationOptions = <
   TError = unknown,
@@ -39,32 +39,32 @@ export const getPostV2E2eTestsRespawnCommunityMutationOptions = <
     TError,
     { data: RespawnCommunityRequestAbbdi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2E2eTestsRespawnCommunity>>,
   TError,
   { data: RespawnCommunityRequestAbbdi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2E2eTestsRespawnCommunity>>,
     { data: RespawnCommunityRequestAbbdi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2E2eTestsRespawnCommunity(data)
-  }
+    return postV2E2eTestsRespawnCommunity(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2E2eTestsRespawnCommunityMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2E2eTestsRespawnCommunity>>
->
-export type PostV2E2eTestsRespawnCommunityMutationBody = RespawnCommunityRequestAbbdi
-export type PostV2E2eTestsRespawnCommunityMutationError = unknown
+>;
+export type PostV2E2eTestsRespawnCommunityMutationBody = RespawnCommunityRequestAbbdi;
+export type PostV2E2eTestsRespawnCommunityMutationError = unknown;
 
 export const usePostV2E2eTestsRespawnCommunity = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -72,9 +72,9 @@ export const usePostV2E2eTestsRespawnCommunity = <TError = unknown, TContext = u
     TError,
     { data: RespawnCommunityRequestAbbdi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2E2eTestsRespawnCommunityMutationOptions(options)
+  const mutationOptions = getPostV2E2eTestsRespawnCommunityMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

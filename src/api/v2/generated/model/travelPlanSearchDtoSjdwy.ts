@@ -4,25 +4,25 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanSourceVskea } from './travelPlanSourceVskea'
-import type { TravelPlanListStatusIgktghq } from './travelPlanListStatusIgktghq'
+import type { TravelPlanSourceVskea } from './travelPlanSourceVskea';
+import type { TravelPlanListStatusIgktghq } from './travelPlanListStatusIgktghq';
 
 export interface TravelPlanSearchDtoSjdwy {
-  publicId?: string
-  publicBatchId?: string
-  name?: string | null
-  source?: TravelPlanSourceVskea
-  email?: string | null
-  origin?: string | null
-  destination?: string | null
-  dateOfJourney?: string
-  dateCreatedUtc?: string
-  status?: TravelPlanListStatusIgktghq
-  dateEmailSentUtc?: string | null
-  viewsOnline?: number
-  readonly dateSurveySentUtc?: string | null
-  dateBehaviorChangeSurveySentUtc?: string | null
-  dateFollowupSurveySentUtc?: string | null
-  batchName?: string | null
-  datePlanEmailScheduledForUtc?: string | null
+  publicId?: string;
+  publicBatchId?: string;
+  name?: string | null;
+  source?: TravelPlanSourceVskea;
+  email?: string | null;
+  origin?: string | null;
+  destination?: string | null;
+  dateOfJourney?: string;
+  dateCreatedUtc?: string;
+  status?: TravelPlanListStatusIgktghq;
+  dateEmailSentUtc?: string | null;
+  viewsOnline?: number;
+  readonly dateSurveySentUtc?: string | null;
+  dateBehaviorChangeSurveySentUtc?: string | null;
+  dateFollowupSurveySentUtc?: string | null;
+  batchName?: string | null;
+  datePlanEmailScheduledForUtc?: string | null;
 }

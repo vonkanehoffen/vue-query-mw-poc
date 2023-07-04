@@ -4,31 +4,31 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactPreferenceDxxa } from './contactPreferenceDxxa'
-import type { LocationPjjkoa } from './locationPjjkoa'
-import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha'
+import type { ContactPreferenceDxxa } from './contactPreferenceDxxa';
+import type { LocationPjjkoa } from './locationPjjkoa';
+import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha';
 
 export interface ContactListResponseFullContactDtoTypri {
-  homeAddress?: string | null
-  homeLatitude?: number | null
-  homeLongitude?: number | null
-  id?: string
-  communityId?: string | null
-  firstName?: string | null
-  lastName?: string | null
-  email?: string | null
-  tags?: string[] | null
-  contactPreferences?: ContactPreferenceDxxa[] | null
-  location?: LocationPjjkoa
-  isInSuppressionList?: boolean
-  isInPendingInviteSystem?: boolean
-  geocoded?: boolean
-  workStartTime?: string | null
-  workFinishTime?: string | null
-  dateCreated?: string
-  workDepartment?: string | null
-  currentCommuteMode?: MobilitywaysTransportTypeAswbha
-  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null
-  commuteDistanceInMeters?: number | null
-  commuteDaysPerWeek?: number | null
+  homeAddress?: string | null;
+  homeLatitude?: number | null;
+  homeLongitude?: number | null;
+  id?: string;
+  communityId?: string | null;
+  firstName?: string | null;
+  lastName?: string | null;
+  email?: string | null;
+  tags?: string[] | null;
+  contactPreferences?: ContactPreferenceDxxa[] | null;
+  location?: LocationPjjkoa;
+  isInSuppressionList?: boolean;
+  isInPendingInviteSystem?: boolean;
+  geocoded?: boolean;
+  workStartTime?: string | null;
+  workFinishTime?: string | null;
+  dateCreated?: string;
+  workDepartment?: string | null;
+  currentCommuteMode?: MobilitywaysTransportTypeAswbha;
+  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null;
+  commuteDistanceInMeters?: number | null;
+  commuteDaysPerWeek?: number | null;
 }

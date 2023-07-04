@@ -7,5 +7,5 @@
  */
 
 export interface UnauthorizedResultPecray {
-  statusCode?: number
+  statusCode?: number;
 }

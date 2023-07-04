@@ -6,6 +6,6 @@
  */
 
 export interface UpdateDashboardUserRolesUserWithRolesQynijq {
-  userId?: string | null
-  roles?: string[] | null
+  userId?: string | null;
+  roles?: string[] | null;
 }

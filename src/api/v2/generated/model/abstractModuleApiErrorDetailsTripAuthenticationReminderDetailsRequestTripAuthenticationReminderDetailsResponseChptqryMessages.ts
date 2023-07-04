@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsTripAuthenticationReminderDetailsRequestTripAuthenticationReminderDetailsResponseChptqryMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

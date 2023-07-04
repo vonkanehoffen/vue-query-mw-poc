@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions } from './communityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions'
+import type { CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions } from './communityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions';
 
 export interface CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxi {
-  options?: CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions
+  options?: CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxiOptions;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface ContactUpdateResponseJkhzwty {
-  contactId?: string
+  contactId?: string;
 }

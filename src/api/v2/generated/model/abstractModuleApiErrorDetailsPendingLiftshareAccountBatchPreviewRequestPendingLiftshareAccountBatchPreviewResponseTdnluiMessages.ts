@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchPreviewRequestPendingLiftshareAccountBatchPreviewResponseTdnluiMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

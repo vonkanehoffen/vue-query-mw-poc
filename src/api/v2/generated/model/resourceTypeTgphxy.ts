@@ -5,7 +5,7 @@
  * OpenAPI spec version: 2.0.0
  */
 
-export type ResourceTypeTgphxy = (typeof ResourceTypeTgphxy)[keyof typeof ResourceTypeTgphxy]
+export type ResourceTypeTgphxy = (typeof ResourceTypeTgphxy)[keyof typeof ResourceTypeTgphxy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ResourceTypeTgphxy = {
@@ -28,4 +28,4 @@ export const ResourceTypeTgphxy = {
   SavedView: 'SavedView',
   EmissionData: 'EmissionData',
   HighFrequencyEmissionData: 'HighFrequencyEmissionData'
-} as const
+} as const;

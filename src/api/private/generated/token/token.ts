@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,8 +12,8 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   TokenCreateResponseEbhzqy,
   UnauthorizedResultPecray,
@@ -26,12 +26,12 @@ import type {
   CreateTokenFacebookRequestDtoYsyoki,
   CreateTokenAppleResponseDtoSrywq,
   CreateTokenAppleRequestDtoGscvby
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Main way of authenticating and generating a JWT
@@ -42,8 +42,8 @@ export const postToken = (tokenCreateRequestHakhvwy: MaybeRef<TokenCreateRequest
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: tokenCreateRequestHakhvwy
-  })
-}
+  });
+};
 
 export const getPostTokenMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseDtoLtlwwzy,
@@ -54,32 +54,32 @@ export const getPostTokenMutationOptions = <
     TError,
     { data: TokenCreateRequestHakhvwy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postToken>>,
   TError,
   { data: TokenCreateRequestHakhvwy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postToken>>,
     { data: TokenCreateRequestHakhvwy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postToken(data)
-  }
+    return postToken(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostTokenMutationResult = NonNullable<Awaited<ReturnType<typeof postToken>>>
-export type PostTokenMutationBody = TokenCreateRequestHakhvwy
+export type PostTokenMutationResult = NonNullable<Awaited<ReturnType<typeof postToken>>>;
+export type PostTokenMutationBody = TokenCreateRequestHakhvwy;
 export type PostTokenMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseDtoLtlwwzy
+  | ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Main way of authenticating and generating a JWT
@@ -93,12 +93,12 @@ export const usePostToken = <
     TError,
     { data: TokenCreateRequestHakhvwy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostTokenMutationOptions(options)
+  const mutationOptions = getPostTokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Used to test and validate a JWT
  */
@@ -107,29 +107,29 @@ export const getToken = (signal?: AbortSignal) => {
     url: `/token`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetTokenQueryKey = () => ['token'] as const
+export const getGetTokenQueryKey = () => ['token'] as const;
 
 export const getGetTokenQueryOptions = <
   TData = Awaited<ReturnType<typeof getToken>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getToken>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getToken>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getToken>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetTokenQueryKey()
+  const queryKey = getGetTokenQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getToken>>> = ({ signal }) =>
-    getToken(signal)
+    getToken(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
-export type GetTokenQueryResult = NonNullable<Awaited<ReturnType<typeof getToken>>>
-export type GetTokenQueryError = unknown
+export type GetTokenQueryResult = NonNullable<Awaited<ReturnType<typeof getToken>>>;
+export type GetTokenQueryError = unknown;
 
 /**
  * @summary Used to test and validate a JWT
@@ -138,16 +138,18 @@ export const useGetToken = <
   TData = Awaited<ReturnType<typeof getToken>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getToken>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getToken>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetTokenQueryOptions(options)
+  const queryOptions = getGetTokenQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Used to authenticate using a Facebook access token and generate a JWT. User must have previously created an account by signing in to Facebook on Liftshare.com
@@ -160,8 +162,8 @@ export const postTokenFacebook = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: createTokenFacebookRequestDtoYsyoki
-  })
-}
+  });
+};
 
 export const getPostTokenFacebookMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseDtoLtlwwzy,
@@ -172,34 +174,34 @@ export const getPostTokenFacebookMutationOptions = <
     TError,
     { data: CreateTokenFacebookRequestDtoYsyoki },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postTokenFacebook>>,
   TError,
   { data: CreateTokenFacebookRequestDtoYsyoki },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postTokenFacebook>>,
     { data: CreateTokenFacebookRequestDtoYsyoki }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postTokenFacebook(data)
-  }
+    return postTokenFacebook(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostTokenFacebookMutationResult = NonNullable<
   Awaited<ReturnType<typeof postTokenFacebook>>
->
-export type PostTokenFacebookMutationBody = CreateTokenFacebookRequestDtoYsyoki
+>;
+export type PostTokenFacebookMutationBody = CreateTokenFacebookRequestDtoYsyoki;
 export type PostTokenFacebookMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseDtoLtlwwzy
+  | ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Used to authenticate using a Facebook access token and generate a JWT. User must have previously created an account by signing in to Facebook on Liftshare.com
@@ -213,12 +215,12 @@ export const usePostTokenFacebook = <
     TError,
     { data: CreateTokenFacebookRequestDtoYsyoki },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostTokenFacebookMutationOptions(options)
+  const mutationOptions = getPostTokenFacebookMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Used to authenticate using an Apple access token and generate a JWT. User must have previously created a Liftshare.com account with the same email registered with Apple
  */
@@ -230,8 +232,8 @@ export const postTokenApple = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: createTokenAppleRequestDtoGscvby
-  })
-}
+  });
+};
 
 export const getPostTokenAppleMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseDtoLtlwwzy,
@@ -242,32 +244,32 @@ export const getPostTokenAppleMutationOptions = <
     TError,
     { data: CreateTokenAppleRequestDtoGscvby },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postTokenApple>>,
   TError,
   { data: CreateTokenAppleRequestDtoGscvby },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postTokenApple>>,
     { data: CreateTokenAppleRequestDtoGscvby }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postTokenApple(data)
-  }
+    return postTokenApple(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostTokenAppleMutationResult = NonNullable<Awaited<ReturnType<typeof postTokenApple>>>
-export type PostTokenAppleMutationBody = CreateTokenAppleRequestDtoGscvby
+export type PostTokenAppleMutationResult = NonNullable<Awaited<ReturnType<typeof postTokenApple>>>;
+export type PostTokenAppleMutationBody = CreateTokenAppleRequestDtoGscvby;
 export type PostTokenAppleMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseDtoLtlwwzy
+  | ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Used to authenticate using an Apple access token and generate a JWT. User must have previously created a Liftshare.com account with the same email registered with Apple
@@ -281,9 +283,9 @@ export const usePostTokenApple = <
     TError,
     { data: CreateTokenAppleRequestDtoGscvby },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostTokenAppleMutationOptions(options)
+  const mutationOptions = getPostTokenAppleMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

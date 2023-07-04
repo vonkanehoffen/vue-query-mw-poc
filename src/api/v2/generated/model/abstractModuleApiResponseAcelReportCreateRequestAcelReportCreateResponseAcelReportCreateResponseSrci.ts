@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AcelReportCreateResponseKvjley } from './acelReportCreateResponseKvjley'
-import type { AbstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri } from './abstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri'
+import type { AcelReportCreateResponseKvjley } from './acelReportCreateResponseKvjley';
+import type { AbstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri } from './abstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri';
 
 export interface AbstractModuleApiResponseAcelReportCreateRequestAcelReportCreateResponseAcelReportCreateResponseSrci {
-  response?: AcelReportCreateResponseKvjley
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri
+  response?: AcelReportCreateResponseKvjley;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsAcelReportCreateRequestAcelReportCreateResponseVcri;
 }

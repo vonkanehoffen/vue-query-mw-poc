@@ -6,6 +6,6 @@
  */
 
 export interface AdminTokenTwoFactorCreateRequestIifgka {
-  token?: string | null
-  twoFactorCode?: string | null
+  token?: string | null;
+  twoFactorCode?: string | null;
 }

@@ -6,7 +6,7 @@
  */
 
 export type DidChangeBehaviorAnswerValueTbzxoi =
-  (typeof DidChangeBehaviorAnswerValueTbzxoi)[keyof typeof DidChangeBehaviorAnswerValueTbzxoi]
+  (typeof DidChangeBehaviorAnswerValueTbzxoi)[keyof typeof DidChangeBehaviorAnswerValueTbzxoi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const DidChangeBehaviorAnswerValueTbzxoi = {
@@ -15,4 +15,4 @@ export const DidChangeBehaviorAnswerValueTbzxoi = {
   NoYetToTryNewMode: 'NoYetToTryNewMode',
   NoIntentionOfChanging: 'NoIntentionOfChanging',
   NoLongerMakeThisJourney: 'NoLongerMakeThisJourney'
-} as const
+} as const;

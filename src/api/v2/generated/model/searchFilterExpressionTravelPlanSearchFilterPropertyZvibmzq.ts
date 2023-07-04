@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanSearchFilterPropertyEcdala } from './travelPlanSearchFilterPropertyEcdala'
-import type { SearchFilterOperatorYomly } from './searchFilterOperatorYomly'
+import type { TravelPlanSearchFilterPropertyEcdala } from './travelPlanSearchFilterPropertyEcdala';
+import type { SearchFilterOperatorYomly } from './searchFilterOperatorYomly';
 
 export interface SearchFilterExpressionTravelPlanSearchFilterPropertyZvibmzq {
-  filterProperty?: TravelPlanSearchFilterPropertyEcdala
-  filterOperator?: SearchFilterOperatorYomly
-  value?: string[] | null
+  filterProperty?: TravelPlanSearchFilterPropertyEcdala;
+  filterOperator?: SearchFilterOperatorYomly;
+  value?: string[] | null;
 }

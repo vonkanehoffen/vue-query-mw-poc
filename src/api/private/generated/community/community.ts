@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,20 +12,20 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   CommunityOptionsHandlerCommunityOptionsResponseDtoTbbwxi,
   CommunityFindByNameResponseGsuvy,
   ValidationExceptionResponseBaseDtoVtrnlzi,
   CommunityFindByNameBaseRequestQbmaui,
   CommunityDetailsRequestDtoTgugsq
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Get a key value list of all community options for current user
@@ -35,31 +35,31 @@ export const getCommunityOptions = (signal?: AbortSignal) => {
     url: `/community/options`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetCommunityOptionsQueryKey = () => ['community', 'options'] as const
+export const getGetCommunityOptionsQueryKey = () => ['community', 'options'] as const;
 
 export const getGetCommunityOptionsQueryOptions = <
   TData = Awaited<ReturnType<typeof getCommunityOptions>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getCommunityOptions>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getCommunityOptions>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getCommunityOptions>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetCommunityOptionsQueryKey()
+  const queryKey = getGetCommunityOptionsQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getCommunityOptions>>> = ({ signal }) =>
-    getCommunityOptions(signal)
+    getCommunityOptions(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetCommunityOptionsQueryResult = NonNullable<
   Awaited<ReturnType<typeof getCommunityOptions>>
->
-export type GetCommunityOptionsQueryError = unknown
+>;
+export type GetCommunityOptionsQueryError = unknown;
 
 /**
  * @summary Get a key value list of all community options for current user
@@ -68,16 +68,18 @@ export const useGetCommunityOptions = <
   TData = Awaited<ReturnType<typeof getCommunityOptions>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getCommunityOptions>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getCommunityOptions>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetCommunityOptionsQueryOptions(options)
+  const queryOptions = getGetCommunityOptionsQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Find community by name or part of
@@ -90,8 +92,8 @@ export const postCommunityFindByName = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: communityFindByNameBaseRequestQbmaui
-  })
-}
+  });
+};
 
 export const getPostCommunityFindByNameMutationOptions = <
   TError = ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -102,32 +104,32 @@ export const getPostCommunityFindByNameMutationOptions = <
     TError,
     { data: CommunityFindByNameBaseRequestQbmaui },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postCommunityFindByName>>,
   TError,
   { data: CommunityFindByNameBaseRequestQbmaui },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postCommunityFindByName>>,
     { data: CommunityFindByNameBaseRequestQbmaui }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postCommunityFindByName(data)
-  }
+    return postCommunityFindByName(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostCommunityFindByNameMutationResult = NonNullable<
   Awaited<ReturnType<typeof postCommunityFindByName>>
->
-export type PostCommunityFindByNameMutationBody = CommunityFindByNameBaseRequestQbmaui
-export type PostCommunityFindByNameMutationError = ValidationExceptionResponseBaseDtoVtrnlzi
+>;
+export type PostCommunityFindByNameMutationBody = CommunityFindByNameBaseRequestQbmaui;
+export type PostCommunityFindByNameMutationError = ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Find community by name or part of
@@ -141,12 +143,12 @@ export const usePostCommunityFindByName = <
     TError,
     { data: CommunityFindByNameBaseRequestQbmaui },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostCommunityFindByNameMutationOptions(options)
+  const mutationOptions = getPostCommunityFindByNameMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Find community by public id and get public information and options
  */
@@ -158,8 +160,8 @@ export const postCommunityDetails = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: communityDetailsRequestDtoTgugsq
-  })
-}
+  });
+};
 
 export const getPostCommunityDetailsMutationOptions = <
   TError = ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -170,32 +172,32 @@ export const getPostCommunityDetailsMutationOptions = <
     TError,
     { data: CommunityDetailsRequestDtoTgugsq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postCommunityDetails>>,
   TError,
   { data: CommunityDetailsRequestDtoTgugsq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postCommunityDetails>>,
     { data: CommunityDetailsRequestDtoTgugsq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postCommunityDetails(data)
-  }
+    return postCommunityDetails(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostCommunityDetailsMutationResult = NonNullable<
   Awaited<ReturnType<typeof postCommunityDetails>>
->
-export type PostCommunityDetailsMutationBody = CommunityDetailsRequestDtoTgugsq
-export type PostCommunityDetailsMutationError = ValidationExceptionResponseBaseDtoVtrnlzi
+>;
+export type PostCommunityDetailsMutationBody = CommunityDetailsRequestDtoTgugsq;
+export type PostCommunityDetailsMutationError = ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Find community by public id and get public information and options
@@ -209,9 +211,9 @@ export const usePostCommunityDetails = <
     TError,
     { data: CommunityDetailsRequestDtoTgugsq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostCommunityDetailsMutationOptions(options)
+  const mutationOptions = getPostCommunityDetailsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

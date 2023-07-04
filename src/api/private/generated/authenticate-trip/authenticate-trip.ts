@@ -4,7 +4,7 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,9 +12,9 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AuthenticateTripDriverResponseDtoWmhqyy,
   ValidationExceptionResponseDtoLtlwwzy,
@@ -22,12 +22,12 @@ import type {
   AuthenticateTripPassengerBaseResponseDtoUcnkima,
   AuthenticateTripPassengerRequestBaseDtoPoxnzaq,
   AuthenticatedTripsResponseDtoYptpiy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Returns new qr code for driver to display to passenger
@@ -40,8 +40,8 @@ export const postAuthenticateTripDriver = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: authenticateTripDriverRequestBaseDtoEluguhi
-  })
-}
+  });
+};
 
 export const getPostAuthenticateTripDriverMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -52,32 +52,32 @@ export const getPostAuthenticateTripDriverMutationOptions = <
     TError,
     { data: AuthenticateTripDriverRequestBaseDtoEluguhi },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postAuthenticateTripDriver>>,
   TError,
   { data: AuthenticateTripDriverRequestBaseDtoEluguhi },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postAuthenticateTripDriver>>,
     { data: AuthenticateTripDriverRequestBaseDtoEluguhi }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postAuthenticateTripDriver(data)
-  }
+    return postAuthenticateTripDriver(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostAuthenticateTripDriverMutationResult = NonNullable<
   Awaited<ReturnType<typeof postAuthenticateTripDriver>>
->
-export type PostAuthenticateTripDriverMutationBody = AuthenticateTripDriverRequestBaseDtoEluguhi
-export type PostAuthenticateTripDriverMutationError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type PostAuthenticateTripDriverMutationBody = AuthenticateTripDriverRequestBaseDtoEluguhi;
+export type PostAuthenticateTripDriverMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Returns new qr code for driver to display to passenger
@@ -91,12 +91,12 @@ export const usePostAuthenticateTripDriver = <
     TError,
     { data: AuthenticateTripDriverRequestBaseDtoEluguhi },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostAuthenticateTripDriverMutationOptions(options)
+  const mutationOptions = getPostAuthenticateTripDriverMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Validates passenger and authenticates trip
  */
@@ -108,8 +108,8 @@ export const postAuthenticateTripPassenger = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: authenticateTripPassengerRequestBaseDtoPoxnzaq
-  })
-}
+  });
+};
 
 export const getPostAuthenticateTripPassengerMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -120,33 +120,33 @@ export const getPostAuthenticateTripPassengerMutationOptions = <
     TError,
     { data: AuthenticateTripPassengerRequestBaseDtoPoxnzaq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postAuthenticateTripPassenger>>,
   TError,
   { data: AuthenticateTripPassengerRequestBaseDtoPoxnzaq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postAuthenticateTripPassenger>>,
     { data: AuthenticateTripPassengerRequestBaseDtoPoxnzaq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postAuthenticateTripPassenger(data)
-  }
+    return postAuthenticateTripPassenger(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostAuthenticateTripPassengerMutationResult = NonNullable<
   Awaited<ReturnType<typeof postAuthenticateTripPassenger>>
->
+>;
 export type PostAuthenticateTripPassengerMutationBody =
-  AuthenticateTripPassengerRequestBaseDtoPoxnzaq
-export type PostAuthenticateTripPassengerMutationError = ValidationExceptionResponseDtoLtlwwzy
+  AuthenticateTripPassengerRequestBaseDtoPoxnzaq;
+export type PostAuthenticateTripPassengerMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Validates passenger and authenticates trip
@@ -160,12 +160,12 @@ export const usePostAuthenticateTripPassenger = <
     TError,
     { data: AuthenticateTripPassengerRequestBaseDtoPoxnzaq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostAuthenticateTripPassengerMutationOptions(options)
+  const mutationOptions = getPostAuthenticateTripPassengerMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * @summary Gets the status and details of an authenticated trip
  */
@@ -174,11 +174,11 @@ export const getAuthenticateTripStatusToken = (token: MaybeRef<string>, signal?:
     url: `/authenticate-trip/status/${unref(token)}`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
 export const getGetAuthenticateTripStatusTokenQueryKey = (token: MaybeRef<string>) =>
-  ['authenticate-trip', 'status', token] as const
+  ['authenticate-trip', 'status', token] as const;
 
 export const getGetAuthenticateTripStatusTokenQueryOptions = <
   TData = Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>,
@@ -190,24 +190,24 @@ export const getGetAuthenticateTripStatusTokenQueryOptions = <
       Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetAuthenticateTripStatusTokenQueryKey(token)
+  const queryKey = getGetAuthenticateTripStatusTokenQueryKey(token);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>> = ({
     signal
-  }) => getAuthenticateTripStatusToken(token, signal)
+  }) => getAuthenticateTripStatusToken(token, signal);
 
-  return { queryKey, queryFn, enabled: !!token, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!token, ...queryOptions };
+};
 
 export type GetAuthenticateTripStatusTokenQueryResult = NonNullable<
   Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>
->
-export type GetAuthenticateTripStatusTokenQueryError = ValidationExceptionResponseDtoLtlwwzy
+>;
+export type GetAuthenticateTripStatusTokenQueryError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Gets the status and details of an authenticated trip
@@ -222,17 +222,19 @@ export const useGetAuthenticateTripStatusToken = <
       Awaited<ReturnType<typeof getAuthenticateTripStatusToken>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetAuthenticateTripStatusTokenQueryOptions(token, options)
+  const queryOptions = getGetAuthenticateTripStatusTokenQueryOptions(token, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 /**
  * @summary Get list of authenticated trips. Note name may be null if member has been deleted
@@ -242,32 +244,32 @@ export const getAuthenticateTripTrips = (signal?: AbortSignal) => {
     url: `/authenticate-trip/trips`,
     method: 'get',
     signal
-  })
-}
+  });
+};
 
-export const getGetAuthenticateTripTripsQueryKey = () => ['authenticate-trip', 'trips'] as const
+export const getGetAuthenticateTripTripsQueryKey = () => ['authenticate-trip', 'trips'] as const;
 
 export const getGetAuthenticateTripTripsQueryOptions = <
   TData = Awaited<ReturnType<typeof getAuthenticateTripTrips>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripTrips>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripTrips>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripTrips>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetAuthenticateTripTripsQueryKey()
+  const queryKey = getGetAuthenticateTripTripsQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getAuthenticateTripTrips>>> = ({
     signal
-  }) => getAuthenticateTripTrips(signal)
+  }) => getAuthenticateTripTrips(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetAuthenticateTripTripsQueryResult = NonNullable<
   Awaited<ReturnType<typeof getAuthenticateTripTrips>>
->
-export type GetAuthenticateTripTripsQueryError = unknown
+>;
+export type GetAuthenticateTripTripsQueryError = unknown;
 
 /**
  * @summary Get list of authenticated trips. Note name may be null if member has been deleted
@@ -276,13 +278,15 @@ export const useGetAuthenticateTripTrips = <
   TData = Awaited<ReturnType<typeof getAuthenticateTripTrips>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripTrips>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getAuthenticateTripTrips>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetAuthenticateTripTripsQueryOptions(options)
+  const queryOptions = getGetAuthenticateTripTripsQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

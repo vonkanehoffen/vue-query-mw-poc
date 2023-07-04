@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

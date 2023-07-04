@@ -4,16 +4,16 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { CommunityPrivacyGcuvykq } from './communityPrivacyGcuvykq'
+import type { CommunityPrivacyGcuvykq } from './communityPrivacyGcuvykq';
 
 export interface CommunityFindByNameCommunityDetailsZvta {
-  communityId?: string | null
-  name?: string | null
-  emailRestrictions?: string[] | null
-  passwordRestricted?: boolean
-  privacy?: CommunityPrivacyGcuvykq
-  umbrella?: boolean
-  isMember?: boolean
-  oidcRequired?: boolean
-  redirectUrl?: string | null
+  communityId?: string | null;
+  name?: string | null;
+  emailRestrictions?: string[] | null;
+  passwordRestricted?: boolean;
+  privacy?: CommunityPrivacyGcuvykq;
+  umbrella?: boolean;
+  isMember?: boolean;
+  oidcRequired?: boolean;
+  redirectUrl?: string | null;
 }

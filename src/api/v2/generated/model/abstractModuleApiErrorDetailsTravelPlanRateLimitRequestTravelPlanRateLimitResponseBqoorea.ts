@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages } from './abstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages'
+import type { AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages } from './abstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages';
 
 export interface AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqooreaMessages;
 }

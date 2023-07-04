@@ -6,5 +6,5 @@
  */
 
 export interface HighFreqDataImportBatchDeleteRequestHisiq {
-  ids?: string[] | null
+  ids?: string[] | null;
 }

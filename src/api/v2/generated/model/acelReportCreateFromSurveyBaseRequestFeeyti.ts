@@ -6,14 +6,14 @@
  */
 
 export interface AcelReportCreateFromSurveyBaseRequestFeeyti {
-  employees?: number
-  audience?: number
-  publicSurveyId?: string
-  name?: string | null
-  description?: string | null
-  simulation?: boolean
-  isPrivate?: boolean
-  communityId?: string | null
-  location?: string | null
-  netZeroTargetYear?: number | null
+  employees?: number;
+  audience?: number;
+  publicSurveyId?: string;
+  name?: string | null;
+  description?: string | null;
+  simulation?: boolean;
+  isPrivate?: boolean;
+  communityId?: string | null;
+  location?: string | null;
+  netZeroTargetYear?: number | null;
 }

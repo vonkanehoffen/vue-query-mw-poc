@@ -4,18 +4,18 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { BookingStatusVpkey } from './bookingStatusVpkey'
-import type { JourneyFrequencyVvhvfbq } from './journeyFrequencyVvhvfbq'
+import type { BookingStatusVpkey } from './bookingStatusVpkey';
+import type { JourneyFrequencyVvhvfbq } from './journeyFrequencyVvhvfbq';
 
 export interface PendingBookingsResponseItemDtoRxxkqy {
-  bookingId?: string
-  origin?: string | null
-  destination?: string | null
-  passengerName?: string | null
-  seatsBooked?: number
-  status?: BookingStatusVpkey
-  passengerId?: string | null
-  journeyFrequency?: JourneyFrequencyVvhvfbq
-  tripsPerWeek?: number
-  journeyDate?: string
+  bookingId?: string;
+  origin?: string | null;
+  destination?: string | null;
+  passengerName?: string | null;
+  seatsBooked?: number;
+  status?: BookingStatusVpkey;
+  passengerId?: string | null;
+  journeyFrequency?: JourneyFrequencyVvhvfbq;
+  tripsPerWeek?: number;
+  journeyDate?: string;
 }

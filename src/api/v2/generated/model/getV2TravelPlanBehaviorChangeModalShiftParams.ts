@@ -6,7 +6,7 @@
  */
 
 export type GetV2TravelPlanBehaviorChangeModalShiftParams = {
-  cid?: string
-  dateFrom?: string
-  dateTo?: string
-}
+  cid?: string;
+  dateFrom?: string;
+  dateTo?: string;
+};

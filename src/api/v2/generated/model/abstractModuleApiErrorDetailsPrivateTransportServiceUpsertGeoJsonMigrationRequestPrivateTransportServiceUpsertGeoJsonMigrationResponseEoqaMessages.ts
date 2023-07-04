@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPrivateTransportServiceUpsertGeoJsonMigrationRequestPrivateTransportServiceUpsertGeoJsonMigrationResponseEoqaMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SubscriptionDetailsQueryDtoMmiitwi } from './subscriptionDetailsQueryDtoMmiitwi'
+import type { SubscriptionDetailsQueryDtoMmiitwi } from './subscriptionDetailsQueryDtoMmiitwi';
 
 export interface SubscriptionUpdateResponseAmkqpeq {
-  subscriptionPreferences?: SubscriptionDetailsQueryDtoMmiitwi[] | null
-  token?: string | null
+  subscriptionPreferences?: SubscriptionDetailsQueryDtoMmiitwi[] | null;
+  token?: string | null;
 }

@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { FeatureManagerListResponseJzhghiFeatures } from './featureManagerListResponseJzhghiFeatures'
+import type { FeatureManagerListResponseJzhghiFeatures } from './featureManagerListResponseJzhghiFeatures';
 
 export interface FeatureManagerListResponseJzhghi {
-  features?: FeatureManagerListResponseJzhghiFeatures
+  features?: FeatureManagerListResponseJzhghiFeatures;
 }

@@ -6,6 +6,6 @@
  */
 
 export interface SurveyQuestionsListQuestionDtoUssblny {
-  id?: string | null
-  questionText?: string | null
+  id?: string | null;
+  questionText?: string | null;
 }

@@ -6,5 +6,5 @@
  */
 
 export interface AcelReportCreateFromSurveyResponseHifbtjq {
-  acelReportId?: string | null
+  acelReportId?: string | null;
 }

@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages'
+import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages';
 
 export interface AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLtty {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchUpsertRequestPendingLiftshareAccountBatchUpsertResponseLttyMessages;
 }

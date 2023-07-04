@@ -6,5 +6,5 @@
  */
 
 export interface SubscriptionReasonCreateResponseOlpkva {
-  [key: string]: any
+  [key: string]: any;
 }

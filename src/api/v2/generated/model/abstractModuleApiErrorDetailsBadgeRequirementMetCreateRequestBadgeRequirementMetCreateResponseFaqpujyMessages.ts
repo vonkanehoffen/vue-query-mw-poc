@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsBadgeRequirementMetCreateRequestBadgeRequirementMetCreateResponseFaqpujyMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

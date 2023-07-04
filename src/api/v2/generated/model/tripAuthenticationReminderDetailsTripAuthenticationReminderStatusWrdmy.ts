@@ -6,11 +6,11 @@
  */
 
 export type TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy =
-  (typeof TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy)[keyof typeof TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy]
+  (typeof TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy)[keyof typeof TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy = {
   Active: 'Active',
   Paused: 'Paused',
   NotSet: 'NotSet'
-} as const
+} as const;

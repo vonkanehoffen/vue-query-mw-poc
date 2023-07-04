@@ -6,9 +6,9 @@
  */
 
 export interface ContactUpdateRequestMfaxy {
-  contactId?: string
-  firstName?: string | null
-  lastName?: string | null
-  email?: string | null
-  address?: string | null
+  contactId?: string;
+  firstName?: string | null;
+  lastName?: string | null;
+  email?: string | null;
+  address?: string | null;
 }

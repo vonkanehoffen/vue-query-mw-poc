@@ -6,7 +6,7 @@
  */
 
 export interface CreateReplyResponseDtoQsizqa {
-  messageId?: string | null
-  conversationId?: string | null
-  dateCreated?: string
+  messageId?: string | null;
+  conversationId?: string | null;
+  dateCreated?: string;
 }

@@ -4,23 +4,23 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AcelReportTypeIegky } from './acelReportTypeIegky'
-import type { AcelModesBreakdownDtoEimnky } from './acelModesBreakdownDtoEimnky'
+import type { AcelReportTypeIegky } from './acelReportTypeIegky';
+import type { AcelModesBreakdownDtoEimnky } from './acelModesBreakdownDtoEimnky';
 
 export interface AcelReportCreateBaseRequestFuollui {
-  reportId?: string | null
-  name?: string | null
-  description?: string | null
-  dateOfAcel?: string
-  certified?: boolean
-  employees?: number
-  audience?: number
-  responses?: number
-  simulation?: boolean
-  isPrivate?: boolean
-  reportType?: AcelReportTypeIegky
-  breakdown?: AcelModesBreakdownDtoEimnky
-  communityId?: string | null
-  location?: string | null
-  netZeroTargetYear?: number | null
+  reportId?: string | null;
+  name?: string | null;
+  description?: string | null;
+  dateOfAcel?: string;
+  certified?: boolean;
+  employees?: number;
+  audience?: number;
+  responses?: number;
+  simulation?: boolean;
+  isPrivate?: boolean;
+  reportType?: AcelReportTypeIegky;
+  breakdown?: AcelModesBreakdownDtoEimnky;
+  communityId?: string | null;
+  location?: string | null;
+  netZeroTargetYear?: number | null;
 }

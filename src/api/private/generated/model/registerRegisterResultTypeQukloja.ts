@@ -6,7 +6,7 @@
  */
 
 export type RegisterRegisterResultTypeQukloja =
-  (typeof RegisterRegisterResultTypeQukloja)[keyof typeof RegisterRegisterResultTypeQukloja]
+  (typeof RegisterRegisterResultTypeQukloja)[keyof typeof RegisterRegisterResultTypeQukloja];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const RegisterRegisterResultTypeQukloja = {
@@ -16,4 +16,4 @@ export const RegisterRegisterResultTypeQukloja = {
   SuccessAlreadyRegistered: 'SuccessAlreadyRegistered',
   CommunityPasswordInvalid: 'CommunityPasswordInvalid',
   OidcRequired: 'OidcRequired'
-} as const
+} as const;

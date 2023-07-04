@@ -4,23 +4,23 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha'
+import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha';
 
 export interface LoadContactsFromViewContactDtoOyeyei {
-  publicId?: string
-  firstName?: string | null
-  lastName?: string | null
-  email?: string | null
-  homeAddress?: string | null
-  geocoded?: boolean
-  dateCreated?: string
-  workLocation?: string | null
-  workDepartment?: string | null
-  workStartTime?: string | null
-  workFinishTime?: string | null
-  currentCommuteMode?: MobilitywaysTransportTypeAswbha
-  commuteDistanceInMeters?: number | null
-  commuteDaysPerWeek?: number | null
-  personalTravelPlanDate?: string | null
-  personalTravelPlanSent?: boolean
+  publicId?: string;
+  firstName?: string | null;
+  lastName?: string | null;
+  email?: string | null;
+  homeAddress?: string | null;
+  geocoded?: boolean;
+  dateCreated?: string;
+  workLocation?: string | null;
+  workDepartment?: string | null;
+  workStartTime?: string | null;
+  workFinishTime?: string | null;
+  currentCommuteMode?: MobilitywaysTransportTypeAswbha;
+  commuteDistanceInMeters?: number | null;
+  commuteDaysPerWeek?: number | null;
+  personalTravelPlanDate?: string | null;
+  personalTravelPlanSent?: boolean;
 }

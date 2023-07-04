@@ -6,5 +6,5 @@
  */
 
 export interface ContactUpsertResponseRmioi {
-  contactId?: string
+  contactId?: string;
 }

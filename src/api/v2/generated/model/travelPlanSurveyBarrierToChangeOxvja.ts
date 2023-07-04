@@ -6,7 +6,7 @@
  */
 
 export type TravelPlanSurveyBarrierToChangeOxvja =
-  (typeof TravelPlanSurveyBarrierToChangeOxvja)[keyof typeof TravelPlanSurveyBarrierToChangeOxvja]
+  (typeof TravelPlanSurveyBarrierToChangeOxvja)[keyof typeof TravelPlanSurveyBarrierToChangeOxvja];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSurveyBarrierToChangeOxvja = {
@@ -18,4 +18,4 @@ export const TravelPlanSurveyBarrierToChangeOxvja = {
   OriginalModeBest: 'OriginalModeBest',
   LikeToTryAgain: 'LikeToTryAgain',
   Other: 'Other'
-} as const
+} as const;

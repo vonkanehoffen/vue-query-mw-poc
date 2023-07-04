@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactLimitRequestContactLimitResponseDgojwjyMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

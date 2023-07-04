@@ -4,17 +4,17 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { EmailSuppressionCheckResponseItemDtoCpjmmli } from './emailSuppressionCheckResponseItemDtoCpjmmli'
-import type { NotificationListBadgeNotificationAglkcvq } from './notificationListBadgeNotificationAglkcvq'
+import type { EmailSuppressionCheckResponseItemDtoCpjmmli } from './emailSuppressionCheckResponseItemDtoCpjmmli';
+import type { NotificationListBadgeNotificationAglkcvq } from './notificationListBadgeNotificationAglkcvq';
 
 export interface NotificationListResponseAgmvy {
-  unreadMessages?: number
-  unreadAlerts?: number
-  pendingBookings?: number
-  pendingRatings?: number
-  pendingTeamInvites?: number
-  totalPoints?: number
-  hasCustomAvatar?: boolean
-  suppressionList?: EmailSuppressionCheckResponseItemDtoCpjmmli[] | null
-  newBadges?: NotificationListBadgeNotificationAglkcvq[] | null
+  unreadMessages?: number;
+  unreadAlerts?: number;
+  pendingBookings?: number;
+  pendingRatings?: number;
+  pendingTeamInvites?: number;
+  totalPoints?: number;
+  hasCustomAvatar?: boolean;
+  suppressionList?: EmailSuppressionCheckResponseItemDtoCpjmmli[] | null;
+  newBadges?: NotificationListBadgeNotificationAglkcvq[] | null;
 }

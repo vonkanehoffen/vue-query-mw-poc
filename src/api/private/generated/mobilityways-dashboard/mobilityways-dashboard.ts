@@ -4,20 +4,20 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AdminTokenCreateResponseNnmuhq,
   UnauthorizedResultPecray,
   ValidationExceptionResponseBaseDtoVtrnlzi,
   GetTokenForClientAccountHandlerRequestTthtui
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * Used to generate an admin JWT allowing liftshare admins to login on behalf of a client. 
@@ -33,8 +33,8 @@ export const postClientTokenGetClientToken = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: getTokenForClientAccountHandlerRequestTthtui
-  })
-}
+  });
+};
 
 export const getPostClientTokenGetClientTokenMutationOptions = <
   TError = UnauthorizedResultPecray | ValidationExceptionResponseBaseDtoVtrnlzi,
@@ -45,34 +45,35 @@ export const getPostClientTokenGetClientTokenMutationOptions = <
     TError,
     { data: GetTokenForClientAccountHandlerRequestTthtui },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postClientTokenGetClientToken>>,
   TError,
   { data: GetTokenForClientAccountHandlerRequestTthtui },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postClientTokenGetClientToken>>,
     { data: GetTokenForClientAccountHandlerRequestTthtui }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postClientTokenGetClientToken(data)
-  }
+    return postClientTokenGetClientToken(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostClientTokenGetClientTokenMutationResult = NonNullable<
   Awaited<ReturnType<typeof postClientTokenGetClientToken>>
->
-export type PostClientTokenGetClientTokenMutationBody = GetTokenForClientAccountHandlerRequestTthtui
+>;
+export type PostClientTokenGetClientTokenMutationBody =
+  GetTokenForClientAccountHandlerRequestTthtui;
 export type PostClientTokenGetClientTokenMutationError =
   | UnauthorizedResultPecray
-  | ValidationExceptionResponseBaseDtoVtrnlzi
+  | ValidationExceptionResponseBaseDtoVtrnlzi;
 
 /**
  * @summary Generate authentication token to login of behalf of client
@@ -86,9 +87,9 @@ export const usePostClientTokenGetClientToken = <
     TError,
     { data: GetTokenForClientAccountHandlerRequestTthtui },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostClientTokenGetClientTokenMutationOptions(options)
+  const mutationOptions = getPostClientTokenGetClientTokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

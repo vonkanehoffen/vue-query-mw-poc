@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TravelPlanRateLimitResponseBhcsi } from './travelPlanRateLimitResponseBhcsi'
-import type { AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea } from './abstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea'
+import type { TravelPlanRateLimitResponseBhcsi } from './travelPlanRateLimitResponseBhcsi';
+import type { AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea } from './abstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea';
 
 export interface AbstractModuleApiResponseTravelPlanRateLimitRequestTravelPlanRateLimitResponseTravelPlanRateLimitResponseIgua {
-  response?: TravelPlanRateLimitResponseBhcsi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea
+  response?: TravelPlanRateLimitResponseBhcsi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsTravelPlanRateLimitRequestTravelPlanRateLimitResponseBqoorea;
 }

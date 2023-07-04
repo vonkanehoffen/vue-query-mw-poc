@@ -4,22 +4,22 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SurveyStatusFguygi } from './surveyStatusFguygi'
-import type { SurveyDeliveryMethodZbwy } from './surveyDeliveryMethodZbwy'
+import type { SurveyStatusFguygi } from './surveyStatusFguygi';
+import type { SurveyDeliveryMethodZbwy } from './surveyDeliveryMethodZbwy';
 
 export interface SurveyDetailSurveyDetailDtoHciqa {
-  publicSurveyId?: string
-  surveyTitle?: string | null
-  numResponses?: number
-  name?: string | null
-  surveyType?: string | null
-  surveyed?: number
-  responses?: number
-  readonly dateCreated?: string
-  readonly dateLastEdited?: string | null
-  readonly datePublished?: string | null
-  published?: boolean
-  status?: SurveyStatusFguygi
-  deliveryMethod?: SurveyDeliveryMethodZbwy
-  publicAnalytics?: boolean
+  publicSurveyId?: string;
+  surveyTitle?: string | null;
+  numResponses?: number;
+  name?: string | null;
+  surveyType?: string | null;
+  surveyed?: number;
+  responses?: number;
+  readonly dateCreated?: string;
+  readonly dateLastEdited?: string | null;
+  readonly datePublished?: string | null;
+  published?: boolean;
+  status?: SurveyStatusFguygi;
+  deliveryMethod?: SurveyDeliveryMethodZbwy;
+  publicAnalytics?: boolean;
 }

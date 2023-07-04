@@ -6,7 +6,7 @@
  */
 
 export type ExternalLoginResultIaxzli =
-  (typeof ExternalLoginResultIaxzli)[keyof typeof ExternalLoginResultIaxzli]
+  (typeof ExternalLoginResultIaxzli)[keyof typeof ExternalLoginResultIaxzli];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ExternalLoginResultIaxzli = {
@@ -14,4 +14,4 @@ export const ExternalLoginResultIaxzli = {
   LoggedIn: 'LoggedIn',
   AccountLocked: 'AccountLocked',
   Failed: 'Failed'
-} as const
+} as const;

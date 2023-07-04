@@ -6,7 +6,7 @@
  */
 
 export interface CommunityListCommunityDtoWdgyibq {
-  id?: string | null
-  name?: string | null
-  active?: boolean
+  id?: string | null;
+  name?: string | null;
+  active?: boolean;
 }

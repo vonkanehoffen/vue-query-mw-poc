@@ -6,5 +6,5 @@
  */
 
 export interface HighFreqDataImportBatchDeleteResponseZwmkq {
-  [key: string]: any
+  [key: string]: any;
 }

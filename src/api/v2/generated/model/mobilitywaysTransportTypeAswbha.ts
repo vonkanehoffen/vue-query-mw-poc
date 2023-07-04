@@ -6,7 +6,7 @@
  */
 
 export type MobilitywaysTransportTypeAswbha =
-  (typeof MobilitywaysTransportTypeAswbha)[keyof typeof MobilitywaysTransportTypeAswbha]
+  (typeof MobilitywaysTransportTypeAswbha)[keyof typeof MobilitywaysTransportTypeAswbha];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const MobilitywaysTransportTypeAswbha = {
@@ -33,4 +33,4 @@ export const MobilitywaysTransportTypeAswbha = {
   CompanyShuttleBus: 'CompanyShuttleBus',
   ElectricCompanyShuttleBus: 'ElectricCompanyShuttleBus',
   ElectricMotorcycle: 'ElectricMotorcycle'
-} as const
+} as const;

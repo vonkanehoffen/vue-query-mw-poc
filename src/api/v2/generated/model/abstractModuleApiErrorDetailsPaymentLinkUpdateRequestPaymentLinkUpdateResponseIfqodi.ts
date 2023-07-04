@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages } from './abstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages'
+import type { AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages } from './abstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages';
 
 export interface AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodi {
-  readonly code?: string | null
-  readonly messages?: AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages
+  readonly code?: string | null;
+  readonly messages?: AbstractModuleApiErrorDetailsPaymentLinkUpdateRequestPaymentLinkUpdateResponseIfqodiMessages;
 }

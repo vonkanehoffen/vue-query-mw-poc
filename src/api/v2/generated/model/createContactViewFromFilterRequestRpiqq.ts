@@ -4,12 +4,12 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactFilterCyeeii } from './contactFilterCyeeii'
+import type { ContactFilterCyeeii } from './contactFilterCyeeii';
 
 export interface CreateContactViewFromFilterRequestRpiqq {
-  viewName?: string | null
-  communityId?: string | null
-  filter?: ContactFilterCyeeii
-  staticView?: boolean
-  adminId?: string | null
+  viewName?: string | null;
+  communityId?: string | null;
+  filter?: ContactFilterCyeeii;
+  staticView?: boolean;
+  adminId?: string | null;
 }

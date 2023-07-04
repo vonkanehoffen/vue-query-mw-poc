@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ValidationExceptionResponseBaseDtoVtrnlziFailures } from './validationExceptionResponseBaseDtoVtrnlziFailures'
+import type { ValidationExceptionResponseBaseDtoVtrnlziFailures } from './validationExceptionResponseBaseDtoVtrnlziFailures';
 
 export interface ValidationExceptionResponseBaseDtoVtrnlzi {
-  readonly failures?: ValidationExceptionResponseBaseDtoVtrnlziFailures
+  readonly failures?: ValidationExceptionResponseBaseDtoVtrnlziFailures;
 }

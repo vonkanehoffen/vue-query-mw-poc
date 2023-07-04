@@ -6,7 +6,7 @@
  */
 
 export type JourneyFrequencyVvhvfbq =
-  (typeof JourneyFrequencyVvhvfbq)[keyof typeof JourneyFrequencyVvhvfbq]
+  (typeof JourneyFrequencyVvhvfbq)[keyof typeof JourneyFrequencyVvhvfbq];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyFrequencyVvhvfbq = {
@@ -14,4 +14,4 @@ export const JourneyFrequencyVvhvfbq = {
   Regular: 'Regular',
   Occasional: 'Occasional',
   Shift: 'Shift'
-} as const
+} as const;

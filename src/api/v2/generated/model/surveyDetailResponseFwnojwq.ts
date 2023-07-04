@@ -4,8 +4,8 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SurveyDetailSurveyDetailDtoHciqa } from './surveyDetailSurveyDetailDtoHciqa'
+import type { SurveyDetailSurveyDetailDtoHciqa } from './surveyDetailSurveyDetailDtoHciqa';
 
 export interface SurveyDetailResponseFwnojwq {
-  surveyDetail?: SurveyDetailSurveyDetailDtoHciqa
+  surveyDetail?: SurveyDetailSurveyDetailDtoHciqa;
 }

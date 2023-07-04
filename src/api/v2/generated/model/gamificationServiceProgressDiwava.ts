@@ -4,14 +4,14 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BadgeCategoryUewjpq } from './badgeCategoryUewjpq'
-import type { BadgeTypeOctufq } from './badgeTypeOctufq'
+import type { BadgeCategoryUewjpq } from './badgeCategoryUewjpq';
+import type { BadgeTypeOctufq } from './badgeTypeOctufq';
 
 export interface GamificationServiceProgressDiwava {
-  category?: BadgeCategoryUewjpq
-  nextBadge?: BadgeTypeOctufq
-  progressPercentage?: number
-  currentValue?: number
-  targetValue?: number
-  unit?: string | null
+  category?: BadgeCategoryUewjpq;
+  nextBadge?: BadgeTypeOctufq;
+  progressPercentage?: number;
+  currentValue?: number;
+  targetValue?: number;
+  unit?: string | null;
 }

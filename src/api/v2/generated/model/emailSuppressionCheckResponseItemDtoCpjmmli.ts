@@ -6,8 +6,8 @@
  */
 
 export interface EmailSuppressionCheckResponseItemDtoCpjmmli {
-  nonTransactional?: boolean
-  type?: string | null
-  source?: string | null
-  description?: string | null
+  nonTransactional?: boolean;
+  type?: string | null;
+  source?: string | null;
+  description?: string | null;
 }

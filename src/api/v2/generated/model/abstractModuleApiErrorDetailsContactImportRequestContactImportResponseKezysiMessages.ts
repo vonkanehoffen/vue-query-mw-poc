@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactImportRequestContactImportResponseKezysiMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

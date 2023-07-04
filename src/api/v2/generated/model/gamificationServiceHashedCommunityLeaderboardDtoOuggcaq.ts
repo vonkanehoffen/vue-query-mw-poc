@@ -6,8 +6,8 @@
  */
 
 export interface GamificationServiceHashedCommunityLeaderboardDtoOuggcaq {
-  id?: number
-  publicId?: string | null
-  communityName?: string | null
-  privacy?: string | null
+  id?: number;
+  publicId?: string | null;
+  communityName?: string | null;
+  privacy?: string | null;
 }

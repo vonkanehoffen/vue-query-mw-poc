@@ -6,5 +6,5 @@
  */
 
 export interface NpsCreateResponseNeurlq {
-  npsId?: string | null
+  npsId?: string | null;
 }

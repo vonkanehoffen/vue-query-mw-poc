@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { LogResponseDjpi } from './logResponseDjpi'
-import type { AbstractModuleApiErrorDetailsLogRequestLogResponseExrwnji } from './abstractModuleApiErrorDetailsLogRequestLogResponseExrwnji'
+import type { LogResponseDjpi } from './logResponseDjpi';
+import type { AbstractModuleApiErrorDetailsLogRequestLogResponseExrwnji } from './abstractModuleApiErrorDetailsLogRequestLogResponseExrwnji';
 
 export interface AbstractModuleApiResponseLogRequestLogResponseLogResponseMrdvma {
-  response?: LogResponseDjpi
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsLogRequestLogResponseExrwnji
+  response?: LogResponseDjpi;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsLogRequestLogResponseExrwnji;
 }

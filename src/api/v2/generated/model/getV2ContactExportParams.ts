@@ -6,7 +6,7 @@
  */
 
 export type GetV2ContactExportParams = {
-  page?: number
-  maxPerPage?: number
-  searchQuery?: string
-}
+  page?: number;
+  maxPerPage?: number;
+  searchQuery?: string;
+};

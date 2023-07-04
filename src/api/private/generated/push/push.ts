@@ -4,18 +4,18 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   ValidationExceptionResponseDtoLtlwwzy,
   PushTokenUpsertBaseRequestNiua
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * @summary Registers the current device for push notifications
@@ -28,8 +28,8 @@ export const postPush = (
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     data: pushTokenUpsertBaseRequestNiua
-  })
-}
+  });
+};
 
 export const getPostPushMutationOptions = <
   TError = ValidationExceptionResponseDtoLtlwwzy,
@@ -40,30 +40,30 @@ export const getPostPushMutationOptions = <
     TError,
     { data: PushTokenUpsertBaseRequestNiua },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postPush>>,
   TError,
   { data: PushTokenUpsertBaseRequestNiua },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postPush>>,
     { data: PushTokenUpsertBaseRequestNiua }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postPush(data)
-  }
+    return postPush(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostPushMutationResult = NonNullable<Awaited<ReturnType<typeof postPush>>>
-export type PostPushMutationBody = PushTokenUpsertBaseRequestNiua
-export type PostPushMutationError = ValidationExceptionResponseDtoLtlwwzy
+export type PostPushMutationResult = NonNullable<Awaited<ReturnType<typeof postPush>>>;
+export type PostPushMutationBody = PushTokenUpsertBaseRequestNiua;
+export type PostPushMutationError = ValidationExceptionResponseDtoLtlwwzy;
 
 /**
  * @summary Registers the current device for push notifications
@@ -77,9 +77,9 @@ export const usePostPush = <
     TError,
     { data: PushTokenUpsertBaseRequestNiua },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostPushMutationOptions(options)
+  const mutationOptions = getPostPushMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

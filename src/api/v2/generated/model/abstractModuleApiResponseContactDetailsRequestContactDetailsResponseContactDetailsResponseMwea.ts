@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactDetailsResponseTasiyq } from './contactDetailsResponseTasiyq'
-import type { AbstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq } from './abstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq'
+import type { ContactDetailsResponseTasiyq } from './contactDetailsResponseTasiyq';
+import type { AbstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq } from './abstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq';
 
 export interface AbstractModuleApiResponseContactDetailsRequestContactDetailsResponseContactDetailsResponseMwea {
-  response?: ContactDetailsResponseTasiyq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq
+  response?: ContactDetailsResponseTasiyq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsContactDetailsRequestContactDetailsResponseQccq;
 }

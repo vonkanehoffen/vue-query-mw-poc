@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,9 +12,9 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponsePendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponsePendingLiftshareAccountBatchDeleteResponseBrvrri,
   AbstractModuleApiResponsePendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponsePendingLiftshareAccountBatchDetailsResponsePtbyri,
@@ -25,18 +25,18 @@ import type {
   AbstractModuleApiResponsePendingLiftshareAccountBatchPreviewRequestPendingLiftshareAccountBatchPreviewResponsePendingLiftshareAccountBatchPreviewResponseQhqedq,
   PendingLiftshareAccountBatchPreviewRequestOlxgra,
   AbstractModuleApiResponsePendingLiftshareAccountImageUpsertRequestPendingLiftshareAccountImageUpsertResponsePendingLiftshareAccountImageUpsertResponseQbxtmyy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const deleteV2PendingAccountBatchId = (id: MaybeRef<string>) => {
   return customInstance<AbstractModuleApiResponsePendingLiftshareAccountBatchDeleteRequestPendingLiftshareAccountBatchDeleteResponsePendingLiftshareAccountBatchDeleteResponseBrvrri>(
     { url: `/v2/pending-account/batch/${unref(id)}`, method: 'delete' }
-  )
-}
+  );
+};
 
 export const getDeleteV2PendingAccountBatchIdMutationOptions = <
   TError = unknown,
@@ -47,32 +47,32 @@ export const getDeleteV2PendingAccountBatchIdMutationOptions = <
     TError,
     { id: string },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof deleteV2PendingAccountBatchId>>,
   TError,
   { id: string },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof deleteV2PendingAccountBatchId>>,
     { id: string }
   > = (props) => {
-    const { id } = props ?? {}
+    const { id } = props ?? {};
 
-    return deleteV2PendingAccountBatchId(id)
-  }
+    return deleteV2PendingAccountBatchId(id);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type DeleteV2PendingAccountBatchIdMutationResult = NonNullable<
   Awaited<ReturnType<typeof deleteV2PendingAccountBatchId>>
->
+>;
 
-export type DeleteV2PendingAccountBatchIdMutationError = unknown
+export type DeleteV2PendingAccountBatchIdMutationError = unknown;
 
 export const useDeleteV2PendingAccountBatchId = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -80,23 +80,23 @@ export const useDeleteV2PendingAccountBatchId = <TError = unknown, TContext = un
     TError,
     { id: string },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getDeleteV2PendingAccountBatchIdMutationOptions(options)
+  const mutationOptions = getDeleteV2PendingAccountBatchIdMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2PendingAccountBatchBatchId = (
   batchId: MaybeRef<string>,
   signal?: AbortSignal
 ) => {
   return customInstance<AbstractModuleApiResponsePendingLiftshareAccountBatchDetailsRequestPendingLiftshareAccountBatchDetailsResponsePendingLiftshareAccountBatchDetailsResponsePtbyri>(
     { url: `/v2/pending-account/batch/${unref(batchId)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2PendingAccountBatchBatchIdQueryKey = (batchId: MaybeRef<string>) =>
-  ['v2', 'pending-account', 'batch', batchId] as const
+  ['v2', 'pending-account', 'batch', batchId] as const;
 
 export const getGetV2PendingAccountBatchBatchIdQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>,
@@ -108,24 +108,24 @@ export const getGetV2PendingAccountBatchBatchIdQueryOptions = <
       Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2PendingAccountBatchBatchIdQueryKey(batchId)
+  const queryKey = getGetV2PendingAccountBatchBatchIdQueryKey(batchId);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>> = ({
     signal
-  }) => getV2PendingAccountBatchBatchId(batchId, signal)
+  }) => getV2PendingAccountBatchBatchId(batchId, signal);
 
-  return { queryKey, queryFn, enabled: !!batchId, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!batchId, ...queryOptions };
+};
 
 export type GetV2PendingAccountBatchBatchIdQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>
->
-export type GetV2PendingAccountBatchBatchIdQueryError = unknown
+>;
+export type GetV2PendingAccountBatchBatchIdQueryError = unknown;
 
 export const useGetV2PendingAccountBatchBatchId = <
   TData = Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>,
@@ -137,17 +137,19 @@ export const useGetV2PendingAccountBatchBatchId = <
       Awaited<ReturnType<typeof getV2PendingAccountBatchBatchId>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2PendingAccountBatchBatchIdQueryOptions(batchId, options)
+  const queryOptions = getGetV2PendingAccountBatchBatchIdQueryOptions(batchId, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const putV2PendingAccountBatchFinalize = (
   pendingLiftshareAccountBatchUpsertYkbrqy: MaybeRef<PendingLiftshareAccountBatchUpsertYkbrqy>
@@ -159,8 +161,8 @@ export const putV2PendingAccountBatchFinalize = (
       headers: { 'Content-Type': 'application/json' },
       data: pendingLiftshareAccountBatchUpsertYkbrqy
     }
-  )
-}
+  );
+};
 
 export const getPutV2PendingAccountBatchFinalizeMutationOptions = <
   TError = unknown,
@@ -171,32 +173,32 @@ export const getPutV2PendingAccountBatchFinalizeMutationOptions = <
     TError,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2PendingAccountBatchFinalize>>,
   TError,
   { data: PendingLiftshareAccountBatchUpsertYkbrqy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2PendingAccountBatchFinalize>>,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2PendingAccountBatchFinalize(data)
-  }
+    return putV2PendingAccountBatchFinalize(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2PendingAccountBatchFinalizeMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2PendingAccountBatchFinalize>>
->
-export type PutV2PendingAccountBatchFinalizeMutationBody = PendingLiftshareAccountBatchUpsertYkbrqy
-export type PutV2PendingAccountBatchFinalizeMutationError = unknown
+>;
+export type PutV2PendingAccountBatchFinalizeMutationBody = PendingLiftshareAccountBatchUpsertYkbrqy;
+export type PutV2PendingAccountBatchFinalizeMutationError = unknown;
 
 export const usePutV2PendingAccountBatchFinalize = <
   TError = unknown,
@@ -207,56 +209,59 @@ export const usePutV2PendingAccountBatchFinalize = <
     TError,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2PendingAccountBatchFinalizeMutationOptions(options)
+  const mutationOptions = getPutV2PendingAccountBatchFinalizeMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2PendingAccountBatch = (signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponsePendingLiftshareAccountBatchListRequestPendingLiftshareAccountBatchListResponsePendingLiftshareAccountBatchListResponseIvqja>(
     { url: `/v2/pending-account/batch`, method: 'get', signal }
-  )
-}
+  );
+};
 
-export const getGetV2PendingAccountBatchQueryKey = () => ['v2', 'pending-account', 'batch'] as const
+export const getGetV2PendingAccountBatchQueryKey = () =>
+  ['v2', 'pending-account', 'batch'] as const;
 
 export const getGetV2PendingAccountBatchQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2PendingAccountBatch>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatch>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatch>>, TError, TData>;
 }): UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatch>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2PendingAccountBatchQueryKey()
+  const queryKey = getGetV2PendingAccountBatchQueryKey();
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2PendingAccountBatch>>> = ({
     signal
-  }) => getV2PendingAccountBatch(signal)
+  }) => getV2PendingAccountBatch(signal);
 
-  return { queryKey, queryFn, ...queryOptions }
-}
+  return { queryKey, queryFn, ...queryOptions };
+};
 
 export type GetV2PendingAccountBatchQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2PendingAccountBatch>>
->
-export type GetV2PendingAccountBatchQueryError = unknown
+>;
+export type GetV2PendingAccountBatchQueryError = unknown;
 
 export const useGetV2PendingAccountBatch = <
   TData = Awaited<ReturnType<typeof getV2PendingAccountBatch>>,
   TError = unknown
 >(options?: {
-  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatch>>, TError, TData>
+  query?: UseQueryOptions<Awaited<ReturnType<typeof getV2PendingAccountBatch>>, TError, TData>;
 }): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2PendingAccountBatchQueryOptions(options)
+  const queryOptions = getGetV2PendingAccountBatchQueryOptions(options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const putV2PendingAccountBatch = (
   pendingLiftshareAccountBatchUpsertYkbrqy: MaybeRef<PendingLiftshareAccountBatchUpsertYkbrqy>
@@ -268,8 +273,8 @@ export const putV2PendingAccountBatch = (
       headers: { 'Content-Type': 'application/json' },
       data: pendingLiftshareAccountBatchUpsertYkbrqy
     }
-  )
-}
+  );
+};
 
 export const getPutV2PendingAccountBatchMutationOptions = <
   TError = unknown,
@@ -280,32 +285,32 @@ export const getPutV2PendingAccountBatchMutationOptions = <
     TError,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2PendingAccountBatch>>,
   TError,
   { data: PendingLiftshareAccountBatchUpsertYkbrqy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2PendingAccountBatch>>,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2PendingAccountBatch(data)
-  }
+    return putV2PendingAccountBatch(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2PendingAccountBatchMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2PendingAccountBatch>>
->
-export type PutV2PendingAccountBatchMutationBody = PendingLiftshareAccountBatchUpsertYkbrqy
-export type PutV2PendingAccountBatchMutationError = unknown
+>;
+export type PutV2PendingAccountBatchMutationBody = PendingLiftshareAccountBatchUpsertYkbrqy;
+export type PutV2PendingAccountBatchMutationError = unknown;
 
 export const usePutV2PendingAccountBatch = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -313,12 +318,12 @@ export const usePutV2PendingAccountBatch = <TError = unknown, TContext = unknown
     TError,
     { data: PendingLiftshareAccountBatchUpsertYkbrqy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2PendingAccountBatchMutationOptions(options)
+  const mutationOptions = getPutV2PendingAccountBatchMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2PendingAccountBatchPreviewEmail = (
   pendingLiftshareAccountBatchPreviewRequestOlxgra: MaybeRef<PendingLiftshareAccountBatchPreviewRequestOlxgra>
 ) => {
@@ -329,8 +334,8 @@ export const postV2PendingAccountBatchPreviewEmail = (
       headers: { 'Content-Type': 'application/json' },
       data: pendingLiftshareAccountBatchPreviewRequestOlxgra
     }
-  )
-}
+  );
+};
 
 export const getPostV2PendingAccountBatchPreviewEmailMutationOptions = <
   TError = unknown,
@@ -341,33 +346,33 @@ export const getPostV2PendingAccountBatchPreviewEmailMutationOptions = <
     TError,
     { data: PendingLiftshareAccountBatchPreviewRequestOlxgra },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2PendingAccountBatchPreviewEmail>>,
   TError,
   { data: PendingLiftshareAccountBatchPreviewRequestOlxgra },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2PendingAccountBatchPreviewEmail>>,
     { data: PendingLiftshareAccountBatchPreviewRequestOlxgra }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2PendingAccountBatchPreviewEmail(data)
-  }
+    return postV2PendingAccountBatchPreviewEmail(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2PendingAccountBatchPreviewEmailMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2PendingAccountBatchPreviewEmail>>
->
+>;
 export type PostV2PendingAccountBatchPreviewEmailMutationBody =
-  PendingLiftshareAccountBatchPreviewRequestOlxgra
-export type PostV2PendingAccountBatchPreviewEmailMutationError = unknown
+  PendingLiftshareAccountBatchPreviewRequestOlxgra;
+export type PostV2PendingAccountBatchPreviewEmailMutationError = unknown;
 
 export const usePostV2PendingAccountBatchPreviewEmail = <
   TError = unknown,
@@ -378,17 +383,17 @@ export const usePostV2PendingAccountBatchPreviewEmail = <
     TError,
     { data: PendingLiftshareAccountBatchPreviewRequestOlxgra },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2PendingAccountBatchPreviewEmailMutationOptions(options)
+  const mutationOptions = getPostV2PendingAccountBatchPreviewEmailMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const putV2PendingAccountImage = () => {
   return customInstance<AbstractModuleApiResponsePendingLiftshareAccountImageUpsertRequestPendingLiftshareAccountImageUpsertResponsePendingLiftshareAccountImageUpsertResponseQbxtmyy>(
     { url: `/v2/pending-account/image`, method: 'put' }
-  )
-}
+  );
+};
 
 export const getPutV2PendingAccountImageMutationOptions = <
   TError = unknown,
@@ -400,30 +405,30 @@ export const getPutV2PendingAccountImageMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2PendingAccountImage>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2PendingAccountImage>>,
     TVariables
   > = () => {
-    return putV2PendingAccountImage()
-  }
+    return putV2PendingAccountImage();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2PendingAccountImageMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2PendingAccountImage>>
->
+>;
 
-export type PutV2PendingAccountImageMutationError = unknown
+export type PutV2PendingAccountImageMutationError = unknown;
 
 export const usePutV2PendingAccountImage = <
   TError = unknown,
@@ -435,9 +440,9 @@ export const usePutV2PendingAccountImage = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2PendingAccountImageMutationOptions(options)
+  const mutationOptions = getPutV2PendingAccountImageMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

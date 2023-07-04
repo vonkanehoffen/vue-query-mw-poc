@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import Card from 'primevue/card'
-import InputText from 'primevue/inputtext'
-import Button from 'primevue/button'
+import Card from 'primevue/card';
+import InputText from 'primevue/inputtext';
+import Button from 'primevue/button';
 
-import { ref } from 'vue'
-import { useQueryClient } from '@tanstack/vue-query'
-import { usePostClientToken } from '@/api/client/generated/authentication-tokens/authentication-tokens'
-import { router } from '@/router'
-import { useAuthStore } from '@/stores/auth'
+import { ref } from 'vue';
+import { useQueryClient } from '@tanstack/vue-query';
+import { usePostClientToken } from '@/api/client/generated/authentication-tokens/authentication-tokens';
+import { router } from '@/router';
+import { useAuthStore } from '@/stores/auth';
 
-const email = ref(null)
-const password = ref(null)
+const email = ref(null);
+const password = ref(null);
 
-const queryClient = useQueryClient()
-const authStore = useAuthStore()
+const queryClient = useQueryClient();
+const authStore = useAuthStore();
 
 const { error, mutate, isLoading } = usePostClientToken({
   mutation: {
     onSuccess: (data) => {
-      console.log('success', data)
+      console.log('success', data);
       // A 200 response will always have tokens:
-      authStore.saveTokens(data.token as string, data.refreshToken as string)
-      queryClient.invalidateQueries()
-      router.push('/')
+      authStore.saveTokens(data.token as string, data.refreshToken as string);
+      queryClient.invalidateQueries();
+      router.push('/');
     }
   }
-})
+});
 
 const onSubmit = (e: Event) => {
-  e.preventDefault()
+  e.preventDefault();
   mutate({
     data: {
       email: email.value,
       password: password.value
     }
-  })
-}
+  });
+};
 </script>
 
 <template>

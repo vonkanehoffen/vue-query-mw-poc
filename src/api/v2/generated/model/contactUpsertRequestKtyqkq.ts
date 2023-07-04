@@ -4,25 +4,25 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha'
+import type { MobilitywaysTransportTypeAswbha } from './mobilitywaysTransportTypeAswbha';
 
 export interface ContactUpsertRequestKtyqkq {
-  communityIds?: string[] | null
-  communityId?: string | null
-  publicId?: string | null
-  firstName?: string | null
-  lastName?: string | null
-  email?: string | null
-  tags?: string[] | null
-  homeAddress?: string | null
-  homeLatitude?: number | null
-  homeLongitude?: number | null
-  workStartTime?: string | null
-  workFinishTime?: string | null
-  workDepartment?: string | null
-  workLocation?: string | null
-  currentCommuteMode?: MobilitywaysTransportTypeAswbha
-  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null
-  commuteDistanceInMeters?: number | null
-  commuteDaysPerWeek?: number | null
+  communityIds?: string[] | null;
+  communityId?: string | null;
+  publicId?: string | null;
+  firstName?: string | null;
+  lastName?: string | null;
+  email?: string | null;
+  tags?: string[] | null;
+  homeAddress?: string | null;
+  homeLatitude?: number | null;
+  homeLongitude?: number | null;
+  workStartTime?: string | null;
+  workFinishTime?: string | null;
+  workDepartment?: string | null;
+  workLocation?: string | null;
+  currentCommuteMode?: MobilitywaysTransportTypeAswbha;
+  alternativeCommuteModes?: MobilitywaysTransportTypeAswbha[] | null;
+  commuteDistanceInMeters?: number | null;
+  commuteDaysPerWeek?: number | null;
 }

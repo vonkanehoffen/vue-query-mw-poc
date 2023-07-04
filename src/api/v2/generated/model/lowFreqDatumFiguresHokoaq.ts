@@ -6,7 +6,7 @@
  */
 
 export interface LowFreqDatumFiguresHokoaq {
-  percentage?: number
-  employees?: number
-  emissionsInKg?: number
+  percentage?: number;
+  employees?: number;
+  emissionsInKg?: number;
 }

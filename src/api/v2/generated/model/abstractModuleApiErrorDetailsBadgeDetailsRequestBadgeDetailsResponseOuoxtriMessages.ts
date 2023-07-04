@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsBadgeDetailsRequestBadgeDetailsResponseOuoxtriMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

@@ -6,5 +6,5 @@
  */
 
 export interface CommunityFindByNameBaseRequestQbmaui {
-  searchTerm?: string | null
+  searchTerm?: string | null;
 }

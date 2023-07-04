@@ -6,7 +6,7 @@
  */
 
 export interface TokenCreateResponseEbhzqy {
-  successful?: boolean
-  token?: string | null
-  refreshToken?: string | null
+  successful?: boolean;
+  token?: string | null;
+  refreshToken?: string | null;
 }

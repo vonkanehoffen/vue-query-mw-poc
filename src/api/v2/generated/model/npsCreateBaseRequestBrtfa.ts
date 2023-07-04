@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { NpsCategoryRohpa } from './npsCategoryRohpa'
+import type { NpsCategoryRohpa } from './npsCategoryRohpa';
 
 export interface NpsCreateBaseRequestBrtfa {
-  score?: number
-  comment?: string | null
-  category?: NpsCategoryRohpa
+  score?: number;
+  comment?: string | null;
+  category?: NpsCategoryRohpa;
 }

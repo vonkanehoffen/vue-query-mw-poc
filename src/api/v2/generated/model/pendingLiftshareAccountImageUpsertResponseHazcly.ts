@@ -6,6 +6,6 @@
  */
 
 export interface PendingLiftshareAccountImageUpsertResponseHazcly {
-  batchId?: string
-  url?: string | null
+  batchId?: string;
+  url?: string | null;
 }

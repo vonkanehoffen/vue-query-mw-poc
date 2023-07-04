@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchRecipientsListTypeAynry } from './pendingLiftshareAccountBatchRecipientsListTypeAynry'
-import type { ContactFilterCyeeii } from './contactFilterCyeeii'
+import type { PendingLiftshareAccountBatchRecipientsListTypeAynry } from './pendingLiftshareAccountBatchRecipientsListTypeAynry';
+import type { ContactFilterCyeeii } from './contactFilterCyeeii';
 
 export interface PendingLiftshareAccountBatchRecipientSettingsSoxbrfy {
-  recipientsListType?: PendingLiftshareAccountBatchRecipientsListTypeAynry
-  contactFilter?: ContactFilterCyeeii
-  knownRecipients?: string[] | null
+  recipientsListType?: PendingLiftshareAccountBatchRecipientsListTypeAynry;
+  contactFilter?: ContactFilterCyeeii;
+  knownRecipients?: string[] | null;
 }

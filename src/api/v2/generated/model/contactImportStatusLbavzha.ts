@@ -6,11 +6,11 @@
  */
 
 export type ContactImportStatusLbavzha =
-  (typeof ContactImportStatusLbavzha)[keyof typeof ContactImportStatusLbavzha]
+  (typeof ContactImportStatusLbavzha)[keyof typeof ContactImportStatusLbavzha];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactImportStatusLbavzha = {
   Uploaded: 'Uploaded',
   Failed: 'Failed',
   Succeeded: 'Succeeded'
-} as const
+} as const;

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { TagListResponseCesiy } from './tagListResponseCesiy'
-import type { AbstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq } from './abstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq'
+import type { TagListResponseCesiy } from './tagListResponseCesiy';
+import type { AbstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq } from './abstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq';
 
 export interface AbstractModuleApiResponseTagListRequestTagListResponseTagListResponseDyncba {
-  response?: TagListResponseCesiy
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq
+  response?: TagListResponseCesiy;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsTagListRequestTagListResponseJgafq;
 }

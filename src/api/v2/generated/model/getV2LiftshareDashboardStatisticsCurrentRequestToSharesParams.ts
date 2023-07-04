@@ -6,5 +6,5 @@
  */
 
 export type GetV2LiftshareDashboardStatisticsCurrentRequestToSharesParams = {
-  cid?: string[]
-}
+  cid?: string[];
+};

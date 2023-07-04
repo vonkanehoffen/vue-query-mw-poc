@@ -6,5 +6,5 @@
  */
 
 export interface AcelReportDeleteResponseMzjmi {
-  [key: string]: any
+  [key: string]: any;
 }

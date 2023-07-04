@@ -7,5 +7,5 @@
  */
 
 export interface VehicleRegistrationLookupRequestDtoKawfefy {
-  vehicleRegistrationMark?: string | null
+  vehicleRegistrationMark?: string | null;
 }

@@ -6,11 +6,11 @@
  */
 
 export type VerifyMobileNumberVerificationStatusFqciyhi =
-  (typeof VerifyMobileNumberVerificationStatusFqciyhi)[keyof typeof VerifyMobileNumberVerificationStatusFqciyhi]
+  (typeof VerifyMobileNumberVerificationStatusFqciyhi)[keyof typeof VerifyMobileNumberVerificationStatusFqciyhi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const VerifyMobileNumberVerificationStatusFqciyhi = {
   Successful: 'Successful',
   IncorrectCode: 'IncorrectCode',
   Error: 'Error'
-} as const
+} as const;

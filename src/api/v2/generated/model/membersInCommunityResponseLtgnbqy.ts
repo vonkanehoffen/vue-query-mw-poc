@@ -6,7 +6,7 @@
  */
 
 export interface MembersInCommunityResponseLtgnbqy {
-  totalMembers?: number
-  activeMembers?: number
-  inactiveMembers?: number
+  totalMembers?: number;
+  activeMembers?: number;
+  inactiveMembers?: number;
 }

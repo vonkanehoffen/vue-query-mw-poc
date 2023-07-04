@@ -6,5 +6,5 @@
  */
 
 export type GetV2LiftshareGamificationPublicLeaderboardParams = {
-  dateFilter?: string
-}
+  dateFilter?: string;
+};

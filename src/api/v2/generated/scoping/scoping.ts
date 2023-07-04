@@ -4,20 +4,20 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { AbstractModuleApiResponseScopingReportUploadRequestScopingReportUploadResponseScopingReportUploadResponseVzdfza } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { AbstractModuleApiResponseScopingReportUploadRequestScopingReportUploadResponseScopingReportUploadResponseVzdfza } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2ScopingReport = () => {
   return customInstance<AbstractModuleApiResponseScopingReportUploadRequestScopingReportUploadResponseScopingReportUploadResponseVzdfza>(
     { url: `/v2/scoping/report`, method: 'post' }
-  )
-}
+  );
+};
 
 export const getPostV2ScopingReportMutationOptions = <
   TError = unknown,
@@ -29,30 +29,30 @@ export const getPostV2ScopingReportMutationOptions = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2ScopingReport>>,
   TError,
   TVariables,
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2ScopingReport>>,
     TVariables
   > = () => {
-    return postV2ScopingReport()
-  }
+    return postV2ScopingReport();
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2ScopingReportMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2ScopingReport>>
->
+>;
 
-export type PostV2ScopingReportMutationError = unknown
+export type PostV2ScopingReportMutationError = unknown;
 
 export const usePostV2ScopingReport = <
   TError = unknown,
@@ -64,9 +64,9 @@ export const usePostV2ScopingReport = <
     TError,
     TVariables,
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2ScopingReportMutationOptions(options)
+  const mutationOptions = getPostV2ScopingReportMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

@@ -6,5 +6,5 @@
  */
 
 export interface ConfirmBookingResponseDtoCxydui {
-  publicBookingId?: string
+  publicBookingId?: string;
 }

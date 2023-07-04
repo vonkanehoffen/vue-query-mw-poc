@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useGetV2Community } from '@/api/v2/generated/community/community'
+import { useGetV2Community } from '@/api/v2/generated/community/community';
 
-const { isLoading, data } = useGetV2Community()
+const { isLoading, data } = useGetV2Community();
 </script>
 
 <template>

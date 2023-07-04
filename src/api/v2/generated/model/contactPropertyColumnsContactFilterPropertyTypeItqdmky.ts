@@ -6,7 +6,7 @@
  */
 
 export type ContactPropertyColumnsContactFilterPropertyTypeItqdmky =
-  (typeof ContactPropertyColumnsContactFilterPropertyTypeItqdmky)[keyof typeof ContactPropertyColumnsContactFilterPropertyTypeItqdmky]
+  (typeof ContactPropertyColumnsContactFilterPropertyTypeItqdmky)[keyof typeof ContactPropertyColumnsContactFilterPropertyTypeItqdmky];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactPropertyColumnsContactFilterPropertyTypeItqdmky = {
@@ -16,4 +16,4 @@ export const ContactPropertyColumnsContactFilterPropertyTypeItqdmky = {
   Time: 'Time',
   Boolean: 'Boolean',
   Collection: 'Collection'
-} as const
+} as const;

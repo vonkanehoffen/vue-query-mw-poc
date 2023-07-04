@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsSurveyQuestionsListRequestSurveyQuestionsListResponseLwsrwrqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

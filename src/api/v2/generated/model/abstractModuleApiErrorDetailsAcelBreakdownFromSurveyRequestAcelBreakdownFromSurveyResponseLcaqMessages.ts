@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsAcelBreakdownFromSurveyRequestAcelBreakdownFromSurveyResponseLcaqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

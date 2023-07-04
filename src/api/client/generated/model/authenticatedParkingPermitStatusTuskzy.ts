@@ -7,11 +7,11 @@
  */
 
 export type AuthenticatedParkingPermitStatusTuskzy =
-  (typeof AuthenticatedParkingPermitStatusTuskzy)[keyof typeof AuthenticatedParkingPermitStatusTuskzy]
+  (typeof AuthenticatedParkingPermitStatusTuskzy)[keyof typeof AuthenticatedParkingPermitStatusTuskzy];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AuthenticatedParkingPermitStatusTuskzy = {
   Valid: 'Valid',
   Warning: 'Warning',
   Invalid: 'Invalid'
-} as const
+} as const;

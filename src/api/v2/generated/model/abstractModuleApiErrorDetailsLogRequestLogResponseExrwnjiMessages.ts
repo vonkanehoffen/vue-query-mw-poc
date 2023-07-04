@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsLogRequestLogResponseExrwnjiMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

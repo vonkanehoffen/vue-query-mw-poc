@@ -6,5 +6,5 @@
  */
 
 export type GetV2ContactLimitParams = {
-  contacts?: number
-}
+  contacts?: number;
+};

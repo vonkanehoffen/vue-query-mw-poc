@@ -6,7 +6,7 @@
  */
 
 export type ContactSearchOperatorEjaavqi =
-  (typeof ContactSearchOperatorEjaavqi)[keyof typeof ContactSearchOperatorEjaavqi]
+  (typeof ContactSearchOperatorEjaavqi)[keyof typeof ContactSearchOperatorEjaavqi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactSearchOperatorEjaavqi = {
@@ -31,4 +31,4 @@ export const ContactSearchOperatorEjaavqi = {
   HasNoneOf: 'HasNoneOf',
   GreaterThanEqualTo: 'GreaterThanEqualTo',
   LessThanEqualTo: 'LessThanEqualTo'
-} as const
+} as const;

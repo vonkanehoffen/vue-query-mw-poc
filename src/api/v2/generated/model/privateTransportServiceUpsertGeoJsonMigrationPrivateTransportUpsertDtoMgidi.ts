@@ -4,25 +4,25 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PrivateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya } from './privateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya'
-import type { LocationPjjkoa } from './locationPjjkoa'
+import type { PrivateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya } from './privateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya';
+import type { LocationPjjkoa } from './locationPjjkoa';
 
 export interface PrivateTransportServiceUpsertGeoJsonMigrationPrivateTransportUpsertDtoMgidi {
-  id?: string | null
-  name?: string | null
-  communityId?: number
-  isPrivate?: boolean
-  operator?: string | null
-  websiteLink?: string | null
-  daysOfOperation?: string[] | null
-  operatingTimes?: string[] | null
-  allowedUsages?: string[] | null
-  fare?: string | null
-  booking?: string | null
-  criteria?: string | null
-  vehicleAccessibility?: string | null
-  otherInfo?: string | null
-  routePolyGeoJson?: PrivateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya
-  stopLocations?: LocationPjjkoa[] | null
-  routePolylines?: string[] | null
+  id?: string | null;
+  name?: string | null;
+  communityId?: number;
+  isPrivate?: boolean;
+  operator?: string | null;
+  websiteLink?: string | null;
+  daysOfOperation?: string[] | null;
+  operatingTimes?: string[] | null;
+  allowedUsages?: string[] | null;
+  fare?: string | null;
+  booking?: string | null;
+  criteria?: string | null;
+  vehicleAccessibility?: string | null;
+  otherInfo?: string | null;
+  routePolyGeoJson?: PrivateTransportServiceUpsertGeoJsonMigrationRoutePolyGeoJsonIfduya;
+  stopLocations?: LocationPjjkoa[] | null;
+  routePolylines?: string[] | null;
 }

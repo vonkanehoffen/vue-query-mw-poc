@@ -5,7 +5,7 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export type BookingStatusVpkey = (typeof BookingStatusVpkey)[keyof typeof BookingStatusVpkey]
+export type BookingStatusVpkey = (typeof BookingStatusVpkey)[keyof typeof BookingStatusVpkey];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BookingStatusVpkey = {
@@ -22,4 +22,4 @@ export const BookingStatusVpkey = {
   CompletedSuccessfullyByDriver: 'CompletedSuccessfullyByDriver',
   CompletedSuccessfullyAutomatically: 'CompletedSuccessfullyAutomatically',
   DeclinedByDriver: 'DeclinedByDriver'
-} as const
+} as const;

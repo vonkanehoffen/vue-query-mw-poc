@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsAuthenticatedTripsRequestAuthenticatedTripsResponseMwuqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

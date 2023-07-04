@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,21 +12,21 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseNpsCreateRequestNpsCreateResponseNpsCreateResponseFmry,
   NpsCreateBaseRequestBrtfa,
   AbstractModuleApiResponseNpsUpdateRequestNpsUpdateResponseNpsUpdateResponseGzqniq,
   NpsUpdateBaseRequestCokchmq,
   AbstractModuleApiResponseNpsDetailsRequestNpsDetailsResponseNpsDetailsResponseIrqpfa
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const postV2Nps = (npsCreateBaseRequestBrtfa: MaybeRef<NpsCreateBaseRequestBrtfa>) => {
   return customInstance<AbstractModuleApiResponseNpsCreateRequestNpsCreateResponseNpsCreateResponseFmry>(
@@ -36,8 +36,8 @@ export const postV2Nps = (npsCreateBaseRequestBrtfa: MaybeRef<NpsCreateBaseReque
       headers: { 'Content-Type': 'application/json' },
       data: npsCreateBaseRequestBrtfa
     }
-  )
-}
+  );
+};
 
 export const getPostV2NpsMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -45,30 +45,30 @@ export const getPostV2NpsMutationOptions = <TError = unknown, TContext = unknown
     TError,
     { data: NpsCreateBaseRequestBrtfa },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2Nps>>,
   TError,
   { data: NpsCreateBaseRequestBrtfa },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2Nps>>,
     { data: NpsCreateBaseRequestBrtfa }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2Nps(data)
-  }
+    return postV2Nps(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostV2NpsMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Nps>>>
-export type PostV2NpsMutationBody = NpsCreateBaseRequestBrtfa
-export type PostV2NpsMutationError = unknown
+export type PostV2NpsMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Nps>>>;
+export type PostV2NpsMutationBody = NpsCreateBaseRequestBrtfa;
+export type PostV2NpsMutationError = unknown;
 
 export const usePostV2Nps = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -76,12 +76,12 @@ export const usePostV2Nps = <TError = unknown, TContext = unknown>(options?: {
     TError,
     { data: NpsCreateBaseRequestBrtfa },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2NpsMutationOptions(options)
+  const mutationOptions = getPostV2NpsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const putV2Nps = (npsUpdateBaseRequestCokchmq: MaybeRef<NpsUpdateBaseRequestCokchmq>) => {
   return customInstance<AbstractModuleApiResponseNpsUpdateRequestNpsUpdateResponseNpsUpdateResponseGzqniq>(
     {
@@ -90,8 +90,8 @@ export const putV2Nps = (npsUpdateBaseRequestCokchmq: MaybeRef<NpsUpdateBaseRequ
       headers: { 'Content-Type': 'application/json' },
       data: npsUpdateBaseRequestCokchmq
     }
-  )
-}
+  );
+};
 
 export const getPutV2NpsMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -99,30 +99,30 @@ export const getPutV2NpsMutationOptions = <TError = unknown, TContext = unknown>
     TError,
     { data: NpsUpdateBaseRequestCokchmq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2Nps>>,
   TError,
   { data: NpsUpdateBaseRequestCokchmq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2Nps>>,
     { data: NpsUpdateBaseRequestCokchmq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2Nps(data)
-  }
+    return putV2Nps(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PutV2NpsMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Nps>>>
-export type PutV2NpsMutationBody = NpsUpdateBaseRequestCokchmq
-export type PutV2NpsMutationError = unknown
+export type PutV2NpsMutationResult = NonNullable<Awaited<ReturnType<typeof putV2Nps>>>;
+export type PutV2NpsMutationBody = NpsUpdateBaseRequestCokchmq;
+export type PutV2NpsMutationError = unknown;
 
 export const usePutV2Nps = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -130,20 +130,20 @@ export const usePutV2Nps = <TError = unknown, TContext = unknown>(options?: {
     TError,
     { data: NpsUpdateBaseRequestCokchmq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2NpsMutationOptions(options)
+  const mutationOptions = getPutV2NpsMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const getV2NpsCategory = (category: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseNpsDetailsRequestNpsDetailsResponseNpsDetailsResponseIrqpfa>(
     { url: `/v2/nps/${unref(category)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2NpsCategoryQueryKey = (category: MaybeRef<string>) =>
-  ['v2', 'nps', category] as const
+  ['v2', 'nps', category] as const;
 
 export const getGetV2NpsCategoryQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2NpsCategory>>,
@@ -152,18 +152,18 @@ export const getGetV2NpsCategoryQueryOptions = <
   category: MaybeRef<string>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2NpsCategory>>, TError, TData> }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2NpsCategory>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2NpsCategoryQueryKey(category)
+  const queryKey = getGetV2NpsCategoryQueryKey(category);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2NpsCategory>>> = ({ signal }) =>
-    getV2NpsCategory(category, signal)
+    getV2NpsCategory(category, signal);
 
-  return { queryKey, queryFn, enabled: !!category, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!category, ...queryOptions };
+};
 
-export type GetV2NpsCategoryQueryResult = NonNullable<Awaited<ReturnType<typeof getV2NpsCategory>>>
-export type GetV2NpsCategoryQueryError = unknown
+export type GetV2NpsCategoryQueryResult = NonNullable<Awaited<ReturnType<typeof getV2NpsCategory>>>;
+export type GetV2NpsCategoryQueryError = unknown;
 
 export const useGetV2NpsCategory = <
   TData = Awaited<ReturnType<typeof getV2NpsCategory>>,
@@ -172,11 +172,13 @@ export const useGetV2NpsCategory = <
   category: MaybeRef<string>,
   options?: { query?: UseQueryOptions<Awaited<ReturnType<typeof getV2NpsCategory>>, TError, TData> }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2NpsCategoryQueryOptions(category, options)
+  const queryOptions = getGetV2NpsCategoryQueryOptions(category, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};

@@ -6,5 +6,5 @@
  */
 
 export interface CreateContactViewFromFilterResponseSzldei {
-  viewId?: string | null
+  viewId?: string | null;
 }

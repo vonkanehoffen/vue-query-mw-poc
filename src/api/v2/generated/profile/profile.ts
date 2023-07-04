@@ -4,22 +4,22 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
-import type { AbstractModuleApiResponseProfileDetailsRequestProfileDetailsResponseProfileDetailsResponseYayntgi } from '.././model'
-import { customInstance } from '../../../axiosInstance'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
+import type { AbstractModuleApiResponseProfileDetailsRequestProfileDetailsResponseProfileDetailsResponseYayntgi } from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const putV2LiftshareProfileId = (id: MaybeRef<string>) => {
   return customInstance<AbstractModuleApiResponseProfileDetailsRequestProfileDetailsResponseProfileDetailsResponseYayntgi>(
     { url: `/v2/liftshare/profile/${unref(id)}`, method: 'put' }
-  )
-}
+  );
+};
 
 export const getPutV2LiftshareProfileIdMutationOptions = <
   TError = unknown,
@@ -30,32 +30,32 @@ export const getPutV2LiftshareProfileIdMutationOptions = <
     TError,
     { id: string },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2LiftshareProfileId>>,
   TError,
   { id: string },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2LiftshareProfileId>>,
     { id: string }
   > = (props) => {
-    const { id } = props ?? {}
+    const { id } = props ?? {};
 
-    return putV2LiftshareProfileId(id)
-  }
+    return putV2LiftshareProfileId(id);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2LiftshareProfileIdMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2LiftshareProfileId>>
->
+>;
 
-export type PutV2LiftshareProfileIdMutationError = unknown
+export type PutV2LiftshareProfileIdMutationError = unknown;
 
 export const usePutV2LiftshareProfileId = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -63,9 +63,9 @@ export const usePutV2LiftshareProfileId = <TError = unknown, TContext = unknown>
     TError,
     { id: string },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2LiftshareProfileIdMutationOptions(options)
+  const mutationOptions = getPutV2LiftshareProfileIdMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

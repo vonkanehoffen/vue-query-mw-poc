@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { SubscriptionCategoryUhhooa } from './subscriptionCategoryUhhooa'
+import type { SubscriptionCategoryUhhooa } from './subscriptionCategoryUhhooa';
 
 export interface SubscriptionUpdateRequestBefoq {
-  token?: string | null
-  optedIn?: SubscriptionCategoryUhhooa[] | null
+  token?: string | null;
+  optedIn?: SubscriptionCategoryUhhooa[] | null;
 }

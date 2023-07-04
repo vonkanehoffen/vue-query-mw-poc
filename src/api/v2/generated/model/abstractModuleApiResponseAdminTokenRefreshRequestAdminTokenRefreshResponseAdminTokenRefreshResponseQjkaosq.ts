@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { AdminTokenRefreshResponseQwnsq } from './adminTokenRefreshResponseQwnsq'
-import type { AbstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci } from './abstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci'
+import type { AdminTokenRefreshResponseQwnsq } from './adminTokenRefreshResponseQwnsq';
+import type { AbstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci } from './abstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci';
 
 export interface AbstractModuleApiResponseAdminTokenRefreshRequestAdminTokenRefreshResponseAdminTokenRefreshResponseQjkaosq {
-  response?: AdminTokenRefreshResponseQwnsq
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci
+  response?: AdminTokenRefreshResponseQwnsq;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsAdminTokenRefreshRequestAdminTokenRefreshResponseAxjci;
 }

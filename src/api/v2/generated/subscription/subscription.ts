@@ -4,7 +4,7 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useQuery, useMutation } from '@tanstack/vue-query'
+import { useQuery, useMutation } from '@tanstack/vue-query';
 import type {
   UseQueryOptions,
   UseMutationOptions,
@@ -12,30 +12,30 @@ import type {
   MutationFunction,
   QueryKey,
   UseQueryReturnType
-} from '@tanstack/vue-query'
-import { unref } from 'vue'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+} from '@tanstack/vue-query';
+import { unref } from 'vue';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseSubscriptionDetailsRequestSubscriptionDetailsResponseSubscriptionDetailsResponsePcxfy,
   AbstractModuleApiResponseSubscriptionReasonCreateRequestSubscriptionReasonCreateResponseSubscriptionReasonCreateResponseDybtfly,
   SubscriptionReasonCreateRequestGnalpaa,
   AbstractModuleApiResponseSubscriptionUpdateRequestSubscriptionUpdateResponseSubscriptionUpdateResponseCqderq,
   SubscriptionUpdateRequestBefoq
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 export const getV2LiftshareSubscriptionToken = (token: MaybeRef<string>, signal?: AbortSignal) => {
   return customInstance<AbstractModuleApiResponseSubscriptionDetailsRequestSubscriptionDetailsResponseSubscriptionDetailsResponsePcxfy>(
     { url: `/v2/liftshare/subscription/${unref(token)}`, method: 'get', signal }
-  )
-}
+  );
+};
 
 export const getGetV2LiftshareSubscriptionTokenQueryKey = (token: MaybeRef<string>) =>
-  ['v2', 'liftshare', 'subscription', token] as const
+  ['v2', 'liftshare', 'subscription', token] as const;
 
 export const getGetV2LiftshareSubscriptionTokenQueryOptions = <
   TData = Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>,
@@ -47,24 +47,24 @@ export const getGetV2LiftshareSubscriptionTokenQueryOptions = <
       Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryOptions<Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>, TError, TData> => {
-  const { query: queryOptions } = options ?? {}
+  const { query: queryOptions } = options ?? {};
 
-  const queryKey = getGetV2LiftshareSubscriptionTokenQueryKey(token)
+  const queryKey = getGetV2LiftshareSubscriptionTokenQueryKey(token);
 
   const queryFn: QueryFunction<Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>> = ({
     signal
-  }) => getV2LiftshareSubscriptionToken(token, signal)
+  }) => getV2LiftshareSubscriptionToken(token, signal);
 
-  return { queryKey, queryFn, enabled: !!token, ...queryOptions }
-}
+  return { queryKey, queryFn, enabled: !!token, ...queryOptions };
+};
 
 export type GetV2LiftshareSubscriptionTokenQueryResult = NonNullable<
   Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>
->
-export type GetV2LiftshareSubscriptionTokenQueryError = unknown
+>;
+export type GetV2LiftshareSubscriptionTokenQueryError = unknown;
 
 export const useGetV2LiftshareSubscriptionToken = <
   TData = Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>,
@@ -76,17 +76,19 @@ export const useGetV2LiftshareSubscriptionToken = <
       Awaited<ReturnType<typeof getV2LiftshareSubscriptionToken>>,
       TError,
       TData
-    >
+    >;
   }
 ): UseQueryReturnType<TData, TError> & { queryKey: QueryKey } => {
-  const queryOptions = getGetV2LiftshareSubscriptionTokenQueryOptions(token, options)
+  const queryOptions = getGetV2LiftshareSubscriptionTokenQueryOptions(token, options);
 
-  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & { queryKey: QueryKey }
+  const query = useQuery(queryOptions) as UseQueryReturnType<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  query.queryKey = queryOptions.queryKey as QueryKey
+  query.queryKey = queryOptions.queryKey as QueryKey;
 
-  return query
-}
+  return query;
+};
 
 export const postV2LiftshareSubscriptionReason = (
   subscriptionReasonCreateRequestGnalpaa: MaybeRef<SubscriptionReasonCreateRequestGnalpaa>
@@ -98,8 +100,8 @@ export const postV2LiftshareSubscriptionReason = (
       headers: { 'Content-Type': 'application/json' },
       data: subscriptionReasonCreateRequestGnalpaa
     }
-  )
-}
+  );
+};
 
 export const getPostV2LiftshareSubscriptionReasonMutationOptions = <
   TError = unknown,
@@ -110,32 +112,32 @@ export const getPostV2LiftshareSubscriptionReasonMutationOptions = <
     TError,
     { data: SubscriptionReasonCreateRequestGnalpaa },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2LiftshareSubscriptionReason>>,
   TError,
   { data: SubscriptionReasonCreateRequestGnalpaa },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2LiftshareSubscriptionReason>>,
     { data: SubscriptionReasonCreateRequestGnalpaa }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2LiftshareSubscriptionReason(data)
-  }
+    return postV2LiftshareSubscriptionReason(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2LiftshareSubscriptionReasonMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2LiftshareSubscriptionReason>>
->
-export type PostV2LiftshareSubscriptionReasonMutationBody = SubscriptionReasonCreateRequestGnalpaa
-export type PostV2LiftshareSubscriptionReasonMutationError = unknown
+>;
+export type PostV2LiftshareSubscriptionReasonMutationBody = SubscriptionReasonCreateRequestGnalpaa;
+export type PostV2LiftshareSubscriptionReasonMutationError = unknown;
 
 export const usePostV2LiftshareSubscriptionReason = <
   TError = unknown,
@@ -146,12 +148,12 @@ export const usePostV2LiftshareSubscriptionReason = <
     TError,
     { data: SubscriptionReasonCreateRequestGnalpaa },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2LiftshareSubscriptionReasonMutationOptions(options)
+  const mutationOptions = getPostV2LiftshareSubscriptionReasonMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const putV2LiftshareSubscription = (
   subscriptionUpdateRequestBefoq: MaybeRef<SubscriptionUpdateRequestBefoq>
 ) => {
@@ -162,8 +164,8 @@ export const putV2LiftshareSubscription = (
       headers: { 'Content-Type': 'application/json' },
       data: subscriptionUpdateRequestBefoq
     }
-  )
-}
+  );
+};
 
 export const getPutV2LiftshareSubscriptionMutationOptions = <
   TError = unknown,
@@ -174,32 +176,32 @@ export const getPutV2LiftshareSubscriptionMutationOptions = <
     TError,
     { data: SubscriptionUpdateRequestBefoq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof putV2LiftshareSubscription>>,
   TError,
   { data: SubscriptionUpdateRequestBefoq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof putV2LiftshareSubscription>>,
     { data: SubscriptionUpdateRequestBefoq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return putV2LiftshareSubscription(data)
-  }
+    return putV2LiftshareSubscription(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PutV2LiftshareSubscriptionMutationResult = NonNullable<
   Awaited<ReturnType<typeof putV2LiftshareSubscription>>
->
-export type PutV2LiftshareSubscriptionMutationBody = SubscriptionUpdateRequestBefoq
-export type PutV2LiftshareSubscriptionMutationError = unknown
+>;
+export type PutV2LiftshareSubscriptionMutationBody = SubscriptionUpdateRequestBefoq;
+export type PutV2LiftshareSubscriptionMutationError = unknown;
 
 export const usePutV2LiftshareSubscription = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -207,9 +209,9 @@ export const usePutV2LiftshareSubscription = <TError = unknown, TContext = unkno
     TError,
     { data: SubscriptionUpdateRequestBefoq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPutV2LiftshareSubscriptionMutationOptions(options)
+  const mutationOptions = getPutV2LiftshareSubscriptionMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PushTokenUpsertResponseJbsamai } from './pushTokenUpsertResponseJbsamai'
-import type { AbstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi } from './abstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi'
+import type { PushTokenUpsertResponseJbsamai } from './pushTokenUpsertResponseJbsamai';
+import type { AbstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi } from './abstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi';
 
 export interface AbstractModuleApiResponsePushTokenUpsertRequestPushTokenUpsertResponsePushTokenUpsertResponseMoolnq {
-  response?: PushTokenUpsertResponseJbsamai
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi
+  response?: PushTokenUpsertResponseJbsamai;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPushTokenUpsertRequestPushTokenUpsertResponseDgiegi;
 }

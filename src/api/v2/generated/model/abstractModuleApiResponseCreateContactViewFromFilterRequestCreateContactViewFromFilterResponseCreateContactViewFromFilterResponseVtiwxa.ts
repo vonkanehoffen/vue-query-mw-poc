@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { CreateContactViewFromFilterResponseSzldei } from './createContactViewFromFilterResponseSzldei'
-import type { AbstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq } from './abstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq'
+import type { CreateContactViewFromFilterResponseSzldei } from './createContactViewFromFilterResponseSzldei';
+import type { AbstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq } from './abstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq';
 
 export interface AbstractModuleApiResponseCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseCreateContactViewFromFilterResponseVtiwxa {
-  response?: CreateContactViewFromFilterResponseSzldei
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq
+  response?: CreateContactViewFromFilterResponseSzldei;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsCreateContactViewFromFilterRequestCreateContactViewFromFilterResponseSoarrkq;
 }

@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsLowFreqDashboardRequestLowFreqDashboardResponseGylniMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

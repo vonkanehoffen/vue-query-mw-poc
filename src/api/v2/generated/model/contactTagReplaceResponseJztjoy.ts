@@ -6,5 +6,5 @@
  */
 
 export interface ContactTagReplaceResponseJztjoy {
-  [key: string]: any
+  [key: string]: any;
 }

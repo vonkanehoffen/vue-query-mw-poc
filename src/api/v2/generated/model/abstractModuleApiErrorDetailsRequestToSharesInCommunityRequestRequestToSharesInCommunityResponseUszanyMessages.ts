@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsRequestToSharesInCommunityRequestRequestToSharesInCommunityResponseUszanyMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

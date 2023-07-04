@@ -6,7 +6,7 @@
  */
 
 export type TravelPlanSearchFilterPropertyEcdala =
-  (typeof TravelPlanSearchFilterPropertyEcdala)[keyof typeof TravelPlanSearchFilterPropertyEcdala]
+  (typeof TravelPlanSearchFilterPropertyEcdala)[keyof typeof TravelPlanSearchFilterPropertyEcdala];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSearchFilterPropertyEcdala = {
@@ -20,4 +20,4 @@ export const TravelPlanSearchFilterPropertyEcdala = {
   PlanSource: 'PlanSource',
   Status: 'Status',
   BatchName: 'BatchName'
-} as const
+} as const;

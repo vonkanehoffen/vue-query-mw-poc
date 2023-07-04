@@ -6,10 +6,10 @@
  */
 
 export interface CommunityParkingAssetDtoQqldyva {
-  parkingAssetId?: string
-  description?: string | null
-  bays?: number
-  address?: string | null
-  latitude?: number
-  longitude?: number
+  parkingAssetId?: string;
+  description?: string | null;
+  bays?: number;
+  address?: string | null;
+  latitude?: number;
+  longitude?: number;
 }

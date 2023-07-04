@@ -6,17 +6,17 @@
  */
 
 export interface MobileAppDashboardResponseJshi {
-  forename?: string | null
-  surname?: string | null
-  email?: string | null
-  activated?: boolean
-  subscriberId?: string | null
-  communityPublicId?: string | null
-  communityName?: string | null
-  co2Saved?: number
-  milesSaved?: number
-  totalAuthenticatedTrips?: number
-  unreadMessages?: number
-  pendingBookings?: number
-  isOnBounceList?: boolean
+  forename?: string | null;
+  surname?: string | null;
+  email?: string | null;
+  activated?: boolean;
+  subscriberId?: string | null;
+  communityPublicId?: string | null;
+  communityName?: string | null;
+  co2Saved?: number;
+  milesSaved?: number;
+  totalAuthenticatedTrips?: number;
+  unreadMessages?: number;
+  pendingBookings?: number;
+  isOnBounceList?: boolean;
 }

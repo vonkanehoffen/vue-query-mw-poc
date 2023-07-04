@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsSurveySentRequestSurveySentResponseGnwsuviMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

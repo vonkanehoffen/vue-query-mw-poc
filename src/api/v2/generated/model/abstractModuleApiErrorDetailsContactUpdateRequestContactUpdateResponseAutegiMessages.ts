@@ -6,5 +6,5 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactUpdateRequestContactUpdateResponseAutegiMessages = {
-  [key: string]: string[]
-} | null
+  [key: string]: string[];
+} | null;

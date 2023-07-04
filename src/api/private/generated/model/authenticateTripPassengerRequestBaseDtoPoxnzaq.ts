@@ -6,7 +6,7 @@
  */
 
 export interface AuthenticateTripPassengerRequestBaseDtoPoxnzaq {
-  qrToken?: string | null
-  lat?: number
-  lng?: number
+  qrToken?: string | null;
+  lat?: number;
+  lng?: number;
 }

@@ -4,11 +4,11 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { PendingLiftshareAccountBatchFinalizeResponseTquci } from './pendingLiftshareAccountBatchFinalizeResponseTquci'
-import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq'
+import type { PendingLiftshareAccountBatchFinalizeResponseTquci } from './pendingLiftshareAccountBatchFinalizeResponseTquci';
+import type { AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq } from './abstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq';
 
 export interface AbstractModuleApiResponsePendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponsePendingLiftshareAccountBatchFinalizeResponseSwima {
-  response?: PendingLiftshareAccountBatchFinalizeResponseTquci
-  readonly status?: string | null
-  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq
+  response?: PendingLiftshareAccountBatchFinalizeResponseTquci;
+  readonly status?: string | null;
+  details?: AbstractModuleApiErrorDetailsPendingLiftshareAccountBatchFinalizeRequestPendingLiftshareAccountBatchFinalizeResponseXnohq;
 }

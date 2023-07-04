@@ -4,10 +4,10 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ModalShiftBreakdownModeEmissionsRankDhugea } from './modalShiftBreakdownModeEmissionsRankDhugea'
+import type { ModalShiftBreakdownModeEmissionsRankDhugea } from './modalShiftBreakdownModeEmissionsRankDhugea';
 
 export interface ModalShiftBreakdownQueryDtoKulpki {
-  previous?: ModalShiftBreakdownModeEmissionsRankDhugea
-  current?: ModalShiftBreakdownModeEmissionsRankDhugea
-  numRespondents?: number
+  previous?: ModalShiftBreakdownModeEmissionsRankDhugea;
+  current?: ModalShiftBreakdownModeEmissionsRankDhugea;
+  numRespondents?: number;
 }

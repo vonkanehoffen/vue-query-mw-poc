@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { UpdateDashboardUserRolesUserWithRolesQynijq } from './updateDashboardUserRolesUserWithRolesQynijq'
+import type { UpdateDashboardUserRolesUserWithRolesQynijq } from './updateDashboardUserRolesUserWithRolesQynijq';
 
 export interface UpdateDashboardUserRolesRequestBaseUfqlua {
-  users?: UpdateDashboardUserRolesUserWithRolesQynijq[] | null
+  users?: UpdateDashboardUserRolesUserWithRolesQynijq[] | null;
 }

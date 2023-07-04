@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsContactPropertyColumnsRequestContactPropertyColumnsResponseOsttqMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

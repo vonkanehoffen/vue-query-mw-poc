@@ -4,16 +4,16 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ContactSearchPropertySktibq } from './contactSearchPropertySktibq'
-import type { ContactSearchOperatorEjaavqi } from './contactSearchOperatorEjaavqi'
+import type { ContactSearchPropertySktibq } from './contactSearchPropertySktibq';
+import type { ContactSearchOperatorEjaavqi } from './contactSearchOperatorEjaavqi';
 
 export interface ContactFilterExpressionYyenjda {
-  property?: ContactSearchPropertySktibq
-  operator?: ContactSearchOperatorEjaavqi
-  value?: string[] | null
-  readonly multiValue?: boolean
-  readonly numericValue?: boolean
-  readonly isStringProperty?: boolean
-  readonly timeValue?: boolean
-  readonly dateValue?: boolean
+  property?: ContactSearchPropertySktibq;
+  operator?: ContactSearchOperatorEjaavqi;
+  value?: string[] | null;
+  readonly multiValue?: boolean;
+  readonly numericValue?: boolean;
+  readonly isStringProperty?: boolean;
+  readonly timeValue?: boolean;
+  readonly dateValue?: boolean;
 }

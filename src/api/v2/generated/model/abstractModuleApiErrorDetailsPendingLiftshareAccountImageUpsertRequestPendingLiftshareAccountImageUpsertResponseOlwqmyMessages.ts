@@ -6,4 +6,4 @@
  */
 
 export type AbstractModuleApiErrorDetailsPendingLiftshareAccountImageUpsertRequestPendingLiftshareAccountImageUpsertResponseOlwqmyMessages =
-  { [key: string]: string[] } | null
+  { [key: string]: string[] } | null;

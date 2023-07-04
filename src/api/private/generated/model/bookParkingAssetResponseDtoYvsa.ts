@@ -4,8 +4,8 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { HttpStatusCodeBsaega } from './httpStatusCodeBsaega'
+import type { HttpStatusCodeBsaega } from './httpStatusCodeBsaega';
 
 export interface BookParkingAssetResponseDtoYvsa {
-  statusCode?: HttpStatusCodeBsaega
+  statusCode?: HttpStatusCodeBsaega;
 }

@@ -4,14 +4,14 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { ExternalLoginResultIaxzli } from './externalLoginResultIaxzli'
+import type { ExternalLoginResultIaxzli } from './externalLoginResultIaxzli';
 
 export interface CreateTokenFacebookResponseDtoRzdixzy {
-  successful?: boolean
-  token?: string | null
-  refreshToken?: string | null
-  result?: ExternalLoginResultIaxzli
-  nextAllowedAttempt?: string
-  isLockedOut?: boolean
-  hasJustRegistered?: boolean
+  successful?: boolean;
+  token?: string | null;
+  refreshToken?: string | null;
+  result?: ExternalLoginResultIaxzli;
+  nextAllowedAttempt?: string;
+  isLockedOut?: boolean;
+  hasJustRegistered?: boolean;
 }

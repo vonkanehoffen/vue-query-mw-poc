@@ -6,10 +6,10 @@
  */
 
 export interface TravelPlanResultsModeBreakdownAgwq {
-  totalPlans?: number
-  hasDriving?: number
-  hasWalking?: number
-  hasCycling?: number
-  hasCarshare?: number
-  hasPublicTransport?: number
+  totalPlans?: number;
+  hasDriving?: number;
+  hasWalking?: number;
+  hasCycling?: number;
+  hasCarshare?: number;
+  hasPublicTransport?: number;
 }

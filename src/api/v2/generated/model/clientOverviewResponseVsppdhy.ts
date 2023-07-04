@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { ClientOverviewQueryDtoRuvicky } from './clientOverviewQueryDtoRuvicky'
+import type { ClientOverviewQueryDtoRuvicky } from './clientOverviewQueryDtoRuvicky';
 
 export interface ClientOverviewResponseVsppdhy {
-  clientData?: ClientOverviewQueryDtoRuvicky[] | null
-  clientCount?: number
+  clientData?: ClientOverviewQueryDtoRuvicky[] | null;
+  clientCount?: number;
 }

@@ -6,7 +6,7 @@
  */
 
 export type BatchListOrderByZvtuny =
-  (typeof BatchListOrderByZvtuny)[keyof typeof BatchListOrderByZvtuny]
+  (typeof BatchListOrderByZvtuny)[keyof typeof BatchListOrderByZvtuny];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchListOrderByZvtuny = {
@@ -16,4 +16,4 @@ export const BatchListOrderByZvtuny = {
   CreatedBy: 'CreatedBy',
   DateCreated: 'DateCreated',
   DateLastUpdated: 'DateLastUpdated'
-} as const
+} as const;

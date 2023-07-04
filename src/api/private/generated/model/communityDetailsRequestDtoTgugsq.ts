@@ -6,5 +6,5 @@
  */
 
 export interface CommunityDetailsRequestDtoTgugsq {
-  communityId?: string | null
+  communityId?: string | null;
 }

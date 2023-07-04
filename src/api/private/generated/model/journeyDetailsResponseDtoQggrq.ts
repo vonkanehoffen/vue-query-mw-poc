@@ -4,35 +4,35 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { JourneyTypeIdmei } from './journeyTypeIdmei'
-import type { JourneyFrequencyVvhvfbq } from './journeyFrequencyVvhvfbq'
+import type { JourneyTypeIdmei } from './journeyTypeIdmei';
+import type { JourneyFrequencyVvhvfbq } from './journeyFrequencyVvhvfbq';
 
 export interface JourneyDetailsResponseDtoQggrq {
-  jid?: number
-  mon?: boolean
-  tues?: boolean
-  wed?: boolean
-  thur?: boolean
-  fri?: boolean
-  sat?: boolean
-  sun?: boolean
-  polyline?: string | null
-  journeyType?: JourneyTypeIdmei
-  frequency?: JourneyFrequencyVvhvfbq
-  originText?: string | null
-  destinationText?: string | null
-  cost?: number
-  comments?: string | null
-  seatsOffered?: number
-  leavingTime?: string
-  smoking?: boolean
-  food?: boolean
-  pets?: boolean
-  hasExpired?: boolean
-  dateAdded?: string
-  bookingId?: string | null
-  subscriberId?: string | null
-  subscriberName?: string | null
-  subscriberDateRegistered?: string
-  hidden?: boolean
+  jid?: number;
+  mon?: boolean;
+  tues?: boolean;
+  wed?: boolean;
+  thur?: boolean;
+  fri?: boolean;
+  sat?: boolean;
+  sun?: boolean;
+  polyline?: string | null;
+  journeyType?: JourneyTypeIdmei;
+  frequency?: JourneyFrequencyVvhvfbq;
+  originText?: string | null;
+  destinationText?: string | null;
+  cost?: number;
+  comments?: string | null;
+  seatsOffered?: number;
+  leavingTime?: string;
+  smoking?: boolean;
+  food?: boolean;
+  pets?: boolean;
+  hasExpired?: boolean;
+  dateAdded?: string;
+  bookingId?: string | null;
+  subscriberId?: string | null;
+  subscriberName?: string | null;
+  subscriberDateRegistered?: string;
+  hidden?: boolean;
 }

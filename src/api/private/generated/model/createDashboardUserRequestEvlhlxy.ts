@@ -4,15 +4,15 @@
  * Liftshare Private API
  * OpenAPI spec version: 1.0.0
  */
-import type { CreateDashboardUserRoleDtoLtjbya } from './createDashboardUserRoleDtoLtjbya'
+import type { CreateDashboardUserRoleDtoLtjbya } from './createDashboardUserRoleDtoLtjbya';
 
 export interface CreateDashboardUserRequestEvlhlxy {
-  email?: string | null
-  firstName?: string | null
-  lastName?: string | null
-  comment?: string | null
-  isApproved?: boolean
-  password?: string | null
-  roles?: CreateDashboardUserRoleDtoLtjbya[] | null
-  sendWelcomeEmail?: boolean
+  email?: string | null;
+  firstName?: string | null;
+  lastName?: string | null;
+  comment?: string | null;
+  isApproved?: boolean;
+  password?: string | null;
+  roles?: CreateDashboardUserRoleDtoLtjbya[] | null;
+  sendWelcomeEmail?: boolean;
 }

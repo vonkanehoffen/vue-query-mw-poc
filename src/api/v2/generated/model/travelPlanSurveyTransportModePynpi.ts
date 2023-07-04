@@ -6,7 +6,7 @@
  */
 
 export type TravelPlanSurveyTransportModePynpi =
-  (typeof TravelPlanSurveyTransportModePynpi)[keyof typeof TravelPlanSurveyTransportModePynpi]
+  (typeof TravelPlanSurveyTransportModePynpi)[keyof typeof TravelPlanSurveyTransportModePynpi];
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSurveyTransportModePynpi = {
@@ -32,4 +32,4 @@ export const TravelPlanSurveyTransportModePynpi = {
   DriveAlone: 'DriveAlone',
   DriveAloneEV: 'DriveAloneEV',
   Fly: 'Fly'
-} as const
+} as const;

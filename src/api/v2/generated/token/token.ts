@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import { useMutation } from '@tanstack/vue-query'
-import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
-import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
+import { useMutation } from '@tanstack/vue-query';
+import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query';
+import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseAdminTokenCreateRequestAdminTokenCreateResponseAdminTokenCreateResponseChhyfgy,
   AdminTokenCreateRequestKiaya,
@@ -16,12 +16,12 @@ import type {
   AdminTokenTwoFactorCreateRequestIifgka,
   AbstractModuleApiResponseTokenCreateRequestTokenCreateResponseTokenCreateResponseZumua,
   TokenCreateRequestHakhvwy
-} from '.././model'
-import { customInstance } from '../../../axiosInstance'
+} from '.././model';
+import { customInstance } from '../../../axiosInstance';
 
-type AwaitedInput<T> = PromiseLike<T> | T
+type AwaitedInput<T> = PromiseLike<T> | T;
 
-type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
+type Awaited<O> = O extends AwaitedInput<infer T> ? T : never;
 
 /**
  * Main way of authenticating and generating a JWT
@@ -36,8 +36,8 @@ export const postV2Token = (
       headers: { 'Content-Type': 'application/json' },
       data: adminTokenCreateRequestKiaya
     }
-  )
-}
+  );
+};
 
 export const getPostV2TokenMutationOptions = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -45,30 +45,30 @@ export const getPostV2TokenMutationOptions = <TError = unknown, TContext = unkno
     TError,
     { data: AdminTokenCreateRequestKiaya },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2Token>>,
   TError,
   { data: AdminTokenCreateRequestKiaya },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2Token>>,
     { data: AdminTokenCreateRequestKiaya }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2Token(data)
-  }
+    return postV2Token(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
-export type PostV2TokenMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Token>>>
-export type PostV2TokenMutationBody = AdminTokenCreateRequestKiaya
-export type PostV2TokenMutationError = unknown
+export type PostV2TokenMutationResult = NonNullable<Awaited<ReturnType<typeof postV2Token>>>;
+export type PostV2TokenMutationBody = AdminTokenCreateRequestKiaya;
+export type PostV2TokenMutationError = unknown;
 
 export const usePostV2Token = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -76,12 +76,12 @@ export const usePostV2Token = <TError = unknown, TContext = unknown>(options?: {
     TError,
     { data: AdminTokenCreateRequestKiaya },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TokenMutationOptions(options)
+  const mutationOptions = getPostV2TokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TokenRefresh = (
   adminTokenRefreshRequestQwdywq: MaybeRef<AdminTokenRefreshRequestQwdywq>
 ) => {
@@ -92,8 +92,8 @@ export const postV2TokenRefresh = (
       headers: { 'Content-Type': 'application/json' },
       data: adminTokenRefreshRequestQwdywq
     }
-  )
-}
+  );
+};
 
 export const getPostV2TokenRefreshMutationOptions = <
   TError = unknown,
@@ -104,32 +104,32 @@ export const getPostV2TokenRefreshMutationOptions = <
     TError,
     { data: AdminTokenRefreshRequestQwdywq },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TokenRefresh>>,
   TError,
   { data: AdminTokenRefreshRequestQwdywq },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TokenRefresh>>,
     { data: AdminTokenRefreshRequestQwdywq }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TokenRefresh(data)
-  }
+    return postV2TokenRefresh(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TokenRefreshMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TokenRefresh>>
->
-export type PostV2TokenRefreshMutationBody = AdminTokenRefreshRequestQwdywq
-export type PostV2TokenRefreshMutationError = unknown
+>;
+export type PostV2TokenRefreshMutationBody = AdminTokenRefreshRequestQwdywq;
+export type PostV2TokenRefreshMutationError = unknown;
 
 export const usePostV2TokenRefresh = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -137,12 +137,12 @@ export const usePostV2TokenRefresh = <TError = unknown, TContext = unknown>(opti
     TError,
     { data: AdminTokenRefreshRequestQwdywq },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TokenRefreshMutationOptions(options)
+  const mutationOptions = getPostV2TokenRefreshMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 export const postV2TokenTwoFactor = (
   adminTokenTwoFactorCreateRequestIifgka: MaybeRef<AdminTokenTwoFactorCreateRequestIifgka>
 ) => {
@@ -153,8 +153,8 @@ export const postV2TokenTwoFactor = (
       headers: { 'Content-Type': 'application/json' },
       data: adminTokenTwoFactorCreateRequestIifgka
     }
-  )
-}
+  );
+};
 
 export const getPostV2TokenTwoFactorMutationOptions = <
   TError = unknown,
@@ -165,32 +165,32 @@ export const getPostV2TokenTwoFactorMutationOptions = <
     TError,
     { data: AdminTokenTwoFactorCreateRequestIifgka },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2TokenTwoFactor>>,
   TError,
   { data: AdminTokenTwoFactorCreateRequestIifgka },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2TokenTwoFactor>>,
     { data: AdminTokenTwoFactorCreateRequestIifgka }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2TokenTwoFactor(data)
-  }
+    return postV2TokenTwoFactor(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2TokenTwoFactorMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2TokenTwoFactor>>
->
-export type PostV2TokenTwoFactorMutationBody = AdminTokenTwoFactorCreateRequestIifgka
-export type PostV2TokenTwoFactorMutationError = unknown
+>;
+export type PostV2TokenTwoFactorMutationBody = AdminTokenTwoFactorCreateRequestIifgka;
+export type PostV2TokenTwoFactorMutationError = unknown;
 
 export const usePostV2TokenTwoFactor = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -198,12 +198,12 @@ export const usePostV2TokenTwoFactor = <TError = unknown, TContext = unknown>(op
     TError,
     { data: AdminTokenTwoFactorCreateRequestIifgka },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2TokenTwoFactorMutationOptions(options)
+  const mutationOptions = getPostV2TokenTwoFactorMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};
 /**
  * Main way of authenticating and generating a JWT
  */
@@ -217,8 +217,8 @@ export const postV2LiftshareToken = (
       headers: { 'Content-Type': 'application/json' },
       data: tokenCreateRequestHakhvwy
     }
-  )
-}
+  );
+};
 
 export const getPostV2LiftshareTokenMutationOptions = <
   TError = unknown,
@@ -229,32 +229,32 @@ export const getPostV2LiftshareTokenMutationOptions = <
     TError,
     { data: TokenCreateRequestHakhvwy },
     TContext
-  >
+  >;
 }): UseMutationOptions<
   Awaited<ReturnType<typeof postV2LiftshareToken>>,
   TError,
   { data: TokenCreateRequestHakhvwy },
   TContext
 > => {
-  const { mutation: mutationOptions } = options ?? {}
+  const { mutation: mutationOptions } = options ?? {};
 
   const mutationFn: MutationFunction<
     Awaited<ReturnType<typeof postV2LiftshareToken>>,
     { data: TokenCreateRequestHakhvwy }
   > = (props) => {
-    const { data } = props ?? {}
+    const { data } = props ?? {};
 
-    return postV2LiftshareToken(data)
-  }
+    return postV2LiftshareToken(data);
+  };
 
-  return { mutationFn, ...mutationOptions }
-}
+  return { mutationFn, ...mutationOptions };
+};
 
 export type PostV2LiftshareTokenMutationResult = NonNullable<
   Awaited<ReturnType<typeof postV2LiftshareToken>>
->
-export type PostV2LiftshareTokenMutationBody = TokenCreateRequestHakhvwy
-export type PostV2LiftshareTokenMutationError = unknown
+>;
+export type PostV2LiftshareTokenMutationBody = TokenCreateRequestHakhvwy;
+export type PostV2LiftshareTokenMutationError = unknown;
 
 export const usePostV2LiftshareToken = <TError = unknown, TContext = unknown>(options?: {
   mutation?: UseMutationOptions<
@@ -262,9 +262,9 @@ export const usePostV2LiftshareToken = <TError = unknown, TContext = unknown>(op
     TError,
     { data: TokenCreateRequestHakhvwy },
     TContext
-  >
+  >;
 }) => {
-  const mutationOptions = getPostV2LiftshareTokenMutationOptions(options)
+  const mutationOptions = getPostV2LiftshareTokenMutationOptions(options);
 
-  return useMutation(mutationOptions)
-}
+  return useMutation(mutationOptions);
+};

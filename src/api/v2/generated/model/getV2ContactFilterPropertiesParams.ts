@@ -6,5 +6,5 @@
  */
 
 export type GetV2ContactFilterPropertiesParams = {
-  category?: string
-}
+  category?: string;
+};

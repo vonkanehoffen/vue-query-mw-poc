@@ -6,6 +6,6 @@
  */
 
 export interface ScopingReportUploadResponseRsjdgqq {
-  scopingReportId?: string | null
-  scopingBatchId?: string | null
+  scopingReportId?: string | null;
+  scopingBatchId?: string | null;
 }

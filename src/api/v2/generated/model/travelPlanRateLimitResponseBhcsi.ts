@@ -4,9 +4,9 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { RateLimitStatusDpnvxq } from './rateLimitStatusDpnvxq'
+import type { RateLimitStatusDpnvxq } from './rateLimitStatusDpnvxq';
 
 export interface TravelPlanRateLimitResponseBhcsi {
-  rateLimitStatus?: RateLimitStatusDpnvxq
-  readonly rateLimitStatusDescription?: string | null
+  rateLimitStatus?: RateLimitStatusDpnvxq;
+  readonly rateLimitStatusDescription?: string | null;
 }

@@ -4,23 +4,23 @@
  * Mobilityways API
  * OpenAPI spec version: 2.0.0
  */
-import type { BadgeCategoryUewjpq } from './badgeCategoryUewjpq'
-import type { BadgeTypeOctufq } from './badgeTypeOctufq'
+import type { BadgeCategoryUewjpq } from './badgeCategoryUewjpq';
+import type { BadgeTypeOctufq } from './badgeTypeOctufq';
 
 export interface BadgeListBadgeDetailsYgcq {
-  publicId?: string
-  enabled?: boolean
-  visible?: boolean
-  points?: number
-  categoryEnum?: BadgeCategoryUewjpq
-  badgeEnum?: BadgeTypeOctufq
-  name?: string | null
-  title?: string | null
-  requirements?: string | null
-  earnedDescription?: string | null
-  unearnedDescription?: string | null
-  numberEarned?: number
-  numberPersonallyEarned?: number
-  viewed?: boolean
-  dateAwardedUtc?: string | null
+  publicId?: string;
+  enabled?: boolean;
+  visible?: boolean;
+  points?: number;
+  categoryEnum?: BadgeCategoryUewjpq;
+  badgeEnum?: BadgeTypeOctufq;
+  name?: string | null;
+  title?: string | null;
+  requirements?: string | null;
+  earnedDescription?: string | null;
+  unearnedDescription?: string | null;
+  numberEarned?: number;
+  numberPersonallyEarned?: number;
+  viewed?: boolean;
+  dateAwardedUtc?: string | null;
 }
