@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Menubar, { type MenubarProps } from 'primevue/menubar'
+import { getIsAuthenticated } from '@/api/helpers'
+
+const isAuthenticated = getIsAuthenticated()
+
 const items = ref<MenubarProps['model']>([
   {
     label: 'Dashboards',
@@ -47,6 +51,10 @@ const items = ref<MenubarProps['model']>([
         <RouterLink to="/">
           <img alt="logo" src="@/assets/mw-wave.svg" width="95" height="24" class="mr-2" />
         </RouterLink>
+      </template>
+      <template #end>
+        <div v-if="isAuthenticated">AUTHED</div>
+        <div v-else>PUBLIC</div>
       </template>
     </Menubar>
   </nav>

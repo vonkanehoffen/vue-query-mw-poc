@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import MainNav from './components/MainNav.vue'
-import { useAuth } from './api/auth'
+// import { useAuth } from './api/auth'
 // import { useAuthStore } from '@/stores/auth'
+import { getIsAuthenticated } from './api/helpers'
 
 // const authStore = useAuthStore()
 // authStore.isAuthenticated
 
-const { isAuthenticated } = useAuth()
+const isAuthenticated = getIsAuthenticated()
 </script>
 
 <template>
