@@ -2,13 +2,20 @@
 import { RouterLink, RouterView } from 'vue-router';
 import MainNav from './components/MainNav.vue';
 import { useAuthStore } from '@/stores/auth';
-import { useTokenRefresh } from '@/api/useTokenRefresh';
 import Toast from 'primevue/toast';
+import { onMounted, onUnmounted } from 'vue';
 
 const authStore = useAuthStore();
 // authStore.isAuthenticated
 
-useTokenRefresh();
+onMounted(() => {
+  // check token fresh, set timeout.
+  // This is ok because VQ has retries which will buffer against initial fails on stale token.
+  authStore.setRefreshTimeout();
+});
+onUnmounted(() => {
+  authStore.clearRefreshTimeout();
+});
 </script>
 
 <template>

@@ -21,6 +21,7 @@ const { error, mutate, isLoading } = usePostClientToken({
       console.log('success', data);
       // A 200 response will always have tokens:
       authStore.saveTokens(data.token as string, data.refreshToken as string);
+      authStore.setRefreshTimeout();
       queryClient.invalidateQueries();
       router.push('/');
     }
