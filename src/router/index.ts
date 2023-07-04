@@ -8,7 +8,10 @@ export const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        private: true
+      }
     },
     {
       path: '/login',
@@ -17,16 +20,19 @@ export const router = createRouter({
     {
       path: '/contacts',
       name: 'contacts',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/ContactsView.vue'),
-      beforeEnter: (to, from) => {
-        console.log('onBeforeEnter', to, from);
-        const authStore = useAuthStore();
-
-        return authStore.isAuthenticated || '/login';
+      meta: {
+        private: true
       }
+    },
+    {
+      path: '/scoping',
+      component: () => import('../views/ScopingView.vue')
     }
   ]
+});
+
+router.beforeEach((to, from) => {
+  const authStore = useAuthStore();
+  if (to.meta.private && !authStore.isAuthenticated) return '/login';
 });
