@@ -10,9 +10,9 @@ export type DidChangeBehaviorAnswerValueTbzxoi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const DidChangeBehaviorAnswerValueTbzxoi = {
-  '0_-_YesINowTravelDifferent': 0 - YesINowTravelDifferent,
-  '1_-_NoTriedAndNotForMe': 1 - NoTriedAndNotForMe,
-  '2_-_NoYetToTryNewMode': 2 - NoYetToTryNewMode,
-  '3_-_NoIntentionOfChanging': 3 - NoIntentionOfChanging,
-  '4_-_NoLongerMakeThisJourney': 4 - NoLongerMakeThisJourney
+  YesINowTravelDifferent: 'YesINowTravelDifferent',
+  NoTriedAndNotForMe: 'NoTriedAndNotForMe',
+  NoYetToTryNewMode: 'NoYetToTryNewMode',
+  NoIntentionOfChanging: 'NoIntentionOfChanging',
+  NoLongerMakeThisJourney: 'NoLongerMakeThisJourney'
 } as const

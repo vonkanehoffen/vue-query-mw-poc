@@ -10,7 +10,7 @@ export type ModalShiftBreakdownModeEmissionsRankDhugea =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ModalShiftBreakdownModeEmissionsRankDhugea = {
-  '0_-_Zero': 0 - Zero,
-  '1_-_Low': 1 - Low,
-  '2_-_High': 2 - High
+  Zero: 'Zero',
+  Low: 'Low',
+  High: 'High'
 } as const

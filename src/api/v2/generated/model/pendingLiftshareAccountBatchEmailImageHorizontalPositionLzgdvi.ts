@@ -10,7 +10,7 @@ export type PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchEmailImageHorizontalPositionLzgdvi = {
-  '0_-_Left': 0 - Left,
-  '1_-_Center': 1 - Center,
-  '2_-_Right': 2 - Right
+  Left: 'Left',
+  Center: 'Center',
+  Right: 'Right'
 } as const

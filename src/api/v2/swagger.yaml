@@ -633,6 +633,24 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__EmailVerify-Request_EmailVerify-Response_EmailVerify-Response__ojoljla'
+  /v2/emissions/high-frequency/imports/delete:
+    post:
+      tags:
+        - emissions
+      summary: ''
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HighFreqDataImportBatchDelete-Request_hisiq'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AbstractModule-ApiResponse__HighFreqDataImportBatchDelete-Request_HighFreqDataImportBatchDelete-Response_HighFreqDataImportBatchDelete-Response__vsmgma'
   /v2/emissions/high-frequency/imports:
     post:
       tags:
@@ -658,7 +676,7 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__HighFreqDataImports-Request_HighFreqDataImports-Response_HighFreqDataImports-Response__gfwfcpa'
-  '/v2/emissions/high-frequency/data-imports/{importId}':
+  '/v2/emissions/high-frequency/imports/{importId}':
     delete:
       tags:
         - emissions
@@ -669,8 +687,7 @@ paths:
           in: path
           required: true
           schema:
-            type: integer
-            format: int32
+            type: string
       responses:
         '200':
           description: Success
@@ -1312,6 +1329,25 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__PrivateTransportServiceUpsert-Request_PrivateTransportServiceUpsert-Response_PrivateTransportServiceUpsert-Response__qdtevy'
+  '/v2/liftshare/profile/{id}':
+    put:
+      tags:
+        - profile
+      summary: ''
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AbstractModule-ApiResponse__ProfileDetails-Request_ProfileDetails-Response_ProfileDetails-Response__yayntgi'
   /v2/liftshare/push-token:
     post:
       tags:
@@ -1379,6 +1415,24 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__DashboardSettingsUpdate-Request_DashboardSettingsUpdate-Response_DashboardSettingsUpdate-Response__ulsbya'
+  /v2/liftshare/payment-link:
+    put:
+      tags:
+        - settings
+      summary: ''
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentLinkUpdate-BaseRequest_ilygpi'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AbstractModule-ApiResponse__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response_PaymentLinkUpdate-Response__mvddpbq'
   '/v2/liftshare/subscription/{token}':
     get:
       tags:
@@ -1967,6 +2021,26 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__TravelPlanEmailCampaignMetrics-Request_TravelPlanEmailCampaignMetrics-Response_TravelPlanEmailCampaignMetrics-Response__ffjlza'
+  '/v2/travel-plans/plan-results/{id}':
+    get:
+      tags:
+        - TravelPlanOnlineResults
+      summary: ''
+      description: ''
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: preview
+          in: query
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Success
   /v2/travel-plan/admin-overview/modal-shift-breakdown:
     post:
       tags:
@@ -2826,6 +2900,22 @@ components:
           nullable: true
           readOnly: true
       additionalProperties: false
+    AbstractModule-ApiErrorDetails__HighFreqDataImportBatchDelete-Request_HighFreqDataImportBatchDelete-Response__wisyy:
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+          readOnly: true
+        messages:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
     AbstractModule-ApiErrorDetails__HighFreqDataImportCreate-Request_HighFreqDataImportCreate-Response__ygjvy:
       type: object
       properties:
@@ -3226,6 +3316,22 @@ components:
           nullable: true
           readOnly: true
       additionalProperties: false
+    AbstractModule-ApiErrorDetails__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response__ifqodi:
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+          readOnly: true
+        messages:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
     AbstractModule-ApiErrorDetails__PendingLiftshareAccountBatchDelete-Request_PendingLiftshareAccountBatchDelete-Response__fkwisna:
       type: object
       properties:
@@ -3355,6 +3461,22 @@ components:
           readOnly: true
       additionalProperties: false
     AbstractModule-ApiErrorDetails__PrivateTransportServiceUpsertGeoJsonMigration-Request_PrivateTransportServiceUpsertGeoJsonMigration-Response__eoqa:
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+          readOnly: true
+        messages:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
+    AbstractModule-ApiErrorDetails__ProfileDetails-Request_ProfileDetails-Response__zvfqvsi:
       type: object
       properties:
         code:
@@ -4370,6 +4492,18 @@ components:
         details:
           $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__FeatureManagerList-Request_FeatureManagerList-Response__mrrxwpq'
       additionalProperties: false
+    AbstractModule-ApiResponse__HighFreqDataImportBatchDelete-Request_HighFreqDataImportBatchDelete-Response_HighFreqDataImportBatchDelete-Response__vsmgma:
+      type: object
+      properties:
+        response:
+          $ref: '#/components/schemas/HighFreqDataImportBatchDelete-Response_zwmkq'
+        status:
+          type: string
+          nullable: true
+          readOnly: true
+        details:
+          $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__HighFreqDataImportBatchDelete-Request_HighFreqDataImportBatchDelete-Response__wisyy'
+      additionalProperties: false
     AbstractModule-ApiResponse__HighFreqDataImportCreate-Request_HighFreqDataImportCreate-Response_HighFreqDataImportCreate-Response__syoijzq:
       type: object
       properties:
@@ -4670,6 +4804,18 @@ components:
         details:
           $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__OnboardingChecklist-Request_OnboardingChecklist-Response__zgqzjq'
       additionalProperties: false
+    AbstractModule-ApiResponse__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response_PaymentLinkUpdate-Response__mvddpbq:
+      type: object
+      properties:
+        response:
+          $ref: '#/components/schemas/PaymentLinkUpdate-Response_sgrwey'
+        status:
+          type: string
+          nullable: true
+          readOnly: true
+        details:
+          $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response__ifqodi'
+      additionalProperties: false
     AbstractModule-ApiResponse__PendingLiftshareAccountBatchDelete-Request_PendingLiftshareAccountBatchDelete-Response_PendingLiftshareAccountBatchDelete-Response__brvrri:
       type: object
       properties:
@@ -4777,6 +4923,18 @@ components:
           readOnly: true
         details:
           $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__PrivateTransportServiceUpsertGeoJsonMigration-Request_PrivateTransportServiceUpsertGeoJsonMigration-Response__eoqa'
+      additionalProperties: false
+    AbstractModule-ApiResponse__ProfileDetails-Request_ProfileDetails-Response_ProfileDetails-Response__yayntgi:
+      type: object
+      properties:
+        response:
+          $ref: '#/components/schemas/ProfileDetails-Response_gkwtjna'
+        status:
+          type: string
+          nullable: true
+          readOnly: true
+        details:
+          $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__ProfileDetails-Request_ProfileDetails-Response__zvfqvsi'
       additionalProperties: false
     AbstractModule-ApiResponse__PublicLeaderboard-Request_PublicLeaderboard-Response_PublicLeaderboard-Response__zarxwcy:
       type: object
@@ -5191,11 +5349,18 @@ components:
       additionalProperties: false
     AcelBreakdownInputType_cgsomi:
       enum:
-        - 0 - Responses
-        - 1 - Percentages
-        - 2 - Employees
-      type: integer
-      format: int32
+        - Responses
+        - Percentages
+        - Employees
+      type: string
+      x-enumNames:
+        - Responses
+        - Percentages
+        - Employees
+      x-enum-varnames:
+        - Responses
+        - Percentages
+        - Employees
     AcelModesBreakdownDto_eimnky:
       type: object
       properties:
@@ -5904,10 +6069,15 @@ components:
       additionalProperties: false
     AcelReportType_iegky:
       enum:
-        - 0 - Manual
-        - 1 - FromSurvey
-      type: integer
-      format: int32
+        - Manual
+        - FromSurvey
+      type: string
+      x-enumNames:
+        - Manual
+        - FromSurvey
+      x-enum-varnames:
+        - Manual
+        - FromSurvey
     AcelTravelModes_binlxy:
       type: object
       properties:
@@ -6059,16 +6229,33 @@ components:
       additionalProperties: false
     AdminTokenCreate-ResultType_mlsaq:
       enum:
-        - 0 - Unknown
-        - 1 - Success
-        - 2 - TwoFactorRequiredYubikey
-        - 3 - TwoFactorRequiredGoogleAuthenticator
-        - 4 - InvalidEmailOrPassword
-        - 5 - InvalidToken
-        - 6 - InvalidRefreshToken
-        - 7 - InvalidTwoFactorCode
-      type: integer
-      format: int32
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      type: string
+      x-enumNames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      x-enum-varnames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
     AdminTokenRefresh-Request_qwdywq:
       type: object
       properties:
@@ -6143,15 +6330,30 @@ components:
       additionalProperties: false
     BadgeCategory_uewjpq:
       enum:
-        - 0 - Unknown
-        - 1 - Authentication
-        - 2 - Emissions
-        - 3 - Level
-        - 4 - Distance
-        - 5 - Activity
-        - 6 - Profile
-      type: integer
-      format: int32
+        - Unknown
+        - Authentication
+        - Emissions
+        - Level
+        - Distance
+        - Activity
+        - Profile
+      type: string
+      x-enumNames:
+        - Unknown
+        - Authentication
+        - Emissions
+        - Level
+        - Distance
+        - Activity
+        - Profile
+      x-enum-varnames:
+        - Unknown
+        - Authentication
+        - Emissions
+        - Level
+        - Distance
+        - Activity
+        - Profile
     BadgeDetails-Response_yrculy:
       type: object
       properties:
@@ -6273,64 +6475,177 @@ components:
       additionalProperties: false
     BadgeType_octufq:
       enum:
-        - 0 - Unknown
-        - 100000 - TripAuthenticated
-        - 100001 - TripAuthenticatedTimes0001
-        - 100010 - TripAuthenticatedTimes0010
-        - 100025 - TripAuthenticatedTimes0025
-        - 100040 - TripAuthenticatedTimes0040
-        - 100050 - TripAuthenticatedTimes0050
-        - 100075 - TripAuthenticatedTimes0075
-        - 100100 - TripAuthenticatedTimes0100
-        - 100150 - TripAuthenticatedTimes0150
-        - 100200 - TripAuthenticatedTimes0200
-        - 100250 - TripAuthenticatedTimes0250
-        - 100300 - TripAuthenticatedTimes0300
-        - 100500 - TripAuthenticatedTimes0500
-        - 101000 - TripAuthenticatedTimes1000
-        - 101500 - TripAuthenticatedTimes1500
-        - 102000 - TripAuthenticatedTimes2000
-        - 105000 - TripAuthenticatedTimes5000
-        - 200100 - EmissionsSavedKg00100
-        - 200250 - EmissionsSavedKg00250
-        - 200500 - EmissionsSavedKg00500
-        - 200750 - EmissionsSavedKg00750
-        - 201000 - EmissionsSavedKg01000
-        - 201500 - EmissionsSavedKg01500
-        - 202000 - EmissionsSavedKg02000
-        - 203000 - EmissionsSavedKg03000
-        - 205000 - EmissionsSavedKg05000
-        - 210000 - EmissionsSavedKg10000
-        - 300001 - Level001
-        - 300002 - Level002
-        - 300003 - Level003
-        - 300004 - Level004
-        - 300005 - Level005
-        - 300006 - Level006
-        - 400010 - DistanceSavedMiles000010
-        - 400050 - DistanceSavedMiles000050
-        - 400100 - DistanceSavedMiles000100
-        - 400250 - DistanceSavedMiles000250
-        - 400500 - DistanceSavedMiles000500
-        - 400750 - DistanceSavedMiles000750
-        - 401000 - DistanceSavedMiles001000
-        - 403000 - DistanceSavedMiles003000
-        - 404000 - DistanceSavedMiles004000
-        - 405000 - DistanceSavedMiles005000
-        - 410000 - DistanceSavedMiles010000
-        - 410001 - DistanceSavedMiles100000
-        - 420000 - DistanceSavedMiles020000
-        - 500001 - FirstJourney
-        - 500002 - SentFirstShareRequest
-        - 500003 - SentFirstMessage
-        - 500004 - FirstTeamJoined
-        - 500005 - FirstAppLogin
-        - 600001 - VerifiedMobileNumber
-        - 600002 - AddedProfilePicture
-        - 600003 - AddedBio
-        - 600004 - VerifiedEmailAddress
-      type: integer
-      format: int32
+        - Unknown
+        - TripAuthenticated
+        - TripAuthenticatedTimes0001
+        - TripAuthenticatedTimes0010
+        - TripAuthenticatedTimes0025
+        - TripAuthenticatedTimes0040
+        - TripAuthenticatedTimes0050
+        - TripAuthenticatedTimes0075
+        - TripAuthenticatedTimes0100
+        - TripAuthenticatedTimes0150
+        - TripAuthenticatedTimes0200
+        - TripAuthenticatedTimes0250
+        - TripAuthenticatedTimes0300
+        - TripAuthenticatedTimes0500
+        - TripAuthenticatedTimes1000
+        - TripAuthenticatedTimes1500
+        - TripAuthenticatedTimes2000
+        - TripAuthenticatedTimes5000
+        - EmissionsSavedKg00100
+        - EmissionsSavedKg00250
+        - EmissionsSavedKg00500
+        - EmissionsSavedKg00750
+        - EmissionsSavedKg01000
+        - EmissionsSavedKg01500
+        - EmissionsSavedKg02000
+        - EmissionsSavedKg03000
+        - EmissionsSavedKg05000
+        - EmissionsSavedKg10000
+        - Level001
+        - Level002
+        - Level003
+        - Level004
+        - Level005
+        - Level006
+        - DistanceSavedMiles000010
+        - DistanceSavedMiles000050
+        - DistanceSavedMiles000100
+        - DistanceSavedMiles000250
+        - DistanceSavedMiles000500
+        - DistanceSavedMiles000750
+        - DistanceSavedMiles001000
+        - DistanceSavedMiles003000
+        - DistanceSavedMiles004000
+        - DistanceSavedMiles005000
+        - DistanceSavedMiles010000
+        - DistanceSavedMiles100000
+        - DistanceSavedMiles020000
+        - FirstJourney
+        - SentFirstShareRequest
+        - SentFirstMessage
+        - FirstTeamJoined
+        - FirstAppLogin
+        - VerifiedMobileNumber
+        - AddedProfilePicture
+        - AddedBio
+        - VerifiedEmailAddress
+      type: string
+      x-enumNames:
+        - Unknown
+        - TripAuthenticated
+        - TripAuthenticatedTimes0001
+        - TripAuthenticatedTimes0010
+        - TripAuthenticatedTimes0025
+        - TripAuthenticatedTimes0040
+        - TripAuthenticatedTimes0050
+        - TripAuthenticatedTimes0075
+        - TripAuthenticatedTimes0100
+        - TripAuthenticatedTimes0150
+        - TripAuthenticatedTimes0200
+        - TripAuthenticatedTimes0250
+        - TripAuthenticatedTimes0300
+        - TripAuthenticatedTimes0500
+        - TripAuthenticatedTimes1000
+        - TripAuthenticatedTimes1500
+        - TripAuthenticatedTimes2000
+        - TripAuthenticatedTimes5000
+        - EmissionsSavedKg00100
+        - EmissionsSavedKg00250
+        - EmissionsSavedKg00500
+        - EmissionsSavedKg00750
+        - EmissionsSavedKg01000
+        - EmissionsSavedKg01500
+        - EmissionsSavedKg02000
+        - EmissionsSavedKg03000
+        - EmissionsSavedKg05000
+        - EmissionsSavedKg10000
+        - Level001
+        - Level002
+        - Level003
+        - Level004
+        - Level005
+        - Level006
+        - DistanceSavedMiles000010
+        - DistanceSavedMiles000050
+        - DistanceSavedMiles000100
+        - DistanceSavedMiles000250
+        - DistanceSavedMiles000500
+        - DistanceSavedMiles000750
+        - DistanceSavedMiles001000
+        - DistanceSavedMiles003000
+        - DistanceSavedMiles004000
+        - DistanceSavedMiles005000
+        - DistanceSavedMiles010000
+        - DistanceSavedMiles100000
+        - DistanceSavedMiles020000
+        - FirstJourney
+        - SentFirstShareRequest
+        - SentFirstMessage
+        - FirstTeamJoined
+        - FirstAppLogin
+        - VerifiedMobileNumber
+        - AddedProfilePicture
+        - AddedBio
+        - VerifiedEmailAddress
+      x-enum-varnames:
+        - Unknown
+        - TripAuthenticated
+        - TripAuthenticatedTimes0001
+        - TripAuthenticatedTimes0010
+        - TripAuthenticatedTimes0025
+        - TripAuthenticatedTimes0040
+        - TripAuthenticatedTimes0050
+        - TripAuthenticatedTimes0075
+        - TripAuthenticatedTimes0100
+        - TripAuthenticatedTimes0150
+        - TripAuthenticatedTimes0200
+        - TripAuthenticatedTimes0250
+        - TripAuthenticatedTimes0300
+        - TripAuthenticatedTimes0500
+        - TripAuthenticatedTimes1000
+        - TripAuthenticatedTimes1500
+        - TripAuthenticatedTimes2000
+        - TripAuthenticatedTimes5000
+        - EmissionsSavedKg00100
+        - EmissionsSavedKg00250
+        - EmissionsSavedKg00500
+        - EmissionsSavedKg00750
+        - EmissionsSavedKg01000
+        - EmissionsSavedKg01500
+        - EmissionsSavedKg02000
+        - EmissionsSavedKg03000
+        - EmissionsSavedKg05000
+        - EmissionsSavedKg10000
+        - Level001
+        - Level002
+        - Level003
+        - Level004
+        - Level005
+        - Level006
+        - DistanceSavedMiles000010
+        - DistanceSavedMiles000050
+        - DistanceSavedMiles000100
+        - DistanceSavedMiles000250
+        - DistanceSavedMiles000500
+        - DistanceSavedMiles000750
+        - DistanceSavedMiles001000
+        - DistanceSavedMiles003000
+        - DistanceSavedMiles004000
+        - DistanceSavedMiles005000
+        - DistanceSavedMiles010000
+        - DistanceSavedMiles100000
+        - DistanceSavedMiles020000
+        - FirstJourney
+        - SentFirstShareRequest
+        - SentFirstMessage
+        - FirstTeamJoined
+        - FirstAppLogin
+        - VerifiedMobileNumber
+        - AddedProfilePicture
+        - AddedBio
+        - VerifiedEmailAddress
     BadgeViewedUpdate-Response_yhohxbi:
       type: object
       properties:
@@ -6365,32 +6680,70 @@ components:
       additionalProperties: false
     BatchListOrderBy_zvtuny:
       enum:
-        - 0 - Name
-        - 1 - Status
-        - 2 - Recipients
-        - 3 - CreatedBy
-        - 4 - DateCreated
-        - 5 - DateLastUpdated
-      type: integer
-      format: int32
+        - Name
+        - Status
+        - Recipients
+        - CreatedBy
+        - DateCreated
+        - DateLastUpdated
+      type: string
+      x-enumNames:
+        - Name
+        - Status
+        - Recipients
+        - CreatedBy
+        - DateCreated
+        - DateLastUpdated
+      x-enum-varnames:
+        - Name
+        - Status
+        - Recipients
+        - CreatedBy
+        - DateCreated
+        - DateLastUpdated
     BatchListStatus_bvvhqsi:
       enum:
-        - 0 - Draft
-        - 1 - NotSent
-        - 2 - Scheduled
-        - 3 - Sent
-      type: integer
-      format: int32
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
+      type: string
+      x-enumNames:
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
+      x-enum-varnames:
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
     BatchSearchFilterProperty_uqumaq:
       enum:
-        - 0 - Name
-        - 1 - Status
-        - 2 - DateCreated
-        - 3 - SearchableProperties
-        - 4 - CreatedBy
-        - 5 - DateLastUpdated
-        - 6 - NumRecipients
+        - Name
+        - Status
+        - DateCreated
+        - SearchableProperties
+        - CreatedBy
+        - DateLastUpdated
+        - NumRecipients
       type: string
+      x-enumNames:
+        - Name
+        - Status
+        - DateCreated
+        - SearchableProperties
+        - CreatedBy
+        - DateLastUpdated
+        - NumRecipients
+      x-enum-varnames:
+        - Name
+        - Status
+        - DateCreated
+        - SearchableProperties
+        - CreatedBy
+        - DateLastUpdated
+        - NumRecipients
     BehaviorChangeJourneyDistanceFrequencyBreakdown-Response_icxtqiq:
       type: object
       properties:
@@ -6621,11 +6974,18 @@ components:
       additionalProperties: false
     CommunityPrivacy_gcuvykq:
       enum:
-        - 0 - Public
-        - 1 - Private
-        - 2 - Closed
-      type: integer
-      format: int32
+        - Public
+        - Private
+        - Closed
+      type: string
+      x-enumNames:
+        - Public
+        - Private
+        - Closed
+      x-enum-varnames:
+        - Public
+        - Private
+        - Closed
     ConsideringChangeQueryDto_eyhazi:
       type: object
       properties:
@@ -6750,23 +7110,54 @@ components:
       additionalProperties: false
     ContactFieldType_metdxi:
       enum:
-        - 0 - FirstName
-        - 1 - LastName
-        - 2 - Email
-        - 3 - HomeAddress
-        - 4 - PublicId
-        - 5 - Tag
-        - 6 - WorkStartTime
-        - 7 - WorkFinishTime
-        - 8 - WorkDepartment
-        - 9 - WorkLocation
-        - 10 - CurrentCommuteMode
-        - 11 - AlternativeCommuteModes
-        - 12 - CommuteDistance
-        - 13 - CommuteDaysPerWeek
-        - '-1 - Unknown'
-      type: integer
-      format: int32
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - PublicId
+        - Tag
+        - WorkStartTime
+        - WorkFinishTime
+        - WorkDepartment
+        - WorkLocation
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistance
+        - CommuteDaysPerWeek
+        - Unknown
+      type: string
+      x-enumNames:
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - PublicId
+        - Tag
+        - WorkStartTime
+        - WorkFinishTime
+        - WorkDepartment
+        - WorkLocation
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistance
+        - CommuteDaysPerWeek
+        - Unknown
+      x-enum-varnames:
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - PublicId
+        - Tag
+        - WorkStartTime
+        - WorkFinishTime
+        - WorkDepartment
+        - WorkLocation
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistance
+        - CommuteDaysPerWeek
+        - Unknown
     ContactFilterExpression_yyenjda:
       type: object
       properties:
@@ -6921,11 +7312,18 @@ components:
       additionalProperties: false
     ContactImportStatus_lbavzha:
       enum:
-        - 0 - Uploaded
-        - 1 - Failed
-        - 2 - Succeeded
-      type: integer
-      format: int32
+        - Uploaded
+        - Failed
+        - Succeeded
+      type: string
+      x-enumNames:
+        - Uploaded
+        - Failed
+        - Succeeded
+      x-enum-varnames:
+        - Uploaded
+        - Failed
+        - Succeeded
     ContactLimit-Response_iwki:
       type: object
       properties:
@@ -7048,11 +7446,18 @@ components:
       additionalProperties: false
     ContactPreferenceType_olhhhi:
       enum:
-        - 0 - MarketingInformation
-        - 1 - Surveys
-        - 2 - TravelPlans
-      type: integer
-      format: int32
+        - MarketingInformation
+        - Surveys
+        - TravelPlans
+      type: string
+      x-enumNames:
+        - MarketingInformation
+        - Surveys
+        - TravelPlans
+      x-enum-varnames:
+        - MarketingInformation
+        - Surveys
+        - TravelPlans
     ContactPreference_dxxa:
       type: object
       properties:
@@ -7155,14 +7560,27 @@ components:
       additionalProperties: false
     ContactPropertyColumns-ContactFilterPropertyType_itqdmky:
       enum:
-        - 0 - Text
-        - 1 - Number
-        - 2 - Date
-        - 3 - Time
-        - 4 - Boolean
-        - 5 - Collection
-      type: integer
-      format: int32
+        - Text
+        - Number
+        - Date
+        - Time
+        - Boolean
+        - Collection
+      type: string
+      x-enumNames:
+        - Text
+        - Number
+        - Date
+        - Time
+        - Boolean
+        - Collection
+      x-enum-varnames:
+        - Text
+        - Number
+        - Date
+        - Time
+        - Boolean
+        - Collection
     ContactPropertyColumns-QueryDto_zzooy:
       type: object
       properties:
@@ -7240,49 +7658,131 @@ components:
       additionalProperties: false
     ContactSearchOperator_ejaavqi:
       enum:
-        - 0 - EqualTo
-        - 1 - NotEqualTo
-        - 2 - StartsWith
-        - 3 - EndsWith
-        - 4 - Contains
-        - 5 - DoesNotContain
-        - 6 - EqualToAnyOf
-        - 7 - NotEqualToAnyOf
-        - 8 - Known
-        - 9 - Unknown
-        - 10 - Between
-        - 11 - LessThan
-        - 12 - GreaterThan
-        - 13 - OptOutSurvey
-        - 14 - OptOutTravelPlans
-        - 15 - IsTrue
-        - 16 - IsFalse
-        - 17 - HasAtLeastOneOf
-        - 18 - HasNoneOf
-        - 19 - GreaterThanEqualTo
-        - 20 - LessThanEqualTo
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
+        - OptOutSurvey
+        - OptOutTravelPlans
+        - IsTrue
+        - IsFalse
+        - HasAtLeastOneOf
+        - HasNoneOf
+        - GreaterThanEqualTo
+        - LessThanEqualTo
       type: string
+      x-enumNames:
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
+        - OptOutSurvey
+        - OptOutTravelPlans
+        - IsTrue
+        - IsFalse
+        - HasAtLeastOneOf
+        - HasNoneOf
+        - GreaterThanEqualTo
+        - LessThanEqualTo
+      x-enum-varnames:
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
+        - OptOutSurvey
+        - OptOutTravelPlans
+        - IsTrue
+        - IsFalse
+        - HasAtLeastOneOf
+        - HasNoneOf
+        - GreaterThanEqualTo
+        - LessThanEqualTo
     ContactSearchProperty_sktibq:
       enum:
-        - 0 - FirstName
-        - 1 - LastName
-        - 2 - Email
-        - 3 - HomeAddress
-        - 4 - DateCreatedUtc
-        - 5 - Tags
-        - 6 - DateLastTravelPlanSent
-        - 7 - WorkLocation
-        - 8 - WorkDepartment
-        - 9 - WorkStartTime
-        - 10 - WorkFinishTime
-        - 11 - CurrentCommuteMode
-        - 12 - AlternativeCommuteModes
-        - 13 - CommuteDistanceInMeters
-        - 14 - CommuteDaysPerWeek
-        - 15 - PersonalTravelPlanDate
-        - 16 - PersonalTravelPlanSent
-        - 17 - SubscriptionPreference
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - DateCreatedUtc
+        - Tags
+        - DateLastTravelPlanSent
+        - WorkLocation
+        - WorkDepartment
+        - WorkStartTime
+        - WorkFinishTime
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistanceInMeters
+        - CommuteDaysPerWeek
+        - PersonalTravelPlanDate
+        - PersonalTravelPlanSent
+        - SubscriptionPreference
       type: string
+      x-enumNames:
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - DateCreatedUtc
+        - Tags
+        - DateLastTravelPlanSent
+        - WorkLocation
+        - WorkDepartment
+        - WorkStartTime
+        - WorkFinishTime
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistanceInMeters
+        - CommuteDaysPerWeek
+        - PersonalTravelPlanDate
+        - PersonalTravelPlanSent
+        - SubscriptionPreference
+      x-enum-varnames:
+        - FirstName
+        - LastName
+        - Email
+        - HomeAddress
+        - DateCreatedUtc
+        - Tags
+        - DateLastTravelPlanSent
+        - WorkLocation
+        - WorkDepartment
+        - WorkStartTime
+        - WorkFinishTime
+        - CurrentCommuteMode
+        - AlternativeCommuteModes
+        - CommuteDistanceInMeters
+        - CommuteDaysPerWeek
+        - PersonalTravelPlanDate
+        - PersonalTravelPlanSent
+        - SubscriptionPreference
     ContactTagReplace-Request_odpaffa:
       type: object
       properties:
@@ -7451,11 +7951,18 @@ components:
       additionalProperties: false
     CumulativeTripAuthentications-DateGranularity_ioemq:
       enum:
-        - 0 - Day
-        - 1 - Month
-        - 2 - Year
-      type: integer
-      format: int32
+        - Day
+        - Month
+        - Year
+      type: string
+      x-enumNames:
+        - Day
+        - Month
+        - Year
+      x-enum-varnames:
+        - Day
+        - Month
+        - Year
     CumulativeTripAuthentications-QueryDto_xilqzka:
       type: object
       properties:
@@ -7507,13 +8014,24 @@ components:
       additionalProperties: false
     DidChangeBehaviorAnswerValue_tbzxoi:
       enum:
-        - 0 - YesINowTravelDifferent
-        - 1 - NoTriedAndNotForMe
-        - 2 - NoYetToTryNewMode
-        - 3 - NoIntentionOfChanging
-        - 4 - NoLongerMakeThisJourney
-      type: integer
-      format: int32
+        - YesINowTravelDifferent
+        - NoTriedAndNotForMe
+        - NoYetToTryNewMode
+        - NoIntentionOfChanging
+        - NoLongerMakeThisJourney
+      type: string
+      x-enumNames:
+        - YesINowTravelDifferent
+        - NoTriedAndNotForMe
+        - NoYetToTryNewMode
+        - NoIntentionOfChanging
+        - NoLongerMakeThisJourney
+      x-enum-varnames:
+        - YesINowTravelDifferent
+        - NoTriedAndNotForMe
+        - NoYetToTryNewMode
+        - NoIntentionOfChanging
+        - NoLongerMakeThisJourney
     DistanceFrequencyBreakdown-Request_slqi:
       type: object
       properties:
@@ -7768,13 +8286,24 @@ components:
       additionalProperties: false
     HighFreqDataCsv-ValidationError_fawemi:
       enum:
-        - 1 - MissingHeaders
-        - 2 - MissingDateColumn
-        - 3 - MissingDistanceColumn
-        - 4 - MissingOrInvalidDateValue
-        - 5 - MissingOrInvalidDistanceValue
-      type: integer
-      format: int32
+        - MissingHeaders
+        - MissingDateColumn
+        - MissingDistanceColumn
+        - MissingOrInvalidDateValue
+        - MissingOrInvalidDistanceValue
+      type: string
+      x-enumNames:
+        - MissingHeaders
+        - MissingDateColumn
+        - MissingDistanceColumn
+        - MissingOrInvalidDateValue
+        - MissingOrInvalidDistanceValue
+      x-enum-varnames:
+        - MissingHeaders
+        - MissingDateColumn
+        - MissingDistanceColumn
+        - MissingOrInvalidDateValue
+        - MissingOrInvalidDistanceValue
     HighFreqDataCsv-ValidationFailure_rlyvky:
       type: object
       properties:
@@ -7788,17 +8317,31 @@ components:
           type: string
           nullable: true
       additionalProperties: false
+    HighFreqDataImportBatchDelete-Request_hisiq:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: string
+          nullable: true
+      additionalProperties: false
+    HighFreqDataImportBatchDelete-Response_zwmkq:
+      type: object
+      additionalProperties: false
     HighFreqDataImportCreate-Response_hrpbofq:
       type: object
       properties:
         importId:
-          type: integer
-          format: int32
+          type: string
           nullable: true
         validationFailures:
           type: array
           items:
             $ref: '#/components/schemas/HighFreqDataCsv-ValidationFailure_rlyvky'
+          nullable: true
+        errorMessage:
+          type: string
           nullable: true
       additionalProperties: false
     HighFreqDataImportDelete-Response_riwja:
@@ -7807,7 +8350,7 @@ components:
     HighFreqDataImports-Response_brlgptq:
       type: object
       properties:
-        dataSources:
+        imports:
           type: array
           items:
             $ref: '#/components/schemas/HighFreqImportDto_yiyri'
@@ -7823,8 +8366,8 @@ components:
           type: string
           nullable: true
         mode:
-          type: string
-          nullable: true
+          type: integer
+          format: int32
         description:
           type: string
           nullable: true
@@ -7842,8 +8385,8 @@ components:
       type: object
       properties:
         id:
-          type: string
-          nullable: true
+          type: integer
+          format: int32
         figures:
           $ref: '#/components/schemas/HighFreqEmissions-HighFreqFigures_blupi'
       additionalProperties: false
@@ -7886,6 +8429,12 @@ components:
           items:
             type: string
           nullable: true
+        dateFrom:
+          type: string
+          format: date
+        dateTo:
+          type: string
+          format: date
       additionalProperties: false
     HighFreqEmissions-Response_xxidiy:
       type: object
@@ -7900,69 +8449,114 @@ components:
       type: object
       properties:
         id:
-          type: integer
-          format: int32
+          type: string
+          nullable: true
+          readOnly: true
+        communityId:
+          type: string
+          nullable: true
+          readOnly: true
         name:
           type: string
           nullable: true
+          readOnly: true
         userName:
           type: string
           nullable: true
-        communityId:
-          type: integer
-          format: int32
+          readOnly: true
         communityName:
           type: string
           nullable: true
+          readOnly: true
         date:
           type: string
           format: date-time
+          readOnly: true
         statusId:
           type: integer
           format: int32
+          readOnly: true
         statusName:
           type: string
           nullable: true
+          readOnly: true
         dataSourceId:
           type: integer
           format: int32
+          readOnly: true
         dataSourceName:
           type: string
           nullable: true
+          readOnly: true
         travelMode:
           type: integer
           format: int32
+          readOnly: true
         travelModeName:
           type: string
           nullable: true
+          readOnly: true
       additionalProperties: false
     JourneyFlexibility_lteey:
       enum:
-        - 0 - Exact
-        - 1 - PlusMinus15Min
-        - 2 - PlusMinus30Min
-        - 3 - PlusMinus1Hour
-        - 4 - PlusMinus2Hours
-        - 5 - PlusMinus4Hours
-        - 6 - PlusMinus12Hours
-        - 7 - Anytime
-      type: integer
-      format: int32
+        - Exact
+        - PlusMinus15Min
+        - PlusMinus30Min
+        - PlusMinus1Hour
+        - PlusMinus2Hours
+        - PlusMinus4Hours
+        - PlusMinus12Hours
+        - Anytime
+      type: string
+      x-enumNames:
+        - Exact
+        - PlusMinus15Min
+        - PlusMinus30Min
+        - PlusMinus1Hour
+        - PlusMinus2Hours
+        - PlusMinus4Hours
+        - PlusMinus12Hours
+        - Anytime
+      x-enum-varnames:
+        - Exact
+        - PlusMinus15Min
+        - PlusMinus30Min
+        - PlusMinus1Hour
+        - PlusMinus2Hours
+        - PlusMinus4Hours
+        - PlusMinus12Hours
+        - Anytime
     JourneyFrequency_vvhvfbq:
       enum:
-        - 1 - OneOff
-        - 2 - Regular
-        - 3 - Occasional
-        - 4 - Shift
-      type: integer
-      format: int32
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
+      type: string
+      x-enumNames:
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
+      x-enum-varnames:
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
     JourneyType_idmei:
       enum:
-        - 1 - Passenger
-        - 2 - Driver
-        - 3 - Both
-      type: integer
-      format: int32
+        - Passenger
+        - Driver
+        - Both
+      type: string
+      x-enumNames:
+        - Passenger
+        - Driver
+        - Both
+      x-enum-varnames:
+        - Passenger
+        - Driver
+        - Both
     JourneyUpsert-Request_xbmluey:
       type: object
       properties:
@@ -8073,11 +8667,18 @@ components:
       additionalProperties: false
     LeaderboardDateFilter_gkngiji:
       enum:
-        - 0 - AllTime
-        - 1 - ThisMonth
-        - 2 - ThisWeek
-      type: integer
-      format: int32
+        - AllTime
+        - ThisMonth
+        - ThisWeek
+      type: string
+      x-enumNames:
+        - AllTime
+        - ThisMonth
+        - ThisWeek
+      x-enum-varnames:
+        - AllTime
+        - ThisMonth
+        - ThisWeek
     LiftshareCurrentStatsSummary-Response_odca:
       type: object
       properties:
@@ -8336,12 +8937,21 @@ components:
       additionalProperties: false
     LuggageSpace_pini:
       enum:
-        - 0 - None
-        - 1 - Small
-        - 2 - Medium
-        - 3 - Large
-      type: integer
-      format: int32
+        - None
+        - Small
+        - Medium
+        - Large
+      type: string
+      x-enumNames:
+        - None
+        - Small
+        - Medium
+        - Large
+      x-enum-varnames:
+        - None
+        - Small
+        - Medium
+        - Large
     ManageSavedViews-QueryDto_qdctiji:
       type: object
       properties:
@@ -8386,10 +8996,15 @@ components:
       additionalProperties: false
     ManageSavedViews-SaveViewPersistence_gqtlxq:
       enum:
-        - 0 - Dynamic
-        - 1 - Static
-      type: integer
-      format: int32
+        - Dynamic
+        - Static
+      type: string
+      x-enumNames:
+        - Dynamic
+        - Static
+      x-enum-varnames:
+        - Dynamic
+        - Static
     MembersInCommunity-Response_ltgnbqy:
       type: object
       properties:
@@ -8453,38 +9068,92 @@ components:
       additionalProperties: false
     MobilitywaysTransportType_aswbha:
       enum:
-        - 0 - WorkFromHome
-        - 1 - Walk
-        - 2 - Cycle
-        - 3 - ElectricScooter
-        - 4 - BusOrCoach
-        - 5 - ElectricBusOrCoach
-        - 6 - LightRail
-        - 7 - Train
-        - 8 - Motorcycle
-        - 9 - Carshare
-        - 10 - ElectricCarshare
-        - 11 - ParkAndRide
-        - 12 - Drive
-        - 13 - ElectricDrive
-        - 14 - Taxi
-        - 15 - ElectricTaxi
-        - 16 - Fly
-        - 17 - Other
-        - 18 - VanPool
-        - 19 - ElectricVanPool
-        - 20 - CompanyShuttleBus
-        - 21 - ElectricCompanyShuttleBus
-        - 22 - ElectricMotorcycle
-      type: integer
-      format: int32
+        - WorkFromHome
+        - Walk
+        - Cycle
+        - ElectricScooter
+        - BusOrCoach
+        - ElectricBusOrCoach
+        - LightRail
+        - Train
+        - Motorcycle
+        - Carshare
+        - ElectricCarshare
+        - ParkAndRide
+        - Drive
+        - ElectricDrive
+        - Taxi
+        - ElectricTaxi
+        - Fly
+        - Other
+        - VanPool
+        - ElectricVanPool
+        - CompanyShuttleBus
+        - ElectricCompanyShuttleBus
+        - ElectricMotorcycle
+      type: string
+      x-enumNames:
+        - WorkFromHome
+        - Walk
+        - Cycle
+        - ElectricScooter
+        - BusOrCoach
+        - ElectricBusOrCoach
+        - LightRail
+        - Train
+        - Motorcycle
+        - Carshare
+        - ElectricCarshare
+        - ParkAndRide
+        - Drive
+        - ElectricDrive
+        - Taxi
+        - ElectricTaxi
+        - Fly
+        - Other
+        - VanPool
+        - ElectricVanPool
+        - CompanyShuttleBus
+        - ElectricCompanyShuttleBus
+        - ElectricMotorcycle
+      x-enum-varnames:
+        - WorkFromHome
+        - Walk
+        - Cycle
+        - ElectricScooter
+        - BusOrCoach
+        - ElectricBusOrCoach
+        - LightRail
+        - Train
+        - Motorcycle
+        - Carshare
+        - ElectricCarshare
+        - ParkAndRide
+        - Drive
+        - ElectricDrive
+        - Taxi
+        - ElectricTaxi
+        - Fly
+        - Other
+        - VanPool
+        - ElectricVanPool
+        - CompanyShuttleBus
+        - ElectricCompanyShuttleBus
+        - ElectricMotorcycle
     ModalShiftBreakdown-ModeEmissionsRank_dhugea:
       enum:
-        - 0 - Zero
-        - 1 - Low
-        - 2 - High
-      type: integer
-      format: int32
+        - Zero
+        - Low
+        - High
+      type: string
+      x-enumNames:
+        - Zero
+        - Low
+        - High
+      x-enum-varnames:
+        - Zero
+        - Low
+        - High
     ModalShiftBreakdown-QueryDto_kulpki:
       type: object
       properties:
@@ -8614,169 +9283,485 @@ components:
       additionalProperties: false
     NotificationTemplateFactory-NotificationCategory_uttlbci:
       enum:
-        - 0 - Archive
-        - 1 - Mailout
-        - 2 - MailoutPlain
-        - 3 - Mobilityways
-        - 4 - MobilitywaysSurvey
-        - 5 - MobilitywaysTravelPlans
-        - 6 - Public
-        - 7 - Sandbox
-        - 8 - System
-        - 9 - SystemPending
-        - 10 - MobilitywaysAdmin
-      type: integer
-      format: int32
+        - Archive
+        - Mailout
+        - MailoutPlain
+        - Mobilityways
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlans
+        - Public
+        - Sandbox
+        - System
+        - SystemPending
+        - MobilitywaysAdmin
+      type: string
+      x-enumNames:
+        - Archive
+        - Mailout
+        - MailoutPlain
+        - Mobilityways
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlans
+        - Public
+        - Sandbox
+        - System
+        - SystemPending
+        - MobilitywaysAdmin
+      x-enum-varnames:
+        - Archive
+        - Mailout
+        - MailoutPlain
+        - Mobilityways
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlans
+        - Public
+        - Sandbox
+        - System
+        - SystemPending
+        - MobilitywaysAdmin
     NotificationTemplateFactory-NotificationKey_qulcniy:
       enum:
-        - 0 - AddJourneyForUsersThatSearched
-        - 1 - AuthenticationWithNoTeam
-        - 2 - AvatarNeedsUpdating
-        - 3 - AvatarRemoved
-        - 4 - BookingCancelledDriverCash
-        - 5 - BookingCancelledPassengerCash
-        - 6 - BookingConfirmDriverManualCash
-        - 7 - BookingConfirmPassengerCash
-        - 8 - BookingNotConfirmedReminder10Hours
-        - 9 - BookingNotConfirmedReminder10HoursCash
-        - 10 - BookingNotConfirmedReminder24HoursCash
-        - 11 - BookingNotConfirmedReminder7DaysCash
-        - 12 - BookingRejectedCash
-        - 13 - BookingRequestDriverCash
-        - 14 - BookingRequestDriverSmsReplyCash
-        - 15 - BookingRequestPassengerCash
-        - 16 - BounceCheck
-        - 17 - CampaignsActivated
-        - 18 - CampaignsInCommunity
-        - 19 - CampaignsNewMember
-        - 20 - CampaignsNotActivated
-        - 21 - CemCommunityAlertNotification
-        - 22 - CommunityAlert
-        - 23 - CommunityInvite
-        - 24 - CommunityInviteSecond
-        - 25 - CommunityMove
-        - 26 - CommunityRemoved
-        - 27 - CommunityRemovedConfirmedSharing
-        - 28 - CommunityRemovedNoJourney
-        - 29 - CommunityRemovedNotSharing
-        - 30 - CommunityRemovedPrivateJourney
-        - 31 - ContactCsm
-        - 32 - DashboardAccountLocked
-        - 33 - DashboardAccountReset
-        - 34 - DashboardMembersBouncedReport
-        - 35 - DashboardWelcome
-        - 36 - DuplicateJourney
-        - 37 - DuplicateJourneySecondReminder
-        - 38 - EmailVerification
-        - 39 - EmailVerificationReminder24Hours
-        - 40 - EmailVerificationReminder72Hours
-        - 41 - EmailVerificationReminder8Days
-        - 42 - Generic
-        - 43 - HelpdeskMessage
-        - 44 - HaveAQuestion
-        - 45 - InviteExistingMemberToTeam
-        - 46 - InviteNewMemberToTeam
-        - 47 - InviteToLiftshareTeamAccepted
-        - 48 - InviteToLiftshareTeamAcceptedRecipient
-        - 49 - InviteToTeamSenderLeftTeamExistingMember
-        - 50 - InviteToTeamSenderLeftTeamNewMember
-        - 51 - JourneyAlert
-        - 52 - LiftshareTeamCreated
-        - 53 - LiftshareTeamInviteRequestDeclined
-        - 54 - LiftshareTeamInviteRequestExpired
-        - 55 - LiftshareTeamInviteRequestPending7DayReminderExistingMember
-        - 56 - LiftshareTeamInviteRequestPending7DayReminderNewMember
-        - 57 - LiftshareTeamJoined
-        - 58 - LiftshareTeamRemoved
-        - 59 - MemberFeedbackSurvey
-        - 60 - MemberImporterActivation
-        - 61 - MemberImporterActivationFirstReminder
-        - 62 - MemberImporterActivationLastReminder
-        - 63 - MemberImporterActivationSmsReminder
-        - 64 - MemberImporterDeactivationLastReminder
-        - 65 - MemberImporterDeactivationWarning
-        - 66 - MemberImporterStatsReport
-        - 67 - MemberImporterUploadReport
-        - 68 - MembersAddedToCommunityConfirmation
-        - 69 - MobileVerification
-        - 70 - MobilitywaysAcelReport
-        - 71 - MobilitywaysForgotPassword
-        - 72 - MobilitywaysSurvey
-        - 73 - MobilitywaysTravelPlan
-        - 74 - MobilitywaysTravelPlanBehaviorChangeSurvey
-        - 75 - MobilitywaysTravelPlanFollowupSurvey
-        - 76 - MobilitywaysWelcome
-        - 77 - NewConversationPassengerReminder48Hours
-        - 78 - NewConversationPassengerReminder5Hours
-        - 79 - NewConversationReminder24Hours
-        - 80 - NewConversationReminder24HoursPassenger
-        - 81 - NewConversationReminder48Hours
-        - 82 - NewConversationReminder5Hours
-        - 83 - NewDriverMessage
-        - 84 - NewMessage
-        - 85 - NewMessageA
-        - 86 - NewMessageB
-        - 87 - NewRating
-        - 88 - PasswordReset
-        - 89 - PendingMemberActivate
-        - 90 - PendingMemberPasswordReminder
-        - 91 - PendingMemberSetPassword
-        - 92 - PhotoReminder10Days
-        - 93 - PhotoReminder24Hours
-        - 94 - PhotoReminder30Days
-        - 95 - RatingBookingReminder
-        - 96 - ScopingReportDownloadLink
-        - 97 - StillMakingJourneyA
-        - 98 - StillMakingJourneyB
-        - 99 - StillMakingJourneyFinal
-        - 100 - StillSharingJourney
-        - 101 - Template
-        - 102 - TopMatches
-        - 103 - TopMatchesMailoutA
-        - 104 - TravelPlanBatchFinishedProcessing
-        - 105 - TripAuthenticatedPassenger
-        - 106 - TripAuthenticatedReminder
-        - 107 - WelcomeA
-        - 108 - WelcomeB
-        - 109 - WelcomeToLiftshareA
-        - 110 - WelcomeToLiftshareB
-        - 111 - Cbb1
-        - 112 - LiftshareTeamInviteRequestNewMemberCancelled
-        - 113 - LiftshareTeamInviteRequestExistingMemberCancelled
-        - 114 - WelcomeToLiftshare
-        - 115 - AddYourFirstJourney
-        - 116 - AddYourFirstJourneyReminder1
-        - 117 - AddYourFirstJourneyReminder2
-        - 118 - AddYourFirstJourneyReminder3
-        - 119 - AddYourFirstJourneyReminder4
-        - 120 - Census
-        - 121 - CompleteYourProfile
-        - 122 - AddYourCommuteJourney
-        - 123 - UnableToAddJourneyApology
-        - 124 - TopMatchesMailoutB
-        - 125 - AddYourCommuteJourneyMailoutA
-        - 126 - AddYourCommuteJourneyMailoutB
-        - 127 - AddYourCommuteJourneyMailoutC
-        - 128 - AddYourCommuteJourneyMailoutD
-        - 129 - CustomPendingAccountInvite
-        - 130 - CustomPendingAccountInviteReminder
-        - 131 - CustomPendingAccountInviteReminderTwo
-        - 132 - ContactImportCompleted
-        - 133 - NewBadgeAwarded
-        - 134 - LSW2022a
-        - 135 - LSW2022b
-        - 136 - LSW2022c
-        - 137 - LSW2022d
-        - 138 - LSW2022e
-        - 139 - LSW2022f
-        - 140 - LSW2022updatedLiftshareTerms
-        - 141 - CommuterCensus2023Public
-        - 142 - CommuterCensus2023Private
-        - 143 - CommuterCensus2023Reminder
-        - 144 - WelcomeNewMembersToLiftshareNectar
-        - 145 - WelcomeExistingMembersToLiftshareNectar
-      type: integer
-      format: int32
+        - AddJourneyForUsersThatSearched
+        - AuthenticationWithNoTeam
+        - AvatarNeedsUpdating
+        - AvatarRemoved
+        - BookingCancelledDriverCash
+        - BookingCancelledPassengerCash
+        - BookingConfirmDriverManualCash
+        - BookingConfirmPassengerCash
+        - BookingNotConfirmedReminder10Hours
+        - BookingNotConfirmedReminder10HoursCash
+        - BookingNotConfirmedReminder24HoursCash
+        - BookingNotConfirmedReminder7DaysCash
+        - BookingRejectedCash
+        - BookingRequestDriverCash
+        - BookingRequestDriverSmsReplyCash
+        - BookingRequestPassengerCash
+        - BounceCheck
+        - CampaignsActivated
+        - CampaignsInCommunity
+        - CampaignsNewMember
+        - CampaignsNotActivated
+        - CemCommunityAlertNotification
+        - CommunityAlert
+        - CommunityInvite
+        - CommunityInviteSecond
+        - CommunityMove
+        - CommunityRemoved
+        - CommunityRemovedConfirmedSharing
+        - CommunityRemovedNoJourney
+        - CommunityRemovedNotSharing
+        - CommunityRemovedPrivateJourney
+        - ContactCsm
+        - DashboardAccountLocked
+        - DashboardAccountReset
+        - DashboardMembersBouncedReport
+        - DashboardWelcome
+        - DuplicateJourney
+        - DuplicateJourneySecondReminder
+        - EmailVerification
+        - EmailVerificationReminder24Hours
+        - EmailVerificationReminder72Hours
+        - EmailVerificationReminder8Days
+        - Generic
+        - HelpdeskMessage
+        - HaveAQuestion
+        - InviteExistingMemberToTeam
+        - InviteNewMemberToTeam
+        - InviteToLiftshareTeamAccepted
+        - InviteToLiftshareTeamAcceptedRecipient
+        - InviteToTeamSenderLeftTeamExistingMember
+        - InviteToTeamSenderLeftTeamNewMember
+        - JourneyAlert
+        - LiftshareTeamCreated
+        - LiftshareTeamInviteRequestDeclined
+        - LiftshareTeamInviteRequestExpired
+        - LiftshareTeamInviteRequestPending7DayReminderExistingMember
+        - LiftshareTeamInviteRequestPending7DayReminderNewMember
+        - LiftshareTeamJoined
+        - LiftshareTeamRemoved
+        - MemberFeedbackSurvey
+        - MemberImporterActivation
+        - MemberImporterActivationFirstReminder
+        - MemberImporterActivationLastReminder
+        - MemberImporterActivationSmsReminder
+        - MemberImporterDeactivationLastReminder
+        - MemberImporterDeactivationWarning
+        - MemberImporterStatsReport
+        - MemberImporterUploadReport
+        - MembersAddedToCommunityConfirmation
+        - MobileVerification
+        - MobilitywaysAcelReport
+        - MobilitywaysForgotPassword
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlan
+        - MobilitywaysTravelPlanBehaviorChangeSurvey
+        - MobilitywaysTravelPlanFollowupSurvey
+        - MobilitywaysWelcome
+        - NewConversationPassengerReminder48Hours
+        - NewConversationPassengerReminder5Hours
+        - NewConversationReminder24Hours
+        - NewConversationReminder24HoursPassenger
+        - NewConversationReminder48Hours
+        - NewConversationReminder5Hours
+        - NewDriverMessage
+        - NewMessage
+        - NewMessageA
+        - NewMessageB
+        - NewRating
+        - PasswordReset
+        - PendingMemberActivate
+        - PendingMemberPasswordReminder
+        - PendingMemberSetPassword
+        - PhotoReminder10Days
+        - PhotoReminder24Hours
+        - PhotoReminder30Days
+        - RatingBookingReminder
+        - ScopingReportDownloadLink
+        - StillMakingJourneyA
+        - StillMakingJourneyB
+        - StillMakingJourneyFinal
+        - StillSharingJourney
+        - Template
+        - TopMatches
+        - TopMatchesMailoutA
+        - TravelPlanBatchFinishedProcessing
+        - TripAuthenticatedPassenger
+        - TripAuthenticatedReminder
+        - WelcomeA
+        - WelcomeB
+        - WelcomeToLiftshareA
+        - WelcomeToLiftshareB
+        - Cbb1
+        - LiftshareTeamInviteRequestNewMemberCancelled
+        - LiftshareTeamInviteRequestExistingMemberCancelled
+        - WelcomeToLiftshare
+        - AddYourFirstJourney
+        - AddYourFirstJourneyReminder1
+        - AddYourFirstJourneyReminder2
+        - AddYourFirstJourneyReminder3
+        - AddYourFirstJourneyReminder4
+        - Census
+        - CompleteYourProfile
+        - AddYourCommuteJourney
+        - UnableToAddJourneyApology
+        - TopMatchesMailoutB
+        - AddYourCommuteJourneyMailoutA
+        - AddYourCommuteJourneyMailoutB
+        - AddYourCommuteJourneyMailoutC
+        - AddYourCommuteJourneyMailoutD
+        - CustomPendingAccountInvite
+        - CustomPendingAccountInviteReminder
+        - CustomPendingAccountInviteReminderTwo
+        - ContactImportCompleted
+        - NewBadgeAwarded
+        - LSW2022a
+        - LSW2022b
+        - LSW2022c
+        - LSW2022d
+        - LSW2022e
+        - LSW2022f
+        - LSW2022updatedLiftshareTerms
+        - CommuterCensus2023Public
+        - CommuterCensus2023Private
+        - CommuterCensus2023Reminder
+        - WelcomeNewMembersToLiftshareNectar
+        - WelcomeExistingMembersToLiftshareNectar
+      type: string
+      x-enumNames:
+        - AddJourneyForUsersThatSearched
+        - AuthenticationWithNoTeam
+        - AvatarNeedsUpdating
+        - AvatarRemoved
+        - BookingCancelledDriverCash
+        - BookingCancelledPassengerCash
+        - BookingConfirmDriverManualCash
+        - BookingConfirmPassengerCash
+        - BookingNotConfirmedReminder10Hours
+        - BookingNotConfirmedReminder10HoursCash
+        - BookingNotConfirmedReminder24HoursCash
+        - BookingNotConfirmedReminder7DaysCash
+        - BookingRejectedCash
+        - BookingRequestDriverCash
+        - BookingRequestDriverSmsReplyCash
+        - BookingRequestPassengerCash
+        - BounceCheck
+        - CampaignsActivated
+        - CampaignsInCommunity
+        - CampaignsNewMember
+        - CampaignsNotActivated
+        - CemCommunityAlertNotification
+        - CommunityAlert
+        - CommunityInvite
+        - CommunityInviteSecond
+        - CommunityMove
+        - CommunityRemoved
+        - CommunityRemovedConfirmedSharing
+        - CommunityRemovedNoJourney
+        - CommunityRemovedNotSharing
+        - CommunityRemovedPrivateJourney
+        - ContactCsm
+        - DashboardAccountLocked
+        - DashboardAccountReset
+        - DashboardMembersBouncedReport
+        - DashboardWelcome
+        - DuplicateJourney
+        - DuplicateJourneySecondReminder
+        - EmailVerification
+        - EmailVerificationReminder24Hours
+        - EmailVerificationReminder72Hours
+        - EmailVerificationReminder8Days
+        - Generic
+        - HelpdeskMessage
+        - HaveAQuestion
+        - InviteExistingMemberToTeam
+        - InviteNewMemberToTeam
+        - InviteToLiftshareTeamAccepted
+        - InviteToLiftshareTeamAcceptedRecipient
+        - InviteToTeamSenderLeftTeamExistingMember
+        - InviteToTeamSenderLeftTeamNewMember
+        - JourneyAlert
+        - LiftshareTeamCreated
+        - LiftshareTeamInviteRequestDeclined
+        - LiftshareTeamInviteRequestExpired
+        - LiftshareTeamInviteRequestPending7DayReminderExistingMember
+        - LiftshareTeamInviteRequestPending7DayReminderNewMember
+        - LiftshareTeamJoined
+        - LiftshareTeamRemoved
+        - MemberFeedbackSurvey
+        - MemberImporterActivation
+        - MemberImporterActivationFirstReminder
+        - MemberImporterActivationLastReminder
+        - MemberImporterActivationSmsReminder
+        - MemberImporterDeactivationLastReminder
+        - MemberImporterDeactivationWarning
+        - MemberImporterStatsReport
+        - MemberImporterUploadReport
+        - MembersAddedToCommunityConfirmation
+        - MobileVerification
+        - MobilitywaysAcelReport
+        - MobilitywaysForgotPassword
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlan
+        - MobilitywaysTravelPlanBehaviorChangeSurvey
+        - MobilitywaysTravelPlanFollowupSurvey
+        - MobilitywaysWelcome
+        - NewConversationPassengerReminder48Hours
+        - NewConversationPassengerReminder5Hours
+        - NewConversationReminder24Hours
+        - NewConversationReminder24HoursPassenger
+        - NewConversationReminder48Hours
+        - NewConversationReminder5Hours
+        - NewDriverMessage
+        - NewMessage
+        - NewMessageA
+        - NewMessageB
+        - NewRating
+        - PasswordReset
+        - PendingMemberActivate
+        - PendingMemberPasswordReminder
+        - PendingMemberSetPassword
+        - PhotoReminder10Days
+        - PhotoReminder24Hours
+        - PhotoReminder30Days
+        - RatingBookingReminder
+        - ScopingReportDownloadLink
+        - StillMakingJourneyA
+        - StillMakingJourneyB
+        - StillMakingJourneyFinal
+        - StillSharingJourney
+        - Template
+        - TopMatches
+        - TopMatchesMailoutA
+        - TravelPlanBatchFinishedProcessing
+        - TripAuthenticatedPassenger
+        - TripAuthenticatedReminder
+        - WelcomeA
+        - WelcomeB
+        - WelcomeToLiftshareA
+        - WelcomeToLiftshareB
+        - Cbb1
+        - LiftshareTeamInviteRequestNewMemberCancelled
+        - LiftshareTeamInviteRequestExistingMemberCancelled
+        - WelcomeToLiftshare
+        - AddYourFirstJourney
+        - AddYourFirstJourneyReminder1
+        - AddYourFirstJourneyReminder2
+        - AddYourFirstJourneyReminder3
+        - AddYourFirstJourneyReminder4
+        - Census
+        - CompleteYourProfile
+        - AddYourCommuteJourney
+        - UnableToAddJourneyApology
+        - TopMatchesMailoutB
+        - AddYourCommuteJourneyMailoutA
+        - AddYourCommuteJourneyMailoutB
+        - AddYourCommuteJourneyMailoutC
+        - AddYourCommuteJourneyMailoutD
+        - CustomPendingAccountInvite
+        - CustomPendingAccountInviteReminder
+        - CustomPendingAccountInviteReminderTwo
+        - ContactImportCompleted
+        - NewBadgeAwarded
+        - LSW2022a
+        - LSW2022b
+        - LSW2022c
+        - LSW2022d
+        - LSW2022e
+        - LSW2022f
+        - LSW2022updatedLiftshareTerms
+        - CommuterCensus2023Public
+        - CommuterCensus2023Private
+        - CommuterCensus2023Reminder
+        - WelcomeNewMembersToLiftshareNectar
+        - WelcomeExistingMembersToLiftshareNectar
+      x-enum-varnames:
+        - AddJourneyForUsersThatSearched
+        - AuthenticationWithNoTeam
+        - AvatarNeedsUpdating
+        - AvatarRemoved
+        - BookingCancelledDriverCash
+        - BookingCancelledPassengerCash
+        - BookingConfirmDriverManualCash
+        - BookingConfirmPassengerCash
+        - BookingNotConfirmedReminder10Hours
+        - BookingNotConfirmedReminder10HoursCash
+        - BookingNotConfirmedReminder24HoursCash
+        - BookingNotConfirmedReminder7DaysCash
+        - BookingRejectedCash
+        - BookingRequestDriverCash
+        - BookingRequestDriverSmsReplyCash
+        - BookingRequestPassengerCash
+        - BounceCheck
+        - CampaignsActivated
+        - CampaignsInCommunity
+        - CampaignsNewMember
+        - CampaignsNotActivated
+        - CemCommunityAlertNotification
+        - CommunityAlert
+        - CommunityInvite
+        - CommunityInviteSecond
+        - CommunityMove
+        - CommunityRemoved
+        - CommunityRemovedConfirmedSharing
+        - CommunityRemovedNoJourney
+        - CommunityRemovedNotSharing
+        - CommunityRemovedPrivateJourney
+        - ContactCsm
+        - DashboardAccountLocked
+        - DashboardAccountReset
+        - DashboardMembersBouncedReport
+        - DashboardWelcome
+        - DuplicateJourney
+        - DuplicateJourneySecondReminder
+        - EmailVerification
+        - EmailVerificationReminder24Hours
+        - EmailVerificationReminder72Hours
+        - EmailVerificationReminder8Days
+        - Generic
+        - HelpdeskMessage
+        - HaveAQuestion
+        - InviteExistingMemberToTeam
+        - InviteNewMemberToTeam
+        - InviteToLiftshareTeamAccepted
+        - InviteToLiftshareTeamAcceptedRecipient
+        - InviteToTeamSenderLeftTeamExistingMember
+        - InviteToTeamSenderLeftTeamNewMember
+        - JourneyAlert
+        - LiftshareTeamCreated
+        - LiftshareTeamInviteRequestDeclined
+        - LiftshareTeamInviteRequestExpired
+        - LiftshareTeamInviteRequestPending7DayReminderExistingMember
+        - LiftshareTeamInviteRequestPending7DayReminderNewMember
+        - LiftshareTeamJoined
+        - LiftshareTeamRemoved
+        - MemberFeedbackSurvey
+        - MemberImporterActivation
+        - MemberImporterActivationFirstReminder
+        - MemberImporterActivationLastReminder
+        - MemberImporterActivationSmsReminder
+        - MemberImporterDeactivationLastReminder
+        - MemberImporterDeactivationWarning
+        - MemberImporterStatsReport
+        - MemberImporterUploadReport
+        - MembersAddedToCommunityConfirmation
+        - MobileVerification
+        - MobilitywaysAcelReport
+        - MobilitywaysForgotPassword
+        - MobilitywaysSurvey
+        - MobilitywaysTravelPlan
+        - MobilitywaysTravelPlanBehaviorChangeSurvey
+        - MobilitywaysTravelPlanFollowupSurvey
+        - MobilitywaysWelcome
+        - NewConversationPassengerReminder48Hours
+        - NewConversationPassengerReminder5Hours
+        - NewConversationReminder24Hours
+        - NewConversationReminder24HoursPassenger
+        - NewConversationReminder48Hours
+        - NewConversationReminder5Hours
+        - NewDriverMessage
+        - NewMessage
+        - NewMessageA
+        - NewMessageB
+        - NewRating
+        - PasswordReset
+        - PendingMemberActivate
+        - PendingMemberPasswordReminder
+        - PendingMemberSetPassword
+        - PhotoReminder10Days
+        - PhotoReminder24Hours
+        - PhotoReminder30Days
+        - RatingBookingReminder
+        - ScopingReportDownloadLink
+        - StillMakingJourneyA
+        - StillMakingJourneyB
+        - StillMakingJourneyFinal
+        - StillSharingJourney
+        - Template
+        - TopMatches
+        - TopMatchesMailoutA
+        - TravelPlanBatchFinishedProcessing
+        - TripAuthenticatedPassenger
+        - TripAuthenticatedReminder
+        - WelcomeA
+        - WelcomeB
+        - WelcomeToLiftshareA
+        - WelcomeToLiftshareB
+        - Cbb1
+        - LiftshareTeamInviteRequestNewMemberCancelled
+        - LiftshareTeamInviteRequestExistingMemberCancelled
+        - WelcomeToLiftshare
+        - AddYourFirstJourney
+        - AddYourFirstJourneyReminder1
+        - AddYourFirstJourneyReminder2
+        - AddYourFirstJourneyReminder3
+        - AddYourFirstJourneyReminder4
+        - Census
+        - CompleteYourProfile
+        - AddYourCommuteJourney
+        - UnableToAddJourneyApology
+        - TopMatchesMailoutB
+        - AddYourCommuteJourneyMailoutA
+        - AddYourCommuteJourneyMailoutB
+        - AddYourCommuteJourneyMailoutC
+        - AddYourCommuteJourneyMailoutD
+        - CustomPendingAccountInvite
+        - CustomPendingAccountInviteReminder
+        - CustomPendingAccountInviteReminderTwo
+        - ContactImportCompleted
+        - NewBadgeAwarded
+        - LSW2022a
+        - LSW2022b
+        - LSW2022c
+        - LSW2022d
+        - LSW2022e
+        - LSW2022f
+        - LSW2022updatedLiftshareTerms
+        - CommuterCensus2023Public
+        - CommuterCensus2023Private
+        - CommuterCensus2023Reminder
+        - WelcomeNewMembersToLiftshareNectar
+        - WelcomeExistingMembersToLiftshareNectar
     NotificationTemplateFactory-Template_nlmpaqi:
       type: object
       properties:
@@ -8831,10 +9816,15 @@ components:
       additionalProperties: false
     NpsCategory_rohpa:
       enum:
-        - 0 - Unknown
-        - 1 - MobilitywaysDashboard
-      type: integer
-      format: int32
+        - Unknown
+        - MobilitywaysDashboard
+      type: string
+      x-enumNames:
+        - Unknown
+        - MobilitywaysDashboard
+      x-enum-varnames:
+        - Unknown
+        - MobilitywaysDashboard
     NpsCreate-BaseRequest_brtfa:
       type: object
       properties:
@@ -8900,9 +9890,25 @@ components:
       additionalProperties: false
     PaginationHelpers-OrderByDirection_arusa:
       enum:
-        - 0 - Asc
-        - 1 - Desc
+        - Asc
+        - Desc
       type: string
+      x-enumNames:
+        - Asc
+        - Desc
+      x-enum-varnames:
+        - Asc
+        - Desc
+    PaymentLinkUpdate-BaseRequest_ilygpi:
+      type: object
+      properties:
+        paymentLink:
+          type: string
+          nullable: true
+      additionalProperties: false
+    PaymentLinkUpdate-Response_sgrwey:
+      type: object
+      additionalProperties: false
     PendingLiftshareAccountBatch-AccountSettings_yjxni:
       type: object
       properties:
@@ -8928,17 +9934,29 @@ components:
       additionalProperties: false
     PendingLiftshareAccountBatch-EmailDelayType_drlq:
       enum:
-        - 0 - Immediately
-        - 1 - Delayed
-      type: integer
-      format: int32
+        - Immediately
+        - Delayed
+      type: string
+      x-enumNames:
+        - Immediately
+        - Delayed
+      x-enum-varnames:
+        - Immediately
+        - Delayed
     PendingLiftshareAccountBatch-EmailImageHorizontalPosition_lzgdvi:
       enum:
-        - 0 - Left
-        - 1 - Center
-        - 2 - Right
-      type: integer
-      format: int32
+        - Left
+        - Center
+        - Right
+      type: string
+      x-enumNames:
+        - Left
+        - Center
+        - Right
+      x-enum-varnames:
+        - Left
+        - Center
+        - Right
     PendingLiftshareAccountBatch-EmailSettings_mcidey:
       type: object
       properties:
@@ -9049,18 +10067,32 @@ components:
       additionalProperties: false
     PendingLiftshareAccountBatch-RecipientsListType_aynry:
       enum:
-        - 0 - Individual
-        - 1 - ContactSearchFilter
-      type: integer
-      format: int32
+        - Individual
+        - ContactSearchFilter
+      type: string
+      x-enumNames:
+        - Individual
+        - ContactSearchFilter
+      x-enum-varnames:
+        - Individual
+        - ContactSearchFilter
     PendingLiftshareAccountBatch-Status_vtwhkvq:
       enum:
-        - 0 - Draft
-        - 1 - Final
-        - 2 - Processed
-        - 3 - Scheduled
-      type: integer
-      format: int32
+        - Draft
+        - Final
+        - Processed
+        - Scheduled
+      type: string
+      x-enumNames:
+        - Draft
+        - Final
+        - Processed
+        - Scheduled
+      x-enum-varnames:
+        - Draft
+        - Final
+        - Processed
+        - Scheduled
     PendingLiftshareAccountBatch-Upsert_ykbrqy:
       type: object
       properties:
@@ -9441,6 +10473,45 @@ components:
               format: double
           nullable: true
       additionalProperties: false
+    ProfileDetails-Response_gkwtjna:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        firstname:
+          type: string
+          nullable: true
+        surname:
+          type: string
+          nullable: true
+        primaryCommunity:
+          type: string
+          nullable: true
+        isAct:
+          type: boolean
+        dateJoined:
+          type: string
+          format: date-time
+        averageRating:
+          type: integer
+          format: int32
+        ratingsReceived:
+          type: integer
+          format: int32
+        isMyProfile:
+          type: boolean
+        bio:
+          type: string
+          nullable: true
+        responseTimeMins:
+          type: integer
+          format: int32
+          nullable: true
+        paymentLink:
+          type: string
+          nullable: true
+      additionalProperties: false
     PublicLeaderboard-PublicLeaderboardEntry_ixtdsca:
       type: object
       properties:
@@ -9539,11 +10610,18 @@ components:
       additionalProperties: false
     PushTokenUpsert-PushDevice_ljxhba:
       enum:
-        - 0 - Android
-        - 1 - Apple
-        - 2 - Expo
-      type: integer
-      format: int32
+        - Android
+        - Apple
+        - Expo
+      type: string
+      x-enumNames:
+        - Android
+        - Apple
+        - Expo
+      x-enum-varnames:
+        - Android
+        - Apple
+        - Expo
     PushTokenUpsert-Response_jbsamai:
       type: object
       additionalProperties: false
@@ -9567,11 +10645,18 @@ components:
       additionalProperties: false
     RateLimitStatus_dpnvxq:
       enum:
-        - 0 - Under
-        - 1 - Warning
-        - 2 - Over
-      type: integer
-      format: int32
+        - Under
+        - Warning
+        - Over
+      type: string
+      x-enumNames:
+        - Under
+        - Warning
+        - Over
+      x-enum-varnames:
+        - Under
+        - Warning
+        - Over
     RequestToSharesInCommunity-Response_ystlgy:
       type: object
       properties:
@@ -9581,27 +10666,66 @@ components:
       additionalProperties: false
     ResourceType_tgphxy:
       enum:
-        - 0 - Community
-        - 1 - Contact
-        - 2 - Tag
-        - 3 - Survey
-        - 4 - AcelReport
-        - 5 - TravelPlanSearch
-        - 6 - TravelPlanBatch
-        - 7 - TravelPlanCustomText
-        - 8 - TravelPlanWidget
-        - 9 - AdminUser
-        - 10 - AdminRole
-        - 11 - AcelTarget
-        - 12 - ContactImportLog
-        - 13 - ScopingReport
-        - 14 - LiftshareUser
-        - 15 - PendingAccountBatch
-        - 16 - SavedView
-        - 17 - EmissionData
-        - 18 - HighFrequencyEmissionData
-      type: integer
-      format: int32
+        - Community
+        - Contact
+        - Tag
+        - Survey
+        - AcelReport
+        - TravelPlanSearch
+        - TravelPlanBatch
+        - TravelPlanCustomText
+        - TravelPlanWidget
+        - AdminUser
+        - AdminRole
+        - AcelTarget
+        - ContactImportLog
+        - ScopingReport
+        - LiftshareUser
+        - PendingAccountBatch
+        - SavedView
+        - EmissionData
+        - HighFrequencyEmissionData
+      type: string
+      x-enumNames:
+        - Community
+        - Contact
+        - Tag
+        - Survey
+        - AcelReport
+        - TravelPlanSearch
+        - TravelPlanBatch
+        - TravelPlanCustomText
+        - TravelPlanWidget
+        - AdminUser
+        - AdminRole
+        - AcelTarget
+        - ContactImportLog
+        - ScopingReport
+        - LiftshareUser
+        - PendingAccountBatch
+        - SavedView
+        - EmissionData
+        - HighFrequencyEmissionData
+      x-enum-varnames:
+        - Community
+        - Contact
+        - Tag
+        - Survey
+        - AcelReport
+        - TravelPlanSearch
+        - TravelPlanBatch
+        - TravelPlanCustomText
+        - TravelPlanWidget
+        - AdminUser
+        - AdminRole
+        - AcelTarget
+        - ContactImportLog
+        - ScopingReport
+        - LiftshareUser
+        - PendingAccountBatch
+        - SavedView
+        - EmissionData
+        - HighFrequencyEmissionData
     RespawnCommunity-Request_abbdi:
       type: object
       properties:
@@ -9705,20 +10829,48 @@ components:
       additionalProperties: false
     SearchFilterOperator_yomly:
       enum:
-        - 0 - EqualTo
-        - 1 - NotEqualTo
-        - 2 - StartsWith
-        - 3 - EndsWith
-        - 4 - Contains
-        - 5 - DoesNotContain
-        - 6 - EqualToAnyOf
-        - 7 - NotEqualToAnyOf
-        - 8 - Known
-        - 9 - Unknown
-        - 10 - Between
-        - 11 - LessThan
-        - 12 - GreaterThan
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
       type: string
+      x-enumNames:
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
+      x-enum-varnames:
+        - EqualTo
+        - NotEqualTo
+        - StartsWith
+        - EndsWith
+        - Contains
+        - DoesNotContain
+        - EqualToAnyOf
+        - NotEqualToAnyOf
+        - Known
+        - Unknown
+        - Between
+        - LessThan
+        - GreaterThan
     StillConsideringChangeChart-Response_dfltoq:
       type: object
       properties:
@@ -9735,17 +10887,36 @@ components:
       additionalProperties: false
     SubscriptionCategory_uhhooa:
       enum:
-        - 0 - System
-        - 1 - Newsletter
-        - 2 - LegitimateInterest
-        - 3 - SharingSupport
-        - 4 - CommunityUpdates
-        - 5 - Surveys
-        - 6 - CaseStudy
-        - 7 - Ambassador
-        - 8 - AddJourneyReminders
-      type: integer
-      format: int32
+        - System
+        - Newsletter
+        - LegitimateInterest
+        - SharingSupport
+        - CommunityUpdates
+        - Surveys
+        - CaseStudy
+        - Ambassador
+        - AddJourneyReminders
+      type: string
+      x-enumNames:
+        - System
+        - Newsletter
+        - LegitimateInterest
+        - SharingSupport
+        - CommunityUpdates
+        - Surveys
+        - CaseStudy
+        - Ambassador
+        - AddJourneyReminders
+      x-enum-varnames:
+        - System
+        - Newsletter
+        - LegitimateInterest
+        - SharingSupport
+        - CommunityUpdates
+        - Surveys
+        - CaseStudy
+        - Ambassador
+        - AddJourneyReminders
     SubscriptionDetails-QueryDto_mmiitwi:
       type: object
       properties:
@@ -9825,11 +10996,18 @@ components:
       additionalProperties: false
     SurveyDeliveryMethod_zbwy:
       enum:
-        - 0 - SharableLink
-        - 1 - Email
-        - 2 - Either
-      type: integer
-      format: int32
+        - SharableLink
+        - Email
+        - Either
+      type: string
+      x-enumNames:
+        - SharableLink
+        - Email
+        - Either
+      x-enum-varnames:
+        - SharableLink
+        - Email
+        - Either
     SurveyDetail-Response_fwnojwq:
       type: object
       properties:
@@ -9995,11 +11173,18 @@ components:
       additionalProperties: false
     SurveyStatus_fguygi:
       enum:
-        - 0 - Draft
-        - 1 - Published
-        - 2 - Unpublished
-      type: integer
-      format: int32
+        - Draft
+        - Published
+        - Unpublished
+      type: string
+      x-enumNames:
+        - Draft
+        - Published
+        - Unpublished
+      x-enum-varnames:
+        - Draft
+        - Published
+        - Unpublished
     TagList-Response_cesiy:
       type: object
       properties:
@@ -10288,13 +11473,24 @@ components:
       additionalProperties: false
     TravelPlanListStatus_igktghq:
       enum:
-        - 0 - Draft
-        - 1 - NotSent
-        - 2 - Scheduled
-        - 3 - Sent
-        - 4 - Failed
-      type: integer
-      format: int32
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
+        - Failed
+      type: string
+      x-enumNames:
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
+        - Failed
+      x-enum-varnames:
+        - Draft
+        - NotSent
+        - Scheduled
+        - Sent
+        - Failed
     TravelPlanRateLimit-Response_bhcsi:
       type: object
       properties:
@@ -10439,74 +11635,182 @@ components:
       additionalProperties: false
     TravelPlanSearchFilterProperty_ecdala:
       enum:
-        - 0 - ContactName
-        - 1 - Email
-        - 2 - Origin
-        - 3 - Destination
-        - 4 - DateCreatedUtc
-        - 5 - SearchableProperties
-        - 6 - DateEmailSentUtc
-        - 7 - PlanSource
-        - 8 - Status
-        - 9 - BatchName
+        - ContactName
+        - Email
+        - Origin
+        - Destination
+        - DateCreatedUtc
+        - SearchableProperties
+        - DateEmailSentUtc
+        - PlanSource
+        - Status
+        - BatchName
       type: string
+      x-enumNames:
+        - ContactName
+        - Email
+        - Origin
+        - Destination
+        - DateCreatedUtc
+        - SearchableProperties
+        - DateEmailSentUtc
+        - PlanSource
+        - Status
+        - BatchName
+      x-enum-varnames:
+        - ContactName
+        - Email
+        - Origin
+        - Destination
+        - DateCreatedUtc
+        - SearchableProperties
+        - DateEmailSentUtc
+        - PlanSource
+        - Status
+        - BatchName
     TravelPlanSource_vskea:
       enum:
-        - 0 - Individual
-        - 1 - Batch
-        - 2 - Widget
-        - 100 - Other
-      type: integer
-      format: int32
+        - Individual
+        - Batch
+        - Widget
+        - Other
+      type: string
+      x-enumNames:
+        - Individual
+        - Batch
+        - Widget
+        - Other
+      x-enum-varnames:
+        - Individual
+        - Batch
+        - Widget
+        - Other
     TravelPlanSurveyBarrierToChange_oxvja:
       enum:
-        - 0 - TooLong
-        - 1 - TooExpensive
-        - 2 - InConvenient
-        - 3 - Unreliable
-        - 4 - NotSafe
-        - 5 - OriginalModeBest
-        - 6 - LikeToTryAgain
-        - 7 - Other
-      type: integer
-      format: int32
+        - TooLong
+        - TooExpensive
+        - InConvenient
+        - Unreliable
+        - NotSafe
+        - OriginalModeBest
+        - LikeToTryAgain
+        - Other
+      type: string
+      x-enumNames:
+        - TooLong
+        - TooExpensive
+        - InConvenient
+        - Unreliable
+        - NotSafe
+        - OriginalModeBest
+        - LikeToTryAgain
+        - Other
+      x-enum-varnames:
+        - TooLong
+        - TooExpensive
+        - InConvenient
+        - Unreliable
+        - NotSafe
+        - OriginalModeBest
+        - LikeToTryAgain
+        - Other
     TravelPlanSurveyTransportMode_pynpi:
       enum:
-        - 0 - WorkAtHome
-        - 1 - WalkRun
-        - 2 - Cycle
-        - 3 - EScooterEBikes
-        - 4 - TubeMetroTram
-        - 5 - Train
-        - 6 - Vanpool
-        - 7 - VanpoolEV
-        - 8 - Liftsharing
-        - 9 - LiftsharingEV
-        - 10 - CompanyShuttleBus
-        - 11 - CompanyShuttleBusEV
-        - 12 - BusCoach
-        - 13 - BusCoachEV
-        - 14 - Motorcycle
-        - 15 - MotorcycleEV
-        - 16 - Taxi
-        - 17 - TaxiEV
-        - 18 - ParkAndRide
-        - 19 - DriveAlone
-        - 20 - DriveAloneEV
-        - 21 - Fly
-      type: integer
-      format: int32
+        - WorkAtHome
+        - WalkRun
+        - Cycle
+        - EScooterEBikes
+        - TubeMetroTram
+        - Train
+        - Vanpool
+        - VanpoolEV
+        - Liftsharing
+        - LiftsharingEV
+        - CompanyShuttleBus
+        - CompanyShuttleBusEV
+        - BusCoach
+        - BusCoachEV
+        - Motorcycle
+        - MotorcycleEV
+        - Taxi
+        - TaxiEV
+        - ParkAndRide
+        - DriveAlone
+        - DriveAloneEV
+        - Fly
+      type: string
+      x-enumNames:
+        - WorkAtHome
+        - WalkRun
+        - Cycle
+        - EScooterEBikes
+        - TubeMetroTram
+        - Train
+        - Vanpool
+        - VanpoolEV
+        - Liftsharing
+        - LiftsharingEV
+        - CompanyShuttleBus
+        - CompanyShuttleBusEV
+        - BusCoach
+        - BusCoachEV
+        - Motorcycle
+        - MotorcycleEV
+        - Taxi
+        - TaxiEV
+        - ParkAndRide
+        - DriveAlone
+        - DriveAloneEV
+        - Fly
+      x-enum-varnames:
+        - WorkAtHome
+        - WalkRun
+        - Cycle
+        - EScooterEBikes
+        - TubeMetroTram
+        - Train
+        - Vanpool
+        - VanpoolEV
+        - Liftsharing
+        - LiftsharingEV
+        - CompanyShuttleBus
+        - CompanyShuttleBusEV
+        - BusCoach
+        - BusCoachEV
+        - Motorcycle
+        - MotorcycleEV
+        - Taxi
+        - TaxiEV
+        - ParkAndRide
+        - DriveAlone
+        - DriveAloneEV
+        - Fly
     TravelPlansListOrderBy_vbaoiy:
       enum:
-        - 0 - DateCreatedUtc
-        - 1 - Status
-        - 2 - DateEmailSentUtc
-        - 3 - PlanOnlineViews
-        - 4 - DateSurveySentUtc
-        - 5 - BatchName
-        - 6 - ContactName
-      type: integer
-      format: int32
+        - DateCreatedUtc
+        - Status
+        - DateEmailSentUtc
+        - PlanOnlineViews
+        - DateSurveySentUtc
+        - BatchName
+        - ContactName
+      type: string
+      x-enumNames:
+        - DateCreatedUtc
+        - Status
+        - DateEmailSentUtc
+        - PlanOnlineViews
+        - DateSurveySentUtc
+        - BatchName
+        - ContactName
+      x-enum-varnames:
+        - DateCreatedUtc
+        - Status
+        - DateEmailSentUtc
+        - PlanOnlineViews
+        - DateSurveySentUtc
+        - BatchName
+        - ContactName
     TripAuthenticationReminderDetails-Response_fipuy:
       type: object
       properties:
@@ -10544,11 +11848,18 @@ components:
       additionalProperties: false
     TripAuthenticationReminderDetails-TripAuthenticationReminderStatus_wrdmy:
       enum:
-        - 0 - Active
-        - 1 - Paused
-        - 2 - NotSet
-      type: integer
-      format: int32
+        - Active
+        - Paused
+        - NotSet
+      type: string
+      x-enumNames:
+        - Active
+        - Paused
+        - NotSet
+      x-enum-varnames:
+        - Active
+        - Paused
+        - NotSet
     TripAuthenticationReminderUpdate-BaseRequest_csidjia:
       type: object
       properties:
@@ -10634,11 +11945,18 @@ components:
       additionalProperties: false
     VerifyMobileNumber-VerificationStatus_fqciyhi:
       enum:
-        - 0 - Successful
-        - 1 - IncorrectCode
-        - 2 - Error
-      type: integer
-      format: int32
+        - Successful
+        - IncorrectCode
+        - Error
+      type: string
+      x-enumNames:
+        - Successful
+        - IncorrectCode
+        - Error
+      x-enum-varnames:
+        - Successful
+        - IncorrectCode
+        - Error
   securitySchemes:
     bearer:
       type: http

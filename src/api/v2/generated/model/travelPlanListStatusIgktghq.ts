@@ -10,9 +10,9 @@ export type TravelPlanListStatusIgktghq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanListStatusIgktghq = {
-  '0_-_Draft': 0 - Draft,
-  '1_-_NotSent': 1 - NotSent,
-  '2_-_Scheduled': 2 - Scheduled,
-  '3_-_Sent': 3 - Sent,
-  '4_-_Failed': 4 - Failed
+  Draft: 'Draft',
+  NotSent: 'NotSent',
+  Scheduled: 'Scheduled',
+  Sent: 'Sent',
+  Failed: 'Failed'
 } as const

@@ -10,6 +10,6 @@ export type PendingLiftshareAccountBatchRecipientsListTypeAynry =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchRecipientsListTypeAynry = {
-  '0_-_Individual': 0 - Individual,
-  '1_-_ContactSearchFilter': 1 - ContactSearchFilter
+  Individual: 'Individual',
+  ContactSearchFilter: 'ContactSearchFilter'
 } as const

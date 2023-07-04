@@ -10,8 +10,8 @@ export type ExternalLoginResultIaxzli =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ExternalLoginResultIaxzli = {
-  '0_-_Registered': 0 - Registered,
-  '1_-_LoggedIn': 1 - LoggedIn,
-  '2_-_AccountLocked': 2 - AccountLocked,
-  '3_-_Failed': 3 - Failed
+  Registered: 'Registered',
+  LoggedIn: 'LoggedIn',
+  AccountLocked: 'AccountLocked',
+  Failed: 'Failed'
 } as const

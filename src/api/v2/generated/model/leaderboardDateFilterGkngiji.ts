@@ -10,7 +10,7 @@ export type LeaderboardDateFilterGkngiji =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const LeaderboardDateFilterGkngiji = {
-  '0_-_AllTime': 0 - AllTime,
-  '1_-_ThisMonth': 1 - ThisMonth,
-  '2_-_ThisWeek': 2 - ThisWeek
+  AllTime: 'AllTime',
+  ThisMonth: 'ThisMonth',
+  ThisWeek: 'ThisWeek'
 } as const

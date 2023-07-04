@@ -9,11 +9,11 @@ export type BadgeCategoryUewjpq = (typeof BadgeCategoryUewjpq)[keyof typeof Badg
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BadgeCategoryUewjpq = {
-  '0_-_Unknown': 0 - Unknown,
-  '1_-_Authentication': 1 - Authentication,
-  '2_-_Emissions': 2 - Emissions,
-  '3_-_Level': 3 - Level,
-  '4_-_Distance': 4 - Distance,
-  '5_-_Activity': 5 - Activity,
-  '6_-_Profile': 6 - Profile
+  Unknown: 'Unknown',
+  Authentication: 'Authentication',
+  Emissions: 'Emissions',
+  Level: 'Level',
+  Distance: 'Distance',
+  Activity: 'Activity',
+  Profile: 'Profile'
 } as const

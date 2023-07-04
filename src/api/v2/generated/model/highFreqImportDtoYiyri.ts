@@ -6,16 +6,16 @@
  */
 
 export interface HighFreqImportDtoYiyri {
-  id?: number
-  name?: string | null
-  userName?: string | null
-  communityId?: number
-  communityName?: string | null
-  date?: string
-  statusId?: number
-  statusName?: string | null
-  dataSourceId?: number
-  dataSourceName?: string | null
-  travelMode?: number
-  travelModeName?: string | null
+  readonly id?: string | null
+  readonly communityId?: string | null
+  readonly name?: string | null
+  readonly userName?: string | null
+  readonly communityName?: string | null
+  readonly date?: string
+  readonly statusId?: number
+  readonly statusName?: string | null
+  readonly dataSourceId?: number
+  readonly dataSourceName?: string | null
+  readonly travelMode?: number
+  readonly travelModeName?: string | null
 }

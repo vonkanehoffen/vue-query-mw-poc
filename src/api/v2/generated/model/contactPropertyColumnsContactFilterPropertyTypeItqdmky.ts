@@ -10,10 +10,10 @@ export type ContactPropertyColumnsContactFilterPropertyTypeItqdmky =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactPropertyColumnsContactFilterPropertyTypeItqdmky = {
-  '0_-_Text': 0 - Text,
-  '1_-_Number': 1 - Number,
-  '2_-_Date': 2 - Date,
-  '3_-_Time': 3 - Time,
-  '4_-_Boolean': 4 - Boolean,
-  '5_-_Collection': 5 - Collection
+  Text: 'Text',
+  Number: 'Number',
+  Date: 'Date',
+  Time: 'Time',
+  Boolean: 'Boolean',
+  Collection: 'Collection'
 } as const

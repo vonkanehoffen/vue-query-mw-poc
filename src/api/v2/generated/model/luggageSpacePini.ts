@@ -9,8 +9,8 @@ export type LuggageSpacePini = (typeof LuggageSpacePini)[keyof typeof LuggageSpa
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const LuggageSpacePini = {
-  '0_-_None': 0 - None,
-  '1_-_Small': 1 - Small,
-  '2_-_Medium': 2 - Medium,
-  '3_-_Large': 3 - Large
+  None: 'None',
+  Small: 'Small',
+  Medium: 'Medium',
+  Large: 'Large'
 } as const

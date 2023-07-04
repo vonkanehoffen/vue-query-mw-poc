@@ -9,17 +9,17 @@ export type BookingStatusVpkey = (typeof BookingStatusVpkey)[keyof typeof Bookin
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BookingStatusVpkey = {
-  '0_-_PendingConfirmation': 0 - PendingConfirmation,
-  '1_-_AutoConfirmed': 1 - AutoConfirmed,
-  '2_-_ManuallyConfirmed': 2 - ManuallyConfirmed,
-  '3_-_CanceledByPassenger': 3 - CanceledByPassenger,
-  '4_-_CanceledByPassengerWithShortNotice': 4 - CanceledByPassengerWithShortNotice,
-  '5_-_CanceledByDriver': 5 - CanceledByDriver,
-  '6_-_CanceledByLiftshare': 6 - CanceledByLiftshare,
-  '7_-_CanceledByTimeout': 7 - CanceledByTimeout,
-  '8_-_PendingConflictResolution': 8 - PendingConflictResolution,
-  '9_-_CompletedSuccessfullyByPassenger': 9 - CompletedSuccessfullyByPassenger,
-  '10_-_CompletedSuccessfullyByDriver': 10 - CompletedSuccessfullyByDriver,
-  '11_-_CompletedSuccessfullyAutomatically': 11 - CompletedSuccessfullyAutomatically,
-  '12_-_DeclinedByDriver': 12 - DeclinedByDriver
+  PendingConfirmation: 'PendingConfirmation',
+  AutoConfirmed: 'AutoConfirmed',
+  ManuallyConfirmed: 'ManuallyConfirmed',
+  CanceledByPassenger: 'CanceledByPassenger',
+  CanceledByPassengerWithShortNotice: 'CanceledByPassengerWithShortNotice',
+  CanceledByDriver: 'CanceledByDriver',
+  CanceledByLiftshare: 'CanceledByLiftshare',
+  CanceledByTimeout: 'CanceledByTimeout',
+  PendingConflictResolution: 'PendingConflictResolution',
+  CompletedSuccessfullyByPassenger: 'CompletedSuccessfullyByPassenger',
+  CompletedSuccessfullyByDriver: 'CompletedSuccessfullyByDriver',
+  CompletedSuccessfullyAutomatically: 'CompletedSuccessfullyAutomatically',
+  DeclinedByDriver: 'DeclinedByDriver'
 } as const

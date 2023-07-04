@@ -9,7 +9,7 @@ export type SurveyStatusFguygi = (typeof SurveyStatusFguygi)[keyof typeof Survey
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SurveyStatusFguygi = {
-  '0_-_Draft': 0 - Draft,
-  '1_-_Published': 1 - Published,
-  '2_-_Unpublished': 2 - Unpublished
+  Draft: 'Draft',
+  Published: 'Published',
+  Unpublished: 'Unpublished'
 } as const

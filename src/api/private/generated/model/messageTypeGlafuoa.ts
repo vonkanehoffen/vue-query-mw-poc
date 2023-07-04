@@ -9,6 +9,6 @@ export type MessageTypeGlafuoa = (typeof MessageTypeGlafuoa)[keyof typeof Messag
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const MessageTypeGlafuoa = {
-  '0_-_Sender': 0 - Sender,
-  '1_-_Recipient': 1 - Recipient
+  Sender: 'Sender',
+  Recipient: 'Recipient'
 } as const

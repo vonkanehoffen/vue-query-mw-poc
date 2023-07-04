@@ -9,7 +9,9 @@ import type { UseMutationOptions, MutationFunction } from '@tanstack/vue-query'
 import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
 import type {
   AbstractModuleApiResponseDashboardSettingsUpdateRequestDashboardSettingsUpdateResponseDashboardSettingsUpdateResponseUlsbya,
-  DashboardSettingsUpdateBaseRequestDgtyi
+  DashboardSettingsUpdateBaseRequestDgtyi,
+  AbstractModuleApiResponsePaymentLinkUpdateRequestPaymentLinkUpdateResponsePaymentLinkUpdateResponseMvddpbq,
+  PaymentLinkUpdateBaseRequestIlygpi
 } from '.././model'
 import { customInstance } from '../../../axiosInstance'
 
@@ -70,6 +72,67 @@ export const usePutV2Settings = <TError = unknown, TContext = unknown>(options?:
   >
 }) => {
   const mutationOptions = getPutV2SettingsMutationOptions(options)
+
+  return useMutation(mutationOptions)
+}
+export const putV2LiftsharePaymentLink = (
+  paymentLinkUpdateBaseRequestIlygpi: MaybeRef<PaymentLinkUpdateBaseRequestIlygpi>
+) => {
+  return customInstance<AbstractModuleApiResponsePaymentLinkUpdateRequestPaymentLinkUpdateResponsePaymentLinkUpdateResponseMvddpbq>(
+    {
+      url: `/v2/liftshare/payment-link`,
+      method: 'put',
+      headers: { 'Content-Type': 'application/json' },
+      data: paymentLinkUpdateBaseRequestIlygpi
+    }
+  )
+}
+
+export const getPutV2LiftsharePaymentLinkMutationOptions = <
+  TError = unknown,
+  TContext = unknown
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
+    TError,
+    { data: PaymentLinkUpdateBaseRequestIlygpi },
+    TContext
+  >
+}): UseMutationOptions<
+  Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
+  TError,
+  { data: PaymentLinkUpdateBaseRequestIlygpi },
+  TContext
+> => {
+  const { mutation: mutationOptions } = options ?? {}
+
+  const mutationFn: MutationFunction<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
+    { data: PaymentLinkUpdateBaseRequestIlygpi }
+  > = (props) => {
+    const { data } = props ?? {}
+
+    return putV2LiftsharePaymentLink(data)
+  }
+
+  return { mutationFn, ...mutationOptions }
+}
+
+export type PutV2LiftsharePaymentLinkMutationResult = NonNullable<
+  Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>
+>
+export type PutV2LiftsharePaymentLinkMutationBody = PaymentLinkUpdateBaseRequestIlygpi
+export type PutV2LiftsharePaymentLinkMutationError = unknown
+
+export const usePutV2LiftsharePaymentLink = <TError = unknown, TContext = unknown>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLink>>,
+    TError,
+    { data: PaymentLinkUpdateBaseRequestIlygpi },
+    TContext
+  >
+}) => {
+  const mutationOptions = getPutV2LiftsharePaymentLinkMutationOptions(options)
 
   return useMutation(mutationOptions)
 }

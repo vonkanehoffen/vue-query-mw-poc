@@ -10,8 +10,8 @@ export type BatchListStatusBvvhqsi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchListStatusBvvhqsi = {
-  '0_-_Draft': 0 - Draft,
-  '1_-_NotSent': 1 - NotSent,
-  '2_-_Scheduled': 2 - Scheduled,
-  '3_-_Sent': 3 - Sent
+  Draft: 'Draft',
+  NotSent: 'NotSent',
+  Scheduled: 'Scheduled',
+  Sent: 'Sent'
 } as const

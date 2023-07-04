@@ -10,17 +10,17 @@ export type SearchFilterOperatorYomly =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SearchFilterOperatorYomly = {
-  '0_-_EqualTo': '0 - EqualTo',
-  '1_-_NotEqualTo': '1 - NotEqualTo',
-  '2_-_StartsWith': '2 - StartsWith',
-  '3_-_EndsWith': '3 - EndsWith',
-  '4_-_Contains': '4 - Contains',
-  '5_-_DoesNotContain': '5 - DoesNotContain',
-  '6_-_EqualToAnyOf': '6 - EqualToAnyOf',
-  '7_-_NotEqualToAnyOf': '7 - NotEqualToAnyOf',
-  '8_-_Known': '8 - Known',
-  '9_-_Unknown': '9 - Unknown',
-  '10_-_Between': '10 - Between',
-  '11_-_LessThan': '11 - LessThan',
-  '12_-_GreaterThan': '12 - GreaterThan'
+  EqualTo: 'EqualTo',
+  NotEqualTo: 'NotEqualTo',
+  StartsWith: 'StartsWith',
+  EndsWith: 'EndsWith',
+  Contains: 'Contains',
+  DoesNotContain: 'DoesNotContain',
+  EqualToAnyOf: 'EqualToAnyOf',
+  NotEqualToAnyOf: 'NotEqualToAnyOf',
+  Known: 'Known',
+  Unknown: 'Unknown',
+  Between: 'Between',
+  LessThan: 'LessThan',
+  GreaterThan: 'GreaterThan'
 } as const

@@ -9,6 +9,6 @@ export type NpsCategoryRohpa = (typeof NpsCategoryRohpa)[keyof typeof NpsCategor
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const NpsCategoryRohpa = {
-  '0_-_Unknown': 0 - Unknown,
-  '1_-_MobilitywaysDashboard': 1 - MobilitywaysDashboard
+  Unknown: 'Unknown',
+  MobilitywaysDashboard: 'MobilitywaysDashboard'
 } as const

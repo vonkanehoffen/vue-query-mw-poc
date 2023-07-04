@@ -7,5 +7,5 @@
 import type { HighFreqImportDtoYiyri } from './highFreqImportDtoYiyri'
 
 export interface HighFreqDataImportsResponseBrlgptq {
-  dataSources?: HighFreqImportDtoYiyri[] | null
+  imports?: HighFreqImportDtoYiyri[] | null
 }

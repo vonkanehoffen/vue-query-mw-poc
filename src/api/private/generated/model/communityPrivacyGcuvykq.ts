@@ -10,7 +10,7 @@ export type CommunityPrivacyGcuvykq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const CommunityPrivacyGcuvykq = {
-  '0_-_Public': 0 - Public,
-  '1_-_Private': 1 - Private,
-  '2_-_Closed': 2 - Closed
+  Public: 'Public',
+  Private: 'Private',
+  Closed: 'Closed'
 } as const

@@ -10,7 +10,7 @@ export type SurveyDeliveryMethodZbwy =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SurveyDeliveryMethodZbwy = {
-  '0_-_SharableLink': 0 - SharableLink,
-  '1_-_Email': 1 - Email,
-  '2_-_Either': 2 - Either
+  SharableLink: 'SharableLink',
+  Email: 'Email',
+  Either: 'Either'
 } as const

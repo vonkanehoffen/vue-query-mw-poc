@@ -10,7 +10,7 @@ export type RateLimitStatusDpnvxq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const RateLimitStatusDpnvxq = {
-  '0_-_Under': 0 - Under,
-  '1_-_Warning': 1 - Warning,
-  '2_-_Over': 2 - Over
+  Under: 'Under',
+  Warning: 'Warning',
+  Over: 'Over'
 } as const

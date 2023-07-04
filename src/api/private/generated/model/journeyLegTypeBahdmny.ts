@@ -10,6 +10,6 @@ export type JourneyLegTypeBahdmny =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyLegTypeBahdmny = {
-  '0_-_Outbound': 0 - Outbound,
-  '1_-_Return': 1 - Return
+  Outbound: 'Outbound',
+  Return: 'Return'
 } as const

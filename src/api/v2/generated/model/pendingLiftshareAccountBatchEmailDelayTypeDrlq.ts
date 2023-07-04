@@ -10,6 +10,6 @@ export type PendingLiftshareAccountBatchEmailDelayTypeDrlq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchEmailDelayTypeDrlq = {
-  '0_-_Immediately': 0 - Immediately,
-  '1_-_Delayed': 1 - Delayed
+  Immediately: 'Immediately',
+  Delayed: 'Delayed'
 } as const

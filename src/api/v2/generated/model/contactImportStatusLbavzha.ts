@@ -10,7 +10,7 @@ export type ContactImportStatusLbavzha =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactImportStatusLbavzha = {
-  '0_-_Uploaded': 0 - Uploaded,
-  '1_-_Failed': 1 - Failed,
-  '2_-_Succeeded': 2 - Succeeded
+  Uploaded: 'Uploaded',
+  Failed: 'Failed',
+  Succeeded: 'Succeeded'
 } as const

@@ -10,10 +10,10 @@ export type RegisterRegisterResultTypeQukloja =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const RegisterRegisterResultTypeQukloja = {
-  '0_-_Success': 0 - Success,
-  '1_-_EmailExists': 1 - EmailExists,
-  '2_-_SuccessAndActivated': 2 - SuccessAndActivated,
-  '3_-_SuccessAlreadyRegistered': 3 - SuccessAlreadyRegistered,
-  '4_-_CommunityPasswordInvalid': 4 - CommunityPasswordInvalid,
-  '5_-_OidcRequired': 5 - OidcRequired
+  Success: 'Success',
+  EmailExists: 'EmailExists',
+  SuccessAndActivated: 'SuccessAndActivated',
+  SuccessAlreadyRegistered: 'SuccessAlreadyRegistered',
+  CommunityPasswordInvalid: 'CommunityPasswordInvalid',
+  OidcRequired: 'OidcRequired'
 } as const

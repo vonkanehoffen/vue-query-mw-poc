@@ -10,12 +10,12 @@ export type JourneyFlexibilityLteey =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyFlexibilityLteey = {
-  '0_-_Exact': 0 - Exact,
-  '1_-_PlusMinus15Min': 1 - PlusMinus15Min,
-  '2_-_PlusMinus30Min': 2 - PlusMinus30Min,
-  '3_-_PlusMinus1Hour': 3 - PlusMinus1Hour,
-  '4_-_PlusMinus2Hours': 4 - PlusMinus2Hours,
-  '5_-_PlusMinus4Hours': 5 - PlusMinus4Hours,
-  '6_-_PlusMinus12Hours': 6 - PlusMinus12Hours,
-  '7_-_Anytime': 7 - Anytime
+  Exact: 'Exact',
+  PlusMinus15Min: 'PlusMinus15Min',
+  PlusMinus30Min: 'PlusMinus30Min',
+  PlusMinus1Hour: 'PlusMinus1Hour',
+  PlusMinus2Hours: 'PlusMinus2Hours',
+  PlusMinus4Hours: 'PlusMinus4Hours',
+  PlusMinus12Hours: 'PlusMinus12Hours',
+  Anytime: 'Anytime'
 } as const

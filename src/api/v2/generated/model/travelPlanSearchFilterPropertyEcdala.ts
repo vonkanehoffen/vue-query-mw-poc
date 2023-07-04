@@ -10,14 +10,14 @@ export type TravelPlanSearchFilterPropertyEcdala =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSearchFilterPropertyEcdala = {
-  '0_-_ContactName': '0 - ContactName',
-  '1_-_Email': '1 - Email',
-  '2_-_Origin': '2 - Origin',
-  '3_-_Destination': '3 - Destination',
-  '4_-_DateCreatedUtc': '4 - DateCreatedUtc',
-  '5_-_SearchableProperties': '5 - SearchableProperties',
-  '6_-_DateEmailSentUtc': '6 - DateEmailSentUtc',
-  '7_-_PlanSource': '7 - PlanSource',
-  '8_-_Status': '8 - Status',
-  '9_-_BatchName': '9 - BatchName'
+  ContactName: 'ContactName',
+  Email: 'Email',
+  Origin: 'Origin',
+  Destination: 'Destination',
+  DateCreatedUtc: 'DateCreatedUtc',
+  SearchableProperties: 'SearchableProperties',
+  DateEmailSentUtc: 'DateEmailSentUtc',
+  PlanSource: 'PlanSource',
+  Status: 'Status',
+  BatchName: 'BatchName'
 } as const

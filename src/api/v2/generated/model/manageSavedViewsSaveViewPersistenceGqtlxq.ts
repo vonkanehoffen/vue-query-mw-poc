@@ -10,6 +10,6 @@ export type ManageSavedViewsSaveViewPersistenceGqtlxq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ManageSavedViewsSaveViewPersistenceGqtlxq = {
-  '0_-_Dynamic': 0 - Dynamic,
-  '1_-_Static': 1 - Static
+  Dynamic: 'Dynamic',
+  Static: 'Static'
 } as const

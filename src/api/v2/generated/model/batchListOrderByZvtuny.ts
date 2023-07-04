@@ -10,10 +10,10 @@ export type BatchListOrderByZvtuny =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchListOrderByZvtuny = {
-  '0_-_Name': 0 - Name,
-  '1_-_Status': 1 - Status,
-  '2_-_Recipients': 2 - Recipients,
-  '3_-_CreatedBy': 3 - CreatedBy,
-  '4_-_DateCreated': 4 - DateCreated,
-  '5_-_DateLastUpdated': 5 - DateLastUpdated
+  Name: 'Name',
+  Status: 'Status',
+  Recipients: 'Recipients',
+  CreatedBy: 'CreatedBy',
+  DateCreated: 'DateCreated',
+  DateLastUpdated: 'DateLastUpdated'
 } as const

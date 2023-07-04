@@ -10,8 +10,8 @@ export type PendingLiftshareAccountBatchStatusVtwhkvq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PendingLiftshareAccountBatchStatusVtwhkvq = {
-  '0_-_Draft': 0 - Draft,
-  '1_-_Final': 1 - Final,
-  '2_-_Processed': 2 - Processed,
-  '3_-_Scheduled': 3 - Scheduled
+  Draft: 'Draft',
+  Final: 'Final',
+  Processed: 'Processed',
+  Scheduled: 'Scheduled'
 } as const

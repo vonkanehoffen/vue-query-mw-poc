@@ -10,7 +10,7 @@ export type VerifyMobileNumberVerificationStatusFqciyhi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const VerifyMobileNumberVerificationStatusFqciyhi = {
-  '0_-_Successful': 0 - Successful,
-  '1_-_IncorrectCode': 1 - IncorrectCode,
-  '2_-_Error': 2 - Error
+  Successful: 'Successful',
+  IncorrectCode: 'IncorrectCode',
+  Error: 'Error'
 } as const

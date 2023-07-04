@@ -10,7 +10,7 @@ export type PushTokenUpsertPushDeviceLjxhba =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const PushTokenUpsertPushDeviceLjxhba = {
-  '0_-_Android': 0 - Android,
-  '1_-_Apple': 1 - Apple,
-  '2_-_Expo': 2 - Expo
+  Android: 'Android',
+  Apple: 'Apple',
+  Expo: 'Expo'
 } as const

@@ -9,7 +9,7 @@ export type JourneyTypeIdmei = (typeof JourneyTypeIdmei)[keyof typeof JourneyTyp
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyTypeIdmei = {
-  '1_-_Passenger': 1 - Passenger,
-  '2_-_Driver': 2 - Driver,
-  '3_-_Both': 3 - Both
+  Passenger: 'Passenger',
+  Driver: 'Driver',
+  Both: 'Both'
 } as const

@@ -10,8 +10,8 @@ export type JourneyFrequencyVvhvfbq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const JourneyFrequencyVvhvfbq = {
-  '1_-_OneOff': 1 - OneOff,
-  '2_-_Regular': 2 - Regular,
-  '3_-_Occasional': 3 - Occasional,
-  '4_-_Shift': 4 - Shift
+  OneOff: 'OneOff',
+  Regular: 'Regular',
+  Occasional: 'Occasional',
+  Shift: 'Shift'
 } as const

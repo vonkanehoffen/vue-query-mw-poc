@@ -7,6 +7,7 @@
 import type { HighFreqDataCsvValidationFailureRlyvky } from './highFreqDataCsvValidationFailureRlyvky'
 
 export interface HighFreqDataImportCreateResponseHrpbofq {
-  importId?: number | null
+  importId?: string | null
   validationFailures?: HighFreqDataCsvValidationFailureRlyvky[] | null
+  errorMessage?: string | null
 }

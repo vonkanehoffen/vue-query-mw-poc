@@ -10,7 +10,7 @@ export type TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrd
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TripAuthenticationReminderDetailsTripAuthenticationReminderStatusWrdmy = {
-  '0_-_Active': 0 - Active,
-  '1_-_Paused': 1 - Paused,
-  '2_-_NotSet': 2 - NotSet
+  Active: 'Active',
+  Paused: 'Paused',
+  NotSet: 'NotSet'
 } as const

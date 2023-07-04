@@ -10,7 +10,7 @@ export type ContactPreferenceTypeOlhhhi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactPreferenceTypeOlhhhi = {
-  '0_-_MarketingInformation': 0 - MarketingInformation,
-  '1_-_Surveys': 1 - Surveys,
-  '2_-_TravelPlans': 2 - TravelPlans
+  MarketingInformation: 'MarketingInformation',
+  Surveys: 'Surveys',
+  TravelPlans: 'TravelPlans'
 } as const

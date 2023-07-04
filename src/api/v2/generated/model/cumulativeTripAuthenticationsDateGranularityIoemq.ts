@@ -10,7 +10,7 @@ export type CumulativeTripAuthenticationsDateGranularityIoemq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const CumulativeTripAuthenticationsDateGranularityIoemq = {
-  '0_-_Day': 0 - Day,
-  '1_-_Month': 1 - Month,
-  '2_-_Year': 2 - Year
+  Day: 'Day',
+  Month: 'Month',
+  Year: 'Year'
 } as const

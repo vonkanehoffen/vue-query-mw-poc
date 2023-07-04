@@ -1239,16 +1239,33 @@ components:
       additionalProperties: false
     AdminTokenCreate-ResultType_mlsaq:
       enum:
-        - 0 - Unknown
-        - 1 - Success
-        - 2 - TwoFactorRequiredYubikey
-        - 3 - TwoFactorRequiredGoogleAuthenticator
-        - 4 - InvalidEmailOrPassword
-        - 5 - InvalidToken
-        - 6 - InvalidRefreshToken
-        - 7 - InvalidTwoFactorCode
-      type: integer
-      format: int32
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      type: string
+      x-enumNames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      x-enum-varnames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
     ApiRegisterRequestDto_htjva:
       type: object
       properties:
@@ -1438,21 +1455,48 @@ components:
       additionalProperties: false
     BookingStatus_vpkey:
       enum:
-        - 0 - PendingConfirmation
-        - 1 - AutoConfirmed
-        - 2 - ManuallyConfirmed
-        - 3 - CanceledByPassenger
-        - 4 - CanceledByPassengerWithShortNotice
-        - 5 - CanceledByDriver
-        - 6 - CanceledByLiftshare
-        - 7 - CanceledByTimeout
-        - 8 - PendingConflictResolution
-        - 9 - CompletedSuccessfullyByPassenger
-        - 10 - CompletedSuccessfullyByDriver
-        - 11 - CompletedSuccessfullyAutomatically
-        - 12 - DeclinedByDriver
-      type: integer
-      format: int32
+        - PendingConfirmation
+        - AutoConfirmed
+        - ManuallyConfirmed
+        - CanceledByPassenger
+        - CanceledByPassengerWithShortNotice
+        - CanceledByDriver
+        - CanceledByLiftshare
+        - CanceledByTimeout
+        - PendingConflictResolution
+        - CompletedSuccessfullyByPassenger
+        - CompletedSuccessfullyByDriver
+        - CompletedSuccessfullyAutomatically
+        - DeclinedByDriver
+      type: string
+      x-enumNames:
+        - PendingConfirmation
+        - AutoConfirmed
+        - ManuallyConfirmed
+        - CanceledByPassenger
+        - CanceledByPassengerWithShortNotice
+        - CanceledByDriver
+        - CanceledByLiftshare
+        - CanceledByTimeout
+        - PendingConflictResolution
+        - CompletedSuccessfullyByPassenger
+        - CompletedSuccessfullyByDriver
+        - CompletedSuccessfullyAutomatically
+        - DeclinedByDriver
+      x-enum-varnames:
+        - PendingConfirmation
+        - AutoConfirmed
+        - ManuallyConfirmed
+        - CanceledByPassenger
+        - CanceledByPassengerWithShortNotice
+        - CanceledByDriver
+        - CanceledByLiftshare
+        - CanceledByTimeout
+        - PendingConflictResolution
+        - CompletedSuccessfullyByPassenger
+        - CompletedSuccessfullyByDriver
+        - CompletedSuccessfullyAutomatically
+        - DeclinedByDriver
     CancelBookingRequestBaseDto_tdrudvy:
       type: object
       properties:
@@ -1619,11 +1663,18 @@ components:
       additionalProperties: false
     CommunityPrivacy_gcuvykq:
       enum:
-        - 0 - Public
-        - 1 - Private
-        - 2 - Closed
-      type: integer
-      format: int32
+        - Public
+        - Private
+        - Closed
+      type: string
+      x-enumNames:
+        - Public
+        - Private
+        - Closed
+      x-enum-varnames:
+        - Public
+        - Private
+        - Closed
     ConfirmBookingResponseDto_cxydui:
       type: object
       properties:
@@ -1835,12 +1886,21 @@ components:
       additionalProperties: false
     ExternalLoginResult_iaxzli:
       enum:
-        - 0 - Registered
-        - 1 - LoggedIn
-        - 2 - AccountLocked
-        - 3 - Failed
-      type: integer
-      format: int32
+        - Registered
+        - LoggedIn
+        - AccountLocked
+        - Failed
+      type: string
+      x-enumNames:
+        - Registered
+        - LoggedIn
+        - AccountLocked
+        - Failed
+      x-enum-varnames:
+        - Registered
+        - LoggedIn
+        - AccountLocked
+        - Failed
     FindDashboardUsers-Request_yenidi:
       type: object
       properties:
@@ -1863,74 +1923,207 @@ components:
       additionalProperties: false
     HttpStatusCode_bsaega:
       enum:
-        - 100 - Continue
-        - 101 - SwitchingProtocols
-        - 102 - Processing
-        - 103 - EarlyHints
-        - 200 - OK
-        - 201 - Created
-        - 202 - Accepted
-        - 203 - NonAuthoritativeInformation
-        - 204 - NoContent
-        - 205 - ResetContent
-        - 206 - PartialContent
-        - 207 - MultiStatus
-        - 208 - AlreadyReported
-        - 226 - IMUsed
-        - 300 - MultipleChoices
-        - 300 - Ambiguous
-        - 301 - MovedPermanently
-        - 301 - Moved
-        - 302 - Found
-        - 302 - Redirect
-        - 303 - SeeOther
-        - 303 - RedirectMethod
-        - 304 - NotModified
-        - 305 - UseProxy
-        - 306 - Unused
-        - 307 - TemporaryRedirect
-        - 307 - RedirectKeepVerb
-        - 308 - PermanentRedirect
-        - 400 - BadRequest
-        - 401 - Unauthorized
-        - 402 - PaymentRequired
-        - 403 - Forbidden
-        - 404 - NotFound
-        - 405 - MethodNotAllowed
-        - 406 - NotAcceptable
-        - 407 - ProxyAuthenticationRequired
-        - 408 - RequestTimeout
-        - 409 - Conflict
-        - 410 - Gone
-        - 411 - LengthRequired
-        - 412 - PreconditionFailed
-        - 413 - RequestEntityTooLarge
-        - 414 - RequestUriTooLong
-        - 415 - UnsupportedMediaType
-        - 416 - RequestedRangeNotSatisfiable
-        - 417 - ExpectationFailed
-        - 421 - MisdirectedRequest
-        - 422 - UnprocessableEntity
-        - 423 - Locked
-        - 424 - FailedDependency
-        - 426 - UpgradeRequired
-        - 428 - PreconditionRequired
-        - 429 - TooManyRequests
-        - 431 - RequestHeaderFieldsTooLarge
-        - 451 - UnavailableForLegalReasons
-        - 500 - InternalServerError
-        - 501 - NotImplemented
-        - 502 - BadGateway
-        - 503 - ServiceUnavailable
-        - 504 - GatewayTimeout
-        - 505 - HttpVersionNotSupported
-        - 506 - VariantAlsoNegotiates
-        - 507 - InsufficientStorage
-        - 508 - LoopDetected
-        - 510 - NotExtended
-        - 511 - NetworkAuthenticationRequired
-      type: integer
-      format: int32
+        - Continue
+        - SwitchingProtocols
+        - Processing
+        - EarlyHints
+        - OK
+        - Created
+        - Accepted
+        - NonAuthoritativeInformation
+        - NoContent
+        - ResetContent
+        - PartialContent
+        - MultiStatus
+        - AlreadyReported
+        - IMUsed
+        - MultipleChoices
+        - Ambiguous
+        - MovedPermanently
+        - Moved
+        - Found
+        - Redirect
+        - SeeOther
+        - RedirectMethod
+        - NotModified
+        - UseProxy
+        - Unused
+        - TemporaryRedirect
+        - RedirectKeepVerb
+        - PermanentRedirect
+        - BadRequest
+        - Unauthorized
+        - PaymentRequired
+        - Forbidden
+        - NotFound
+        - MethodNotAllowed
+        - NotAcceptable
+        - ProxyAuthenticationRequired
+        - RequestTimeout
+        - Conflict
+        - Gone
+        - LengthRequired
+        - PreconditionFailed
+        - RequestEntityTooLarge
+        - RequestUriTooLong
+        - UnsupportedMediaType
+        - RequestedRangeNotSatisfiable
+        - ExpectationFailed
+        - MisdirectedRequest
+        - UnprocessableEntity
+        - Locked
+        - FailedDependency
+        - UpgradeRequired
+        - PreconditionRequired
+        - TooManyRequests
+        - RequestHeaderFieldsTooLarge
+        - UnavailableForLegalReasons
+        - InternalServerError
+        - NotImplemented
+        - BadGateway
+        - ServiceUnavailable
+        - GatewayTimeout
+        - HttpVersionNotSupported
+        - VariantAlsoNegotiates
+        - InsufficientStorage
+        - LoopDetected
+        - NotExtended
+        - NetworkAuthenticationRequired
+      type: string
+      x-enumNames:
+        - Continue
+        - SwitchingProtocols
+        - Processing
+        - EarlyHints
+        - OK
+        - Created
+        - Accepted
+        - NonAuthoritativeInformation
+        - NoContent
+        - ResetContent
+        - PartialContent
+        - MultiStatus
+        - AlreadyReported
+        - IMUsed
+        - MultipleChoices
+        - Ambiguous
+        - MovedPermanently
+        - Moved
+        - Found
+        - Redirect
+        - SeeOther
+        - RedirectMethod
+        - NotModified
+        - UseProxy
+        - Unused
+        - TemporaryRedirect
+        - RedirectKeepVerb
+        - PermanentRedirect
+        - BadRequest
+        - Unauthorized
+        - PaymentRequired
+        - Forbidden
+        - NotFound
+        - MethodNotAllowed
+        - NotAcceptable
+        - ProxyAuthenticationRequired
+        - RequestTimeout
+        - Conflict
+        - Gone
+        - LengthRequired
+        - PreconditionFailed
+        - RequestEntityTooLarge
+        - RequestUriTooLong
+        - UnsupportedMediaType
+        - RequestedRangeNotSatisfiable
+        - ExpectationFailed
+        - MisdirectedRequest
+        - UnprocessableEntity
+        - Locked
+        - FailedDependency
+        - UpgradeRequired
+        - PreconditionRequired
+        - TooManyRequests
+        - RequestHeaderFieldsTooLarge
+        - UnavailableForLegalReasons
+        - InternalServerError
+        - NotImplemented
+        - BadGateway
+        - ServiceUnavailable
+        - GatewayTimeout
+        - HttpVersionNotSupported
+        - VariantAlsoNegotiates
+        - InsufficientStorage
+        - LoopDetected
+        - NotExtended
+        - NetworkAuthenticationRequired
+      x-enum-varnames:
+        - Continue
+        - SwitchingProtocols
+        - Processing
+        - EarlyHints
+        - OK
+        - Created
+        - Accepted
+        - NonAuthoritativeInformation
+        - NoContent
+        - ResetContent
+        - PartialContent
+        - MultiStatus
+        - AlreadyReported
+        - IMUsed
+        - MultipleChoices
+        - Ambiguous
+        - MovedPermanently
+        - Moved
+        - Found
+        - Redirect
+        - SeeOther
+        - RedirectMethod
+        - NotModified
+        - UseProxy
+        - Unused
+        - TemporaryRedirect
+        - RedirectKeepVerb
+        - PermanentRedirect
+        - BadRequest
+        - Unauthorized
+        - PaymentRequired
+        - Forbidden
+        - NotFound
+        - MethodNotAllowed
+        - NotAcceptable
+        - ProxyAuthenticationRequired
+        - RequestTimeout
+        - Conflict
+        - Gone
+        - LengthRequired
+        - PreconditionFailed
+        - RequestEntityTooLarge
+        - RequestUriTooLong
+        - UnsupportedMediaType
+        - RequestedRangeNotSatisfiable
+        - ExpectationFailed
+        - MisdirectedRequest
+        - UnprocessableEntity
+        - Locked
+        - FailedDependency
+        - UpgradeRequired
+        - PreconditionRequired
+        - TooManyRequests
+        - RequestHeaderFieldsTooLarge
+        - UnavailableForLegalReasons
+        - InternalServerError
+        - NotImplemented
+        - BadGateway
+        - ServiceUnavailable
+        - GatewayTimeout
+        - HttpVersionNotSupported
+        - VariantAlsoNegotiates
+        - InsufficientStorage
+        - LoopDetected
+        - NotExtended
+        - NetworkAuthenticationRequired
     InsertOrUpdateNumberplateRequestBaseDto_eebfuhy:
       type: object
       properties:
@@ -2022,31 +2215,57 @@ components:
       additionalProperties: false
     JourneyFrequency_vvhvfbq:
       enum:
-        - 1 - OneOff
-        - 2 - Regular
-        - 3 - Occasional
-        - 4 - Shift
-      type: integer
-      format: int32
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
+      type: string
+      x-enumNames:
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
+      x-enum-varnames:
+        - OneOff
+        - Regular
+        - Occasional
+        - Shift
     JourneyLegType_bahdmny:
       enum:
-        - 0 - Outbound
-        - 1 - Return
-      type: integer
-      format: int32
+        - Outbound
+        - Return
+      type: string
+      x-enumNames:
+        - Outbound
+        - Return
+      x-enum-varnames:
+        - Outbound
+        - Return
     JourneyType_idmei:
       enum:
-        - 1 - Passenger
-        - 2 - Driver
-        - 3 - Both
-      type: integer
-      format: int32
+        - Passenger
+        - Driver
+        - Both
+      type: string
+      x-enumNames:
+        - Passenger
+        - Driver
+        - Both
+      x-enum-varnames:
+        - Passenger
+        - Driver
+        - Both
     MessageType_glafuoa:
       enum:
-        - 0 - Sender
-        - 1 - Recipient
-      type: integer
-      format: int32
+        - Sender
+        - Recipient
+      type: string
+      x-enumNames:
+        - Sender
+        - Recipient
+      x-enum-varnames:
+        - Sender
+        - Recipient
     MobileAppDashboard-Response_jshi:
       type: object
       properties:
@@ -2157,21 +2376,41 @@ components:
       additionalProperties: false
     PushTokenUpsert-PushDevice_ljxhba:
       enum:
-        - 0 - Android
-        - 1 - Apple
-        - 2 - Expo
-      type: integer
-      format: int32
+        - Android
+        - Apple
+        - Expo
+      type: string
+      x-enumNames:
+        - Android
+        - Apple
+        - Expo
+      x-enum-varnames:
+        - Android
+        - Apple
+        - Expo
     Register-RegisterResultType_qukloja:
       enum:
-        - 0 - Success
-        - 1 - EmailExists
-        - 2 - SuccessAndActivated
-        - 3 - SuccessAlreadyRegistered
-        - 4 - CommunityPasswordInvalid
-        - 5 - OidcRequired
-      type: integer
-      format: int32
+        - Success
+        - EmailExists
+        - SuccessAndActivated
+        - SuccessAlreadyRegistered
+        - CommunityPasswordInvalid
+        - OidcRequired
+      type: string
+      x-enumNames:
+        - Success
+        - EmailExists
+        - SuccessAndActivated
+        - SuccessAlreadyRegistered
+        - CommunityPasswordInvalid
+        - OidcRequired
+      x-enum-varnames:
+        - Success
+        - EmailExists
+        - SuccessAndActivated
+        - SuccessAlreadyRegistered
+        - CommunityPasswordInvalid
+        - OidcRequired
     TokenCreate-Request_hakhvwy:
       type: object
       properties:

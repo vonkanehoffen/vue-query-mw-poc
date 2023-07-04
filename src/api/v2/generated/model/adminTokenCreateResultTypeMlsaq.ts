@@ -10,12 +10,12 @@ export type AdminTokenCreateResultTypeMlsaq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AdminTokenCreateResultTypeMlsaq = {
-  '0_-_Unknown': 0 - Unknown,
-  '1_-_Success': 1 - Success,
-  '2_-_TwoFactorRequiredYubikey': 2 - TwoFactorRequiredYubikey,
-  '3_-_TwoFactorRequiredGoogleAuthenticator': 3 - TwoFactorRequiredGoogleAuthenticator,
-  '4_-_InvalidEmailOrPassword': 4 - InvalidEmailOrPassword,
-  '5_-_InvalidToken': 5 - InvalidToken,
-  '6_-_InvalidRefreshToken': 6 - InvalidRefreshToken,
-  '7_-_InvalidTwoFactorCode': 7 - InvalidTwoFactorCode
+  Unknown: 'Unknown',
+  Success: 'Success',
+  TwoFactorRequiredYubikey: 'TwoFactorRequiredYubikey',
+  TwoFactorRequiredGoogleAuthenticator: 'TwoFactorRequiredGoogleAuthenticator',
+  InvalidEmailOrPassword: 'InvalidEmailOrPassword',
+  InvalidToken: 'InvalidToken',
+  InvalidRefreshToken: 'InvalidRefreshToken',
+  InvalidTwoFactorCode: 'InvalidTwoFactorCode'
 } as const

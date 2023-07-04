@@ -7,6 +7,6 @@
 import type { HighFreqEmissionsHighFreqFiguresBlupi } from './highFreqEmissionsHighFreqFiguresBlupi'
 
 export interface HighFreqEmissionsHighFreqDataSourceItemRsdaq {
-  id?: string | null
+  id?: number
   figures?: HighFreqEmissionsHighFreqFiguresBlupi
 }

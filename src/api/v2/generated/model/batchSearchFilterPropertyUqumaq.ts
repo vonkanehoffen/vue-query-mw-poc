@@ -10,11 +10,11 @@ export type BatchSearchFilterPropertyUqumaq =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BatchSearchFilterPropertyUqumaq = {
-  '0_-_Name': '0 - Name',
-  '1_-_Status': '1 - Status',
-  '2_-_DateCreated': '2 - DateCreated',
-  '3_-_SearchableProperties': '3 - SearchableProperties',
-  '4_-_CreatedBy': '4 - CreatedBy',
-  '5_-_DateLastUpdated': '5 - DateLastUpdated',
-  '6_-_NumRecipients': '6 - NumRecipients'
+  Name: 'Name',
+  Status: 'Status',
+  DateCreated: 'DateCreated',
+  SearchableProperties: 'SearchableProperties',
+  CreatedBy: 'CreatedBy',
+  DateLastUpdated: 'DateLastUpdated',
+  NumRecipients: 'NumRecipients'
 } as const

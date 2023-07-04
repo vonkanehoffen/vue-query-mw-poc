@@ -10,8 +10,8 @@ export type TravelPlanSourceVskea =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlanSourceVskea = {
-  '0_-_Individual': 0 - Individual,
-  '1_-_Batch': 1 - Batch,
-  '2_-_Widget': 2 - Widget,
-  '100_-_Other': 100 - Other
+  Individual: 'Individual',
+  Batch: 'Batch',
+  Widget: 'Widget',
+  Other: 'Other'
 } as const

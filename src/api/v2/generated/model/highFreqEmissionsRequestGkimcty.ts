@@ -7,4 +7,6 @@
 
 export interface HighFreqEmissionsRequestGkimcty {
   communityIds?: string[] | null
+  dateFrom?: string
+  dateTo?: string
 }

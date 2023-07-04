@@ -10,11 +10,11 @@ export type TravelPlansListOrderByVbaoiy =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const TravelPlansListOrderByVbaoiy = {
-  '0_-_DateCreatedUtc': 0 - DateCreatedUtc,
-  '1_-_Status': 1 - Status,
-  '2_-_DateEmailSentUtc': 2 - DateEmailSentUtc,
-  '3_-_PlanOnlineViews': 3 - PlanOnlineViews,
-  '4_-_DateSurveySentUtc': 4 - DateSurveySentUtc,
-  '5_-_BatchName': 5 - BatchName,
-  '6_-_ContactName': 6 - ContactName
+  DateCreatedUtc: 'DateCreatedUtc',
+  Status: 'Status',
+  DateEmailSentUtc: 'DateEmailSentUtc',
+  PlanOnlineViews: 'PlanOnlineViews',
+  DateSurveySentUtc: 'DateSurveySentUtc',
+  BatchName: 'BatchName',
+  ContactName: 'ContactName'
 } as const

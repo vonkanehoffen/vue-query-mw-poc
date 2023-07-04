@@ -11,7 +11,7 @@ export type AuthenticatedParkingPermitStatusTuskzy =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AuthenticatedParkingPermitStatusTuskzy = {
-  '0_-_Valid': 0 - Valid,
-  '1_-_Warning': 1 - Warning,
-  '2_-_Invalid': 2 - Invalid
+  Valid: 'Valid',
+  Warning: 'Warning',
+  Invalid: 'Invalid'
 } as const

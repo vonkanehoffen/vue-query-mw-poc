@@ -10,7 +10,7 @@ export type AcelBreakdownInputTypeCgsomi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AcelBreakdownInputTypeCgsomi = {
-  '0_-_Responses': 0 - Responses,
-  '1_-_Percentages': 1 - Percentages,
-  '2_-_Employees': 2 - Employees
+  Responses: 'Responses',
+  Percentages: 'Percentages',
+  Employees: 'Employees'
 } as const

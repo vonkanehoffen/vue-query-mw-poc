@@ -10,19 +10,19 @@ export type ContactFieldTypeMetdxi =
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const ContactFieldTypeMetdxi = {
-  '0_-_FirstName': 0 - FirstName,
-  '1_-_LastName': 1 - LastName,
-  '2_-_Email': 2 - Email,
-  '3_-_HomeAddress': 3 - HomeAddress,
-  '4_-_PublicId': 4 - PublicId,
-  '5_-_Tag': 5 - Tag,
-  '6_-_WorkStartTime': 6 - WorkStartTime,
-  '7_-_WorkFinishTime': 7 - WorkFinishTime,
-  '8_-_WorkDepartment': 8 - WorkDepartment,
-  '9_-_WorkLocation': 9 - WorkLocation,
-  '10_-_CurrentCommuteMode': 10 - CurrentCommuteMode,
-  '11_-_AlternativeCommuteModes': 11 - AlternativeCommuteModes,
-  '12_-_CommuteDistance': 12 - CommuteDistance,
-  '13_-_CommuteDaysPerWeek': 13 - CommuteDaysPerWeek,
-  '-1_-_Unknown': -1 - Unknown
+  FirstName: 'FirstName',
+  LastName: 'LastName',
+  Email: 'Email',
+  HomeAddress: 'HomeAddress',
+  PublicId: 'PublicId',
+  Tag: 'Tag',
+  WorkStartTime: 'WorkStartTime',
+  WorkFinishTime: 'WorkFinishTime',
+  WorkDepartment: 'WorkDepartment',
+  WorkLocation: 'WorkLocation',
+  CurrentCommuteMode: 'CurrentCommuteMode',
+  AlternativeCommuteModes: 'AlternativeCommuteModes',
+  CommuteDistance: 'CommuteDistance',
+  CommuteDaysPerWeek: 'CommuteDaysPerWeek',
+  Unknown: 'Unknown'
 } as const

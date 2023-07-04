@@ -16,6 +16,8 @@ import type {
 import { unref } from 'vue'
 import type { MaybeRef } from '@tanstack/vue-query/build/lib/types'
 import type {
+  AbstractModuleApiResponseHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseHighFreqDataImportBatchDeleteResponseVsmgma,
+  HighFreqDataImportBatchDeleteRequestHisiq,
   AbstractModuleApiResponseHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseHighFreqDataImportCreateResponseSyoijzq,
   AbstractModuleApiResponseHighFreqDataImportsRequestHighFreqDataImportsResponseHighFreqDataImportsResponseGfwfcpa,
   AbstractModuleApiResponseHighFreqDataImportDeleteRequestHighFreqDataImportDeleteResponseHighFreqDataImportDeleteResponseSxfwmgq,
@@ -33,6 +35,71 @@ type AwaitedInput<T> = PromiseLike<T> | T
 
 type Awaited<O> = O extends AwaitedInput<infer T> ? T : never
 
+export const postV2EmissionsHighFrequencyImportsDelete = (
+  highFreqDataImportBatchDeleteRequestHisiq: MaybeRef<HighFreqDataImportBatchDeleteRequestHisiq>
+) => {
+  return customInstance<AbstractModuleApiResponseHighFreqDataImportBatchDeleteRequestHighFreqDataImportBatchDeleteResponseHighFreqDataImportBatchDeleteResponseVsmgma>(
+    {
+      url: `/v2/emissions/high-frequency/imports/delete`,
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      data: highFreqDataImportBatchDeleteRequestHisiq
+    }
+  )
+}
+
+export const getPostV2EmissionsHighFrequencyImportsDeleteMutationOptions = <
+  TError = unknown,
+  TContext = unknown
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof postV2EmissionsHighFrequencyImportsDelete>>,
+    TError,
+    { data: HighFreqDataImportBatchDeleteRequestHisiq },
+    TContext
+  >
+}): UseMutationOptions<
+  Awaited<ReturnType<typeof postV2EmissionsHighFrequencyImportsDelete>>,
+  TError,
+  { data: HighFreqDataImportBatchDeleteRequestHisiq },
+  TContext
+> => {
+  const { mutation: mutationOptions } = options ?? {}
+
+  const mutationFn: MutationFunction<
+    Awaited<ReturnType<typeof postV2EmissionsHighFrequencyImportsDelete>>,
+    { data: HighFreqDataImportBatchDeleteRequestHisiq }
+  > = (props) => {
+    const { data } = props ?? {}
+
+    return postV2EmissionsHighFrequencyImportsDelete(data)
+  }
+
+  return { mutationFn, ...mutationOptions }
+}
+
+export type PostV2EmissionsHighFrequencyImportsDeleteMutationResult = NonNullable<
+  Awaited<ReturnType<typeof postV2EmissionsHighFrequencyImportsDelete>>
+>
+export type PostV2EmissionsHighFrequencyImportsDeleteMutationBody =
+  HighFreqDataImportBatchDeleteRequestHisiq
+export type PostV2EmissionsHighFrequencyImportsDeleteMutationError = unknown
+
+export const usePostV2EmissionsHighFrequencyImportsDelete = <
+  TError = unknown,
+  TContext = unknown
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof postV2EmissionsHighFrequencyImportsDelete>>,
+    TError,
+    { data: HighFreqDataImportBatchDeleteRequestHisiq },
+    TContext
+  >
+}) => {
+  const mutationOptions = getPostV2EmissionsHighFrequencyImportsDeleteMutationOptions(options)
+
+  return useMutation(mutationOptions)
+}
 export const postV2EmissionsHighFrequencyImports = () => {
   return customInstance<AbstractModuleApiResponseHighFreqDataImportCreateRequestHighFreqDataImportCreateResponseHighFreqDataImportCreateResponseSyoijzq>(
     { url: `/v2/emissions/high-frequency/imports`, method: 'post' }
@@ -148,61 +215,60 @@ export const useGetV2EmissionsHighFrequencyImports = <
   return query
 }
 
-export const deleteV2EmissionsHighFrequencyDataImportsImportId = (importId: MaybeRef<number>) => {
+export const deleteV2EmissionsHighFrequencyImportsImportId = (importId: MaybeRef<string>) => {
   return customInstance<AbstractModuleApiResponseHighFreqDataImportDeleteRequestHighFreqDataImportDeleteResponseHighFreqDataImportDeleteResponseSxfwmgq>(
-    { url: `/v2/emissions/high-frequency/data-imports/${unref(importId)}`, method: 'delete' }
+    { url: `/v2/emissions/high-frequency/imports/${unref(importId)}`, method: 'delete' }
   )
 }
 
-export const getDeleteV2EmissionsHighFrequencyDataImportsImportIdMutationOptions = <
+export const getDeleteV2EmissionsHighFrequencyImportsImportIdMutationOptions = <
   TError = unknown,
   TContext = unknown
 >(options?: {
   mutation?: UseMutationOptions<
-    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyDataImportsImportId>>,
+    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyImportsImportId>>,
     TError,
-    { importId: number },
+    { importId: string },
     TContext
   >
 }): UseMutationOptions<
-  Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyDataImportsImportId>>,
+  Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyImportsImportId>>,
   TError,
-  { importId: number },
+  { importId: string },
   TContext
 > => {
   const { mutation: mutationOptions } = options ?? {}
 
   const mutationFn: MutationFunction<
-    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyDataImportsImportId>>,
-    { importId: number }
+    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyImportsImportId>>,
+    { importId: string }
   > = (props) => {
     const { importId } = props ?? {}
 
-    return deleteV2EmissionsHighFrequencyDataImportsImportId(importId)
+    return deleteV2EmissionsHighFrequencyImportsImportId(importId)
   }
 
   return { mutationFn, ...mutationOptions }
 }
 
-export type DeleteV2EmissionsHighFrequencyDataImportsImportIdMutationResult = NonNullable<
-  Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyDataImportsImportId>>
+export type DeleteV2EmissionsHighFrequencyImportsImportIdMutationResult = NonNullable<
+  Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyImportsImportId>>
 >
 
-export type DeleteV2EmissionsHighFrequencyDataImportsImportIdMutationError = unknown
+export type DeleteV2EmissionsHighFrequencyImportsImportIdMutationError = unknown
 
-export const useDeleteV2EmissionsHighFrequencyDataImportsImportId = <
+export const useDeleteV2EmissionsHighFrequencyImportsImportId = <
   TError = unknown,
   TContext = unknown
 >(options?: {
   mutation?: UseMutationOptions<
-    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyDataImportsImportId>>,
+    Awaited<ReturnType<typeof deleteV2EmissionsHighFrequencyImportsImportId>>,
     TError,
-    { importId: number },
+    { importId: string },
     TContext
   >
 }) => {
-  const mutationOptions =
-    getDeleteV2EmissionsHighFrequencyDataImportsImportIdMutationOptions(options)
+  const mutationOptions = getDeleteV2EmissionsHighFrequencyImportsImportIdMutationOptions(options)
 
   return useMutation(mutationOptions)
 }

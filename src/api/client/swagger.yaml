@@ -206,16 +206,33 @@ components:
       additionalProperties: false
     AdminTokenCreate-ResultType_mlsaq:
       enum:
-        - 0 - Unknown
-        - 1 - Success
-        - 2 - TwoFactorRequiredYubikey
-        - 3 - TwoFactorRequiredGoogleAuthenticator
-        - 4 - InvalidEmailOrPassword
-        - 5 - InvalidToken
-        - 6 - InvalidRefreshToken
-        - 7 - InvalidTwoFactorCode
-      type: integer
-      format: int32
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      type: string
+      x-enumNames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
+      x-enum-varnames:
+        - Unknown
+        - Success
+        - TwoFactorRequiredYubikey
+        - TwoFactorRequiredGoogleAuthenticator
+        - InvalidEmailOrPassword
+        - InvalidToken
+        - InvalidRefreshToken
+        - InvalidTwoFactorCode
     AdminTokenRefresh-Request_qwdywq:
       type: object
       properties:
@@ -262,11 +279,18 @@ components:
       additionalProperties: false
     AuthenticatedParkingPermitStatus_tuskzy:
       enum:
-        - 0 - Valid
-        - 1 - Warning
-        - 2 - Invalid
-      type: integer
-      format: int32
+        - Valid
+        - Warning
+        - Invalid
+      type: string
+      x-enumNames:
+        - Valid
+        - Warning
+        - Invalid
+      x-enum-varnames:
+        - Valid
+        - Warning
+        - Invalid
     PermitScanActivityDto_ryjcoi:
       type: object
       properties:

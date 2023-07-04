@@ -9,6 +9,6 @@ export type AcelReportTypeIegky = (typeof AcelReportTypeIegky)[keyof typeof Acel
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AcelReportTypeIegky = {
-  '0_-_Manual': 0 - Manual,
-  '1_-_FromSurvey': 1 - FromSurvey
+  Manual: 'Manual',
+  FromSurvey: 'FromSurvey'
 } as const
