@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import Menubar, { type MenubarProps } from 'primevue/menubar';
 import { useAuthStore } from '@/stores/auth';
+import LogoutButton from '@/components/LogoutButton.vue';
 
 const authStore = useAuthStore();
 
@@ -22,7 +23,8 @@ const items = ref<MenubarProps['model']>([
     to: '/contacts'
   },
   {
-    label: 'Scoping'
+    label: 'Scoping',
+    to: '/scoping'
   },
   {
     label: 'Surveys'
@@ -53,7 +55,7 @@ const items = ref<MenubarProps['model']>([
         </RouterLink>
       </template>
       <template #end>
-        <div v-if="authStore.isAuthenticated">AUTHED</div>
+        <LogoutButton v-if="authStore.isAuthenticated" />
         <div v-else>PUBLIC</div>
       </template>
     </Menubar>
