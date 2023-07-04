@@ -11,11 +11,9 @@ import PrimeVue from 'primevue/config';
 import App from './App.vue';
 import { router } from './router';
 import axios from 'axios';
-import { postClientTokenRefresh } from './api/client/generated/authentication-tokens/authentication-tokens';
-import { STORAGE_REFRESH_TOKEN, STORAGE_TOKEN } from './api/constants';
 import { useAuthStore } from './stores/auth';
-import Toast, { useToast, type PluginOptions, POSITION } from 'vue-toastification';
-import 'vue-toastification/dist/index.css';
+import ToastService from 'primevue/toastservice';
+import { useToast } from 'primevue/usetoast';
 
 const app = createApp(App);
 
@@ -30,7 +28,7 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
 
           const authStore = useAuthStore();
           const toast = useToast();
-          toast(error.message);
+          toast.add({ severity: 'error', summary: 'Server error', detail: error.message });
 
           if (axios.isAxiosError(error)) {
             if (error.response?.status === 401 && authStore.isAuthenticated) {
@@ -44,14 +42,10 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
   }
 };
 
-const toastOptions: PluginOptions = {
-  position: POSITION.BOTTOM_RIGHT
-};
-
 app.use(createPinia());
 app.use(router);
 app.use(VueQueryPlugin, vueQueryPluginOptions);
 app.use(PrimeVue);
-app.use(Toast, toastOptions);
+app.use(ToastService);
 
 app.mount('#app');

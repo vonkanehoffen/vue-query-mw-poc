@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import MainNav from './components/MainNav.vue';
 import { useAuthStore } from '@/stores/auth';
 import { useTokenRefresh } from '@/api/useTokenRefresh';
+import Toast from 'primevue/toast';
 
 const authStore = useAuthStore();
 // authStore.isAuthenticated
@@ -11,6 +12,7 @@ useTokenRefresh();
 </script>
 
 <template>
+  <Toast position="bottom-right" />
   <header>
     <MainNav />
   </header>
