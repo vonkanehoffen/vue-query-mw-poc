@@ -34,17 +34,8 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
 
           if (axios.isAxiosError(error)) {
             if (error.response?.status === 401 && authStore.isAuthenticated) {
-              console.log('gonna refresh')
-              try {
-                const response = await postClientTokenRefresh({
-                  token: localStorage.getItem(STORAGE_TOKEN),
-                  refreshToken: localStorage.getItem(STORAGE_REFRESH_TOKEN)
-                })
-                console.log('refreh suvvess', response)
-                authStore.saveTokens(response.token, response.refreshToken)
-              } catch (error) {
-                console.log('refresh error', error)
-              }
+              console.log('VueQuery 401. Destroying tokens')
+              authStore.destroyTokens()
             }
           }
         }
