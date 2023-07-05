@@ -76,7 +76,7 @@ const onSubmit = (e: Event) => {
           >
             <p>Mobilityways</p>
             <label for="email">Email</label>
-            <InputText id="email" type="text" v-model="email" />
+            <InputText id="email" type="text" v-model="email" autofocus />
             <label for="password">Password</label>
             <InputText id="password" type="password" v-model="password" />
             <Button type="submit" label="Submit" :loading="isLoading" />

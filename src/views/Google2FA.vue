@@ -4,7 +4,7 @@ import { router } from '@/router';
 import { useAuthStore } from '@/stores/authStore';
 import { useQueryClient } from '@tanstack/vue-query';
 import { useToast } from 'primevue/usetoast';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 540;
@@ -14,6 +14,7 @@ const props = defineProps({
 });
 
 const otp = ref('');
+const input = ref();
 
 const queryClient = useQueryClient();
 const authStore = useAuthStore();
@@ -39,12 +40,14 @@ const onSubmit = (e: Event) => {
     }
   });
 };
+onMounted(() => {
+  input.value.$el.focus();
+});
 </script>
 <template>
   <form @submit="onSubmit" class="flex flex-col justify-items-stretch gap-4">
-    <label for="email">2FA</label>
-    token: {{ $props.token }}
-    <InputText id="email" type="text" v-model="otp" />
+    <label for="otp">2FA</label>
+    <InputText id="otp" type="text" v-model="otp" ref="input" />
     <Button type="submit" label="Submit" :loading="isLoading" />
   </form>
 </template>
