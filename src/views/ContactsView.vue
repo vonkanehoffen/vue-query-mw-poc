@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { useGetV2Community } from '@/api/v2/generated/community/community';
-import { useGetV2Contact, usePostV2ContactFilter } from '@/api/v2/generated/contact/contact';
+import { usePostV2ContactFilter } from '@/api/v2/generated/contact/contact';
 import { useUserStore } from '@/stores/userStore';
 import { storeToRefs } from 'pinia';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import Tag from 'primevue/tag';
 import { onMounted, watch } from 'vue';
 
 const userStore = useUserStore();
@@ -12,7 +14,7 @@ const { communityId } = storeToRefs(userStore);
 const contactFilter = usePostV2ContactFilter();
 
 const postContactFilter = () => {
-  if (communityId) {
+  if (communityId.value) {
     contactFilter.mutate({
       data: {
         communityId: communityId.value,
@@ -34,5 +36,17 @@ onMounted(postContactFilter);
 
 <template>
   <h1 class="text-lg">Contacts - com {{ userStore.communityId }}</h1>
-  <pre> {{ JSON.stringify(contactFilter.data.value, null, 2) }}</pre>
+  <DataTable :value="contactFilter.data.value?.response?.contacts">
+    <Column field="firstName" header="First Name"></Column>
+    <Column field="lastName" header="Last Name"></Column>
+    <Column field="email" header="Email"></Column>
+    <Column field="homeAddress" header="Home Address"></Column>
+    <Column header="Tags">
+      <template #body="slotProps">
+        <ul>
+          <li v-for="tag in slotProps.data.tags"><Tag :value="tag"></Tag></li>
+        </ul>
+      </template>
+    </Column>
+  </DataTable>
 </template>
