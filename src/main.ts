@@ -15,6 +15,8 @@ import { useAuthStore } from '@/stores/authStore';
 import ToastService from 'primevue/toastservice';
 import { useToast } from 'primevue/usetoast';
 
+import Button from 'primevue/button';
+
 const app = createApp(App);
 
 const vueQueryPluginOptions: VueQueryPluginOptions = {
@@ -51,5 +53,8 @@ app.use(router);
 app.use(VueQueryPlugin, vueQueryPluginOptions);
 app.use(PrimeVue);
 app.use(ToastService);
+
+// TODO: Do this for all components we want globally?
+app.component('Button', Button);
 
 app.mount('#app');

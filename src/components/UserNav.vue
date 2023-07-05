@@ -4,7 +4,6 @@ import { computed, ref } from 'vue';
 import { useUserStore } from '@/stores/userStore';
 import LogoutButton from '@/components/LogoutButton.vue';
 import Menu from 'primevue/menu';
-import Button from 'primevue/button';
 import Avatar from 'primevue/avatar';
 
 const userStore = useUserStore();

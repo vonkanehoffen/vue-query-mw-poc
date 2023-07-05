@@ -36,17 +36,19 @@ onMounted(postContactFilter);
 
 <template>
   <h1 class="text-lg">Contacts - com {{ userStore.communityId }}</h1>
-  <DataTable :value="contactFilter.data.value?.response?.contacts">
-    <Column field="firstName" header="First Name"></Column>
-    <Column field="lastName" header="Last Name"></Column>
-    <Column field="email" header="Email"></Column>
-    <Column field="homeAddress" header="Home Address"></Column>
-    <Column header="Tags">
-      <template #body="slotProps">
-        <ul>
-          <li v-for="tag in slotProps.data.tags"><Tag :value="tag"></Tag></li>
-        </ul>
-      </template>
-    </Column>
-  </DataTable>
+  <div class="flex px-6">
+    <DataTable :value="contactFilter.data.value?.response?.contacts" class="w-full">
+      <Column field="firstName" header="First Name"></Column>
+      <Column field="lastName" header="Last Name"></Column>
+      <Column field="email" header="Email"></Column>
+      <Column field="homeAddress" header="Home Address"></Column>
+      <Column header="Tags">
+        <template #body="slotProps">
+          <ul>
+            <li v-for="tag in slotProps.data.tags"><Tag :value="tag"></Tag></li>
+          </ul>
+        </template>
+      </Column>
+    </DataTable>
+  </div>
 </template>
