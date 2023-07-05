@@ -34,6 +34,7 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
             if (error.response?.status === 401 && authStore.isAuthenticated) {
               console.log('VueQuery 401. Destroying tokens');
               authStore.destroyTokens();
+              router.push('/login');
             }
           }
         }

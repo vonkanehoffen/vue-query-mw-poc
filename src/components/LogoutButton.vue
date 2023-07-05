@@ -9,4 +9,12 @@ const handleLogout = () => {
   router.push('/login');
 };
 </script>
-<template><Button label="Logout" @click="handleLogout()" /></template>
+<template>
+  <button
+    class="w-full p-link flex align-items-center p-2 pl-4 text-color hover:surface-200 border-noround"
+    @click="handleLogout"
+  >
+    <i class="pi pi-sign-out" />
+    <span class="ml-2">Log Out</span>
+  </button>
+</template>

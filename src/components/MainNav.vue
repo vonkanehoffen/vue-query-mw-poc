@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import Menubar, { type MenubarProps } from 'primevue/menubar';
 import { useAuthStore } from '@/stores/auth';
 import LogoutButton from '@/components/LogoutButton.vue';
+import UserNav from './UserNav.vue';
 
 const authStore = useAuthStore();
 
@@ -44,6 +45,7 @@ const items = ref<MenubarProps['model']>([
     ]
   }
 ]);
+// Next.... a community selector on the nav bar that saves selected ID to Pinia
 </script>
 
 <template>
@@ -55,7 +57,7 @@ const items = ref<MenubarProps['model']>([
         </RouterLink>
       </template>
       <template #end>
-        <LogoutButton v-if="authStore.isAuthenticated" />
+        <UserNav v-if="authStore.isAuthenticated" />
         <div v-else>PUBLIC</div>
       </template>
     </Menubar>
