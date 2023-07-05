@@ -48,11 +48,11 @@ export const useAuthStore = defineStore('auth', {
         this.saveTokens(response.token as string, response.refreshToken as string);
         this.setRefreshTimeout();
       } catch (error) {
-        // If it's a 401 from the server, the user is logged out os return to login.
+        // If it's a 401 or 403 from the server, the user is logged out os return to login.
         // We don't want to destroy tokens if it's just a temp server error.
         console.log('refresh error', error);
         if (axios.isAxiosError(error)) {
-          if (error.response?.status === 401) {
+          if (error.response?.status === 401 || error.response?.status === 403) {
             this.destroyTokens();
             this.clearRefreshTimeout();
             router.push('/login');
