@@ -7,7 +7,7 @@ import { ref } from 'vue';
 import { useQueryClient } from '@tanstack/vue-query';
 import { usePostClientToken } from '@/api/client/generated/authentication-tokens/authentication-tokens';
 import { router } from '@/router';
-import { useAuthStore } from '@/stores/auth';
+import { useAuthStore } from '@/stores/authStore';
 
 const email = ref(null);
 const password = ref(null);

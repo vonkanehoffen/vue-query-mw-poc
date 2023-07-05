@@ -11,7 +11,7 @@ import PrimeVue from 'primevue/config';
 import App from './App.vue';
 import { router } from './router';
 import axios from 'axios';
-import { useAuthStore } from './stores/auth';
+import { useAuthStore } from '@/stores/authStore';
 import ToastService from 'primevue/toastservice';
 import { useToast } from 'primevue/usetoast';
 

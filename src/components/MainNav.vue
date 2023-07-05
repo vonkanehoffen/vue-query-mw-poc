@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Menubar, { type MenubarProps } from 'primevue/menubar';
-import { useAuthStore } from '@/stores/auth';
+import { useAuthStore } from '@/stores/authStore';
 import LogoutButton from '@/components/LogoutButton.vue';
 import UserNav from './UserNav.vue';
 
