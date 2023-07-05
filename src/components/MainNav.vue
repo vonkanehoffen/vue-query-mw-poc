@@ -45,7 +45,6 @@ const items = ref<MenubarProps['model']>([
     ]
   }
 ]);
-// Next.... a community selector on the nav bar that saves selected ID to Pinia
 </script>
 
 <template>
