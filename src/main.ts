@@ -22,7 +22,7 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
     defaultOptions: {
       queries: {
         // TODO: Is this really gonna be depreciated in v5? See https://tkdodo.eu/blog/breaking-react-querys-api-on-purpose
-        onError: async (error) => {
+        onError: (error) => {
           // If it's 401 we need to update the auth state in pinia
           console.log('DEFAULT ERROR', error, error.response?.status);
 
@@ -38,6 +38,9 @@ const vueQueryPluginOptions: VueQueryPluginOptions = {
             }
           }
         }
+      },
+      mutations: {
+        // TODO
       }
     }
   }
