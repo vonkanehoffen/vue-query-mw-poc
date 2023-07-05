@@ -9,11 +9,12 @@ const handleLogout = () => {
 };
 </script>
 <template>
-  <button
-    class="w-full p-link flex align-items-center p-2 pl-4 text-color hover:surface-200 border-noround"
+  <Button
+    icon="pi pi-sign-out"
     @click="handleLogout"
-  >
-    <i class="pi pi-sign-out" />
-    <span class="ml-2">Log Out</span>
-  </button>
+    label="Log Out"
+    class="w-full"
+    size="small"
+    severity="secondary"
+  />
 </template>

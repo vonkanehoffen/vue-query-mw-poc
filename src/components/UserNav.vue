@@ -3,15 +3,17 @@ import { useGetV2Community } from '@/api/v2/generated/community/community';
 import { computed, ref } from 'vue';
 import { useUserStore } from '@/stores/userStore';
 import LogoutButton from '@/components/LogoutButton.vue';
-import Menu from 'primevue/menu';
-import Avatar from 'primevue/avatar';
+import OverlayPanel from 'primevue/overlaypanel';
+import Dropdown from 'primevue/dropdown';
+import { storeToRefs } from 'pinia';
 
 const userStore = useUserStore();
+const { communityId } = storeToRefs(userStore);
 const { isLoading, data } = useGetV2Community();
-const menu = ref();
 
-const toggle = (event) => {
-  menu.value.toggle(event);
+const op = ref();
+const toggle = (event: Event) => {
+  op.value.toggle(event);
 };
 
 const items = computed(() => {
@@ -35,20 +37,18 @@ const items = computed(() => {
     aria-haspopup="true"
     aria-controls="overlay_menu"
   />
-  <Menu :model="items" :popup="true" ref="menu" id="overlay_menu">
-    <template #start>
-      <button
-        class="w-full p-link flex align-items-center p-2 pl-3 text-color hover:surface-200 border-noround"
-      >
-        <Avatar class="mr-2" shape="circle" />
-        <div class="flex flex-column align">
-          <span class="font-bold">Amy Elsner</span>
-          <span class="text-sm">Agent</span>
-        </div>
-      </button>
-    </template>
-    <template #end>
+  <OverlayPanel ref="op">
+    <Dropdown
+      v-model="communityId"
+      :options="data?.response?.communities || []"
+      :optionValue="(opt) => opt.id"
+      filter
+      optionLabel="name"
+      placeholder="Select a Coummunity"
+      class="w-full md:w-14rem"
+    />
+    <div class="mt-4">
       <LogoutButton />
-    </template>
-  </Menu>
+    </div>
+  </OverlayPanel>
 </template>
