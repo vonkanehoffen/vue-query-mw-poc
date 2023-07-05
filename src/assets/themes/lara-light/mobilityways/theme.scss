@@ -1,4 +1,15 @@
-$primaryColor: #F163C1 !default;
+// Brand colours.
+// @see https://content.mobilityways.com/hubfs/Brand%20Guidelines/Mobilityways-Brand-Guidelines-V1.pdf
+$brandPosy: #F163C1;
+$brandFresh: #00DCC0;
+$brandEcoGreen: #00938A;
+$brandCarbon: #3C3B3B;
+$brandSunny: #FFE131;
+$brandBloom: #E106A0;
+$brandHeather: #91056F;
+$brandOilSpill: #153252;
+
+$primaryColor: $brandPosy !default;
 $primaryLightColor: #BFDBFE !default;
 $primaryDarkColor: #2563eb !default;
 $primaryDarkerColor: #1D4ED8 !default;
@@ -8,6 +19,22 @@ $highlightBg: #EFF6FF !default;
 $highlightTextColor: $primaryDarkerColor !default;
 $highlightFocusBg: rgba($primaryColor, .24) !default;
 
+$fontFamily: "Nunito Sans", Helvetica, Arial, sans-serif;
+
+$horizontalMenuBg: $brandCarbon;
+$horizontalMenuTextColor: white;
+$horizontalMenuRootMenuitemTextColor: white;
+$horizontalMenuRootMenuitemIconColor: $brandPosy;
+$horizontalMenuBorder: none;
+$horizontalMenuRootMenuitemTextHoverColor: white;
+$horizontalMenuRootMenuitemHoverBg: lighten($brandCarbon, 10%);
+$horizontalMenuRootMenuitemIconHoverColor: $brandPosy;
+
+
 @import '../_variables';
 @import '../../../theme-base/_components';
 @import '../_extensions';
+
+.p-menubar {
+  border-radius: 0;
+}
