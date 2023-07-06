@@ -15,7 +15,10 @@ export const router = createRouter({
     },
     {
       path: '/login',
-      component: () => import('../views/LoginView.vue')
+      component: () => import('../views/LoginView.vue'),
+      meta: {
+        auth: true
+      }
     },
     {
       path: '/contacts',
@@ -35,4 +38,5 @@ export const router = createRouter({
 router.beforeEach((to, from) => {
   const authStore = useAuthStore();
   if (to.meta.private && !authStore.isAuthenticated) return '/login';
+  if (to.meta.auth && authStore.isAuthenticated) return '/';
 });
