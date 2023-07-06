@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Menubar, { type MenubarProps } from 'primevue/menubar';
+import Tag from 'primevue/tag';
 import { useAuthStore } from '@/stores/authStore';
 import UserNav from './UserNav.vue';
 
@@ -56,7 +57,7 @@ const items = ref<MenubarProps['model']>([
       </template>
       <template #end>
         <UserNav v-if="authStore.isAuthenticated" />
-        <div v-else>PUBLIC</div>
+        <Tag severity="info" class="mr-2" v-else>PUBLIC</Tag>
       </template>
     </Menubar>
   </nav>
