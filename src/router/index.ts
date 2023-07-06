@@ -23,7 +23,7 @@ export const router = createRouter({
     {
       path: '/contacts',
       name: 'contacts',
-      component: () => import('../views/ContactsView.vue'),
+      component: () => import('../views/Contacts/ContactsView.vue'),
       meta: {
         private: true
       }

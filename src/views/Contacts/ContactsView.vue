@@ -7,6 +7,7 @@ import Column from 'primevue/column';
 import Tag from 'primevue/tag';
 import { onMounted, watch } from 'vue';
 import PageHeader from '@/components/PageHeader.vue';
+import CreateContact from './CreateContact.vue';
 
 const userStore = useUserStore();
 const { communityId } = storeToRefs(userStore);
@@ -38,9 +39,7 @@ onMounted(postContactFilter);
 <template>
   <PageHeader title="Contacts">
     <template #buttons>
-      <div class="flex justify-end">
-        <Button label="Add Contact" />
-      </div>
+      <CreateContact />
     </template>
   </PageHeader>
 
