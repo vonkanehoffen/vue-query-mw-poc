@@ -30,13 +30,16 @@ const items = computed(() => {
 });
 </script>
 <template>
-  <Button
-    type="button"
-    label="Toggle"
+  <div
+    class="p-menuitem cursor-pointer"
+    role="menuitem"
     @click="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
-  />
+  >
+    Community name here
+    <i class="pi pi-angle-down" style="color: var(--primary-color)"></i>
+  </div>
   <OverlayPanel ref="op">
     <Dropdown
       v-model="communityId"

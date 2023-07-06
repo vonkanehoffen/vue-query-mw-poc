@@ -15,6 +15,14 @@ $primaryDarkColor: #2563eb !default;
 $primaryDarkerColor: #1D4ED8 !default;
 $primaryTextColor: #ffffff !default;
 
+:root {
+  --primary-color: $primaryColor;
+  --primary-light-color: $primaryLightColor;
+  --primary-dark-color: $primaryDarkColor;
+  --primary-darker-color: $primaryDarkerColor;
+  --primary-text-color: $primaryTextColor;
+}
+
 $highlightBg: #EFF6FF !default;
 $highlightTextColor: $primaryDarkerColor !default;
 $highlightFocusBg: rgba($primaryColor, .24) !default;
