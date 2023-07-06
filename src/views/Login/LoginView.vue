@@ -9,7 +9,7 @@ import { router } from '@/router';
 import { useAuthStore } from '@/stores/authStore';
 import axios from 'axios';
 import { AdminTokenCreateResultTypeMlsaq } from '@/api/client/generated/model';
-import { useToast } from 'primevue/usetoast';
+import { useToast } from 'vue-toastification';
 import Google2FA from './Google2FA.vue';
 
 const email = ref('');
@@ -34,18 +34,14 @@ const { mutate, isLoading } = usePostClientToken({
     },
     onError: (error) => {
       if (axios.isAxiosError(error)) {
-        console.log('axios', error.response?.data);
         switch (error.response?.data.resultType as AdminTokenCreateResultTypeMlsaq) {
           case AdminTokenCreateResultTypeMlsaq.InvalidEmailOrPassword:
-            toast.add({
-              severity: 'error',
-              summary: 'Invalid email or password',
-              detail: 'Please try again',
-              life: 5000
-            });
+            toast.error('Invalid email or password');
+            break;
           case AdminTokenCreateResultTypeMlsaq.TwoFactorRequiredGoogleAuthenticator:
             token.value = error.response?.data.token;
             showGoogle2Fa.value = true;
+            break;
         }
       }
     }
