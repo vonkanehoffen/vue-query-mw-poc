@@ -3,7 +3,7 @@ import { usePostClientTokenValidateTwoFactor } from '@/api/client/generated/auth
 import { router } from '@/router';
 import { useAuthStore } from '@/stores/authStore';
 import { useQueryClient } from '@tanstack/vue-query';
-import { useToast } from 'primevue/usetoast';
+import { useToast } from 'vue-toastification';
 import { onMounted, ref } from 'vue';
 import InputText from 'primevue/inputtext';
 
@@ -25,6 +25,9 @@ const { mutate, isLoading } = usePostClientTokenValidateTwoFactor({
       authStore.setRefreshTimeout();
       queryClient.invalidateQueries();
       router.push('/');
+    },
+    onError: () => {
+      toast.error('Sorry, 2FA problems and a custom error message');
     }
   }
 });

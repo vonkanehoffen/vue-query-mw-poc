@@ -11,18 +11,23 @@ import PrimeVue from 'primevue/config';
 import App from './App.vue';
 import { router } from './router';
 
-import ToastService from 'primevue/toastservice';
+import Toast, { type PluginOptions, POSITION } from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
 
 import Button from 'primevue/button';
 import { vueQueryOptions } from './api/vueQueryOptions';
 
 const app = createApp(App);
 
+const toastOptions: PluginOptions = {
+  position: POSITION.BOTTOM_RIGHT
+};
+
 app.use(createPinia());
 app.use(router);
 app.use(VueQueryPlugin, vueQueryOptions);
 app.use(PrimeVue);
-app.use(ToastService);
+app.use(Toast, toastOptions);
 
 // TODO: Do this for all components we want globally?
 app.component('Button', Button);

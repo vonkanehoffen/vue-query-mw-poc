@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useAuthStore } from '@/stores/authStore';
 import { type VueQueryPluginOptions } from '@tanstack/vue-query';
-import { useToast } from 'primevue/usetoast';
+import { useToast } from 'vue-toastification';
 import { router } from '../router';
 
 export const vueQueryOptions: VueQueryPluginOptions = {
@@ -15,7 +15,7 @@ export const vueQueryOptions: VueQueryPluginOptions = {
 
           const authStore = useAuthStore();
           const toast = useToast();
-          toast.add({ severity: 'error', summary: 'Server error', detail: error.message });
+          toast.error(`Server error: ${error.message}`);
 
           if (axios.isAxiosError(error)) {
             if (error.response?.status === 401 && authStore.isAuthenticated) {
@@ -32,7 +32,7 @@ export const vueQueryOptions: VueQueryPluginOptions = {
           console.log('DEFAULT MUTATION ERROR', error);
           const toast = useToast();
           // TODO: Not working here. Inject warning
-          toast.add({ severity: 'error', summary: 'Server error', detail: error.message });
+          toast.error(`Server error: ${error.message}`);
         }
       }
     }
