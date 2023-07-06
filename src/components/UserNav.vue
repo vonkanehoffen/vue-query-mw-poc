@@ -15,19 +15,6 @@ const op = ref();
 const toggle = (event: Event) => {
   op.value.toggle(event);
 };
-
-const items = computed(() => {
-  return [
-    { separator: true },
-    ...(data.value?.response?.communities?.map((c) => ({
-      label: c.name,
-      command: () => {
-        userStore.communityId = c.id as string;
-      }
-    })) || []),
-    { separator: true }
-  ];
-});
 </script>
 <template>
   <div
