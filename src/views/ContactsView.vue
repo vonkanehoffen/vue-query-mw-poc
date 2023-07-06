@@ -6,6 +6,7 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Tag from 'primevue/tag';
 import { onMounted, watch } from 'vue';
+import PageHeader from '@/components/PageHeader.vue';
 
 const userStore = useUserStore();
 const { communityId } = storeToRefs(userStore);
@@ -35,6 +36,14 @@ onMounted(postContactFilter);
 </script>
 
 <template>
+  <PageHeader title="Contacts">
+    <template #buttons>
+      <div class="flex justify-end">
+        <Button label="Add Contact" />
+      </div>
+    </template>
+  </PageHeader>
+
   <h1 class="text-lg">Contacts - com {{ userStore.communityId }}</h1>
   <div class="flex px-6">
     <DataTable :value="contactFilter.data.value?.response?.contacts" class="w-full">
