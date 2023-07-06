@@ -1,6 +1,6 @@
-import { API_URL_DEV, STORAGE_TOKEN } from './constants';
+import { API_URL_DEV } from './constants';
 
+// We'd be switching environments here if this was for real ;-)
 export function getApiBaseUrl() {
-  // TODO: Switching
   return API_URL_DEV;
 }

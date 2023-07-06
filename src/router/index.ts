@@ -35,7 +35,7 @@ export const router = createRouter({
   ]
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   const authStore = useAuthStore();
   if (to.meta.private && !authStore.isAuthenticated) return '/login';
   if (to.meta.auth && authStore.isAuthenticated) return '/';

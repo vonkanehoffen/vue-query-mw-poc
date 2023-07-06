@@ -12,7 +12,7 @@ import CreateContact from './CreateContact.vue';
 const userStore = useUserStore();
 const { communityId } = storeToRefs(userStore);
 
-// // TODO: Why is this endpoint a POST? It makes things awkward...
+// TODO: Why is this endpoint a POST? It makes things awkward...
 const contactFilter = usePostV2ContactFilter();
 
 const postContactFilter = () => {
@@ -28,8 +28,8 @@ const postContactFilter = () => {
   }
 };
 
-watch(communityId, (communityId) => {
-  console.log('watch', communityId);
+// We wouldn't need a watch if this was a GET / useQuery.
+watch(communityId, () => {
   postContactFilter();
 });
 
@@ -42,8 +42,6 @@ onMounted(postContactFilter);
       <CreateContact />
     </template>
   </PageHeader>
-
-  <h1 class="text-lg">Contacts - com {{ userStore.communityId }}</h1>
   <div class="flex px-6">
     <DataTable :value="contactFilter.data.value?.response?.contacts" class="w-full">
       <Column field="firstName" header="First Name"></Column>
@@ -53,7 +51,7 @@ onMounted(postContactFilter);
       <Column header="Tags">
         <template #body="slotProps">
           <ul>
-            <li v-for="tag in slotProps.data.tags"><Tag :value="tag"></Tag></li>
+            <li v-for="tag in slotProps.data.tags" :key="tag"><Tag :value="tag"></Tag></li>
           </ul>
         </template>
       </Column>

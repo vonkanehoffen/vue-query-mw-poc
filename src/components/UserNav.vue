@@ -29,7 +29,7 @@ const toggle = (event: Event) => {
 </script>
 <template>
   <div
-    class="p-menuitem cursor-pointer"
+    class="p-menuitem mr-2 cursor-pointer"
     role="menuitem"
     @click="toggle"
     aria-haspopup="true"

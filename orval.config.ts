@@ -1,9 +1,14 @@
-import { defineConfig } from 'orval'
+import { defineConfig } from 'orval';
 
+/**
+ * Orval config
+ * This defines how the API layer is generated from our swagger docs.
+ */
 export default defineConfig({
   /**
    * Liftshare Private API & Mobilityways V2 API
    * Note we're in the process of moving everything to V2, hence generating from both specs for now.
+   * Also "client" as separate for auth things.
    *
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Liftshare%20Private%20API%201.0.0
    * @see https://interface-dev.liftshare.com/swagger/index.html?urls.primaryName=Mobilityways%20API%202.0.0
@@ -65,4 +70,4 @@ export default defineConfig({
       target: './src/api/v2/swagger.yaml'
     }
   }
-})
+});

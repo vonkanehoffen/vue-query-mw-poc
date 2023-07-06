@@ -1,5 +1,5 @@
 /**
- * Local storage key for API bearer token
+ * Local storage keys for API tokens
  */
 export const STORAGE_TOKEN = 'token';
 export const STORAGE_REFRESH_TOKEN = 'refreshToken';

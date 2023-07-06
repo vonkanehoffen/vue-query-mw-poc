@@ -1,3 +1,7 @@
+// Mobilityways theme
+// This is just a customised version of lara-light
+// Doing this saves us a ton of time as there's already a full design system built around that with a Figma lib
+
 // Brand colours.
 // @see https://content.mobilityways.com/hubfs/Brand%20Guidelines/Mobilityways-Brand-Guidelines-V1.pdf
 $brandPosy: #F163C1;
@@ -9,21 +13,15 @@ $brandBloom: #E106A0;
 $brandHeather: #91056F;
 $brandOilSpill: #153252;
 
+// The whole PrimeVue styling API will be changing to CSS variables soon apparently.
+
 $primaryColor: $brandPosy !default;
-$primaryLightColor: #BFDBFE !default;
+$primaryLightColor: lighten($brandPosy, 20%) !default;
 $primaryDarkColor: $brandBloom !default;
 $primaryDarkerColor: $brandHeather !default;
 $primaryTextColor: #ffffff !default;
 
-:root {
-  --primary-color: $primaryColor;
-  --primary-light-color: $primaryLightColor;
-  --primary-dark-color: $primaryDarkColor;
-  --primary-darker-color: $primaryDarkerColor;
-  --primary-text-color: $primaryTextColor;
-}
-
-$highlightBg: #EFF6FF !default;
+$highlightBg: lighten($brandPosy, 30%) !default;
 $highlightTextColor: $primaryDarkerColor !default;
 $highlightFocusBg: rgba($primaryColor, .24) !default;
 
@@ -42,6 +40,10 @@ $horizontalMenuRootMenuitemIconHoverColor: $brandPosy;
 @import '../_variables';
 @import '../../../theme-base/_components';
 @import '../_extensions';
+
+// There's more of this component specific overriding in _extensions in the main theme
+// Keeping this to a minimum is probably a good idea so we don't need to customise the Figma lib too much
+// ....and it looks kinda nice how it is ;-) 
 
 .p-menubar {
   border-radius: 0;
