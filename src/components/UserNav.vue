@@ -11,9 +11,20 @@ const userStore = useUserStore();
 const { communityId } = storeToRefs(userStore);
 const { isLoading, data } = useGetV2Community();
 
-const op = ref();
+const selectedCommunityName = computed(() => {
+  if (isLoading.value) {
+    return 'Loading...';
+  }
+  if (data.value?.response?.communities) {
+    const community = data.value.response.communities.find((c) => c.id === communityId.value);
+    return community?.name || 'Select a community';
+  }
+  return 'Select a community';
+});
+
+const overlayPanel = ref();
 const toggle = (event: Event) => {
-  op.value.toggle(event);
+  overlayPanel.value.toggle(event);
 };
 </script>
 <template>
@@ -24,10 +35,10 @@ const toggle = (event: Event) => {
     aria-haspopup="true"
     aria-controls="overlay_menu"
   >
-    Community name here
-    <i class="pi pi-angle-down" style="color: var(--primary-color)"></i>
+    {{ selectedCommunityName }}
+    <i class="pi pi-angle-down ml-2" style="color: var(--primary-color)"></i>
   </div>
-  <OverlayPanel ref="op">
+  <OverlayPanel ref="overlayPanel">
     <Dropdown
       v-model="communityId"
       :options="data?.response?.communities || []"
