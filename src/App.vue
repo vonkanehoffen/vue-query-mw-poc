@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import MainNav from './components/MainNav.vue';
+import MainNav from './components/navigation/MainNav.vue';
 import { useAuthStore } from '@/stores/authStore';
 import Toast from 'primevue/toast';
 import { onMounted, onUnmounted } from 'vue';

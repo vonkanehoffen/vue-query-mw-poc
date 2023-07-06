@@ -6,7 +6,7 @@ import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import Tag from 'primevue/tag';
 import { onMounted, watch } from 'vue';
-import PageHeader from '@/components/PageHeader.vue';
+import PageHeader from '@/components/layout/PageHeader.vue';
 import CreateContact from './CreateContact.vue';
 
 const userStore = useUserStore();

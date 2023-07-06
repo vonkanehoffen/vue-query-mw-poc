@@ -2,7 +2,7 @@
 import { useGetV2Community } from '@/api/v2/generated/community/community';
 import { computed, ref } from 'vue';
 import { useUserStore } from '@/stores/userStore';
-import LogoutButton from '@/components/LogoutButton.vue';
+import LogoutButton from '@/components/navigation/LogoutButton.vue';
 import OverlayPanel from 'primevue/overlaypanel';
 import Dropdown from 'primevue/dropdown';
 import { storeToRefs } from 'pinia';
