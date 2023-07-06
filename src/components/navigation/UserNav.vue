@@ -38,7 +38,7 @@ const toggle = (event: Event) => {
     {{ selectedCommunityName }}
     <i class="pi pi-angle-down ml-2" style="color: var(--primary-color)"></i>
   </div>
-  <OverlayPanel ref="overlayPanel">
+  <OverlayPanel ref="overlayPanel" class="!w-[20rem]">
     <Dropdown
       v-model="communityId"
       :options="data?.response?.communities || []"
@@ -46,7 +46,7 @@ const toggle = (event: Event) => {
       filter
       optionLabel="name"
       placeholder="Select a Coummunity"
-      class="w-full md:w-14rem"
+      class="w-full"
     />
     <div class="mt-4">
       <LogoutButton />
