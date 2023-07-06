@@ -14,8 +14,15 @@ const toggle = () => {
 };
 
 const userStore = useUserStore();
-const { mutate, isLoading, isSuccess } = usePostV2Contact();
-const { handleSubmit, values, errors, defineComponentBinds } = useForm({
+
+/**
+ * VeeValidate and Yup handle form validation
+ * They also play quite nicely with PrimeVue.
+ * See examples from maintainers:
+ * @see https://stackblitz.com/edit/vee-validate-v4-prime-vue-1kwgkn?file=src%2FApp.vue
+ * @see https://primevue.org/inputtext/#veevalidate
+ */
+const { handleSubmit, errors, defineComponentBinds } = useForm({
   validationSchema: yup.object({
     email: yup.string().email().required()
   })
@@ -24,6 +31,12 @@ const { handleSubmit, values, errors, defineComponentBinds } = useForm({
 const firstName = defineComponentBinds('firstName');
 const lastName = defineComponentBinds('lastName');
 const email = defineComponentBinds('email');
+
+/**
+ * Vue Query means this one line is all we need for data binding.
+ * Everything else is auto-generated :-)
+ */
+const { mutate, isLoading, isSuccess } = usePostV2Contact();
 
 const onSubmit = handleSubmit((values) => {
   mutate({
@@ -34,6 +47,7 @@ const onSubmit = handleSubmit((values) => {
       email: values.email
     }
   });
+  // TODO: Cache invalidate when we have GET endpoint
 });
 </script>
 <template>

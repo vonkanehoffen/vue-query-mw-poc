@@ -20,14 +20,18 @@ export const vueQueryOptions: VueQueryPluginOptions = {
           console.log('DEFAULT QUERY ERROR', error);
           const authStore = useAuthStore();
           const toast = useToast();
-          toast.error(`Server error: ${error.message}`);
 
-          // If it's 401 we need to update the auth state in pinia
+          // Error can be anything: https://tkdodo.eu/blog/react-query-and-type-script#what-about-error
           if (axios.isAxiosError(error)) {
+            toast.error(`Server error: ${error.message}`);
+
+            // If it's 401 we need to update the auth state in pinia
             if (error.response?.status === 401 && authStore.isAuthenticated) {
               authStore.destroyTokens();
               router.push('/login');
             }
+          } else if (error instanceof Error) {
+            toast.error(`General error: ${error.message}`);
           }
         }
       },
