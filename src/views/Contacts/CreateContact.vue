@@ -5,12 +5,15 @@ import { usePostV2Contact } from '@/api/v2/generated/contact/contact';
 import { useForm } from 'vee-validate';
 import InputText from 'primevue/inputtext';
 import * as yup from 'yup';
+import { useUserStore } from '@/stores/userStore';
+import Message from 'primevue/message';
 
 const visible = ref(false);
 const toggle = () => {
   visible.value = !visible.value;
 };
 
+const userStore = useUserStore();
 const { mutate, isLoading, isSuccess } = usePostV2Contact();
 const { handleSubmit, values, errors, defineComponentBinds } = useForm({
   validationSchema: yup.object({
@@ -25,6 +28,7 @@ const email = defineComponentBinds('email');
 const onSubmit = handleSubmit((values) => {
   mutate({
     data: {
+      communityId: userStore.communityId,
       firstName: values.firstName,
       lastName: values.lastName,
       email: values.email
@@ -80,7 +84,7 @@ const onSubmit = handleSubmit((values) => {
         <Button type="submit" label="Submit" :loading="isLoading" />
       </div>
 
-      <h1 v-if="isSuccess">Done!</h1>
+      <Message v-if="isSuccess">Done!</Message>
     </form>
   </Sidebar>
 </template>
