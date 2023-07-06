@@ -11,7 +11,7 @@ const toggle = () => {
   visible.value = !visible.value;
 };
 
-const { mutate, isLoading } = usePostV2Contact();
+const { mutate, isLoading, isSuccess } = usePostV2Contact();
 const { handleSubmit, values, errors, defineComponentBinds } = useForm({
   validationSchema: yup.object({
     email: yup.string().email().required()
@@ -20,27 +20,68 @@ const { handleSubmit, values, errors, defineComponentBinds } = useForm({
 
 const firstName = defineComponentBinds('firstName');
 const lastName = defineComponentBinds('lastName');
-const email = defineComponentBinds('lastName');
+const email = defineComponentBinds('email');
 
 const onSubmit = handleSubmit((values) => {
-  alert(JSON.stringify(values, null, 2));
+  mutate({
+    data: {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      email: values.email
+    }
+  });
 });
 </script>
 <template>
   <Button label="Add Contact" @click="toggle" />
-  <Sidebar v-model:visible="visible" position="right" id="create-contact">
+  <Sidebar v-model:visible="visible" position="right" id="create-contact" class="md:!w-[30rem]">
     <template #header>
       <h2 class="text-lg font-bold mr-2">Create new contact</h2>
     </template>
-    <form class="my-2" @submit="onSubmit">
-      <InputText label="First Name" v-bind="firstName" />
-      <InputText label="Last Name" v-bind="lastName" />
-      <InputText label="Email" v-bind="email" />
-      <Button type="submit" label="Submit" :loading="isLoading" />
+    <form class="my-2 grid grid-cols-2 gap-4" @submit="onSubmit">
+      <!-- TODO: can these fields be reusable components? -->
+      <div class="mt-4">
+        <span class="p-float-label">
+          <InputText
+            v-bind="firstName"
+            aria-describedby="firstName-help"
+            :class="{ 'p-invalid': errors.firstName, 'w-full': true }"
+          />
+          <label for="firstName">First Name</label>
+        </span>
+        <small id="firstName-help" class="p-error">{{ errors.firstName }}</small>
+      </div>
+      <div class="mt-4">
+        <span class="p-float-label">
+          <InputText
+            v-bind="lastName"
+            aria-describedby="lastName-help"
+            type="lastName"
+            :class="{ 'p-invalid': errors.lastName, 'w-full': true }"
+          />
+          <label for="lastName">Last Name</label>
+        </span>
+        <small id="lastName-help" class="p-error">{{ errors.lastName }}</small>
+      </div>
+      <div class="col-span-2 mt-4">
+        <span class="p-float-label">
+          <InputText
+            v-bind="email"
+            aria-describedby="email-help"
+            type="email"
+            :class="{ 'p-invalid': errors.email, 'w-full': true }"
+          />
+          <label for="email">Email</label>
+        </span>
+        <small id="email-help" class="p-error">{{ errors.email }}</small>
+      </div>
+
+      <div class="col-span-2">
+        <Button type="submit" label="Submit" :loading="isLoading" />
+      </div>
+
+      <h1 v-if="isSuccess">Done!</h1>
     </form>
-    <pre> {{ JSON.stringify(values, null, 2) }}</pre>
-    <h2>errors:</h2>
-    <pre> {{ JSON.stringify(errors, null, 2) }}</pre>
   </Sidebar>
 </template>
 

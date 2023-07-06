@@ -27,7 +27,13 @@ export const vueQueryOptions: VueQueryPluginOptions = {
         }
       },
       mutations: {
-        // TODO
+        onError: (error) => {
+          // TODO: 401 should clear tokens here too, but there's some inconsistency with responses on backend I think
+          console.log('DEFAULT MUTATION ERROR', error);
+          const toast = useToast();
+          // TODO: Not working here. Inject warning
+          toast.add({ severity: 'error', summary: 'Server error', detail: error.message });
+        }
       }
     }
   }
