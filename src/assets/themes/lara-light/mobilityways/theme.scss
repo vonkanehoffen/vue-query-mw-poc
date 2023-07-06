@@ -35,6 +35,17 @@ $horizontalMenuBorder: none;
 $horizontalMenuRootMenuitemTextHoverColor: white;
 $horizontalMenuRootMenuitemHoverBg: lighten($brandCarbon, 10%);
 $horizontalMenuRootMenuitemIconHoverColor: $brandPosy;
+$menuBg: $brandCarbon;
+$menuitemTextColor: white;
+$menuitemTextHoverColor: white;
+$menuitemHoverBg: lighten($brandCarbon, 10%);
+$menuitemTextActiveColor: white;
+$menuitemIconActiveColor: white;
+$menuitemFocusBg: lighten($brandCarbon, 10%);
+$menuitemActiveBg: lighten($brandCarbon, 10%);
+$menuitemTextFocusColor: white;
+$menuitemIconFocusColor: white;
+$menuitemActiveFocusBg: lighten($brandCarbon, 10%);
 
 
 @import '../_variables';
