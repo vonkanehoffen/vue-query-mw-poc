@@ -10,6 +10,8 @@ import type { MaybeRef } from '@tanstack/vue-query/build/lib/types';
 import type {
   AbstractModuleApiResponseDashboardSettingsUpdateRequestDashboardSettingsUpdateResponseDashboardSettingsUpdateResponseUlsbya,
   DashboardSettingsUpdateBaseRequestDgtyi,
+  AbstractModuleApiResponsePaymentLinkToggleRequestPaymentLinkToggleResponsePaymentLinkToggleResponseRygjcfy,
+  PaymentLinkToggleBaseRequestItrrhea,
   AbstractModuleApiResponsePaymentLinkUpdateRequestPaymentLinkUpdateResponsePaymentLinkUpdateResponseMvddpbq,
   PaymentLinkUpdateBaseRequestIlygpi
 } from '.././model';
@@ -72,6 +74,67 @@ export const usePutV2Settings = <TError = unknown, TContext = unknown>(options?:
   >;
 }) => {
   const mutationOptions = getPutV2SettingsMutationOptions(options);
+
+  return useMutation(mutationOptions);
+};
+export const putV2LiftsharePaymentLinkEnable = (
+  paymentLinkToggleBaseRequestItrrhea: MaybeRef<PaymentLinkToggleBaseRequestItrrhea>
+) => {
+  return customInstance<AbstractModuleApiResponsePaymentLinkToggleRequestPaymentLinkToggleResponsePaymentLinkToggleResponseRygjcfy>(
+    {
+      url: `/v2/liftshare/payment-link/enable`,
+      method: 'put',
+      headers: { 'Content-Type': 'application/json' },
+      data: paymentLinkToggleBaseRequestItrrhea
+    }
+  );
+};
+
+export const getPutV2LiftsharePaymentLinkEnableMutationOptions = <
+  TError = unknown,
+  TContext = unknown
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLinkEnable>>,
+    TError,
+    { data: PaymentLinkToggleBaseRequestItrrhea },
+    TContext
+  >;
+}): UseMutationOptions<
+  Awaited<ReturnType<typeof putV2LiftsharePaymentLinkEnable>>,
+  TError,
+  { data: PaymentLinkToggleBaseRequestItrrhea },
+  TContext
+> => {
+  const { mutation: mutationOptions } = options ?? {};
+
+  const mutationFn: MutationFunction<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLinkEnable>>,
+    { data: PaymentLinkToggleBaseRequestItrrhea }
+  > = (props) => {
+    const { data } = props ?? {};
+
+    return putV2LiftsharePaymentLinkEnable(data);
+  };
+
+  return { mutationFn, ...mutationOptions };
+};
+
+export type PutV2LiftsharePaymentLinkEnableMutationResult = NonNullable<
+  Awaited<ReturnType<typeof putV2LiftsharePaymentLinkEnable>>
+>;
+export type PutV2LiftsharePaymentLinkEnableMutationBody = PaymentLinkToggleBaseRequestItrrhea;
+export type PutV2LiftsharePaymentLinkEnableMutationError = unknown;
+
+export const usePutV2LiftsharePaymentLinkEnable = <TError = unknown, TContext = unknown>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof putV2LiftsharePaymentLinkEnable>>,
+    TError,
+    { data: PaymentLinkToggleBaseRequestItrrhea },
+    TContext
+  >;
+}) => {
+  const mutationOptions = getPutV2LiftsharePaymentLinkEnableMutationOptions(options);
 
   return useMutation(mutationOptions);
 };

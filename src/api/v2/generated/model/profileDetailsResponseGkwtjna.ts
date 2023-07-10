@@ -18,4 +18,5 @@ export interface ProfileDetailsResponseGkwtjna {
   bio?: string | null;
   responseTimeMins?: number | null;
   paymentLink?: string | null;
+  paymentLinkEnabled?: boolean;
 }

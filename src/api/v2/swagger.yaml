@@ -1415,6 +1415,24 @@ paths:
             application/json; charset=utf-8:
               schema:
                 $ref: '#/components/schemas/AbstractModule-ApiResponse__DashboardSettingsUpdate-Request_DashboardSettingsUpdate-Response_DashboardSettingsUpdate-Response__ulsbya'
+  /v2/liftshare/payment-link/enable:
+    put:
+      tags:
+        - settings
+      summary: ''
+      description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentLinkToggle-BaseRequest_itrrhea'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AbstractModule-ApiResponse__PaymentLinkToggle-Request_PaymentLinkToggle-Response_PaymentLinkToggle-Response__rygjcfy'
   /v2/liftshare/payment-link:
     put:
       tags:
@@ -3316,6 +3334,22 @@ components:
           nullable: true
           readOnly: true
       additionalProperties: false
+    AbstractModule-ApiErrorDetails__PaymentLinkToggle-Request_PaymentLinkToggle-Response__lorjiq:
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+          readOnly: true
+        messages:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          nullable: true
+          readOnly: true
+      additionalProperties: false
     AbstractModule-ApiErrorDetails__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response__ifqodi:
       type: object
       properties:
@@ -4803,6 +4837,18 @@ components:
           readOnly: true
         details:
           $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__OnboardingChecklist-Request_OnboardingChecklist-Response__zgqzjq'
+      additionalProperties: false
+    AbstractModule-ApiResponse__PaymentLinkToggle-Request_PaymentLinkToggle-Response_PaymentLinkToggle-Response__rygjcfy:
+      type: object
+      properties:
+        response:
+          $ref: '#/components/schemas/PaymentLinkToggle-Response_trsemuy'
+        status:
+          type: string
+          nullable: true
+          readOnly: true
+        details:
+          $ref: '#/components/schemas/AbstractModule-ApiErrorDetails__PaymentLinkToggle-Request_PaymentLinkToggle-Response__lorjiq'
       additionalProperties: false
     AbstractModule-ApiResponse__PaymentLinkUpdate-Request_PaymentLinkUpdate-Response_PaymentLinkUpdate-Response__mvddpbq:
       type: object
@@ -9899,6 +9945,15 @@ components:
       x-enum-varnames:
         - Asc
         - Desc
+    PaymentLinkToggle-BaseRequest_itrrhea:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+      additionalProperties: false
+    PaymentLinkToggle-Response_trsemuy:
+      type: object
+      additionalProperties: false
     PaymentLinkUpdate-BaseRequest_ilygpi:
       type: object
       properties:
@@ -10511,6 +10566,8 @@ components:
         paymentLink:
           type: string
           nullable: true
+        paymentLinkEnabled:
+          type: boolean
       additionalProperties: false
     PublicLeaderboard-PublicLeaderboardEntry_ixtdsca:
       type: object
