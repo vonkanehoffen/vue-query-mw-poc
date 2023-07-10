@@ -2,8 +2,9 @@
 import { useGetV2AcelReportId } from '@/api/v2/generated/survey/survey';
 import Dropdown from 'primevue/dropdown';
 import { computed, ref } from 'vue';
+import InvalidateButton from './InvalidateButton.vue';
 
-const selectedReportId = ref();
+const selectedReportId = ref({ name: 'Babergh', code: 'pt' });
 const reports = ref([
   { name: 'Babergh', code: 'pt' },
   { name: 'Willis', code: 'zm' },
@@ -29,6 +30,7 @@ const { isLoading, data } = useGetV2AcelReportId(id, {
       placeholder="Select a Report"
       class="w-full md:w-14rem"
     />
+    <InvalidateButton />
     <p v-if="isLoading && enabled">Loading...</p>
     <pre> {{ JSON.stringify(data, null, 2) }}</pre>
   </div>
