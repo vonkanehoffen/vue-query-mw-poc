@@ -31,6 +31,10 @@ export const router = createRouter({
     {
       path: '/scoping',
       component: () => import('../views/ScopingView.vue')
+    },
+    {
+      path: '/acel/dashbard',
+      component: () => import('../views/Acel/Dashboard/AcelDashboardView.vue')
     }
   ]
 });
