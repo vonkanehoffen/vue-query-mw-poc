@@ -5,13 +5,263 @@ info:
 servers:
   - url: https://interface.liftshare.com
     description: Production
-  - url: http://localhost
+  - url: https://localhost:5001
     description: Current server
   - url: https://interface-dev.liftshare.com
     description: Development
   - url: https://liftshare-api-core-staging.azurewebsites.net
     description: Staging
 paths:
+  '/dashboard/acel/report/{reportId}':
+    get:
+      tags:
+        - Mobilityways dashboard
+      summary: Acel report details
+      description: Gets full information on acel report and breakdown of transport types
+      parameters:
+        - name: reportId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+    delete:
+      tags:
+        - Mobilityways dashboard
+      summary: Delete acel report
+      description: Delete an acel report. Throws DeletePrimaryAcelReportException if set as a primary report
+      parameters:
+        - name: reportId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/reports:
+    get:
+      tags:
+        - Mobilityways dashboard
+      summary: List previous acel reports
+      description: Lists all acel reports for given community ids
+      parameters:
+        - name: cid
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/assumptions:
+    get:
+      tags:
+        - Mobilityways dashboard
+      summary: Get latest Acel assumptions
+      description: Get latest Acel assumptions for calculation
+      parameters:
+        - name: versionDate
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/primary-report:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Set primary acel report
+      description: Set primary acel report for user and community
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SetPrimaryAcelReport-BaseRequest_uclxqzi'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SetPrimaryAcelReport-BaseRequest_uclxqzi'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SetPrimaryAcelReport-BaseRequest_uclxqzi'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/set-target:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Set acel target and date
+      description: Set acel target and date.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportTarget-Request_cixsni'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportTarget-Request_cixsni'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportTarget-Request_cixsni'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/toggle-private:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Set report to public or private
+      description: Set report to public or private
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportPrivacy-Request_hwghvq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportPrivacy-Request_hwghvq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SetAcelReportPrivacy-Request_hwghvq'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/rename:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Rename acel report
+      description: Rename acel report
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RenameAcelReport-Request_fbbepxy'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/RenameAcelReport-Request_fbbepxy'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/RenameAcelReport-Request_fbbepxy'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/create:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Create an acel report
+      description: Create an acel report
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreate-BaseRequest_fuollui'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreate-BaseRequest_fuollui'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreate-BaseRequest_fuollui'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/from-survey:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Breakdown of ACEl responses from survey
+      description: gets a breakdown of transport models with count from ACEL answers from a survey (published in a paused or complete state)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcelBreakdownFromSurvey-Request_wjcxq'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AcelBreakdownFromSurvey-Request_wjcxq'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AcelBreakdownFromSurvey-Request_wjcxq'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/create-from-survey:
+    post:
+      tags:
+        - Mobilityways dashboard
+      summary: Create an acel report from survey
+      description: Create an acel report from a survey (published in a paused or complete state)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreateFromSurvey-BaseRequest_feeyti'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreateFromSurvey-BaseRequest_feeyti'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AcelReportCreateFromSurvey-BaseRequest_feeyti'
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
+  /dashboard/acel/acel-surveys:
+    get:
+      tags:
+        - Mobilityways dashboard
+      summary: Get Acel surveys
+      description: Get Acel surveys in a published paused or complete state for report creation
+      parameters:
+        - name: cid
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+      security:
+        - bearer:
+            - AuthenticationSchemes:Bearer
   /parking/assets:
     get:
       tags:
@@ -1225,6 +1475,191 @@ paths:
                 $ref: '#/components/schemas/ValidationExceptionResponseDto_ltlwwzy'
 components:
   schemas:
+    AcelBreakdownFromSurvey-Request_wjcxq:
+      type: object
+      properties:
+        publicSurveyId:
+          type: string
+          format: uuid
+      additionalProperties: false
+    AcelBreakdownInputType_cgsomi:
+      enum:
+        - Responses
+        - Percentages
+        - Employees
+      type: string
+      x-enumNames:
+        - Responses
+        - Percentages
+        - Employees
+      x-enum-varnames:
+        - Responses
+        - Percentages
+        - Employees
+    AcelModesBreakdownDto_eimnky:
+      type: object
+      properties:
+        companyShuttleBus:
+          type: integer
+          format: int32
+        electricCompanyShuttleBus:
+          type: integer
+          format: int32
+        electricMotorcycle:
+          type: integer
+          format: int32
+        vanPool:
+          type: integer
+          format: int32
+        electricVanPool:
+          type: integer
+          format: int32
+        busOrCoach:
+          type: integer
+          format: int32
+        carshare:
+          type: integer
+          format: int32
+        cycle:
+          type: integer
+          format: int32
+        drive:
+          type: integer
+          format: int32
+        electricBusOrCoach:
+          type: integer
+          format: int32
+        electricCarshare:
+          type: integer
+          format: int32
+        electricDrive:
+          type: integer
+          format: int32
+        electricScooter:
+          type: integer
+          format: int32
+        electricTaxi:
+          type: integer
+          format: int32
+        fly:
+          type: integer
+          format: int32
+        lightRail:
+          type: integer
+          format: int32
+        motorcycle:
+          type: integer
+          format: int32
+        other:
+          type: integer
+          format: int32
+        parkAndRide:
+          type: integer
+          format: int32
+        taxi:
+          type: integer
+          format: int32
+        train:
+          type: integer
+          format: int32
+        walk:
+          type: integer
+          format: int32
+        workFromHome:
+          type: integer
+          format: int32
+        inputType:
+          $ref: '#/components/schemas/AcelBreakdownInputType_cgsomi'
+      additionalProperties: false
+    AcelReportCreate-BaseRequest_fuollui:
+      type: object
+      properties:
+        reportId:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        dateOfAcel:
+          type: string
+          format: date-time
+        certified:
+          type: boolean
+        employees:
+          type: integer
+          format: int32
+        audience:
+          type: integer
+          format: int32
+        responses:
+          type: integer
+          format: int32
+        simulation:
+          type: boolean
+        isPrivate:
+          type: boolean
+        reportType:
+          $ref: '#/components/schemas/AcelReportType_iegky'
+        breakdown:
+          $ref: '#/components/schemas/AcelModesBreakdownDto_eimnky'
+        communityId:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        netZeroTargetYear:
+          type: integer
+          format: int32
+          nullable: true
+      additionalProperties: false
+    AcelReportCreateFromSurvey-BaseRequest_feeyti:
+      type: object
+      properties:
+        employees:
+          type: integer
+          format: int32
+        audience:
+          type: integer
+          format: int32
+        publicSurveyId:
+          type: string
+          format: uuid
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        simulation:
+          type: boolean
+        isPrivate:
+          type: boolean
+        communityId:
+          type: string
+          nullable: true
+        location:
+          type: string
+          nullable: true
+        netZeroTargetYear:
+          type: integer
+          format: int32
+          nullable: true
+      additionalProperties: false
+    AcelReportType_iegky:
+      enum:
+        - Manual
+        - FromSurvey
+      type: string
+      x-enumNames:
+        - Manual
+        - FromSurvey
+      x-enum-varnames:
+        - Manual
+        - FromSurvey
     AdminTokenCreate-Response_nnmuhq:
       type: object
       properties:
@@ -2411,6 +2846,45 @@ components:
         - SuccessAlreadyRegistered
         - CommunityPasswordInvalid
         - OidcRequired
+    RenameAcelReport-Request_fbbepxy:
+      type: object
+      properties:
+        reportId:
+          type: string
+          nullable: true
+        newName:
+          type: string
+          nullable: true
+      additionalProperties: false
+    SetAcelReportPrivacy-Request_hwghvq:
+      type: object
+      properties:
+        reportId:
+          type: string
+          nullable: true
+        private:
+          type: boolean
+      additionalProperties: false
+    SetAcelReportTarget-Request_cixsni:
+      type: object
+      properties:
+        reportId:
+          type: string
+          nullable: true
+        targetAcelScore:
+          type: integer
+          format: int32
+        acelTargetDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    SetPrimaryAcelReport-BaseRequest_uclxqzi:
+      type: object
+      properties:
+        reportId:
+          type: string
+          nullable: true
+      additionalProperties: false
     TokenCreate-Request_hakhvwy:
       type: object
       properties:
@@ -2501,4 +2975,4 @@ components:
       scheme: bearer
       bearerFormat: JSON Web Token (JWT)
 security:
-  - bearer: []
+  - bearer: [ ]
