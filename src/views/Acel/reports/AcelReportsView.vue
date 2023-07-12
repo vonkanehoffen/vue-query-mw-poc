@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useUserStore } from '@/stores/userStore';
-import { reactive } from 'vue';
+import { computed, reactive } from 'vue';
 import { useGetDashboardAcelReports } from '@/api/private/generated/mobilityways-dashboard/mobilityways-dashboard.ts';
 import { storeToRefs } from 'pinia';
 
@@ -13,6 +13,8 @@ const params = reactive({
 });
 
 const { data, isLoading } = useGetDashboardAcelReports(params);
+
+const names = computed(() => data.value?.reports?.map((r) => r.name));
 </script>
 <template>
   <div class="m-8">
@@ -20,6 +22,6 @@ const { data, isLoading } = useGetDashboardAcelReports(params);
     <pre>params = {{ params }}</pre>
     <pre>userStore.communityId = {{ userStore.communityId }}</pre>
     <pre>loading {{ isLoading }}</pre>
-    <pre>{{ data }}</pre>
+    <pre>{{ names }}</pre>
   </div>
 </template>
