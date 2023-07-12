@@ -38,7 +38,8 @@ const items = ref<MenubarProps['model']>([
         to: '/acel/dashbard'
       },
       {
-        label: 'ACEL Reports'
+        label: 'ACEL Reports',
+        to: '/acel/reports'
       },
       {
         label: 'ACEL Generator'
