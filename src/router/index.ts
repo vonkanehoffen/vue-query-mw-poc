@@ -38,7 +38,7 @@ export const router = createRouter({
     },
     {
       path: '/acel/reports',
-      component: () => import('../views/Acel/Reports/AcelReportsView.vue')
+      component: () => import('../views/Acel/reports/AcelReportsView.vue')
     }
   ]
 });
