@@ -12,6 +12,10 @@ const params = reactive({
   cid: communityId
 });
 
+/**
+ * This is all we need to get the reports list from the server.
+ * It'll deal with retriies, caching etc. and update when the communityId changes.
+ */
 const { data, isLoading } = useGetDashboardAcelReports(params);
 
 const names = computed(() => data.value?.reports?.map((r) => r.name));
